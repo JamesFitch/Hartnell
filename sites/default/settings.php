@@ -210,24 +210,8 @@
  *   );
  * @endcode
  */
-$databases = array (
+$databases['hartnell.edu'] = array (
   'default' => 
-  array (
-    'default' => 
-    array (
-      'database' => 'hartnell',
-      'username' => 'hartnell_user',
-      'password' => 'y@yh@rtn3ll!',
-      'host' => 'localhost',
-      'port' => '',
-      'driver' => 'mysql',
-      'prefix' => '',
-    ),
-  ),
-
-  'hartnell.edu' => 
-  array (
-    'default' => 
     array (
       'database' => 'courses',
       'username' => 'justwent',
@@ -237,7 +221,6 @@ $databases = array (
       'driver' => 'mysql',
       'prefix' => '',
     ),
-  ),
 );
 
 /**
@@ -579,3 +562,22 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  * Remove the leading hash signs to disable.
  */
 # $conf['allow_authorize_operations'] = FALSE;
+
+// Pantheon environment-specific files, and local settings file
+$environment = NULL;
+
+if (defined('PANTHEON_ENVIRONMENT')) {
+  $environment = PANTHEON_ENVIRONMENT;
+}
+
+if(!empty($environment) && file_exists(dirname(__FILE__) . "/settings.$environment.php")) {
+  include_once("settings.$environment.php");
+}
+
+if(file_exists(dirname(__FILE__) . '/local.settings.php')) {
+  include_once('local.settings.php');
+}
+
+// stick the env variable into the $conf array, to easily access in Drupal.
+$conf['environment'] = $environment;
+

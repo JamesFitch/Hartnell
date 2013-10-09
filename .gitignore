@@ -8,6 +8,9 @@
 /sites/default/**/files
 /sites/default/**/private
 
+# Local settings files
+sites/*/local.settings.php
+
 # Packages #
 ############
 *.7z
@@ -41,3 +44,16 @@ Thumbs.db
 # SASS #
 ##########
 .sass-cache
+
+# Debugging files
+phpinfo.php
+
+# Vim stash files
+\.*.sw[p/o]
+
+# SQL dump files
+*\.sql
+*\.sql.tar*
+*\.sql.tgz
+*\.sql.zip
+
