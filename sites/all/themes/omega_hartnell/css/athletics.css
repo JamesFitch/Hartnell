@@ -1,0 +1,2217 @@
+@charset "UTF-8";
+/*
+ * Imports
+ */
+/*
+ * Mixins
+ */
+/*
+* General includes
+*/
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.woff") format("woff"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.ttf") format("truetype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pt_sans_narrowbold';
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot");
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.woff") format("woff"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.ttf") format("truetype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.svg#pt_sans_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * Vanilla mixins
+ */
+/* Links */
+/* Links END */
+/* 
+*	Style Elements
+*/
+/* Images */
+/* Margin is overriding core wysiwyg settings */
+/* Margin is overriding core wysiwyg settings */
+/* Panels */
+/*
+* Social buttons backgrounds
+*/
+/*
+* Flexible buttons
+*/
+/*
+ * BEGIN: Athletics Mixins
+ */
+/*
+ * END: Athletics Mixins
+ */
+@font-face {
+  font-family: 'hartnell_icons';
+  src: url("../fonts/fontello/font/hartnell_icons.eot");
+  src: url("../fonts/fontello/font/hartnell_icons.eot?#iefix") format("embedded-opentype"), url("../fonts/fontello/font/hartnell_icons.woff") format("woff"), url("../font/hartnell_icons.ttf") format("truetype"), url("../fonts/fontello/font/hartnell_icons.svg#hartnell_icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 22, ../sass/fontello.scss */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'hartnell_icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: block;
+  text-decoration: inherit;
+  text-align: center;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+/* line 27, ../sass/fontello.scss */
+[class^="icon-"]:after,
+[class*=" icon-"]:after {
+  display: inline;
+  margin-left: 1em;
+  font-size: 13px;
+  line-height: 1;
+  font-family: 'hartnell_icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: block;
+  text-decoration: inherit;
+  text-align: center;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+/* line 40, ../sass/fontello.scss */
+[class^="icon-"]:hover,
+[class^="icon-"]:active,
+[class^="icon-"]:focus,
+[class*="icon-"]:hover,
+[class*="icon-"]:active,
+[class*="icon-"]:focus {
+  cursor: pointer;
+}
+
+/* line 22, ../sass/fontello-mixins.scss */
+.icon-gplus:before {
+  content: '\2b';
+  /* '+' */
+}
+
+/* line 27, ../sass/fontello-mixins.scss */
+.icon-calendar-1:before {
+  content: '\2e';
+  /* '.' */
+}
+
+/* line 32, ../sass/fontello-mixins.scss */
+.icon-stumbleupon:before {
+  content: '\2f';
+  /* '/' */
+}
+
+/* line 37, ../sass/fontello-mixins.scss */
+.icon-pinterest:before {
+  content: '\31';
+  /* '1' */
+}
+
+/* line 42, ../sass/fontello-mixins.scss */
+.icon-w3c:before {
+  content: '\33';
+  /* '3' */
+}
+
+/* line 47, ../sass/fontello-mixins.scss */
+.icon-foursquare:before {
+  content: '\34';
+  /* '4' */
+}
+
+/* line 52, ../sass/fontello-mixins.scss */
+.icon-html5:before {
+  content: '\35';
+  /* '5' */
+}
+
+/* line 57, ../sass/fontello-mixins.scss */
+.icon-digg:before {
+  content: '\3b';
+  /* ';' */
+}
+
+/* line 62, ../sass/fontello-mixins.scss */
+.icon-reddit:before {
+  content: '\3e';
+  /* '&gt;' */
+}
+
+/* line 67, ../sass/fontello-mixins.scss */
+.icon-blogger:before {
+  content: '\42';
+  /* 'B' */
+}
+
+/* line 72, ../sass/fontello-mixins.scss */
+.icon-cc:before {
+  content: '\43';
+  /* 'C' */
+}
+
+/* line 77, ../sass/fontello-mixins.scss */
+.icon-dribble:before {
+  content: '\44';
+  /* 'D' */
+}
+
+/* line 82, ../sass/fontello-mixins.scss */
+.icon-evernote:before {
+  content: '\45';
+  /* 'E' */
+}
+
+/* line 87, ../sass/fontello-mixins.scss */
+.icon-flickr:before {
+  content: '\46';
+  /* 'F' */
+}
+
+/* line 92, ../sass/fontello-mixins.scss */
+.icon-google:before {
+  content: '\47';
+  /* 'G' */
+}
+
+/* line 97, ../sass/fontello-mixins.scss */
+.icon-instapaper:before {
+  content: '\49';
+  /* 'I' */
+}
+
+/* line 102, ../sass/fontello-mixins.scss */
+.icon-linkedin:before {
+  content: '\4c';
+  /* 'L' */
+}
+
+/* line 107, ../sass/fontello-mixins.scss */
+.icon-disqus:before {
+  content: '\51';
+  /* 'Q' */
+}
+
+/* line 112, ../sass/fontello-mixins.scss */
+.icon-rss-1:before {
+  content: '\52';
+  /* 'R' */
+}
+
+/* line 117, ../sass/fontello-mixins.scss */
+.icon-skype:before {
+  content: '\53';
+  /* 'S' */
+}
+
+/* line 122, ../sass/fontello-mixins.scss */
+.icon-twitter:before {
+  content: '\54';
+  /* 'T' */
+}
+
+/* line 127, ../sass/fontello-mixins.scss */
+.icon-youtube:before {
+  content: '\55';
+  /* 'U' */
+}
+
+/* line 132, ../sass/fontello-mixins.scss */
+.icon-vimeo:before {
+  content: '\56';
+  /* 'V' */
+}
+
+/* line 137, ../sass/fontello-mixins.scss */
+.icon-yahoo:before {
+  content: '\59';
+  /* 'Y' */
+}
+
+/* line 142, ../sass/fontello-mixins.scss */
+.icon-email:before {
+  content: '\5d';
+  /* ']' */
+  line-height: 0.8em;
+}
+
+/* line 148, ../sass/fontello-mixins.scss */
+.icon-podcast:before {
+  content: '\60';
+  /* '`' */
+}
+
+/* line 153, ../sass/fontello-mixins.scss */
+.icon-amazon:before {
+  content: '\61';
+  /* 'a' */
+}
+
+/* line 158, ../sass/fontello-mixins.scss */
+.icon-dropbox:before {
+  content: '\64';
+  /* 'd' */
+}
+
+/* line 163, ../sass/fontello-mixins.scss */
+.icon-facebook:before {
+  content: '\66';
+  /* 'f' */
+  text-align: center;
+}
+
+/* line 169, ../sass/fontello-mixins.scss */
+.icon-github:before {
+  content: '\67';
+  /* 'g' */
+}
+
+/* line 174, ../sass/fontello-mixins.scss */
+.icon-tumblr:before {
+  content: '\74';
+  /* 't' */
+}
+
+/* line 179, ../sass/fontello-mixins.scss */
+.icon-wordpress:before {
+  content: '\77';
+  /* 'w' */
+}
+
+/* line 184, ../sass/fontello-mixins.scss */
+.icon-yelp:before {
+  content: '\79';
+  /* 'y' */
+}
+
+/* line 189, ../sass/fontello-mixins.scss */
+.icon-eventbrite:before {
+  content: '\7c';
+  /* '|' */
+}
+
+/* line 194, ../sass/fontello-mixins.scss */
+.icon-cart:before {
+  content: '\c9';
+  /* 'É' */
+}
+
+/* line 199, ../sass/fontello-mixins.scss */
+.icon-instagram:before {
+  content: '\dc';
+  /* 'Ü' */
+}
+
+/* line 204, ../sass/fontello-mixins.scss */
+.icon-acrobat:before {
+  content: '\e3';
+  /* 'ã' */
+}
+
+/* line 209, ../sass/fontello-mixins.scss */
+.icon-drupal:before {
+  content: '\e4';
+  /* 'ä' */
+}
+
+/* line 214, ../sass/fontello-mixins.scss */
+.icon-pocket:before {
+  content: '\e7';
+  /* 'ç' */
+}
+
+/* line 219, ../sass/fontello-mixins.scss */
+.icon-bitbucket:before {
+  content: '\e9';
+  /* 'é' */
+}
+
+/* line 224, ../sass/fontello-mixins.scss */
+.icon-info:before {
+  content: '\2139';
+  /* 'ℹ' */
+}
+
+/* line 229, ../sass/fontello-mixins.scss */
+.icon-home:before {
+  content: '\2302';
+  /* '⌂' */
+}
+
+/* line 234, ../sass/fontello-mixins.scss */
+.icon-pause:before {
+  content: '\2389';
+  /* '⎉' */
+}
+
+/* line 239, ../sass/fontello-mixins.scss */
+.icon-fast-forward:before {
+  content: '\23e9';
+  /* '⏩' */
+}
+
+/* line 244, ../sass/fontello-mixins.scss */
+.icon-fast-backward:before {
+  content: '\23ea';
+  /* '⏪' */
+}
+
+/* line 249, ../sass/fontello-mixins.scss */
+.icon-to-end:before {
+  content: '\23ed';
+  /* '⏭' */
+}
+
+/* line 254, ../sass/fontello-mixins.scss */
+.icon-to-start:before {
+  content: '\23ee';
+  /* '⏮' */
+}
+
+/* line 259, ../sass/fontello-mixins.scss */
+.icon-stop:before {
+  content: '\25a0';
+  /* '■' */
+}
+
+/* line 264, ../sass/fontello-mixins.scss */
+.icon-play:before {
+  content: '\25b6';
+  /* '▶' */
+}
+
+/* line 269, ../sass/fontello-mixins.scss */
+.icon-right-dir:before {
+  content: '\25b8';
+  /* '▸' */
+}
+
+/* line 274, ../sass/fontello-mixins.scss */
+.icon-left-dir:before {
+  content: '\25c2';
+  /* '◂' */
+}
+
+/* line 279, ../sass/fontello-mixins.scss */
+.icon-star:before {
+  content: '\2605';
+  /* '★' */
+}
+
+/* line 284, ../sass/fontello-mixins.scss */
+.icon-star-empty:before {
+  content: '\2606';
+  /* '☆' */
+}
+
+/* line 289, ../sass/fontello-mixins.scss */
+.icon-cup:before {
+  content: '\2615';
+  /* '☕' */
+}
+
+/* line 294, ../sass/fontello-mixins.scss */
+.icon-menu:before {
+  content: '\2630';
+  /* '☰' */
+}
+
+/* line 299, ../sass/fontello-mixins.scss */
+.icon-layout:before {
+  content: '\e80c';
+  /* '' */
+}
+
+/* line 304, ../sass/fontello-mixins.scss */
+.icon-th:before {
+  content: '\268f';
+  /* '⚏' */
+}
+
+/* line 309, ../sass/fontello-mixins.scss */
+.icon-flag:before {
+  content: '\2691';
+  /* '⚑' */
+}
+
+/* line 314, ../sass/fontello-mixins.scss */
+.icon-attention:before {
+  content: '\26a0';
+  /* '⚠' */
+}
+
+/* line 319, ../sass/fontello-mixins.scss */
+.icon-record:before {
+  content: '\26ab';
+  /* '⚫' */
+}
+
+/* line 324, ../sass/fontello-mixins.scss */
+.icon-cog-alt:before {
+  content: '\26ef';
+  /* '⛯' */
+}
+
+/* line 329, ../sass/fontello-mixins.scss */
+.icon-mail:before {
+  content: '\2709';
+  /* '✉' */
+}
+
+/* line 334, ../sass/fontello-mixins.scss */
+.icon-edit-1:before {
+  content: '\e804';
+  /* '' */
+}
+
+/* line 339, ../sass/fontello-mixins.scss */
+.icon-pencil:before {
+  content: '\270e';
+  /* '✎' */
+}
+
+/* line 344, ../sass/fontello-mixins.scss */
+.icon-check:before {
+  content: '\2713';
+  /* '✓' */
+}
+
+/* line 349, ../sass/fontello-mixins.scss */
+.icon-cancel:before {
+  content: '\2715';
+  /* '✕' */
+}
+
+/* line 354, ../sass/fontello-mixins.scss */
+.icon-help:before {
+  content: '\2753';
+  /* '❓' */
+}
+
+/* line 359, ../sass/fontello-mixins.scss */
+.icon-list:before {
+  content: '\e005';
+  /* '' */
+}
+
+/* line 364, ../sass/fontello-mixins.scss */
+.icon-info-circled:before {
+  content: '\e801';
+  /* '' */
+}
+
+/* line 369, ../sass/fontello-mixins.scss */
+.icon-info-circle:before {
+  content: '\e705';
+  /* '' */
+}
+
+/* line 374, ../sass/fontello-mixins.scss */
+.icon-th-large:before {
+  content: '\e708';
+  /* '' */
+}
+
+/* line 379, ../sass/fontello-mixins.scss */
+.icon-print:before {
+  content: '\e716';
+  /* '' */
+}
+
+/* line 384, ../sass/fontello-mixins.scss */
+.icon-print-1:before {
+  content: '\e805';
+  /* '' */
+}
+
+/* line 389, ../sass/fontello-mixins.scss */
+.icon-chat:before {
+  content: '\e720';
+  /* '' */
+}
+
+/* line 394, ../sass/fontello-mixins.scss */
+.icon-vcard:before {
+  content: '\e722';
+  /* '' */
+}
+
+/* line 399, ../sass/fontello-mixins.scss */
+.icon-location:before {
+  content: '\e724';
+  /* '' */
+}
+
+/* line 404, ../sass/fontello-mixins.scss */
+.icon-location-1:before {
+  content: '\e806';
+  /* '' */
+}
+
+/* line 409, ../sass/fontello-mixins.scss */
+.icon-trash:before {
+  content: '\e729';
+  /* '' */
+}
+
+/* line 414, ../sass/fontello-mixins.scss */
+.icon-rss:before {
+  content: '\e73a';
+  /* '' */
+}
+
+/* line 419, ../sass/fontello-mixins.scss */
+.icon-basket:before {
+  content: '\e73d';
+  /* '' */
+}
+
+/* line 424, ../sass/fontello-mixins.scss */
+.icon-chart-pie:before {
+  content: '\e751';
+  /* '' */
+}
+
+/* line 429, ../sass/fontello-mixins.scss */
+.icon-left-circled:before {
+  content: '\e759';
+  /* '' */
+}
+
+/* line 434, ../sass/fontello-mixins.scss */
+.icon-right-circled:before {
+  content: '\e75a';
+  /* '' */
+}
+
+/* line 439, ../sass/fontello-mixins.scss */
+.icon-left-open:before {
+  content: '\e75d';
+  /* '' */
+}
+
+/* line 445, ../sass/fontello-mixins.scss */
+.icon-right-open:after {
+  content: '\e75e';
+  /* '' */
+}
+
+/* line 450, ../sass/fontello-mixins.scss */
+.icon-brush:before {
+  content: '\e79a';
+  /* '' */
+}
+
+/* line 455, ../sass/fontello-mixins.scss */
+.icon-aboveground-rail:before {
+  content: '\e810';
+  /* '' */
+}
+
+/* line 460, ../sass/fontello-mixins.scss */
+.icon-airport:before {
+  content: '\e811';
+  /* '' */
+}
+
+/* line 465, ../sass/fontello-mixins.scss */
+.icon-belowground-rail:before {
+  content: '\e80e';
+  /* '' */
+}
+
+/* line 470, ../sass/fontello-mixins.scss */
+.icon-bicycle:before {
+  content: '\e80d';
+  /* '' */
+}
+
+/* line 475, ../sass/fontello-mixins.scss */
+.icon-bus:before {
+  content: '\e80f';
+  /* '' */
+}
+
+/* line 480, ../sass/fontello-mixins.scss */
+.icon-cafe:before {
+  content: '\e80c';
+  /* '' */
+}
+
+/* line 485, ../sass/fontello-mixins.scss */
+.icon-library:before {
+  content: '\e823';
+  /* '' */
+}
+
+/* line 490, ../sass/fontello-mixins.scss */
+.icon-restaurant:before {
+  content: '\e832';
+  /* '' */
+}
+
+/* line 495, ../sass/fontello-mixins.scss */
+.icon-toilet:before {
+  content: '\e83b';
+  /* '' */
+}
+
+/* line 500, ../sass/fontello-mixins.scss */
+.icon-tree-1:before {
+  content: '\e83e';
+  /* '' */
+}
+
+/* line 505, ../sass/fontello-mixins.scss */
+.icon-tree-2:before {
+  content: '\e83f';
+  /* '' */
+}
+
+/* line 510, ../sass/fontello-mixins.scss */
+.icon-chat-empty:before {
+  content: '\f0e6';
+  /* '' */
+}
+
+/* line 515, ../sass/fontello-mixins.scss */
+.icon-picture:before {
+  content: '🌄';
+  /* '\1f304' */
+}
+
+/* line 520, ../sass/fontello-mixins.scss */
+.icon-picture-1:before {
+  content: '\e809';
+  /* '' */
+}
+
+/* line 525, ../sass/fontello-mixins.scss */
+.icon-globe:before {
+  content: '🌎';
+  /* '\1f30e' */
+}
+
+/* line 530, ../sass/fontello-mixins.scss */
+.icon-gift:before {
+  content: '🎁';
+  /* '\1f381' */
+}
+
+/* line 535, ../sass/fontello-mixins.scss */
+.icon-graduation-cap:before {
+  content: '🎓';
+  /* '\1f393' */
+}
+
+/* line 540, ../sass/fontello-mixins.scss */
+.icon-mic:before {
+  content: '🎤';
+  /* '\1f3a4' */
+}
+
+/* line 545, ../sass/fontello-mixins.scss */
+.icon-videocam:before {
+  content: '🎥';
+  /* '\1f3a5' */
+}
+
+/* line 550, ../sass/fontello-mixins.scss */
+.icon-headphones:before {
+  content: '🎧';
+  /* '\1f3a7' */
+}
+
+/* line 555, ../sass/fontello-mixins.scss */
+.icon-ticket:before {
+  content: '🎫';
+  /* '\1f3ab' */
+}
+
+/* line 560, ../sass/fontello-mixins.scss */
+.icon-award-1:before {
+  content: '\e80a';
+  /* '' */
+}
+
+/* line 565, ../sass/fontello-mixins.scss */
+.icon-award:before {
+  content: '🏉';
+  /* '\1f3c9' */
+}
+
+/* line 570, ../sass/fontello-mixins.scss */
+.icon-thumbs-up:before {
+  content: '👍';
+  /* '\1f44d' */
+}
+
+/* line 575, ../sass/fontello-mixins.scss */
+.icon-thumbs-down:before {
+  content: '👎';
+  /* '\1f44e' */
+}
+
+/* line 580, ../sass/fontello-mixins.scss */
+.icon-user:before {
+  content: '👤';
+  /* '\1f464' */
+}
+
+/* line 585, ../sass/fontello-mixins.scss */
+.icon-users:before {
+  content: '👥';
+  /* '\1f465' */
+}
+
+/* line 590, ../sass/fontello-mixins.scss */
+.icon-users-1:before {
+  content: '\e802';
+  /* '' */
+}
+
+/* line 595, ../sass/fontello-mixins.scss */
+.icon-lamp:before {
+  content: '💡';
+  /* '\1f4a1' */
+}
+
+/* line 600, ../sass/fontello-mixins.scss */
+.icon-credit-card-1:before {
+  content: '\e80b';
+  /* '' */
+}
+
+/* line 605, ../sass/fontello-mixins.scss */
+.icon-credit-card:before {
+  content: '💳';
+  /* '\1f4b3' */
+}
+
+/* line 610, ../sass/fontello-mixins.scss */
+.icon-monitor:before {
+  content: '💻';
+  /* '\1f4bb' */
+}
+
+/* line 615, ../sass/fontello-mixins.scss */
+.icon-floppy:before {
+  content: '💾';
+  /* '\1f4be' */
+}
+
+/* line 620, ../sass/fontello-mixins.scss */
+.icon-folder:before {
+  content: '📁';
+  /* '\1f4c1' */
+}
+
+/* line 625, ../sass/fontello-mixins.scss */
+.icon-calendar:before {
+  content: '📅';
+  /* '\1f4c5' */
+}
+
+/* line 630, ../sass/fontello-mixins.scss */
+.icon-chart-line:before {
+  content: '📈';
+  /* '\1f4c8' */
+}
+
+/* line 635, ../sass/fontello-mixins.scss */
+.icon-chart-bar:before {
+  content: '📊';
+  /* '\1f4ca' */
+}
+
+/* line 640, ../sass/fontello-mixins.scss */
+.icon-attach:before {
+  content: '📎';
+  /* '\1f4ce' */
+}
+
+/* line 645, ../sass/fontello-mixins.scss */
+.icon-book:before {
+  content: '📕';
+  /* '\1f4d5' */
+}
+
+/* line 650, ../sass/fontello-mixins.scss */
+.icon-book-1:before {
+  content: '\e808';
+  /* '' */
+}
+
+/* line 655, ../sass/fontello-mixins.scss */
+.icon-book-open:before {
+  content: '📖';
+  /* '\1f4d6' */
+}
+
+/* line 660, ../sass/fontello-mixins.scss */
+.icon-phone:before {
+  content: '📞';
+  /* '\1f4de' */
+}
+
+/* line 665, ../sass/fontello-mixins.scss */
+.icon-megaphone:before {
+  content: '📣';
+  /* '\1f4e3' */
+}
+
+/* line 670, ../sass/fontello-mixins.scss */
+.icon-newspaper:before {
+  content: '📰';
+  /* '\1f4f0' */
+}
+
+/* line 680, ../sass/fontello-mixins.scss */
+.icon-signal:before {
+  content: '📶';
+  /* '\1f4f6' */
+}
+
+/* line 685, ../sass/fontello-mixins.scss */
+.icon-camera:before {
+  content: '📷';
+  /* '\1f4f7' */
+}
+
+/* line 690, ../sass/fontello-mixins.scss */
+.icon-search:before {
+  content: '🔍';
+  /* '\1f50d' */
+}
+
+/* line 695, ../sass/fontello-mixins.scss */
+.icon-search-1:before {
+  content: '\e803';
+  /* '' */
+}
+
+/* line 700, ../sass/fontello-mixins.scss */
+.icon-lock:before {
+  content: '\1f512';
+  /* '\1f512' */
+}
+
+/* line 705, ../sass/fontello-mixins.scss */
+.icon-lock-open:before {
+  content: '🔓';
+  /* '\1f513' */
+}
+
+/* line 710, ../sass/fontello-mixins.scss */
+.icon-bell:before {
+  content: '🔔';
+  /* '\1f514' */
+}
+
+/* line 715, ../sass/fontello-mixins.scss */
+.icon-bell-1:before {
+  content: '\e800';
+  /* '' */
+}
+
+/* line 720, ../sass/fontello-mixins.scss */
+.icon-link:before {
+  content: '🔗';
+  /* '\1f517' */
+}
+
+/* line 725, ../sass/fontello-mixins.scss */
+.icon-flashlight:before {
+  content: '🔦';
+  /* '\1f526' */
+}
+
+/* line 730, ../sass/fontello-mixins.scss */
+.icon-chart-area:before {
+  content: '🔾';
+  /* '\1f53e' */
+}
+
+/* line 735, ../sass/fontello-mixins.scss */
+.icon-clock:before {
+  content: '🕔';
+  /* '\1f554' */
+}
+
+/* line 740, ../sass/fontello-mixins.scss */
+.icon-clock-1:before {
+  content: '\e807';
+  /* '' */
+}
+
+/* line 745, ../sass/fontello-mixins.scss */
+.icon-rocket:before {
+  content: '🚀';
+  /* '\1f680' */
+}
+
+/**
+ * IE Compatibility
+ */
+/* line 23, ../sass/athletics.scss */
+.page-node-208 #breadcrumb {
+  display: none;
+}
+
+/* line 29, ../sass/athletics.scss */
+.section-header .athletic-branding .region-branding {
+  /* Panther Logo */
+}
+/* line 31, ../sass/athletics.scss */
+.section-header .athletic-branding .region-branding .logo-img {
+  margin: 0 auto;
+  text-align: center;
+  width: 99%;
+}
+@media only screen and (max-width: 380px) {
+  /* line 31, ../sass/athletics.scss */
+  .section-header .athletic-branding .region-branding .logo-img {
+    margin: 0 30% 3% !important;
+    width: 40% !important;
+  }
+}
+
+/* line 44, ../sass/athletics.scss */
+.athletics-content .region-content {
+  margin-top: 0;
+}
+
+/* line 49, ../sass/athletics.scss */
+.athletics-context {
+  /* BEGIN: Athletic Panes */
+  /*  Node Adjustment */
+  /* Before: Athletic People Adjustments */
+  /* END: Athletic People Adjustments */
+  /*
+   * END: Athletic Panes
+  */
+  /*
+   * BEGIN: Athletic Views
+  */
+  /* BEGIN: Athletic Global View Styles */
+}
+/* line 50, ../sass/athletics.scss */
+.athletics-context h1.athletics-title {
+  color: #ffb300;
+  font-family: "pt_sans_narrowbold";
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+/* line 56, ../sass/athletics.scss */
+.athletics-context h2.pane-title {
+  font-szie: 1.4em;
+  text-transform: uppercase;
+}
+/* line 60, ../sass/athletics.scss */
+.athletics-context .pane-node-body {
+  color: #cccccc;
+}
+/* line 67, ../sass/athletics.scss */
+.athletics-context .panel-pane h2.pane-title,
+.athletics-context .pane-views-panes h2.pane-title,
+.athletics-context .sidebar .panel-pane h2.pane-title,
+.athletics-context .sidebar .pane-views-panes h2.pane-title,
+.athletics-context .athletics-pane-title,
+.athletics-context.node-type-person .row2:before {
+  font-size: 1.4em;
+  color: #ffb300;
+  font-family: 'pt_sans_narrowbold';
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 1px;
+  font-weight: normal;
+  border-bottom: none;
+  text-transform: uppercase;
+}
+/* line 78, ../sass/athletics.scss */
+.athletics-context .panel-pane h2.pane-title a, .athletics-context .panel-pane h2.pane-title a:link, .athletics-context .panel-pane h2.pane-title a:visited,
+.athletics-context .pane-views-panes h2.pane-title a,
+.athletics-context .pane-views-panes h2.pane-title a:link,
+.athletics-context .pane-views-panes h2.pane-title a:visited,
+.athletics-context .sidebar .panel-pane h2.pane-title a,
+.athletics-context .sidebar .panel-pane h2.pane-title a:link,
+.athletics-context .sidebar .panel-pane h2.pane-title a:visited,
+.athletics-context .sidebar .pane-views-panes h2.pane-title a,
+.athletics-context .sidebar .pane-views-panes h2.pane-title a:link,
+.athletics-context .sidebar .pane-views-panes h2.pane-title a:visited,
+.athletics-context .athletics-pane-title a,
+.athletics-context.node-type-person .row2:before a,
+.athletics-context .athletics-pane-title a:link,
+.athletics-context.node-type-person .row2:before a:link,
+.athletics-context .athletics-pane-title a:visited,
+.athletics-context.node-type-person .row2:before a:visited {
+  color: #ffb300;
+  text-decoration: none;
+}
+/* line 82, ../sass/athletics.scss */
+.athletics-context .panel-pane h2.pane-title a:hover, .athletics-context .panel-pane h2.pane-title a:active, .athletics-context .panel-pane h2.pane-title a:focus,
+.athletics-context .pane-views-panes h2.pane-title a:hover,
+.athletics-context .pane-views-panes h2.pane-title a:active,
+.athletics-context .pane-views-panes h2.pane-title a:focus,
+.athletics-context .sidebar .panel-pane h2.pane-title a:hover,
+.athletics-context .sidebar .panel-pane h2.pane-title a:active,
+.athletics-context .sidebar .panel-pane h2.pane-title a:focus,
+.athletics-context .sidebar .pane-views-panes h2.pane-title a:hover,
+.athletics-context .sidebar .pane-views-panes h2.pane-title a:active,
+.athletics-context .sidebar .pane-views-panes h2.pane-title a:focus,
+.athletics-context .athletics-pane-title a:hover,
+.athletics-context.node-type-person .row2:before a:hover,
+.athletics-context .athletics-pane-title a:active,
+.athletics-context.node-type-person .row2:before a:active,
+.athletics-context .athletics-pane-title a:focus,
+.athletics-context.node-type-person .row2:before a:focus {
+  color: white;
+  background-color: transparent;
+}
+/* line 87, ../sass/athletics.scss */
+.athletics-context #page.page {
+  background-color: #600e10;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF600E10', endColorstr='#FF250101');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzYwMGUxMCIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjNDUwODA5Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMjUwMTAxIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #600e10), color-stop(50%, #450809), color-stop(100%, #250101));
+  background-image: -webkit-linear-gradient(top, #600e10 0%, #450809 50%, #250101 100%);
+  background-image: -moz-linear-gradient(top, #600e10 0%, #450809 50%, #250101 100%);
+  background-image: -o-linear-gradient(top, #600e10 0%, #450809 50%, #250101 100%);
+  background-image: linear-gradient(top, #600e10 0%, #450809 50%, #250101 100%);
+}
+/* line 89, ../sass/athletics.scss */
+.athletics-context #page.page #section-header {
+  background: #4b0d0e;
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRiMGQwZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIwJSIgc3RvcC1jb2xvcj0iIzcyMTUxNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0YjBkMGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(left, #4b0d0e 0%, #721517 20%, #4b0d0e 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #4b0d0e), color-stop(20%, #721517), color-stop(100%, #4b0d0e));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #4b0d0e 0%, #721517 20%, #4b0d0e 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #4b0d0e 0%, #721517 20%, #4b0d0e 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #4b0d0e 0%, #721517 20%, #4b0d0e 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #4b0d0e 0%, #721517 20%, #4b0d0e 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b0d0e', endColorstr='#4b0d0e',GradientType=1 );
+  /* IE6-8 */
+}
+@media only screen and (max-width: 380px) {
+  /* line 89, ../sass/athletics.scss */
+  .athletics-context #page.page #section-header {
+    background: #600e10;
+  }
+}
+/* line 92, ../sass/athletics.scss */
+.athletics-context #page.page #section-header .athletic-user-wrapper {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+/* line 97, ../sass/athletics.scss */
+.athletics-context #page.page #section-header .athletic-user-wrapper .region-user-second a, .athletics-context #page.page #section-header .athletic-user-wrapper .region-user-second a:link, .athletics-context #page.page #section-header .athletic-user-wrapper .region-user-second a:visited {
+  font-weight: normal;
+}
+/* line 101, ../sass/athletics.scss */
+.athletics-context #page.page #section-header .athletic-user-wrapper .region-user-second .block-search-form .container-inline {
+  text-align: center;
+}
+/* line 104, ../sass/athletics.scss */
+.athletics-context #page.page #section-header .athletic-user-wrapper .region-user-second .block-search-form .form-text {
+  border-radius: 0 0 0 0;
+  margin-right: 0.5em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  background-color: #2e2e2e;
+  border: 1px solid #48090a;
+  font-size: 0.846em;
+  font-weight: bold;
+  color: #333333;
+  padding: 0.154em 0.231em 0.154em 13px;
+  -webkit-box-shadow: inset 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
+}
+/* line 117, ../sass/athletics.scss */
+.athletics-context #page.page #section-header .athletic-user-wrapper .region-user-second .block-search-form .form-item textarea, .athletics-context #page.page #section-header .athletic-user-wrapper .region-user-second .block-search-form .form-item input {
+  color: #666666;
+}
+/* line 124, ../sass/athletics.scss */
+.athletics-context #page.page #section-header .athletic-brand-wrapper {
+  /* Alert Button */
+}
+/* line 129, ../sass/athletics.scss */
+.athletics-context #page.page #section-header .athletic-brand-wrapper .block-sitewide-alerts-block .view-sitewide-alerts .views-row {
+  padding-right: 0;
+}
+@media only screen and (max-width: 380px) {
+  /* line 129, ../sass/athletics.scss */
+  .athletics-context #page.page #section-header .athletic-brand-wrapper .block-sitewide-alerts-block .view-sitewide-alerts .views-row {
+    padding: 0;
+  }
+}
+/* line 132, ../sass/athletics.scss */
+.athletics-context #page.page #section-header .athletic-brand-wrapper .block-sitewide-alerts-block .view-sitewide-alerts .views-row a, .athletics-context #page.page #section-header .athletic-brand-wrapper .block-sitewide-alerts-block .view-sitewide-alerts .views-row a:link, .athletics-context #page.page #section-header .athletic-brand-wrapper .block-sitewide-alerts-block .view-sitewide-alerts .views-row a:visited {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: #730027;
+  padding: 0.5em 1.2em;
+  background: -moz-linear-gradient(top, #ffb300 0%, #ffb300 50%, #ffb300 50%, #cc8f00 65%, #b37d00);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffb300), color-stop(0.5, #ffb300), color-stop(0.5, #ffb300), color-stop(0.65, #cc8f00), to(#b37d00));
+  background: #ffb300;
+  /* Old browsers */
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFB300', endColorstr='#FFB37D00');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmYjMwMCIvPjxzdG9wIG9mZnNldD0iNDglIiBzdG9wLWNvbG9yPSIjZmZiMzAwIi8+PHN0b3Agb2Zmc2V0PSI1MiUiIHN0b3AtY29sb3I9IiNjYzhmMDAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiMzdkMDAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffb300), color-stop(48%, #ffb300), color-stop(52%, #cc8f00), color-stop(100%, #b37d00));
+  background-image: -webkit-linear-gradient(top, #ffb300 0%, #ffb300 48%, #cc8f00 52%, #b37d00 100%);
+  background-image: -moz-linear-gradient(top, #ffb300 0%, #ffb300 48%, #cc8f00 52%, #b37d00 100%);
+  background-image: -o-linear-gradient(top, #ffb300 0%, #ffb300 48%, #cc8f00 52%, #b37d00 100%);
+  background-image: linear-gradient(top, #ffb300 0%, #ffb300 48%, #cc8f00 52%, #b37d00 100%);
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #b37d00;
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 0px 2px white;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 0px 2px white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 0px 2px white;
+  text-shadow: 0px 1px 3px #ffca4d, 0px 1px 0px #cc8f00;
+  display: block;
+  text-align: center;
+  color: black;
+  margin: 1em 0;
+}
+/* line 139, ../sass/athletics.scss */
+.athletics-context #page.page #section-header .athletic-brand-wrapper .block-sitewide-alerts-block .view-sitewide-alerts .views-row a:hover, .athletics-context #page.page #section-header .athletic-brand-wrapper .block-sitewide-alerts-block .view-sitewide-alerts .views-row a:active, .athletics-context #page.page #section-header .athletic-brand-wrapper .block-sitewide-alerts-block .view-sitewide-alerts .views-row a:focus {
+  color: #0d0004;
+  background: -moz-linear-gradient(top, #b37d00 0%, #cc8f00 50%, #e6a100 50%, #ffb300 65%, #ffb300);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b37d00), color-stop(0.5, #cc8f00), color-stop(0.5, #e6a100), color-stop(0.65, #ffb300), to(#ffb300));
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #b37d00;
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 0px 2px white;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 0px 2px white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 0px 2px white;
+  text-shadow: 0px 1px 3px #ffca4d, 0px 1px 0px #cc8f00;
+  background: #ffb300;
+  /* Old browsers */
+  color: #730027;
+  text-decoration: none;
+}
+/* line 148, ../sass/athletics.scss */
+.athletics-context #page.page .athletic-content-wrapper {
+  -webkit-box-shadow: inset 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
+}
+/* line 150, ../sass/athletics.scss */
+.athletics-context #page.page .athletic-content-wrapper #breadcrumb {
+  font-family: 'pt_sans_narrowbold';
+  font-size: 0.925em;
+  color: white;
+}
+/* line 154, ../sass/athletics.scss */
+.athletics-context #page.page .athletic-content-wrapper #breadcrumb a, .athletics-context #page.page .athletic-content-wrapper #breadcrumb a:link, .athletics-context #page.page .athletic-content-wrapper #breadcrumb a:visited {
+  font-weight: normal;
+  font-family: 'pt_sans_narrowbold';
+  color: #cccccc;
+}
+/* line 159, ../sass/athletics.scss */
+.athletics-context #page.page .athletic-content-wrapper #breadcrumb a:hover, .athletics-context #page.page .athletic-content-wrapper #breadcrumb a:active, .athletics-context #page.page .athletic-content-wrapper #breadcrumb a:focus {
+  font-weight: normal;
+  color: white;
+  border-bottom: none;
+}
+/* line 166, ../sass/athletics.scss */
+.athletics-context #page.page .athletic-content-wrapper .region-content h1.event-title {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+/* line 171, ../sass/athletics.scss */
+.athletics-context #page.page .athletic-content-wrapper .region-content h2 {
+  box-shadow: none;
+  				                  /*
+   *  BEGIN: Athletics Primary Menu
+   */
+}
+/* line 177, ../sass/athletics.scss */
+.athletics-context #page.page .athletic-content-wrapper .region-content .pane-node-body strong {
+  color: #ffb300;
+}
+/* line 183, ../sass/athletics.scss */
+.athletics-context #page.page #section-footer {
+  border-top: 1px solid #461e1f;
+  background: #150000;
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE1MDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #150000 0%, #040000 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #150000), color-stop(100%, #040000));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #150000 0%, #040000 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #150000 0%, #040000 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #150000 0%, #040000 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #150000 0%, #040000 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#150000', endColorstr='#040000',GradientType=0 );
+  /* IE6-8 */
+}
+/* line 196, ../sass/athletics.scss */
+.athletics-context .title-background-color-a h2.pane-title,
+.athletics-context .title-background-color-a .pane-views-panes h2.pane-title,
+.athletics-context .title-background-color-a .sidebar .panel-pane h2.pane-title,
+.athletics-context .title-background-color-a .sidebar .pane-views-panes h2.pane-title,
+.athletics-context .title-background-color-b h2.pane-title,
+.athletics-context .title-background-color-b .pane-views-panes h2.pane-title,
+.athletics-context .title-background-color-b .sidebar .panel-pane h2.pane-title,
+.athletics-context .title-background-color-b .sidebar .pane-views-panes h2.pane-title,
+.athletics-context .title-background-color-c h2.pane-title,
+.athletics-context .title-background-color-c .pane-views-panes h2.pane-title,
+.athletics-context .title-background-color-c .sidebar .panel-pane h2.pane-title,
+.athletics-context .title-background-color-c .sidebar .pane-views-panes h2.pane-title,
+.athletics-context .title-background-color-d h2.pane-title,
+.athletics-context .title-background-color-d .pane-views-panes h2.pane-title,
+.athletics-context .title-background-color-d .sidebar .panel-pane h2.pane-title,
+.athletics-context .title-background-color-d .sidebar .pane-views-panes h2.pane-title {
+  color: white;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 1.4em;
+  text-transform: none;
+}
+/* line 204, ../sass/athletics.scss */
+.athletics-context .view-slides {
+  background-color: #0F0B05;
+  border: medium none;
+}
+/* line 211, ../sass/athletics.scss */
+.athletics-context .panel-pane .field-item {
+  border-bottom: 1px solid #461e1f;
+  border-top: 1px solid #240203;
+}
+/* line 215, ../sass/athletics.scss */
+.athletics-context .panel-pane .field-item:first-child {
+  border-top: none;
+}
+/* line 218, ../sass/athletics.scss */
+.athletics-context .panel-pane .field-item:last-child {
+  border-bottom: none;
+}
+/* line 225, ../sass/athletics.scss */
+.athletics-context .pane-node-field-related-links .field-item,
+.athletics-context .pane-node-field-related-files .field-item,
+.athletics-context .pane-node-field-related-flexpages .field-item {
+  font-weight: bold;
+}
+/* line 227, ../sass/athletics.scss */
+.athletics-context .pane-node-field-related-links .field-item a, .athletics-context .pane-node-field-related-links .field-item a:link, .athletics-context .pane-node-field-related-links .field-item a:visited,
+.athletics-context .pane-node-field-related-files .field-item a,
+.athletics-context .pane-node-field-related-files .field-item a:link,
+.athletics-context .pane-node-field-related-files .field-item a:visited,
+.athletics-context .pane-node-field-related-flexpages .field-item a,
+.athletics-context .pane-node-field-related-flexpages .field-item a:link,
+.athletics-context .pane-node-field-related-flexpages .field-item a:visited {
+  color: #cccccc;
+  text-decoration: none;
+}
+/* line 231, ../sass/athletics.scss */
+.athletics-context .pane-node-field-related-links .field-item a:hover, .athletics-context .pane-node-field-related-links .field-item a:active, .athletics-context .pane-node-field-related-links .field-item a:focus,
+.athletics-context .pane-node-field-related-files .field-item a:hover,
+.athletics-context .pane-node-field-related-files .field-item a:active,
+.athletics-context .pane-node-field-related-files .field-item a:focus,
+.athletics-context .pane-node-field-related-flexpages .field-item a:hover,
+.athletics-context .pane-node-field-related-flexpages .field-item a:active,
+.athletics-context .pane-node-field-related-flexpages .field-item a:focus {
+  color: white;
+}
+/* line 241, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view a,
+.athletics-context .pane-views-panes .view a:link,
+.athletics-context .pane-views-panes .view a:visited {
+  color: #cccccc;
+  text-decoration: none;
+}
+/* line 248, ../sass/athletics.scss */
+.athletics-context article.node-news a, .athletics-context article.node-news a:link, .athletics-context article.node-news a:visited {
+  color: #730027;
+  text-decoration: none;
+}
+/* line 252, ../sass/athletics.scss */
+.athletics-context article.node-news a:hover, .athletics-context article.node-news a:active, .athletics-context article.node-news a:focus {
+  color: #400016;
+  text-decoration: none;
+}
+/* line 264, ../sass/athletics.scss */
+.athletics-context.node-type-person .grid-13.row2,
+.athletics-context.node-type-person .grid-13.row3,
+.athletics-context.node-type-person .person-node-content-area,
+.athletics-context.node-type-person .pane-additional-links-custom {
+  border: 1px solid #cccccc;
+  background-color: white;
+  margin-top: 20px;
+}
+/* line 182, ../sass/mixins.scss */
+.athletics-context.node-type-person .grid-13.row2 a, .athletics-context.node-type-person .grid-13.row2 a:link, .athletics-context.node-type-person .grid-13.row2 a:visited,
+.athletics-context.node-type-person .grid-13.row3 a,
+.athletics-context.node-type-person .grid-13.row3 a:link,
+.athletics-context.node-type-person .grid-13.row3 a:visited,
+.athletics-context.node-type-person .person-node-content-area a,
+.athletics-context.node-type-person .person-node-content-area a:link,
+.athletics-context.node-type-person .person-node-content-area a:visited,
+.athletics-context.node-type-person .pane-additional-links-custom a,
+.athletics-context.node-type-person .pane-additional-links-custom a:link,
+.athletics-context.node-type-person .pane-additional-links-custom a:visited {
+  color: #730027;
+}
+/* line 185, ../sass/mixins.scss */
+.athletics-context.node-type-person .grid-13.row2 a:hover, .athletics-context.node-type-person .grid-13.row2 a:active, .athletics-context.node-type-person .grid-13.row2 a:focus,
+.athletics-context.node-type-person .grid-13.row3 a:hover,
+.athletics-context.node-type-person .grid-13.row3 a:active,
+.athletics-context.node-type-person .grid-13.row3 a:focus,
+.athletics-context.node-type-person .person-node-content-area a:hover,
+.athletics-context.node-type-person .person-node-content-area a:active,
+.athletics-context.node-type-person .person-node-content-area a:focus,
+.athletics-context.node-type-person .pane-additional-links-custom a:hover,
+.athletics-context.node-type-person .pane-additional-links-custom a:active,
+.athletics-context.node-type-person .pane-additional-links-custom a:focus {
+  color: #400016;
+  text-decoration: none;
+}
+/* line 268, ../sass/athletics.scss */
+.athletics-context.node-type-person .pane-additional-links-custom {
+  margin-top: 0;
+  border: none;
+}
+/* line 273, ../sass/athletics.scss */
+.athletics-context.node-type-person .grid-13 .pane-title,
+.athletics-context.node-type-person div.row2:before {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+/* line 278, ../sass/athletics.scss */
+.athletics-context.node-type-person .grid-13.row3 .pane-ath-person-info .pane-content .pane-title {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+/* line 284, ../sass/athletics.scss */
+.athletics-context.node-type-person .grid-13.row3 .pane-title .pane-ath-person-info .omega-grid,
+.athletics-context.node-type-person #content-type-person-athletics .pane-ath-person-info .omega-grid {
+  margin-left: 0;
+}
+/* line 291, ../sass/athletics.scss */
+.athletics-context.node-type-person .person-node-content-area,
+.athletics-context.node-type-person .row2col1 .inside,
+.athletics-context.node-type-person .row2col2 .inside,
+.athletics-context.node-type-person .row3 .inside {
+  padding: 1em;
+}
+/* line 294, ../sass/athletics.scss */
+.athletics-context.node-type-person .row2col1 .inside {
+  padding-top: 0;
+}
+/* line 298, ../sass/athletics.scss */
+.athletics-context.node-type-person .panel-panel.grid-13 .grid-6.row2Col2 {
+  margin-bottom: 10px;
+}
+/* line 301, ../sass/athletics.scss */
+.athletics-context.node-type-person .panel-panel.grid-13 .field.field-name-field-bio {
+  width: 98%;
+}
+/* line 306, ../sass/athletics.scss */
+.athletics-context.node-type-person .pane-ath-person-info .inside {
+  display: table;
+  padding-left: 10px;
+}
+/* line 310, ../sass/athletics.scss */
+.athletics-context.node-type-person .pane-ath-person-info .panel-pane {
+  margin-left: 10px;
+  display: table-row;
+}
+/* line 316, ../sass/athletics.scss */
+.athletics-context.node-type-person .pane-ath-person-info .panel-pane .pane-title,
+.athletics-context.node-type-person .pane-ath-person-info .panel-pane .pane-content {
+  display: table-cell;
+}
+/* line 319, ../sass/athletics.scss */
+.athletics-context.node-type-person .pane-ath-person-info .panel-pane h2.pane-title {
+  font-size: 13px;
+  padding-right: 8px;
+}
+/* line 325, ../sass/athletics.scss */
+.athletics-context.node-type-person .row2:before {
+  margin-right: 0.71429em;
+  margin-left: 0.71429em;
+  margin-top: 0.71429em;
+}
+/* line 335, ../sass/athletics.scss */
+.athletics-context .pane-node-field-body .field-name-field-body p, .athletics-context .pane-node-field-body .field-name-field-body ul, .athletics-context .pane-node-field-body .field-name-field-body ol, .athletics-context .pane-node-field-body .field-name-field-body li, .athletics-context .pane-node-field-body .field-name-field-body img, .athletics-context .pane-node-field-body .field-name-field-body span, .athletics-context .pane-node-field-body .field-name-field-body strong, .athletics-context .pane-node-field-body .field-name-field-body em {
+  color: white;
+}
+/* line 342, ../sass/athletics.scss */
+.athletics-context.node-type-person .sidebar .panel-pane.pane-additional-links-custom .file-icon {
+  margin-bottom: 2px;
+}
+/* line 346, ../sass/athletics.scss */
+.athletics-context.node-type-person .sidebar .panel-pane.pane-additional-links-custom .panel-pane h2.pane-title, .athletics-context.node-type-person .sidebar .panel-pane.pane-additional-links-custom .panel-pane h2.pane-title a {
+  color: #ffb300;
+}
+/* line 352, ../sass/athletics.scss */
+.athletics-context.node-type-person .sidebar .pane-node-field-url .icon-monitor:hover {
+  cursor: auto;
+}
+/* line 369, ../sass/athletics.scss */
+.athletics-context ul.links {
+  padding: 0;
+  margin: 0;
+}
+/* line 372, ../sass/athletics.scss */
+.athletics-context ul.links .node-readmore {
+  padding: 0;
+  margin: 0;
+}
+/* line 375, ../sass/athletics.scss */
+.athletics-context ul.links .node-readmore a, .athletics-context ul.links .node-readmore a:link, .athletics-context ul.links .node-readmore a:visited {
+  font-style: normal;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: right;
+}
+/* line 381, ../sass/athletics.scss */
+.athletics-context ul.links .node-readmore a:hover, .athletics-context ul.links .node-readmore a:active, .athletics-context ul.links .node-readmore a:focus {
+  color: #0d0004;
+}
+/* line 386, ../sass/athletics.scss */
+.athletics-context .views-row {
+  padding: 0.5em 1em;
+  border-bottom: hidden;
+}
+/* line 390, ../sass/athletics.scss */
+.athletics-context .views-field-body {
+  color: #333333;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+/* line 399, ../sass/athletics.scss */
+.athletics-context .views-field-body a, .athletics-context .views-field-body a:link, .athletics-context .views-field-body a:visited,
+.athletics-context .views-field-body .read-more-link,
+.athletics-context .views-field-body .read-more-red,
+.athletics-context .views-field-body .views-more-link,
+.athletics-context .views-field-body .node-readmore a {
+  color: #333333;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+/* line 405, ../sass/athletics.scss */
+.athletics-context .views-field-body a:hover, .athletics-context .views-field-body a:active, .athletics-context .views-field-body a:focus {
+  color: white;
+}
+/* line 410, ../sass/athletics.scss */
+.athletics-context a.read-more-link,
+.athletics-context a.more-link {
+  color: #333333;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+/* line 418, ../sass/athletics.scss */
+.athletics-context a.more-link:hover,
+.athletics-context a.more-link:active,
+.athletics-context a.more-link:focus {
+  color: white;
+}
+/* line 422, ../sass/athletics.scss */
+.athletics-context .publish-date {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1em;
+}
+/* line 429, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .events-audience {
+  background-color: white;
+}
+/* line 431, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .events-audience .event-view-row {
+  border-bottom: 1px solid #cccccc;
+}
+/* line 433, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .events-audience .event-view-row h6.homepage-event {
+  margin: 0;
+}
+/* line 435, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .events-audience .event-view-row .location-name a, .athletics-context .pane-views-panes .events-audience .event-view-row .location-name a:link, .athletics-context .pane-views-panes .events-audience .event-view-row .location-name a:visited {
+  color: #730027;
+  text-decoration: none;
+}
+/* line 439, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .events-audience .event-view-row .location-name a:hover, .athletics-context .pane-views-panes .events-audience .event-view-row .location-name a:active, .athletics-context .pane-views-panes .events-audience .event-view-row .location-name a:focus {
+  color: #0d0004;
+}
+/* line 443, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .events-audience .event-view-row .events-audience > .view-footer {
+  border-color: #cccccc;
+}
+/* line 445, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .events-audience p.calendar {
+  margin: 0;
+  padding: 0;
+}
+/* line 448, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .events-audience p.calendar a, .athletics-context .pane-views-panes .events-audience p.calendar a:link, .athletics-context .pane-views-panes .events-audience p.calendar a:visited {
+  color: #730027;
+  text-decoration: none;
+}
+/* line 452, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .events-audience p.calendar a:hover, .athletics-context .pane-views-panes .events-audience p.calendar a:active, .athletics-context .pane-views-panes .events-audience p.calendar a:focus {
+  color: #0d0004;
+}
+/* line 459, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view .view-content {
+  padding: 0;
+}
+/* line 460, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view .view-filters {
+  padding: 0.5em 1em;
+}
+/* line 463, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view .view-filters .views-exposed-widget label {
+  float: left;
+  margin-right: 1em;
+}
+/* line 469, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view a.read-more.icon-right-open {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* line 475, ../sass/athletics.scss */
+.athletics-context .pane-views-panes, .athletics-context .panel-pane {
+  /* END: Athletic Global View Styles */
+  /* Node Specific Styles */
+  /* BEGIN: Athletic Events View */
+}
+/* line 476, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-filters, .athletics-context .panel-pane .view-filters {
+  padding: 0;
+}
+/* line 477, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-filters .ajax-progress, .athletics-context .panel-pane .view-filters .ajax-progress {
+  display: none;
+}
+/* line 479, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-filters #edit-tid-wrapper, .athletics-context .panel-pane .view-filters #edit-tid-wrapper {
+  padding: 0;
+  width: 100%;
+}
+/* line 482, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-filters #edit-tid-wrapper label, .athletics-context .panel-pane .view-filters #edit-tid-wrapper label {
+  color: white;
+  padding: 0 0 0.3em 0;
+}
+/* line 488, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-filters #edit-tid-wrapper .views-widget select:active,
+.athletics-context .pane-views-panes .view-filters #edit-tid-wrapper .views-widget select:focus, .athletics-context .panel-pane .view-filters #edit-tid-wrapper .views-widget select:active,
+.athletics-context .panel-pane .view-filters #edit-tid-wrapper .views-widget select:focus {
+  box-shadow: 0 0 7px #17150f;
+}
+/* line 491, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-filters #edit-tid-wrapper .views-widget .form-select, .athletics-context .panel-pane .view-filters #edit-tid-wrapper .views-widget .form-select {
+  padding: 0.462em 1em;
+  height: 2.615em;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  /* For IE8 and earlier */
+  border-color: #894e4e #2e0304 #2e0304;
+  border-radius: 4px 4px 4px 4px;
+  width: 100%;
+  font-weight: bold;
+}
+/* line 500, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-filters #edit-tid-wrapper .views-widget .form-select option, .athletics-context .panel-pane .view-filters #edit-tid-wrapper .views-widget .form-select option {
+  font-weight: bold;
+  color: #17150f;
+}
+/* line 509, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-content h3, .athletics-context .pane-views-panes .view-content h3.sports-title, .athletics-context .panel-pane .view-content h3, .athletics-context .panel-pane .view-content h3.sports-title {
+  margin: 0;
+}
+/* line 512, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-content .testimonial-rows, .athletics-context .panel-pane .view-content .testimonial-rows {
+  border-bottom: 1px dotted #cccccc;
+}
+/* line 515, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-content .views-row, .athletics-context .panel-pane .view-content .views-row {
+  color: white;
+  font-weight: bold;
+  padding: 0;
+  padding: 0.5em 1em;
+}
+/* line 520, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-content .views-row a, .athletics-context .pane-views-panes .view-content .views-row a:link, .athletics-context .pane-views-panes .view-content .views-row a:visited, .athletics-context .pane-views-panes .view-content .views-row a.read-more-link, .athletics-context .panel-pane .view-content .views-row a, .athletics-context .panel-pane .view-content .views-row a:link, .athletics-context .panel-pane .view-content .views-row a:visited, .athletics-context .panel-pane .view-content .views-row a.read-more-link {
+  color: #cccccc;
+  text-decoration: none;
+}
+/* line 524, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-content .views-row a:hover, .athletics-context .pane-views-panes .view-content .views-row a:active, .athletics-context .pane-views-panes .view-content .views-row a:focus, .athletics-context .panel-pane .view-content .views-row a:hover, .athletics-context .panel-pane .view-content .views-row a:active, .athletics-context .panel-pane .view-content .views-row a:focus {
+  color: white;
+}
+/* line 531, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-content .more-link,
+.athletics-context .pane-views-panes .view-content .read-more-red,
+.athletics-context .pane-views-panes .view-content .views-more-link,
+.athletics-context .pane-views-panes .view-content .node-readmore a, .athletics-context .panel-pane .view-content .more-link,
+.athletics-context .panel-pane .view-content .read-more-red,
+.athletics-context .panel-pane .view-content .views-more-link,
+.athletics-context .panel-pane .view-content .node-readmore a {
+  font-weight: bold;
+}
+/* line 533, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-content .more-link .views-field-body,
+.athletics-context .pane-views-panes .view-content .read-more-red .views-field-body,
+.athletics-context .pane-views-panes .view-content .views-more-link .views-field-body,
+.athletics-context .pane-views-panes .view-content .node-readmore a .views-field-body, .athletics-context .panel-pane .view-content .more-link .views-field-body,
+.athletics-context .panel-pane .view-content .read-more-red .views-field-body,
+.athletics-context .panel-pane .view-content .views-more-link .views-field-body,
+.athletics-context .panel-pane .view-content .node-readmore a .views-field-body {
+  color: #333333;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+/* line 540, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-content .more-link .views-exposed-widget label,
+.athletics-context .pane-views-panes .view-content .read-more-red .views-exposed-widget label,
+.athletics-context .pane-views-panes .view-content .views-more-link .views-exposed-widget label,
+.athletics-context .pane-views-panes .view-content .node-readmore a .views-exposed-widget label, .athletics-context .panel-pane .view-content .more-link .views-exposed-widget label,
+.athletics-context .panel-pane .view-content .read-more-red .views-exposed-widget label,
+.athletics-context .panel-pane .view-content .views-more-link .views-exposed-widget label,
+.athletics-context .panel-pane .view-content .node-readmore a .views-exposed-widget label {
+  float: left;
+  margin-right: 1em;
+}
+/* line 546, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-content .views-row:hover, .athletics-context .pane-views-panes .view-content .views-row:active, .athletics-context .pane-views-panes .view-content .views-row:focus, .athletics-context .panel-pane .view-content .views-row:hover, .athletics-context .panel-pane .view-content .views-row:active, .athletics-context .panel-pane .view-content .views-row:focus {
+  background-color: transparent;
+}
+/* line 550, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-footer, .athletics-context .panel-pane .view-footer {
+  border-top: 1px solid #240203;
+  text-align: right;
+  padding: 0.5em 1em;
+}
+/* line 554, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-footer p, .athletics-context .panel-pane .view-footer p {
+  text-align: right;
+  padding-top: 0.5em;
+}
+/* line 557, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-footer p a, .athletics-context .pane-views-panes .view-footer p a:link, .athletics-context .pane-views-panes .view-footer p a:visited, .athletics-context .panel-pane .view-footer p a, .athletics-context .panel-pane .view-footer p a:link, .athletics-context .panel-pane .view-footer p a:visited {
+  color: #cccccc;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+/* line 564, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-footer p a:hover, .athletics-context .pane-views-panes .view-footer p a:active, .athletics-context .pane-views-panes .view-footer p a:focus, .athletics-context .panel-pane .view-footer p a:hover, .athletics-context .panel-pane .view-footer p a:active, .athletics-context .panel-pane .view-footer p a:focus {
+  color: white;
+}
+/* line 568, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-footer p a.read-more-red:after,
+.athletics-context .pane-views-panes .view-footer p a.views-more-link:after, .athletics-context .panel-pane .view-footer p a.read-more-red:after,
+.athletics-context .panel-pane .view-footer p a.views-more-link:after {
+  content: "";
+}
+/* line 573, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .view-footer .node-readmore a:after, .athletics-context .panel-pane .view-footer .node-readmore a:after {
+  font-weight: bold;
+}
+/* line 578, ../sass/athletics.scss */
+.athletics-context .pane-views-panes ul.pager, .athletics-context .panel-pane ul.pager {
+  border: 1px solid #240203;
+  background: transparent;
+  min-height: 21px;
+  text-shadow: none;
+  margin-bottom: 1em;
+}
+/* line 584, ../sass/athletics.scss */
+.athletics-context .pane-views-panes ul.pager li, .athletics-context .panel-pane ul.pager li {
+  background: transparent;
+  border-right: 1px solid #894e4e;
+}
+/* line 587, ../sass/athletics.scss */
+.athletics-context .pane-views-panes ul.pager li a, .athletics-context .pane-views-panes ul.pager li a:link, .athletics-context .pane-views-panes ul.pager li a:visited, .athletics-context .panel-pane ul.pager li a, .athletics-context .panel-pane ul.pager li a:link, .athletics-context .panel-pane ul.pager li a:visited {
+  background: transparent;
+  text-shadow: none;
+  color: #cccccc;
+  text-decoration: none;
+}
+/* line 593, ../sass/athletics.scss */
+.athletics-context .pane-views-panes ul.pager li a:hover, .athletics-context .pane-views-panes ul.pager li a:active, .athletics-context .pane-views-panes ul.pager li a:focus, .athletics-context .panel-pane ul.pager li a:hover, .athletics-context .panel-pane ul.pager li a:active, .athletics-context .panel-pane ul.pager li a:focus {
+  color: white;
+}
+/* line 595, ../sass/athletics.scss */
+.athletics-context .pane-views-panes ul.pager li.pager-next, .athletics-context .panel-pane ul.pager li.pager-next {
+  border-left: 1px solid #894e4e;
+}
+/* line 597, ../sass/athletics.scss */
+.athletics-context .pane-views-panes ul.pager li.pager-next a, .athletics-context .pane-views-panes ul.pager li.pager-last a, .athletics-context .panel-pane ul.pager li.pager-next a, .athletics-context .panel-pane ul.pager li.pager-last a {
+  padding: 0.308em 0.615em;
+}
+/* line 606, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .athletic-context .node-location .events-audience, .athletics-context .panel-pane .athletic-context .node-location .events-audience {
+  border: 1px solid #cccccc;
+  background-color: white;
+}
+/* line 182, ../sass/mixins.scss */
+.athletics-context .pane-views-panes .athletic-context .node-location .events-audience a, .athletics-context .pane-views-panes .athletic-context .node-location .events-audience a:link, .athletics-context .pane-views-panes .athletic-context .node-location .events-audience a:visited, .athletics-context .panel-pane .athletic-context .node-location .events-audience a, .athletics-context .panel-pane .athletic-context .node-location .events-audience a:link, .athletics-context .panel-pane .athletic-context .node-location .events-audience a:visited {
+  color: #730027;
+}
+/* line 185, ../sass/mixins.scss */
+.athletics-context .pane-views-panes .athletic-context .node-location .events-audience a:hover, .athletics-context .pane-views-panes .athletic-context .node-location .events-audience a:active, .athletics-context .pane-views-panes .athletic-context .node-location .events-audience a:focus, .athletics-context .panel-pane .athletic-context .node-location .events-audience a:hover, .athletics-context .panel-pane .athletic-context .node-location .events-audience a:active, .athletics-context .panel-pane .athletic-context .node-location .events-audience a:focus {
+  color: #400016;
+  text-decoration: none;
+}
+/* line 615, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .athletic-events,
+.athletics-context .pane-views-panes .athletic-events-upcoming,
+.athletics-context .pane-views-panes .athletic-events-past, .athletics-context .panel-pane .athletic-events,
+.athletics-context .panel-pane .athletic-events-upcoming,
+.athletics-context .panel-pane .athletic-events-past {
+  background: transparent;
+  border: hidden;
+}
+/* line 619, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .athletic-events .view-content h3, .athletics-context .pane-views-panes .athletic-events .view-content h3.athletic-title,
+.athletics-context .pane-views-panes .athletic-events-upcoming .view-content h3,
+.athletics-context .pane-views-panes .athletic-events-upcoming .view-content h3.athletic-title,
+.athletics-context .pane-views-panes .athletic-events-past .view-content h3,
+.athletics-context .pane-views-panes .athletic-events-past .view-content h3.athletic-title, .athletics-context .panel-pane .athletic-events .view-content h3, .athletics-context .panel-pane .athletic-events .view-content h3.athletic-title,
+.athletics-context .panel-pane .athletic-events-upcoming .view-content h3,
+.athletics-context .panel-pane .athletic-events-upcoming .view-content h3.athletic-title,
+.athletics-context .panel-pane .athletic-events-past .view-content h3,
+.athletics-context .panel-pane .athletic-events-past .view-content h3.athletic-title {
+  border-top: 1px solid #461e1f;
+  color: #d1d1d1;
+  margin: 0;
+  padding: 0;
+}
+/* line 625, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .athletic-events .view-content .schedules-row,
+.athletics-context .pane-views-panes .athletic-events-upcoming .view-content .schedules-row,
+.athletics-context .pane-views-panes .athletic-events-past .view-content .schedules-row, .athletics-context .panel-pane .athletic-events .view-content .schedules-row,
+.athletics-context .panel-pane .athletic-events-upcoming .view-content .schedules-row,
+.athletics-context .panel-pane .athletic-events-past .view-content .schedules-row {
+  /* Tablets */
+  border-bottom: 1px solid #461e1f !important;
+  padding: 0.5em 0;
+  width: 100%;
+}
+@media only screen and (min-width: 381px) and (max-width: 959px) {
+  /* line 625, ../sass/athletics.scss */
+  .athletics-context .pane-views-panes .athletic-events .view-content .schedules-row,
+  .athletics-context .pane-views-panes .athletic-events-upcoming .view-content .schedules-row,
+  .athletics-context .pane-views-panes .athletic-events-past .view-content .schedules-row, .athletics-context .panel-pane .athletic-events .view-content .schedules-row,
+  .athletics-context .panel-pane .athletic-events-upcoming .view-content .schedules-row,
+  .athletics-context .panel-pane .athletic-events-past .view-content .schedules-row {
+    padding: 0;
+  }
+}
+/* line 630, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .athletic-events .view-content .schedules-row .views-field-title,
+.athletics-context .pane-views-panes .athletic-events-upcoming .view-content .schedules-row .views-field-title,
+.athletics-context .pane-views-panes .athletic-events-past .view-content .schedules-row .views-field-title, .athletics-context .panel-pane .athletic-events .view-content .schedules-row .views-field-title,
+.athletics-context .panel-pane .athletic-events-upcoming .view-content .schedules-row .views-field-title,
+.athletics-context .panel-pane .athletic-events-past .view-content .schedules-row .views-field-title {
+  display: block;
+}
+/* line 632, ../sass/athletics.scss */
+.athletics-context .pane-views-panes .athletic-events .view-content .schedules-row .views-field-title .schedules-title,
+.athletics-context .pane-views-panes .athletic-events-upcoming .view-content .schedules-row .views-field-title .schedules-title,
+.athletics-context .pane-views-panes .athletic-events-past .view-content .schedules-row .views-field-title .schedules-title, .athletics-context .panel-pane .athletic-events .view-content .schedules-row .views-field-title .schedules-title,
+.athletics-context .panel-pane .athletic-events-upcoming .view-content .schedules-row .views-field-title .schedules-title,
+.athletics-context .panel-pane .athletic-events-past .view-content .schedules-row .views-field-title .schedules-title {
+  border-bottom: 0;
+  padding: 0;
+  margin-bottom: 0;
+}
+/* line 643, ../sass/athletics.scss */
+.athletics-context .athletic-events span.athletic-day {
+  display: inline-block;
+  margin-left: 1em;
+}
+/* line 648, ../sass/athletics.scss */
+.athletics-context .athletic-events .views-row .schedules-title {
+  /* Mobile */
+  /* Tablets */
+}
+@media only screen and (max-width: 380px) {
+  /* line 648, ../sass/athletics.scss */
+  .athletics-context .athletic-events .views-row .schedules-title {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 381px) and (max-width: 959px) {
+  /* line 648, ../sass/athletics.scss */
+  .athletics-context .athletic-events .views-row .schedules-title {
+    margin: 0;
+  }
+}
+/* line 657, ../sass/athletics.scss */
+.athletics-context .athletic-events-upcoming .view-content h3.sports-title,
+.athletics-context .athletic-events-past .view-content h3.sports-title {
+  font-size: 1.3em;
+  margin: 0.25 0 0 0;
+}
+/* line 661, ../sass/athletics.scss */
+.athletics-context .athletic-events-upcoming .view-content span.win-loss,
+.athletics-context .athletic-events-past .view-content span.win-loss {
+  color: #ffb300;
+  float: right;
+  text-align: right;
+  display: inline-block;
+  width: 10%;
+}
+/* line 668, ../sass/athletics.scss */
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row {
+  clear: both;
+  display: inline-block;
+  padding: 0.3em 0 0.5em 0;
+}
+/* line 674, ../sass/athletics.scss */
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-title,
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-field-event-date-1,
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-field-event-date-2,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-title,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-field-event-date-1,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-field-event-date-2 {
+  display: block;
+  min-height: 18px;
+  width: 100%;
+  margin: 0;
+}
+/* line 679, ../sass/athletics.scss */
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-title span.athletic-time,
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-field-event-date-1 span.athletic-time,
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-field-event-date-2 span.athletic-time,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-title span.athletic-time,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-field-event-date-1 span.athletic-time,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-field-event-date-2 span.athletic-time {
+  display: inline-block;
+  text-align: right;
+  width: 50%;
+}
+/* line 684, ../sass/athletics.scss */
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-title span.athletic-day,
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-field-event-date-1 span.athletic-day,
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-field-event-date-2 span.athletic-day,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-title span.athletic-day,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-field-event-date-1 span.athletic-day,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-field-event-date-2 span.athletic-day {
+  text-align: left;
+  display: inline-block;
+  width: 50%;
+}
+/* line 689, ../sass/athletics.scss */
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-title .game-location,
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-field-event-date-1 .game-location,
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-field-event-date-2 .game-location,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-title .game-location,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-field-event-date-1 .game-location,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-field-event-date-2 .game-location {
+  font-weight: normal;
+}
+/* line 694, ../sass/athletics.scss */
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-field-hartnell-score,
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-field-opponent-score,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-field-hartnell-score,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-field-opponent-score {
+  width: 100%;
+  float: none;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 700, ../sass/athletics.scss */
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-field-hartnell-score .views-label,
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-field-opponent-score .views-label,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-field-hartnell-score .views-label,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-field-opponent-score .views-label {
+  color: white;
+}
+/* line 707, ../sass/athletics.scss */
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .win-loss-field,
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .team-vs-team,
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .game-location,
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .vs-opponent,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .win-loss-field,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .team-vs-team,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .game-location,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .vs-opponent {
+  text-align: center;
+}
+/* line 710, ../sass/athletics.scss */
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row p.opponents,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row p.opponents {
+  margin: 0;
+  text-align: center;
+}
+
+/* END: Athletic Events View */
+/* BEGIN: Athletic Person View */
+/* line 725, ../sass/athletics.scss */
+.athletics-context .view-athletics.coaching-staff .view-filters, .athletics-context .view-athletics.player-list .view-filters {
+  border-bottom: 1px solid rgba(137, 78, 78, 0.35);
+}
+/* line 729, ../sass/athletics.scss */
+.athletics-context .view-athletics .view-content {
+  border-top: 1px solid #461E1F;
+}
+/* line 738, ../sass/athletics.scss */
+.athletics-context .view-athletics .view-content .views-row.players-info-row:first-child, .athletics-context .view-athletics .view-content .views-row.coach-sport-row:first-child {
+  border-top: none;
+}
+/* line 741, ../sass/athletics.scss */
+.athletics-context .view-athletics .view-content .views-row.players-info-row.views-row-last, .athletics-context .view-athletics .view-content .views-row.coach-sport-row.views-row-last {
+  border-bottom: none;
+}
+/* line 745, ../sass/athletics.scss */
+.athletics-context .view-athletics .view-content .views-row .views-field-field-person-headshot {
+  float: left;
+}
+/* line 747, ../sass/athletics.scss */
+.athletics-context .view-athletics .view-content .views-row .views-field-field-person-headshot img {
+  border: 2px solid #cccccc;
+  margin: 0 1em 0.5em 0;
+}
+/* line 751, ../sass/athletics.scss */
+.athletics-context .view-athletics .view-content .views-row .views-field-field-player-number {
+  width: 28%;
+  max-width: 60px;
+  height: 45px;
+  float: left;
+  padding: 0;
+}
+/* line 757, ../sass/athletics.scss */
+.athletics-context .view-athletics .view-content .views-row .views-field-field-player-number h2 {
+  font-size: 2.769em;
+  color: white;
+  font-family: "pt_sans_narrowbold";
+  padding: 0;
+  margin: 0;
+  letter-spacing: 1px;
+  font-weight: normal;
+  line-height: 1em;
+}
+
+@media only screen and (max-width: 380px) {
+  /* line 827, ../sass/athletics.scss */
+  .athletics-context .view-athletics .view-content .views-row .views-field-field-player-number {
+    width: 100%;
+    text-align: center;
+  }
+  /* line 832, ../sass/athletics.scss */
+  .athletics-context .view-athletics .view-content .views-row.views-row.players-info-row .views-field-field-player-number {
+    margin-left: 0;
+  }
+  /* line 836, ../sass/athletics.scss */
+  .athletics-context .view-athletics .view-content .views-row.views-row.players-info-row .views-field-title,
+  .athletics-context .view-athletics .view-content .views-row.views-row.players-info-row .views-field-field-player-position {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 741px) and (max-width: 959px) {
+  /* line 885, ../sass/athletics.scss */
+  .athletics-context .view-athletics .view-content .views-row.players-info-row {
+    padding-top: 10px;
+  }
+  /* line 887, ../sass/athletics.scss */
+  .athletics-context .view-athletics .view-content .views-row.players-info-row .views-field-field-player-number {
+    padding-right: 5px;
+    height: 45px;
+    width: 38px;
+  }
+  /* line 891, ../sass/athletics.scss */
+  .athletics-context .view-athletics .view-content .views-row.players-info-row .views-field-field-player-number h2 {
+    font-size: 29px;
+    line-height: 29px;
+  }
+  /* line 896, ../sass/athletics.scss */
+  .athletics-context .view-athletics .view-content .views-row.players-info-row .views-field-title h3 {
+    font-size: 13px;
+  }
+  /* line 906, ../sass/athletics.scss */
+  .athletics-context .view-athletics .view-content .views-row.coach-sport-row .views-field-field-person-headshot {
+    float: none;
+  }
+}
+/* line 923, ../sass/athletics.scss */
+.athletics-context {
+  /* END: Athletic Person View */
+  /* BEGIN: Athletic News View */
+  /* END: Athletic News View */
+  /*
+   * END: Athletic Views
+  */
+}
+/* line 925, ../sass/athletics.scss */
+.athletics-context .view-athletics .view-content {
+  padding: 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid #461e1f;
+}
+/* line 930, ../sass/athletics.scss */
+.athletics-context .view-athletics .view-content .views-row,
+.athletics-context .view-athletics .view-content .coach-sport-row {
+  padding: 0.5em 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 54px;
+}
+/* line 936, ../sass/athletics.scss */
+.athletics-context .view-athletics .view-content .views-row .coach-title, .athletics-context .view-athletics .view-content .views-row .player-name,
+.athletics-context .view-athletics .view-content .coach-sport-row .coach-title,
+.athletics-context .view-athletics .view-content .coach-sport-row .player-name {
+  margin: 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+/* line 947, ../sass/athletics.scss */
+.athletics-context .view-athletics .view-content .views-row .views-field-field-person-title,
+.athletics-context .view-athletics .view-content .coach-sport-row .views-field-field-person-title {
+  font-size: 13px;
+  font-weight: normal;
+}
+/* line 954, ../sass/athletics.scss */
+.athletics-context .view-athletics ul.pager .ajax-progress-throbber {
+  display: none;
+}
+/* line 959, ../sass/athletics.scss */
+.athletics-context .coaching-staff {
+  background-color: transparent;
+  border: hidden;
+}
+/* line 963, ../sass/athletics.scss */
+.athletics-context .coaching-staff .view-content .coach-sport-row {
+  margin-bottom: 0.5em;
+  padding: 0.5em 0;
+  min-height: 70px;
+}
+/* line 970, ../sass/athletics.scss */
+.athletics-context .player-roster, .athletics-context .player-list {
+  background-color: transparent;
+  border: hidden;
+}
+/* line 973, ../sass/athletics.scss */
+.athletics-context .player-roster .view-content, .athletics-context .player-list .view-content {
+  border-top: 1px solid #461E1F;
+  border-bottom: 1px solid #240203;
+}
+/* line 976, ../sass/athletics.scss */
+.athletics-context .player-roster .view-content table.views-view-grid, .athletics-context .player-list .view-content table.views-view-grid {
+  border-top: 1px solid #240203;
+  border-bottom: 1px solid #461E1F;
+}
+/* line 979, ../sass/athletics.scss */
+.athletics-context .player-roster .view-content table.views-view-grid tbody, .athletics-context .player-list .view-content table.views-view-grid tbody {
+  border-left: none;
+  border-right: none;
+}
+/* line 983, ../sass/athletics.scss */
+.athletics-context .player-roster .view-content table.views-view-grid tbody tr td, .athletics-context .player-list .view-content table.views-view-grid tbody tr td {
+  padding: 0.5em 1em;
+  border-bottom: none;
+  color: white;
+}
+/* line 987, ../sass/athletics.scss */
+.athletics-context .player-roster .view-content table.views-view-grid tbody tr td .views-field, .athletics-context .player-list .view-content table.views-view-grid tbody tr td .views-field {
+  margin-right: 1em;
+}
+/* line 989, ../sass/athletics.scss */
+.athletics-context .player-roster .view-content table.views-view-grid tbody tr td .views-field a, .athletics-context .player-roster .view-content table.views-view-grid tbody tr td .views-field a:link, .athletics-context .player-roster .view-content table.views-view-grid tbody tr td .views-field a:visited, .athletics-context .player-list .view-content table.views-view-grid tbody tr td .views-field a, .athletics-context .player-list .view-content table.views-view-grid tbody tr td .views-field a:link, .athletics-context .player-list .view-content table.views-view-grid tbody tr td .views-field a:visited {
+  color: #cccccc;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+/* line 996, ../sass/athletics.scss */
+.athletics-context .player-roster .view-content table.views-view-grid tbody tr td .views-field a:hover, .athletics-context .player-roster .view-content table.views-view-grid tbody tr td .views-field a:active, .athletics-context .player-roster .view-content table.views-view-grid tbody tr td .views-field a:focus, .athletics-context .player-list .view-content table.views-view-grid tbody tr td .views-field a:hover, .athletics-context .player-list .view-content table.views-view-grid tbody tr td .views-field a:active, .athletics-context .player-list .view-content table.views-view-grid tbody tr td .views-field a:focus {
+  color: white;
+}
+/* line 1001, ../sass/athletics.scss */
+.athletics-context .player-roster .view-content table.views-view-grid tbody tr td.col-first, .athletics-context .player-list .view-content table.views-view-grid tbody tr td.col-first {
+  border-left: 1px solid #240203;
+}
+/* line 1004, ../sass/athletics.scss */
+.athletics-context .player-roster .view-content table.views-view-grid tbody tr td.col-last, .athletics-context .player-list .view-content table.views-view-grid tbody tr td.col-last {
+  border-left: 1px solid #461E1F;
+}
+@media only screen and (max-width: 380px) {
+  /* line 973, ../sass/athletics.scss */
+  .athletics-context .player-roster .view-content, .athletics-context .player-list .view-content {
+    /* Force table to not be like tables anymore */
+  }
+  /* line 1012, ../sass/athletics.scss */
+  .athletics-context .player-roster .view-content table, .athletics-context .player-roster .view-content thead, .athletics-context .player-roster .view-content tbody, .athletics-context .player-roster .view-content th, .athletics-context .player-roster .view-content td, .athletics-context .player-roster .view-content tr, .athletics-context .player-list .view-content table, .athletics-context .player-list .view-content thead, .athletics-context .player-list .view-content tbody, .athletics-context .player-list .view-content th, .athletics-context .player-list .view-content td, .athletics-context .player-list .view-content tr {
+    display: block;
+  }
+  /* line 1015, ../sass/athletics.scss */
+  .athletics-context .player-roster .view-content td, .athletics-context .player-roster .view-content td.col-first, .athletics-context .player-roster .view-content td.col-last, .athletics-context .player-list .view-content td, .athletics-context .player-list .view-content td.col-first, .athletics-context .player-list .view-content td.col-last {
+    /* Behave  like a "row" */
+    border-left: 1px solid #461e1f;
+    border-right: 1px solid #461E1F;
+    position: relative;
+    padding-left: 50%;
+  }
+}
+/* line 1029, ../sass/athletics.scss */
+.athletics-context .athletic-news {
+  background-color: transparent;
+  border: hidden;
+}
+/* line 1032, ../sass/athletics.scss */
+.athletics-context .athletic-news .news-view-row {
+  border-bottom: none;
+  padding: 0.5em 1em;
+}
+/* line 1035, ../sass/athletics.scss */
+.athletics-context .athletic-news .news-view-row .views-field-body {
+  color: white;
+}
+/* line 1039, ../sass/athletics.scss */
+.athletics-context .athletic-news .views-row-last.news-view-row {
+  border-bottom: 1px solid #461e1f;
+}

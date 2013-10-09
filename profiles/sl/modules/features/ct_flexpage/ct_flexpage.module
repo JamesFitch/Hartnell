@@ -1,0 +1,98 @@
+<?php
+/**
+ * @file
+ * Code for the CT Flexible Page feature.
+ */
+
+include_once('ct_flexpage.features.inc');
+
+/**
+ * Implements hook_form_alter().
+ */
+function ct_flexpage_form_alter(&$form, &$form_state, $form_id) {
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function ct_flexpage_module_implements_alter(&$implementations, $hook) {
+  $hooks = array('form_alter','menu_alter');
+  if (in_array($hook, $hooks)) {
+    $group = $implementations['ct_flexpage'];
+    unset($implementations['ct_flexpage']);
+    $implementations['ct_flexpage'] = $group;
+  }
+}
+
+function ct_flexpage_node_presave($node) {
+  switch ($node->type) {
+    case 'flexpage':
+    case 'webform':
+      // Reset the power_menu path cache by calling power_menu_get_path() and setting
+      // the fourth parameter, $use_cache, to FALSE.
+      // Note: This only takes effect once a node revision is published live. It does
+      // not take effect for unmoderated drafts.
+      if (isset($node->menu) && !$node->menu['enabled']) {
+        power_menu_get_path($node, 'node', NULL, FALSE);
+      }
+      break;
+    default:
+      break;
+  }
+}
+
+/**
+ * Implements hook_menu_block_tree_alter().
+ *
+ * Set the menu active trail using the power_menu
+ * module. Need to do this here to make power_menu,
+ * ctools/page_manager, and menu_block play nicely
+ * with each other.
+ */
+function ct_flexpage_menu_block_tree_alter(&$tree, &$config) {
+  static $run_count = 0;
+  if (($config['menu_name'] === 'main-menu') && ($run_count === 0)) {
+    $run_count++;
+    $entity = menu_get_object();
+    if (is_object($entity) && isset($entity->nid)) {
+      // We need to check if the in_active_trail array element has been set by
+      // menu_tree_add_active_path() already. If it has, the call to
+      // power_menu_set_path() will eventually lead to an invocation of
+      // node_page_title() passing in the nid instead of the node object, and
+      // thereby generating an error.
+      $in_active_trail = FALSE;
+      foreach ($tree as $key => $item) {
+        if ($tree[$key]['link']['in_active_trail'] == TRUE) {
+          $in_active_trail = TRUE;
+          break;
+        }
+      }
+      reset($tree);
+      if (!$in_active_trail) {
+        global $language;
+        $langcode = $language->language;
+        $type = 'node';
+
+        if (variable_get('power_menu_handlers_enabled', FALSE)) {
+          power_menu_set_path($entity, $type, $langcode);
+        }
+        menu_tree_add_active_path($tree);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function ct_flexpage_menu_alter(&$items) {
+  // Make 'Content' the default subtab under the 'Panelizer' tab instead of 'Settings'.
+  /*
+  $items['node/%node/panelizer']['page arguments'][1] = 'content';
+  $items['node/%node/panelizer']['access arguments'][4] = 'content';
+  $items['node/%node/panelizer/page_manager/settings']['type'] = MENU_LOCAL_TASK;
+  $items['node/%node/panelizer/page_manager/content']['type'] = MENU_DEFAULT_LOCAL_TASK;
+  $items['node/%node/panelizer/overview']['type'] = MENU_LOCAL_TASK;
+  $items['node/%node/panelizer/page_manager']['type'] = MENU_DEFAULT_LOCAL_TASK;
+   */
+}

@@ -1,0 +1,8 @@
+<?php
+/**
+ * @file
+ * Code for the CWI CT External Resource
+ feature.
+ */
+
+include_once('ct_external_resource.features.inc');

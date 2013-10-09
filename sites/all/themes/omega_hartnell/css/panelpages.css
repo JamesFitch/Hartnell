@@ -1,0 +1,157 @@
+/*
+ * Imports
+ */
+/*
+ * Mixins
+ */
+/*
+* General includes
+*/
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.woff") format("woff"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.ttf") format("truetype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pt_sans_narrowbold';
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot");
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.woff") format("woff"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.ttf") format("truetype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.svg#pt_sans_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * Vanilla mixins
+ */
+/* Links */
+/* Links END */
+/* 
+*	Style Elements
+*/
+/* Images */
+/* Margin is overriding core wysiwyg settings */
+/* Margin is overriding core wysiwyg settings */
+/* Panels */
+/*
+* Social buttons backgrounds
+*/
+/*
+* Flexible buttons
+*/
+/*
+ * BEGIN: Athletics Mixins
+ */
+/*
+ * END: Athletics Mixins
+ */
+/* line 17, ../sass/panelpages.scss */
+.panel-pane.pane-node-field-headerimg {
+  margin-bottom: 1.5em;
+}
+
+/* line 22, ../sass/panelpages.scss */
+.pane-node-title h1 {
+  margin-top: 0;
+}
+
+/* PERSON CT PAGE VARIANT  */
+/* line 28, ../sass/panelpages.scss */
+.node-type-person {
+  /* hide spurious element */
+  /*  +++++   undo layout in global.css:2242 ++++ */
+}
+/* line 31, ../sass/panelpages.scss */
+.node-type-person .pane-node-title h2 {
+  display: none;
+}
+/* line 36, ../sass/panelpages.scss */
+.node-type-person .field {
+  margin-left: 0;
+}
+/* line 39, ../sass/panelpages.scss */
+.node-type-person .field-name-field-person-headshot {
+  /* undo absolute positioning in global.css:2305 */
+  position: relative;
+}
+/* line 43, ../sass/panelpages.scss */
+.node-type-person .welcome-subtitle h2.pane-title {
+  border: none;
+}
+/* line 46, ../sass/panelpages.scss */
+.node-type-person .pane-node-field-person-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: -.8em;
+}
+/* line 51, ../sass/panelpages.scss */
+.node-type-person .pane-node-field-person-headshot {
+  float: left;
+  max-width: 50%;
+}
+/* line 55, ../sass/panelpages.scss */
+.node-type-person .pane-node-field-person-headshot img {
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+/* line 62, ../sass/panelpages.scss */
+.node-type-person .sidebar .pane-additional-links-custom {
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: white;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+/* line 68, ../sass/panelpages.scss */
+.node-type-person .sidebar .panel-pane {
+  margin-bottom: 0;
+}
+/* line 71, ../sass/panelpages.scss */
+.node-type-person .sidebar .pane-title {
+  border-bottom: none;
+}
+/* line 75, ../sass/panelpages.scss */
+.node-type-person .sidebar .panel-pane ~ .panel-pane h2.pane-title {
+  margin: 0;
+  padding: 0.5em 1em;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  font-size: 1.25em;
+}
+/* line 81, ../sass/panelpages.scss */
+.node-type-person .sidebar .panel-pane ~ .panel-pane h2.pane-title, .node-type-person .sidebar .panel-pane ~ .panel-pane h2.pane-title a {
+  color: #17150f;
+  background-color: white;
+}
+/* line 87, ../sass/panelpages.scss */
+.node-type-person .sidebar .panel-pane ~ .panel-pane:last-child .pane-content {
+  border-bottom: none;
+}
+/* line 91, ../sass/panelpages.scss */
+.node-type-person .sidebar .panel-pane ~ .panel-pane .pane-content {
+  border-bottom: 1px dotted #cccccc;
+  margin: 0 1em;
+  padding-bottom: 10px;
+}
+/* line 99, ../sass/panelpages.scss */
+.node-type-person .sidebar .panel-pane ~ .panel-pane.title-only .pane-content {
+  padding-bottom: 0;
+}
+/* line 101, ../sass/panelpages.scss */
+.node-type-person .sidebar .panel-pane ~ .panel-pane.title-only .pane-content * {
+  display: none;
+}
+/* line 107, ../sass/panelpages.scss */
+.node-type-person .sidebar .panel-pane ~ .panel-pane.pseudo-block-title .pane-content {
+  border-bottom: none;
+}
+/* line 112, ../sass/panelpages.scss */
+.node-type-person .sidebar .inline-icon:before {
+  display: inline-block;
+  padding-right: .25em;
+}

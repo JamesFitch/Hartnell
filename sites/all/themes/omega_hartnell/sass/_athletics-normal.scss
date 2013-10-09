@@ -1,0 +1,213 @@
+// General Theming 
+.athletics-context {
+  .region-branding {
+    z-index: 500;
+  }
+  .pane-main-menu > h2.pane-title:nth-child(1) {
+    @include dark-header-title;
+  }
+  a, a:link, a:visited {
+    color: $neutral;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: $base-font;
+    font-style: normal;
+  }
+  ul.tabs {
+    a, a:link, a:visited {
+      color: #730027;
+    }
+  }
+  ul.tabs .active {
+    a, a:link, a:visited {
+      color: #000000;
+    }
+  }
+  a:hover, a:active, a:focus {
+    color: $white; 
+  }
+  ul.tabs {
+    a:hover, a:active, a:focus {
+      color: #730027;
+    }
+  }
+  ul.tabs .active {
+    a:hover, a:active, a:focus {
+      color: #000000;
+    }
+  }
+
+/*
+ *  BEGIN: Athletics Primary Menu
+ */
+
+a.athletic-link, a.athletic-link:link, a.athletic-link:visited { 
+  @include athletic-link;
+}
+a.athletic-link:hover, a.athletic-link:focus, a.athletic-link:active { 
+  @include athletic-link-hover;
+}
+
+  .athletic-brand-wrapper {
+    .athletic-branding {
+      /* Panther Logo */
+        .logo-img {
+          margin-top: -8%;
+      }
+    }
+  }
+
+  .view-sitewide-alerts {
+      a, a:link, a:visited {
+        float: right;
+      }  
+  }
+
+/* Navigation: User */
+.region-user-second {
+  padding: left;
+    .block-search-form {
+      float: right;
+      width: 30%;   
+    }
+    .block-user-menu {
+      float: left;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+        ul.menu {
+          float: right;
+        }
+    }
+}
+
+// Coaches list
+  .view-athletics {
+    .view-content {
+      .views-row {
+        .views-field-field-person-headshot {
+          float: left;
+        }
+      }
+    } 
+  }
+
+// Players
+  h3.player-name,
+  .views-field-field-person-title,
+  .views-field-field-player-position {
+    font-weight: normal;
+    text-align: left;
+  }
+
+  .athletic-brand-wrapper {
+    height: 160px;
+    .athletic-branding {
+      /* Social Media Navigation */
+      .social-media-user {
+        ul.menu {
+         text-align: right;
+          li {
+           float: right;
+          }
+          li.last {
+           margin: 1em 0 0 0;
+          }
+        } 
+      }
+    }
+  }
+
+/* BEGIN: Athletic Slideshow View */
+    h2.slide-title a,
+    h2.slide-title a:link,
+    h2.slide-title a:visited {
+      font-family: 'pt_sans_narrowbold' ;
+      @include respond-to(handhelds) { font-size: 1.375em; } /* Mobile */
+      color: $gold ;
+      font-weight: normal ;
+    }
+    h2.slide-title a:hover,
+    h2.slide-title a:active,
+    h2.slide-title a:focus  {
+      color: darken($gold, 20%);  
+    }
+  .slideshow-athletic {
+    .flexslider {
+      li {
+        .views-field-nothing {
+           width: 100%;
+        }
+        .views-field-nothing-1 {
+          .float-left-text {
+           left: 52%;
+          // height: 501px;
+          }
+        }
+      }
+    }
+  }
+/* END View Type: Athletic Slideshow */
+
+/* BEGIN: Athletic Events View */
+  .athletic-events {
+    .view-content {
+      span.athletic-day {
+       float: right;
+      }
+      .views-row {
+       width: 100%;
+        .views-field-field-event-date-2 {
+         float: left;
+         width: 20%;
+        } 
+        .views-field-field-opponent,
+        .views-field-title-1 {
+         padding-left: 23%;
+        }
+        .schedules-title {
+         margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .athletic-events-upcoming,
+  .athletic-events-past {
+    .view-content {
+      .views-row.schedules-row {
+        .views-field-field-hartnell-score,
+        .views-field-field-opponent-score {
+          width: 50%;
+          float: left;
+        }
+      }
+    }
+  }
+/* END: Athletic Events View */
+
+/* BEGIN: Athletic Menu */
+
+  .athletic-primary-menu {
+    padding-top: 0;
+    .content {
+     width: 100%;
+      ul.menu {
+        float: right;
+        margin-left: 0;
+        padding-left: 0;
+        li {
+          padding: 0;
+          margin: 0;
+          list-style: inline;
+            a.athletic-link, a.athletic-link:link, a.athletic-link:visited { 
+              @include athletic-link;
+            }
+            a.athletic-link:hover, a.athletic-link:focus, a.athletic-link:active { 
+              @include athletic-link-hover;
+            }
+        }
+      }
+    }
+  }
+/* BEGIN: Athletic Menu */
+} /* END .athletic-context */

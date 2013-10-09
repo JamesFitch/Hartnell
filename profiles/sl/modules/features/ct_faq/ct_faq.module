@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ * Code for the CWI CT FAQ feature.
+ */
+
+include_once('ct_faq.features.inc');
+
+function ct_faq_preprocess_link(&$vars) {
+  if (isset($vars['options']['entity']->vocabulary_machine_name) &&
+      ($vars['options']['entity']->vocabulary_machine_name == 'faq_category') &&
+      isset($vars['options']['entity']->tid)) {
+    // Set the path of the Frequently Asked Questions landing page
+    $vars['path'] = 'node/122';
+    // Set the query string parameter for the tid of the FAQ Category taxonomy
+    $vars['options']['query']['tid'] = $vars['options']['entity']->tid;
+  }
+}

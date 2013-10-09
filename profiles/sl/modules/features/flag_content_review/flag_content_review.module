@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the CWI Flag Content Review feature.
+ */
+
+include_once('flag_content_review.features.inc');

@@ -1,0 +1,536 @@
+<?php
+
+/**
+ * @file hartnell_custom.module
+ *
+ * hartnell_custom module functions
+ */
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ *
+ * Tell panels where to find the .inc files that define ctools plugins 
+ */
+function hartnell_custom_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools' && !empty($plugin)) {
+    return "plugins/$plugin";
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function hartnell_custom_module_implements_alter(&$implementations, $hook) {
+  $hooks = array('menu_block_tree_alter');
+  if (in_array($hook, $hooks)) {
+    $group = $implementations['hartnell_custom'];
+    unset($implementations['hartnell_custom']);
+    $implementations['hartnell_custom'] = $group;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ * 
+ */
+function hartnell_custom_form_alter(&$form, &$form_state, $form_id) {
+
+  switch($form_id) {
+
+    case 'views_exposed_form':
+
+      // Workaround bug in View ajax handling of reset button in a panel.
+      // See https://drupal.org/node/1807916#comment-7124206
+      if (isset($form_state['view']->current_display) && 
+          'panel_pane_1' == $form_state['view']->current_display && $form['#action'] = '/') {
+        // Fix action URL.
+        $form['#action'] = $GLOBALS['base_url'] . '/' . $_GET['q'];
+      }
+
+      // Add select lists to course search exposed filters
+      if (isset($form_state['view']->name) && $form_state['view']->name == 'course_search') {      
+        $cols = array('COURSE_NAME','TERM','LOCATION','SHORT_TITLE','SUBJECT',);
+        $opts = hartnell_custom_get_course_search_filter_options($cols);
+        foreach($cols as $col) {
+          $form[$col]['#type'] = 'select';
+          $form[$col]['#options'] = $opts[$col];
+          $form[$col]['#empty_option'] = '';
+          $form[$col]['#empty_value'] = '';
+          $form[$col]['#size'] = 1;
+          $form[$col]['#validated'] = true;
+        }
+      }
+
+      break;
+
+    case 'taxonomy_form_term':
+
+      // Custom handling for taxonomy term form on "site_section" vocabulary.
+      if($form['#bundle'] == 'site_section') {
+
+        // Add custom validation function.
+        $form['#validate'][] = 'hartnell_custom_site_section_term_validate';
+
+        // Define field keys for processing downstream.
+        $body_class_field_keys = array(
+          'field_title_text_color', 
+          'field_title_background_color', 
+          'field_menu_text_color', 
+          'field_menu_background_color', 
+        ); 
+
+        // Term entity.
+        $term = $form['#term'];
+        // Configure theme fields.
+        foreach($body_class_field_keys as $fld) {
+
+          // Apply default values.
+          if(!empty($term[$fld]) && !empty($term[$fld][LANGUAGE_NONE][0]['value'])){
+            $val = $term[$fld][LANGUAGE_NONE][0]['value'];
+          } else {
+            $val = 'inherit';
+          }
+          $form[$fld]['und']['#default_value'] = $val;
+
+          // Configure for hide/show in UI.
+          $form[$fld][LANGUAGE_NONE]['#states'] = array(
+            'visible' => array(
+              // ':input[id="edit-field-color-settings-und"]' => array('value' => 'custom'),
+              '#edit-field-color-settings-und' => array('value' => 'custom'),
+            ),
+          );
+
+          // Add options array.
+          $form[$fld][LANGUAGE_NONE]['#options'] = hartnell_custom_site_section_color_options($fld);
+
+        }
+
+        // Give feedback on current inheritance application (applied ancestor section, or site defaults).
+        $desc = $form['field_color_settings'][LANGUAGE_NONE]['#description'];
+        $parent_tid = @$form['#term']['parent'][0];
+        if($parent_tid) {
+          $sec_theme_data = hartnell_custom_get_site_section_theme_data($parent_tid);
+          // Closest ancestor tid.
+          $applied_tid = @$sec_theme_data['merged']['field_title_text_color']['section tid'];
+          if($applied_tid) {
+            $parent_section = $sec_theme_data['data'][$applied_tid]['term'];
+            $parent_section = $parent_section->name;
+            $repl = '<strong><a href="' . $GLOBALS['base_url'] . '/taxonomy/term/' . 
+                $applied_tid . '/edit">' . $parent_section . '</a> Section</strong> 
+                (this is the closest ancestor with color settings specified)';      
+          }
+        }
+        
+        if(empty($repl)) {
+          $repl = '<strong>Site Default Style</strong> (all parent sections, if any, are set to "Inherit")';
+        }
+
+
+        $repl = '<br/>Setting to "Inherit" will apply colors from: ' . $repl;
+        $desc = str_replace('[%parent]', $repl, $desc);
+        $desc .= l('More Info','help/hartnell_custom/section-theme-colors');
+        $form['field_color_settings'][LANGUAGE_NONE]['#description'] = $desc;
+      }
+      break;
+  }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function hartnell_custom_views_api() {
+  return array(
+    'api' => 3,
+  );
+}
+
+/**
+ * Builds options arrays for site section color selects
+ * @param  string $fld_key FAPI key of field
+ * @return array  FAPI options array
+ */
+function hartnell_custom_site_section_color_options($fld_key){
+
+  // Map field keys to class-name prefixes
+  $field_opt_prefixes = array(
+    'field_title_text_color' => 'title-text', 
+    'field_title_background_color' => 'title-background', 
+    'field_menu_text_color' => 'menu-text', 
+    'field_menu_background_color' => 'menu-background', 
+  );
+
+  $prefix = $field_opt_prefixes[$fld_key];
+
+  switch($fld_key) {
+    case 'field_title_text_color': 
+      $opts = array(
+        '_none' => '- Select a color -',
+        $prefix . '-color-a' => 'White',
+        $prefix . '-color-b' => 'Gold',
+        $prefix . '-color-c' => 'Gray',
+        $prefix . '-color-d' => 'Black',
+      );
+      break;
+    case 'field_title_background_color': 
+      $opts = array(
+        '_none' => '- Select a color -',
+        $prefix . '-color-a' => 'Olive',
+        $prefix . '-color-b' => 'Blue',
+        $prefix . '-color-c' => 'Burgundy',
+        $prefix . '-color-d' => 'Gold',
+      );
+      break;
+    case 'field_menu_text_color': 
+      $opts = array(
+        '_none' => '- Select a color -',
+        $prefix . '-color-a' => 'Gold',
+        $prefix . '-color-b' => 'White',
+        $prefix . '-color-c' => 'Gray',
+        $prefix . '-color-d' => 'Black',
+      );
+      break;
+    case 'field_menu_background_color': 
+      $opts = array(
+        '_none' => '- Select a color -',
+        $prefix . '-color-a' => 'Olive',
+        $prefix . '-color-b' => 'Gold',
+        $prefix . '-color-c' => 'Burgundy',
+        $prefix . '-color-d' => 'Blue',
+      );
+      break;
+  }
+
+  return $opts;
+
+}
+
+/**
+ * Implements hook_form_validate for site_section term edit form.
+ * 
+ */
+function hartnell_custom_site_section_term_validate($form, &$form_state) {
+  
+  // Color setting fields are actually only required if field_color_settings == 'custom',
+  // so we need to ignore validation errors for these fields.
+  if($form_state['values']['field_color_settings'][LANGUAGE_NONE][0]['value'] <> 'custom') {
+
+    // "Required" fields that we want to ignore.
+    // Use FAPI errors field key format.
+    $safe_fields = array(
+        'field_title_text_color' . '][' . LANGUAGE_NONE, 
+        'field_title_background_color' . '][' . LANGUAGE_NONE, 
+        'field_menu_text_color' . '][' . LANGUAGE_NONE, 
+        'field_menu_background_color' . '][' . LANGUAGE_NONE, 
+    );    
+
+    // Get previously registered errors.
+    $errors = form_get_errors();
+
+    // Clear Error message queue.
+    $messages = drupal_get_messages('error');     // this will clear Error msg queue
+
+    // Clear all errors.
+    form_clear_error();
+
+    // Reinstate errors, skipping the fields we've specified.
+    if (count($errors)) {
+      foreach ($errors as $field => $msg) {
+        if (!in_array($field, $safe_fields)) form_set_error($field, $msg);
+      }
+    }
+
+  }
+
+}
+
+/**
+ * Implements hook_preprocess_html().
+ * 
+ */
+function hartnell_custom_preprocess_html(&$vars) {
+  if (path_is_admin(current_path())) return;
+  
+  //   Inject section-specific-theming classes.
+  // 
+  //   Apply section styles, iterating up the site_section hierarchy 
+  //   as far as necessary.
+  // 
+  // 
+  
+  // Get the current node for this request (if there is one).
+  $node = menu_get_object();
+  if(!$node) return;
+  if($node && $node->type == 'flexpage'){
+
+    // Get site section term for this page.
+    $theme_data = hartnell_custom_get_site_section_theme_data();
+    // Handle malformed pages with no site_section set.
+    if(empty($theme_data) || ! is_array($theme_data) ) return;
+    $theme_data = $theme_data['merged'];
+
+    // Fields aray for processing
+    $body_class_field_keys = array(
+      'field_title_text_color', 
+      'field_title_background_color', 
+      'field_menu_text_color', 
+      'field_menu_background_color', 
+    ); 
+
+    // Add body classes
+    foreach($body_class_field_keys as $field_key) {
+      if(array_key_exists($field_key, $theme_data)) {
+        $body_class = $theme_data[$field_key]['value'];
+        $vars['classes_array'][] = $body_class;
+      }
+    }
+
+  } 
+}
+
+/**
+ * Retrieves Site Section-based theme data.
+ * @return Array 
+ *    Keys:
+ *    + data   : Terms and theme fields, in tree order.
+ *    + merged : Applied theme values derived from terms tree, using 
+ *               the "closest ancestor" logic and observing "use site defaults"
+ *               overrides.
+ *               Array, keyed by FAPI field key
+ *      Keys:
+ *      + section tid : Term id of source for this value
+ *      + value       : Applied theme field value
+ *         
+ */
+function hartnell_custom_get_site_section_theme_data($tid = null){
+
+  // Handling a site_section term node.
+  if($tid) {
+    $site_section_tree = taxonomy_get_parents_all($tid);
+
+  // Handling a normal page request.
+  } else {
+    // Get the current node for this request (if there is one).
+    $node = menu_get_object();
+
+    // Bail if wrong content type.
+    if( ! ($node && $node->type == 'flexpage') ) return array();
+
+    // Get site section term for this page.
+    $site_section = 
+      field_get_items('node', $node, 'field_site_section', $node->language);
+      
+    // Bail if no Site Section defined.
+    if(!$site_section) return array();
+
+    // Load site section taxonomy and parents.
+    $site_section = array_shift($site_section);
+    $site_section_tree = taxonomy_get_parents_all($site_section['tid']);
+
+  }
+
+  // Section-theme field keys for easier processing downstream.
+  $all_section_theme_item_field_keys = array(
+    'field_title_text_color', 
+    'field_title_background_color', 
+    'field_menu_text_color', 
+    'field_menu_background_color', 
+    'field_banner_image',
+  );
+
+  // If a term in the tree is set to "use site default" AND all its children
+  // are set to "inherit", then ignore all color settings.
+  // $use_site_defaults will be null until we get to the first ancestor term 
+  // NOT set to 'inherit'.  Then, if it's set to 
+  //  + 'custom', we'll set $use_site_defaults to FALSE.
+  //  + 'site-default', we'll set $use_site_defaults to TRUE.
+  $use_site_defaults = null; 
+
+  // Get theme data from site section and all ancestors.
+  $data = array();
+  foreach($site_section_tree as $term){
+    $item = array();
+    $item['term'] = $term;
+
+    // Get the "color_settings", which will determine whether we use the
+    // color theming fields for this term.
+    $color_setting = $term->field_color_settings;
+    if(empty($color_setting)) {
+      // Use default value.
+      $color_setting = 'inherit';
+    } else {
+      $color_setting = $term->field_color_settings[LANGUAGE_NONE][0]['value'];
+    }
+
+    // See notes on $use_site_defaults declaration, above.
+    if(is_null($use_site_defaults)) {
+      if($color_setting == 'custom') {
+        $use_site_defaults = FALSE;
+      } elseif($color_setting == 'site-default') {
+        $use_site_defaults = TRUE;
+      }
+    }
+
+    // Ignore color fields unless this term is configured to use them, or
+    // if $use_site_defaults === TRUE.
+    if($use_site_defaults || $color_setting <> 'custom') {
+      $field_keys = array('field_banner_image');
+    } else {
+      $field_keys = $all_section_theme_item_field_keys;
+    }
+
+    // Loop theme fields, getting values
+    foreach($field_keys as $field_key) {
+      $item[$field_key] =
+        field_get_items('taxonomy_term', $term, $field_key);
+      if(!$item[$field_key]) {
+        unset($item[$field_key]); 
+      } else {
+        $item[$field_key] = $item[$field_key][0];
+        if(array_key_exists('value', $item[$field_key]))
+          $item[$field_key] = $item[$field_key]['value'];
+      }
+    }
+    $data[$term->tid] = $item;
+  }
+
+  // Compile merged values. Ie., get "nearest ancestor" value for each field.
+  // Note that this implicitly follow the "use site defaults" setting because
+  // of the field selection logic upstream.
+  $data_merged = array();
+  $fields_arr_tpl = array_fill_keys($all_section_theme_item_field_keys, null);
+  foreach($data as $ancestor_tid => $ancestor) {
+    // Array of only field items, and only those that exist in this term.
+    $vals = array_intersect_key($ancestor, $fields_arr_tpl);
+    // Array of fields already in $data_merged, for later processing.
+    $inherited_fields = array_fill_keys(array_keys($data_merged), null);
+    // Add any applicable fields from this term that don't already exist in $data_merged.
+    $data_merged = array_merge($vals, $data_merged);
+    // Convert new items into array(term, value).
+    $new_fields = array_diff_key($vals, $inherited_fields);
+    foreach($new_fields as $fld_key => $fld_val) {
+      $data_merged[$fld_key] = array(
+        'section tid' => $ancestor_tid,
+        'value' => $fld_val,
+      );
+    }
+  }
+
+  return array('data' => $data, 'merged' => $data_merged);
+}
+
+/**
+ * Implements hook_preprocess_panels_pane().
+ *
+ */
+function hartnell_custom_preprocess_panels_pane(&$vars) {
+
+  // Disable the menu mini-panels when displaying main menu in panelized
+  // menus (ie., in the sidebar).
+  // Note that this will potentially cause unwanted side-effects in situations
+  // where
+  //  + Attempting to display a mini-panel dropdown in the panelized content region.
+  //  + Displaying the main menu in non-panelized regions (ie., the footer), 
+  //    where the menu includes items that have mini-panels attached.
+  $pane = $vars['pane'];
+  if($pane->type == 'menu_tree') {
+
+    // Loop menu items in #content array
+    foreach($vars['content']['#content'] as $key => &$menu_item) {
+      // Ignore items not prefixed with '#' 
+      if(strpos($key, '#') !== 0) {
+        // Reset the localized options, removing keys inserted by menu mini-panels
+        $menu_item['#localized_options'] = array('attributes' => array());
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_menu_breadcrumb_alter().
+ * Fix: Make sure the menu_minipanels module does not attach the qTips function
+ * to any breadcrumb links by removing the minipanel 'flag' from menu items.
+ * See issue: https://drupal.org/node/1758866
+ */
+function hartnell_custom_menu_breadcrumb_alter(&$active_trail, $item){
+  foreach ($active_trail as $key => $menu_item) {
+    if (isset($active_trail[$key]['localized_options']['attributes']['class'])) {
+      $main_menu_class = array_search('main-menu-link', $active_trail[$key]['localized_options']['attributes']['class']);
+      if ($main_menu_class !== FALSE) {
+        unset($active_trail[$key]['localized_options']['attributes']['class'][$main_menu_class]);
+      }
+    }
+    if (isset($active_trail[$key]['localized_options']['minipanel']) && !empty($active_trail[$key]['localized_options']['minipanel'])) {
+      unset($active_trail[$key]['localized_options']['minipanel']);
+    }
+  }
+}
+
+/**
+ * Implements hook_menu_block_tree_alter().
+ *
+ * Fix: Make sure the menu_minipanels module does not attach the qTips function
+ * to any menu block titles by removing the minipanel 'flag' from menu items.
+ * See issue: https://drupal.org/node/1758866
+ */
+function hartnell_custom_menu_block_tree_alter(&$tree, &$config) {
+  if ($config['parent_mlid'] == 'main-menu:0') {
+    hartnell_custom_menu_block_recursive($tree);
+  }
+}
+
+/**
+ * Recursive function to traverse the menu tree of the block menu and remove the mini-panels
+ * settings and the main-menu-link class.
+ * Invoked by hartnell_custom_menu_block_tree_alter().
+ */
+function hartnell_custom_menu_block_recursive(&$tree) {
+  foreach ($tree as $id => $item) {
+    if (isset($item['link']['localized_options']['minipanel'])) {
+      unset($tree[$id]['link']['localized_options']['minipanel']);
+    }
+    if (isset($item['link']['localized_options']['menu_minipanels_hover'])) {
+      unset($tree[$id]['link']['localized_options']['menu_minipanels_hover']);
+    }
+    if (isset($item['link']['localized_options']['attributes']['class'])) {
+      $main_menu_class = array_search('main-menu-link', $item['link']['localized_options']['attributes']['class']);
+      if ($main_menu_class !== FALSE) {
+        unset($tree[$id]['link']['localized_options']['attributes']['class'][$main_menu_class]);
+      }
+    }
+    if (!empty($item['below'])) {
+      hartnell_custom_menu_block_recursive($item['below']);
+    }
+  }
+}
+
+/**
+ * Retrieves external course search data and returns as FAPI options arrays
+ * @return array Array of FAPI select options, one for each filter field
+ */
+function hartnell_custom_get_course_search_filter_options($cols) {
+
+  $cols = array(
+    'COURSE_NAME',
+    'TERM',
+    'LOCATION',
+    'SHORT_TITLE',
+    'SUBJECT',
+  );
+  $cols_select = implode(',', $cols);
+  $data = array_fill_keys($cols, array());
+
+  // Load data
+  db_set_active('hartnell.edu');
+  $q = 'select ' . $cols_select . ' FROM open_sections';
+  $result = db_query($q); 
+  db_set_active(); 
+
+  foreach($result as $rec) {
+    foreach($cols as $col) {
+      $data[$col][$rec->$col] = $rec->$col; #use array key to eliminate dupes
+    }
+  } 
+
+  return $data;
+
+}

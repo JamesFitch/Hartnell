@@ -1,0 +1,21 @@
+<h3>Administerting Images Styles</h3>
+<p>Drupal has built-in functionality to automatically scale and resize images. This is managed by image styles, which, in classic Drupal style, may be manipulated and extended by administrators. Each style is available in the field display settings, where you can select which style best fits each view mode.</p>
+<p>Image styles are created and edited from the toolbar, Configuration, Media, Image styles. The resulting page contains an overview of all available image styles, links to edit each style, and also a link to create additional styles.</p>
+<img class="screenshot" src="&path&/screenshots/image_styles.png" /> 
+
+<h3>Creating and editing image styles</h3>
+<p>The first step in creating a new image style is to provide it with a machine name. (This is one of the few places in Drupal where you have to enter machine names manually.) The name will be used in the path to style's image derivatives and should only contain lowercase alpha-numericals, dashes (-) and underscores (_). A common practice is to name a style by their use case ('sidebar_small') or their actual sizes ('180x180').</p>
+<p>Saving the machine name creates an empty image style and redirects you to the page to edit it. (See figure 8.3.) Here you may add one or several effects, used to manipulate the image. A standard Drupal installation provides the following effects:</p>
+<ul>
+  <li>Crop: This cuts the image down to selected measurements. You can specify which part of the image should be in focus.</li>
+  <li>Desaturate: This converts the image to grey scale.</li>
+  <li>Resize: This streches or shrinks the image to a size that you define, without any cropping.</li>
+  <li>Rotate: This rotates the image a number of degrees. You can set which background color should be used on any blank spots revealed by the rotation or you can optionally have a random rotation, with a specified maximum angle.</li>
+  <li>Scale: This scales down the image to fit within a specified width and height. (You may set only one dimension to scale the image.) You may optionally allow the images to be scaled up too, if it is smaller than the given dimensions.</li>
+  <li>Scale and crop: This scales the image to cover a given width and height, cropping any parts outside the given frame after scaling.</li>
+</ul>
+<p>The most commonly used effects are scale and scale and crop. You may chain several effects to create combined image effects. Administrators may reorder effects in a style, add or remove existing effects.</p>
+<img class="screenshot" src="&path&/screenshots/edit_my_style.png" /> 
+<p><strong>TIP:</strong> Image styles defined by modules, such as the ones included in a standard installation, can't be deleted. You have to actively override the standard settings to be able to edit their effects. You can revert the styles to their default settings later on, if need be.</p>
+
+<p><strong>TIP:</strong> The ImageCache Actions module provides a number of new effects for image processing.</p>

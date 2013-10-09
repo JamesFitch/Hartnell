@@ -1,0 +1,33 @@
+/*
+ * Imports
+ */
+/*
+ * Mixins
+ */
+/*
+* General includes
+*/
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.woff") format("woff"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.ttf") format("truetype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * Vanilla mixins
+ */
+/* Links */
+/* Links END */
+/* 
+*	Style Elements
+*/
+/* Images */
+/* Panels */
+/*
+* Flexible buttons
+*/
+/* line 10, ../sass/contenttypes.scss */
+body {
+  background-color: red;
+}

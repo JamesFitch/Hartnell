@@ -1,0 +1,17 @@
+name = Site Structure
+description = This module ties together menu_block, power_menu, panels, and the site_section vocabulary to create a comprehensive site structuring solution.
+package = ServerLogic
+core = 7.x
+dependencies[] = "ctools"
+dependencies[] = "menu_block"
+dependencies[] = "panels"
+dependencies[] = "panelizer"
+dependencies[] = "power_menu"
+dependencies[] = "tax_site_section"
+
+
+; Information added by drush on 2013-03-31
+version = "master-dev"
+project = "sitestructure"
+datestamp = "1364790695"
+

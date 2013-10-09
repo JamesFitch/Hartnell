@@ -1,0 +1,548 @@
+/* This file will hold styles that are loaded using the same media query as the normal grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
+
+/*
+ * Imports
+*/
+
+@import "variables";
+@import "mixins";
+@import "compass";
+
+
+/*
+ * Elements
+*/
+
+.feed-icon {
+  float: right;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+}
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
+/*
+ * START: Layout Fixes
+ */
+
+.front {
+	.grid-13.omega.promo-wrapper {
+	 margin: 0 10px 0 0;
+	}
+	.grid-3.omega.tab-wrapper {
+	 margin: 0 0 0 10px;
+	}
+	.grid-4.omega,
+	.grid-9.omega {
+	 margin: 0 10px;
+	}	
+ }
+
+/* Styles for narrow columns on normal layout */
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {
+  word-wrap: normal;
+}
+
+.row2 {
+	.grid-4.left-hand {
+	 margin-left: 0;
+	}
+	.grid-4.right-hand {
+	 margin-right: 0;
+	}		
+}
+
+.zone-branding {
+  .region-branding {
+    .logo-img {
+	  margin: 0;
+    }
+  }
+}
+
+/* Main navigation menu */
+.qtip, .qtip-light, .qtip-active {
+  left: 60px !important; // Overriding core qtip jquery settings
+}
+
+/* Navigation: User */
+.region-user-second {
+  padding: left;
+    .block-search-form {
+      float: right;
+      width: 30%;
+        .edit-submit {
+         float: right;
+        }   
+    }
+    .block-user-menu {
+      float: left;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+        ul.menu {
+          float: right;
+        }
+    }
+}
+
+/* Person: Academic Content Type */
+.node-type-person {
+  // Adjust nested columns in second row
+  .row2 {
+    &.grid-13.push-3 {
+      margin-left: 10px;
+    }
+  }
+}
+
+/* BEGIN: Node Location */
+
+.node-location {
+	.field-name-field-location-photo {
+	 width: 24%;
+	 float: left;
+	 margin-right: 1em;
+	}
+	.field-name-field-location-address,
+	.field-name-field-location-city,
+	.field-name-field-location-state,
+	.field-name-field-location-zip,
+	.field-name-field-location-phone {
+	  float: left;
+	  width: 74%;
+	}
+	.field-name-body { clear: both; }
+}
+
+.node-location.node-teaser {
+	.field-name-field-location-address,
+	.field-name-field-location-city,
+	.field-name-field-location-state,
+	.field-name-field-location-zip,
+	.field-name-field-location-phone {
+	 width: 100%;
+	}	
+}
+
+/* END: Node Location */
+
+/* Testimonial Content Type  */
+.testimonial {
+	.field-name-field-testimonial-image {
+	 float: left;
+	 min-width: 160px;
+	}
+	.field-name-field-academic-subject {
+	 display: inline-block;
+	 margin: 1em 0 2em 0;
+	}
+}
+/* END: Testimonial Content Type */
+
+
+/* END: Layout Fixes */
+nav[role=navigation] ul {
+  float: right;
+}
+
+.js nav[role=navigation] {
+  overflow: visible;
+  max-height: 0;
+}
+
+.zone-branding {
+	.region-menu {
+	 padding-top: 4.7em;
+	}
+}
+
+/* Navigation: Main Menu Wide and Normal (Toggle Mobile classes begin at line 196)*/
+
+.region-menu {
+  margin: 0em 0.833em 0.833em 0.833em;
+  display: inline;
+	li {
+	  color: $gray;
+	  padding: 0.5em 1em;
+	  font-family: $alt-font;
+	  font-size: 1em;
+	  margin: 0;
+	}
+	li.first {
+	  margin-left: 0;
+	  padding-left: 0;
+	}
+	li.last {
+	  margin-right: 0;
+	  padding-right: 0;
+	}
+}
+
+
+.ftr-block-logo {
+  float: left;	
+}
+
+
+.page {
+	@include respond-to(medium-screens)  { background-image: hidden; } /* Tablets */
+	.zone-content {
+		 /* Tablets */
+		@include respond-to(medium-screens)  { 
+		background: url(../images/hartnell_panther.jpg) bottom left no-repeat;
+		background-size: 65%;
+		}
+	}
+}
+
+
+/* General Views - Text */
+.pane-views-panes {
+	.views-exposed-widget {
+	// width: 100%;
+	}
+}
+/* END General Views - Text */
+
+/* 
+ * BEGIN: Athletic News View
+ */
+.left-thumbnail {
+ float: left;
+ margin-right: 1em;
+}
+/* 
+ * END: Athletic News View
+ */
+
+/*  BEGIN: All News - Page */
+.all-news-page {
+	.views-exposed-form {
+//		#edit-title-wrapper { width: 24%; }
+//		#edit-field-type-of-news-tid-wrapper { width: 18%; }
+//		#edit-field-team-tid-wrapper { width: 20%; }
+		.views-exposed-widget.views-submit-button { padding: 0em !important; }
+	}
+}
+/*  END: All News - Page */
+
+
+/*  News - Home */
+.news-home { 
+	.views_slideshow_main {
+		.views_slideshow_cycle_teaser_section {
+	     min-height: 17em;
+		}
+	}
+}
+/*  END: News - Home */
+
+/* Views Type: Testimonial  */ 
+.view-testimonials {
+  #edit-academic-area-wrapper {
+    clear: none;
+  }
+  .pane-views-panes & {
+    .view-filters {
+      .views-exposed-widget {
+        label, div {
+          display: block;
+        }
+      }
+    }
+  }
+  .views-exposed-widgets {
+    .views-submit-button {
+      clear: none;
+    }
+    .views-submit-button, .views-reset-button {
+      input {
+        margin-top: 1.5em;
+      }
+    }
+  }
+	.view-content {
+		.views-field-field-testimonial-image {
+			.testimonial-image {
+				img {
+			 	   float: left;
+			 	}
+			}
+		}
+	}
+}
+testimonials-full-page  {
+	.testimonial-rows {
+	   min-height: 160px;
+		.views-field-field-testimonial-image {
+			.testimonial-image {
+				img {
+			 	   float: left;
+			 	}
+			}
+		}
+	}
+}
+/* END: Views Type: Testimonial */
+
+
+/* Views Type: Calendar: Month View */
+
+.calendar_control,
+.calendar_links,
+.calendar_header,
+.calendar { 
+	 width: 100%; }
+
+.calendar { 
+	.views-exposed-widgets {
+		#edit-audience-wrapper { width: 27%; }
+		#edit-event-type-wrapper { width: 27%; }
+		.views-reset-button, .views-submit-button { 
+		 width: 8%;
+		 }
+	}
+}
+
+/* END: Views Type: Calendar: Month View */
+
+/* Views Type: Locations */
+.view-locations {
+	table {
+		tbody {
+		 border: none;
+			 tr {
+				 td {
+				  width: 50%;
+          .views-field {
+            margin-left: 30%;
+          }
+          h4.locations {
+           margin: 0;
+          }
+					.location-thumb {
+					 float: left;
+           margin: 0 1.3em 0.5em 0;
+           position: relative;
+					 width: 30%;
+					}
+				 }
+			 }
+		}
+	}
+}
+/* END: Views Type: Locations */
+
+
+/* View Type: People Directory */
+.view-people-directory {
+  .view-filters {
+    .views-submit-button, .views-reset-button {
+      display: inline-block;
+      width: auto;
+      float: left;
+    } 
+  }
+}
+/* END View Type: People Directory */
+
+
+/* View Type: Home Slideshow */
+
+.front {
+	.slideshow-home {
+		.view-content {
+		 padding: 0 !important;
+			.flexslider {
+				ul.slides {
+				  .flex-active-slide {
+					 	.views-field-nothing {
+					     width: auto;
+						 	.left-div {
+						     top: 0;
+							 	img {
+								 left: 0;
+								 top: 0;
+								 z-index: 2;
+								}
+							}
+						}
+						.views-field-nothing-1 {
+						 margin: 1em 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.front {
+  #flexslider-2 ul.slides {
+    height: expression( this.scrollHeight < 491 ? "490px" : "auto" ); /* Cross browser expression */
+    min-height: 37.692em; /* Chrome override */
+    img {
+      height: expression( this.scrollHeight < 491 ? "490px" : "auto" ); /* Cross browser expression */
+      min-height: 37.692em; /* Chrome override */
+	}
+    .float-left-text {
+      height: expression( this.scrollHeight < 391 ? "390px" : "auto" ); /* Cross browser expression */
+	  min-height: 33.5em; /* Chrome override */
+	}
+  }
+}
+/* END View Type: Home Slideshow */
+
+
+/* View Type: Landing Slideshow (Athletic Full pahr no sidebar)*/
+
+.slideshow-landing {
+  .view-content {
+	.flexslider {
+	  .slides{
+	    li.flexslider_views_slideshow_slide {
+		  img {
+            height: expression( this.scrollHeight < 530 ? "529px" : "auto" ); /* Cross browser expression */
+            min-height: 40.692em; /* Chrome override */
+            left: 0;
+            top: 0;
+            z-index: 2;
+            max-width: 1180px;
+          }
+		  .float-left-text {
+		    min-height: 27.769em; /* Chrome override */
+			max-height: 38.692em; /* Chrome override */
+		  }
+		}          
+	  }
+	}
+  }
+}
+
+/* END View Type: Landing Slideshow */
+
+/* View Type: Internal Slideshow  */
+.slideshow-internal {
+	.view-content {
+		.flexslider {
+			.slides {
+				li.flexslider_views_slideshow_slide {
+					.views-field-nothing {
+						.left-div {
+							img {
+							  max-width: 575px;
+							}
+						}
+					}
+					.views-field-nothing-1 {
+            		  .float-left-text {
+		                min-height: 27.769em; /* Chrome override */
+              		  }
+              		}
+				}
+			}
+		}
+	}
+}
+
+/* END View Type: Internal Slideshow */
+
+/*
+ * BEGIN Events Type: Academic Default
+ */
+
+.events-audience {
+  .views-field-field-event-date {
+    width: 30%;
+    margin-right: 3%;
+  }
+}
+ .view-events {
+	.view-content {
+		.views-row {
+		  clear: both;
+		  display: block;
+		  min-height: 65px;
+		 	.views-field-field-event-date,
+			.views-field-field-event-date-2 {
+			  width: 40%;
+			  margin-right: 3%;
+			  @include respond-to(handhelds) { float: none !important; } /* Mobile */
+			}
+			.views-field-title {
+			 @include respond-to(handhelds) { text-align: center !important; } /* Mobile */
+			}
+		}
+	}
+}
+.sidebar {
+	.view-events {
+		.views-row {
+		  width: 87%;
+		}
+		.views-field-field-event-date,
+		.views-field-field-event-date-2 {
+		 width: 40%;
+		 margin-right: 3%;
+		}
+	}
+}
+.view-events {
+	.view-content {
+		.views-row {
+		 	.views-field-field-event-date,
+			.views-field-field-event-date-2 {
+			  display: block;
+			  float: left;
+			}
+			.views-field-title {
+			 display: block;	 
+			}
+			p {
+			 text-align: right;
+			 margin: 0;
+			}
+		}
+	}
+	.view-footer {
+		ul.event-list {
+		 width: 100%;
+		  	li {
+		  	 list-style: none;
+			 display: inline-block;
+			}
+			li.add-event {
+			 text-align: left;
+			}			
+			li.read-more {
+			 float: right;
+			}
+		}
+	}
+	.attachment {
+	  font-family: $alt-font;
+	  border-top: 1px solid $crumbs;
+	  font-style: italic;
+	  padding: 0.5em;
+	  text-align: right;
+	}
+}
+
+/*
+ * END Events Type: Academic Default
+ */
+
+// Person directory View
+.view-people-directory {
+  .views-field-field-academic-area-or-major {
+    display: table-cell;
+  }
+}
+
+// Adding "normal" styles for Athletics
+@import "athletics-normal";

@@ -1,0 +1,87 @@
+//
+// SASS Variables
+//
+
+// Style colors
+$black:       #000;
+$dark-gray:   #17150f;
+$gray:  	  #333;
+$light-gray:  #666;
+$neutral:	  #F3F3F3;
+$white:		  #FFF;
+
+// School Colors
+$burgundy:    #730027;
+$gold:		  #FFB300;
+
+// Additional theme colors
+$user-menu:	  #2e2e2e;
+$crumbs: #ccc;
+$overlay: #0f0b05;
+$athletics: #ffcc00;
+
+// Site Section Color Options
+
+//Mono
+$lighter-gold: #FFd573;
+$darker-gold: #A67400;
+
+$lighter-burgundy: #B95375;
+$darker-burgundy: #4B0019;
+
+// Complement
+$light-blue: #4965D6;
+$medium-blue: #1533AD;
+$dark-blue: #071C71;
+
+$light-lime: #73BA2F;
+$medium-lime: #397500;
+$dark-lime: #254C00; 
+
+// Triad
+$light-purple: #7446d7;
+$medium-purple: #4312AE;
+$dark-purple: #280671;
+
+$light-teal: #390ECF;
+$medium-teal: #057D9F;
+$dark-teal: #025167;
+
+$light-green: #2BA62F;
+$medium-green: #005B2f;
+$dark-green: #003B1F;
+
+
+// Font Families
+
+$base-font: Arial, Helvetica, sans-serif;
+$alt-font: Georgia, Times, serif;
+
+//
+// Importing Compass functionality
+//
+@import "compass";
+@import "compass/css3";
+@import "compass/support";
+@import "compass/css3/opacity";
+
+//
+// Queries
+//
+$break-small: 380px;
+$break-large: 960px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+  @else if $media == tablets {
+    @media only screen and (min-width: 741px) and (max-width: $break-large - 1) { @content; }
+  }
+}

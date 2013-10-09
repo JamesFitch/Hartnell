@@ -1,0 +1,101 @@
+<?php
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function sitestructure_module_implements_alter(&$implementations, $hook) {
+  $hooks = array('form_alter','menu_alter');
+  //$hooks = array('form_alter');
+  if (in_array($hook, $hooks)) {
+    $group = $implementations['sitestructure'];
+    unset($implementations['sitestructure']);
+    $implementations['sitestructure'] = $group;
+  }
+  if ($hook == 'entity_view') {
+    unset($implementations['power_menu']);
+  }
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function sitestructure_menu_alter(&$items) {
+  // Make 'Content' the default subtab under the 'Panelizer' tab instead of 'Settings'.
+  $items['node/%node/panelizer']['page arguments'][1] = 'content';
+  $items['node/%node/panelizer']['access arguments'][4] = 'content';
+  $items['node/%node/panelizer/settings']['type'] = MENU_LOCAL_TASK;
+  $items['node/%node/panelizer/content']['type'] = MENU_DEFAULT_LOCAL_TASK;
+}
+
+/**
+ * Implements hook_entity_view().
+ */
+function sitestructure_entity_view($entity, $type, $view_mode, $langcode) {
+  $current_menu = sitestructure_get_current_menu();
+
+  // Power menu sets active menu only on full node view and enabled handlers
+  if ($view_mode == 'full' && variable_get('power_menu_handlers_enabled', FALSE) && empty($current_menu)) {
+    power_menu_set_path($entity, $type, $langcode);
+  }
+}
+
+/**
+ * Implements hook_ctools_render_alter().
+ *
+ */
+function sitestructure_ctools_render_alter(&$info, &$page, &$context) {
+  if ($context['task']['name'] == 'node_view') {
+    global $language;
+    $langcode = $language->language;
+    $entity = node_load($context['args'][0]);
+    $type = 'node';
+    $current_menu = sitestructure_get_current_menu();
+
+    if (variable_get('power_menu_handlers_enabled', FALSE) && empty($current_menu)) {
+      power_menu_set_path($entity, $type, $langcode);
+    }
+  }
+}
+
+function sitestructure_get_current_menu() {
+  $menu_trail = menu_get_active_trail();
+  $current_menu = (isset($menu_trail[1]['menu_name']) && ($menu_trail[1]['module'] != 'system')) ? $menu_trail[1]['menu_name'] : NULL;
+  return $current_menu;
+}
+
+/**
+ * Implements hook_menu_block_tree_alter().
+ *
+ * Set the menu active trail using the power_menu
+ * module. Need to do this here to make power_menu, 
+ * ctools/page_manager, and menu_block play nicely
+ * with each other.
+ */
+function sitestructure_menu_block_tree_alter(&$tree, &$config) {
+  $entity = menu_get_object();
+  if (is_object($entity) && isset($entity->nid)) {
+    // We need to check if the in_active_trail array element has been set by
+    // menu_tree_add_active_path() already. If it has, the call to 
+    // power_menu_set_path() will eventually lead to an invocation of 
+    // node_page_title() passing in the nid instead of the node object, and
+    // thereby generating an error.
+    $in_active_trail = FALSE;
+    foreach ($tree as $key => $item) {
+      if ($tree[$key]['link']['in_active_trail'] == TRUE) {
+        $in_active_trail = TRUE;
+        break;
+      }
+    }
+    reset($tree);
+    if (!$in_active_trail) {
+      global $language;
+      $langcode = $language->language;
+      $type = 'node';
+
+      if (variable_get('power_menu_handlers_enabled', FALSE)) {
+        power_menu_set_path($entity, $type, $langcode);
+      }
+      menu_tree_add_active_path($tree);
+    }
+  }
+}

@@ -1,0 +1,12 @@
+name = Taxonomy: Tags
+description = Free tagging taxonomy vocabulary
+core = 7.x
+package = Taxonomy
+php = 5.2.4
+version = master-dev
+project = tax_tags
+dependencies[] = features
+dependencies[] = taxonomy
+datestamp = 1364790692
+features[features_api][] = api:1
+features[taxonomy][] = tags

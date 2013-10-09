@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the CWI Boxes feature.
+ */
+
+include_once('sldistro_boxes.features.inc');

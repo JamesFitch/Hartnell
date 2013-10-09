@@ -1,0 +1,789 @@
+/* This file will hold styles that are loaded using the same media query as the normal grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
+/*
+ * Imports
+*/
+/*
+ * Mixins
+ */
+/*
+* General includes
+*/
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.woff") format("woff"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.ttf") format("truetype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pt_sans_narrowbold';
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot");
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.woff") format("woff"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.ttf") format("truetype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.svg#pt_sans_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * Vanilla mixins
+ */
+/* Links */
+/* Links END */
+/* 
+*	Style Elements
+*/
+/* Images */
+/* Margin is overriding core wysiwyg settings */
+/* Margin is overriding core wysiwyg settings */
+/* Panels */
+/*
+* Social buttons backgrounds
+*/
+/*
+* Flexible buttons
+*/
+/*
+ * BEGIN: Athletics Mixins
+ */
+/*
+ * END: Athletics Mixins
+ */
+/*
+ * Elements
+*/
+/* line 18, ../sass/omega-hartnell-alpha-default-normal.scss */
+.feed-icon {
+  float: right;
+}
+
+/* line 22, ../sass/omega-hartnell-alpha-default-normal.scss */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+/* line 25, ../sass/omega-hartnell-alpha-default-normal.scss */
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
+/*
+ * START: Layout Fixes
+ */
+/* line 34, ../sass/omega-hartnell-alpha-default-normal.scss */
+.front .grid-13.omega.promo-wrapper {
+  margin: 0 10px 0 0;
+}
+/* line 37, ../sass/omega-hartnell-alpha-default-normal.scss */
+.front .grid-3.omega.tab-wrapper {
+  margin: 0 0 0 10px;
+}
+/* line 41, ../sass/omega-hartnell-alpha-default-normal.scss */
+.front .grid-4.omega,
+.front .grid-9.omega {
+  margin: 0 10px;
+}
+
+/* Styles for narrow columns on normal layout */
+/* line 47, ../sass/omega-hartnell-alpha-default-normal.scss */
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {
+  word-wrap: normal;
+}
+
+/* line 52, ../sass/omega-hartnell-alpha-default-normal.scss */
+.row2 .grid-4.left-hand {
+  margin-left: 0;
+}
+/* line 55, ../sass/omega-hartnell-alpha-default-normal.scss */
+.row2 .grid-4.right-hand {
+  margin-right: 0;
+}
+
+/* line 62, ../sass/omega-hartnell-alpha-default-normal.scss */
+.zone-branding .region-branding .logo-img {
+  margin: 0;
+}
+
+/* Main navigation menu */
+/* line 69, ../sass/omega-hartnell-alpha-default-normal.scss */
+.qtip, .qtip-light, .qtip-active {
+  left: 60px !important;
+}
+
+/* Navigation: User */
+/* line 74, ../sass/omega-hartnell-alpha-default-normal.scss */
+.region-user-second {
+  padding: left;
+}
+/* line 76, ../sass/omega-hartnell-alpha-default-normal.scss */
+.region-user-second .block-search-form {
+  float: right;
+  width: 30%;
+}
+/* line 79, ../sass/omega-hartnell-alpha-default-normal.scss */
+.region-user-second .block-search-form .edit-submit {
+  float: right;
+}
+/* line 83, ../sass/omega-hartnell-alpha-default-normal.scss */
+.region-user-second .block-user-menu {
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+/* line 88, ../sass/omega-hartnell-alpha-default-normal.scss */
+.region-user-second .block-user-menu ul.menu {
+  float: right;
+}
+
+/* Person: Academic Content Type */
+/* line 98, ../sass/omega-hartnell-alpha-default-normal.scss */
+.node-type-person .row2.grid-13.push-3 {
+  margin-left: 10px;
+}
+
+/* BEGIN: Node Location */
+/* line 107, ../sass/omega-hartnell-alpha-default-normal.scss */
+.node-location .field-name-field-location-photo {
+  width: 24%;
+  float: left;
+  margin-right: 1em;
+}
+/* line 116, ../sass/omega-hartnell-alpha-default-normal.scss */
+.node-location .field-name-field-location-address,
+.node-location .field-name-field-location-city,
+.node-location .field-name-field-location-state,
+.node-location .field-name-field-location-zip,
+.node-location .field-name-field-location-phone {
+  float: left;
+  width: 74%;
+}
+/* line 120, ../sass/omega-hartnell-alpha-default-normal.scss */
+.node-location .field-name-body {
+  clear: both;
+}
+
+/* line 128, ../sass/omega-hartnell-alpha-default-normal.scss */
+.node-location.node-teaser .field-name-field-location-address,
+.node-location.node-teaser .field-name-field-location-city,
+.node-location.node-teaser .field-name-field-location-state,
+.node-location.node-teaser .field-name-field-location-zip,
+.node-location.node-teaser .field-name-field-location-phone {
+  width: 100%;
+}
+
+/* END: Node Location */
+/* Testimonial Content Type  */
+/* line 137, ../sass/omega-hartnell-alpha-default-normal.scss */
+.testimonial .field-name-field-testimonial-image {
+  float: left;
+  min-width: 160px;
+}
+/* line 141, ../sass/omega-hartnell-alpha-default-normal.scss */
+.testimonial .field-name-field-academic-subject {
+  display: inline-block;
+  margin: 1em 0 2em 0;
+}
+
+/* END: Testimonial Content Type */
+/* END: Layout Fixes */
+/* line 150, ../sass/omega-hartnell-alpha-default-normal.scss */
+nav[role=navigation] ul {
+  float: right;
+}
+
+/* line 154, ../sass/omega-hartnell-alpha-default-normal.scss */
+.js nav[role=navigation] {
+  overflow: visible;
+  max-height: 0;
+}
+
+/* line 160, ../sass/omega-hartnell-alpha-default-normal.scss */
+.zone-branding .region-menu {
+  padding-top: 4.7em;
+}
+
+/* Navigation: Main Menu Wide and Normal (Toggle Mobile classes begin at line 196)*/
+/* line 167, ../sass/omega-hartnell-alpha-default-normal.scss */
+.region-menu {
+  margin: 0em 0.833em 0.833em 0.833em;
+  display: inline;
+}
+/* line 170, ../sass/omega-hartnell-alpha-default-normal.scss */
+.region-menu li {
+  color: #333333;
+  padding: 0.5em 1em;
+  font-family: Georgia, Times, serif;
+  font-size: 1em;
+  margin: 0;
+}
+/* line 177, ../sass/omega-hartnell-alpha-default-normal.scss */
+.region-menu li.first {
+  margin-left: 0;
+  padding-left: 0;
+}
+/* line 181, ../sass/omega-hartnell-alpha-default-normal.scss */
+.region-menu li.last {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+/* line 188, ../sass/omega-hartnell-alpha-default-normal.scss */
+.ftr-block-logo {
+  float: left;
+}
+
+/* line 193, ../sass/omega-hartnell-alpha-default-normal.scss */
+.page {
+  /* Tablets */
+}
+@media only screen and (min-width: 381px) and (max-width: 959px) {
+  /* line 193, ../sass/omega-hartnell-alpha-default-normal.scss */
+  .page {
+    background-image: hidden;
+  }
+}
+/* line 195, ../sass/omega-hartnell-alpha-default-normal.scss */
+.page .zone-content {
+  /* Tablets */
+}
+@media only screen and (min-width: 381px) and (max-width: 959px) {
+  /* line 195, ../sass/omega-hartnell-alpha-default-normal.scss */
+  .page .zone-content {
+    background: url(../images/hartnell_panther.jpg) bottom left no-repeat;
+    background-size: 65%;
+  }
+}
+
+/* General Views - Text */
+/* END General Views - Text */
+/* 
+ * BEGIN: Athletic News View
+ */
+/* line 216, ../sass/omega-hartnell-alpha-default-normal.scss */
+.left-thumbnail {
+  float: left;
+  margin-right: 1em;
+}
+
+/* 
+ * END: Athletic News View
+ */
+/*  BEGIN: All News - Page */
+/* line 230, ../sass/omega-hartnell-alpha-default-normal.scss */
+.all-news-page .views-exposed-form .views-exposed-widget.views-submit-button {
+  padding: 0em !important;
+}
+
+/*  END: All News - Page */
+/*  News - Home */
+/* line 239, ../sass/omega-hartnell-alpha-default-normal.scss */
+.news-home .views_slideshow_main .views_slideshow_cycle_teaser_section {
+  min-height: 17em;
+}
+
+/*  END: News - Home */
+/* Views Type: Testimonial  */
+/* line 248, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-testimonials #edit-academic-area-wrapper {
+  clear: none;
+}
+/* line 254, ../sass/omega-hartnell-alpha-default-normal.scss */
+.pane-views-panes .view-testimonials .view-filters .views-exposed-widget label, .pane-views-panes .view-testimonials .view-filters .views-exposed-widget div {
+  display: block;
+}
+/* line 261, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-testimonials .views-exposed-widgets .views-submit-button {
+  clear: none;
+}
+/* line 265, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-testimonials .views-exposed-widgets .views-submit-button input, .view-testimonials .views-exposed-widgets .views-reset-button input {
+  margin-top: 1.5em;
+}
+/* line 273, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-testimonials .view-content .views-field-field-testimonial-image .testimonial-image img {
+  float: left;
+}
+
+/* line 281, ../sass/omega-hartnell-alpha-default-normal.scss */
+testimonials-full-page .testimonial-rows {
+  min-height: 160px;
+}
+/* line 285, ../sass/omega-hartnell-alpha-default-normal.scss */
+testimonials-full-page .testimonial-rows .views-field-field-testimonial-image .testimonial-image img {
+  float: left;
+}
+
+/* END: Views Type: Testimonial */
+/* Views Type: Calendar: Month View */
+/* line 300, ../sass/omega-hartnell-alpha-default-normal.scss */
+.calendar_control,
+.calendar_links,
+.calendar_header,
+.calendar {
+  width: 100%;
+}
+
+/* line 305, ../sass/omega-hartnell-alpha-default-normal.scss */
+.calendar .views-exposed-widgets #edit-audience-wrapper {
+  width: 27%;
+}
+/* line 306, ../sass/omega-hartnell-alpha-default-normal.scss */
+.calendar .views-exposed-widgets #edit-event-type-wrapper {
+  width: 27%;
+}
+/* line 307, ../sass/omega-hartnell-alpha-default-normal.scss */
+.calendar .views-exposed-widgets .views-reset-button, .calendar .views-exposed-widgets .views-submit-button {
+  width: 8%;
+}
+
+/* END: Views Type: Calendar: Month View */
+/* Views Type: Locations */
+/* line 318, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-locations table tbody {
+  border: none;
+}
+/* line 321, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-locations table tbody tr td {
+  width: 50%;
+}
+/* line 323, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-locations table tbody tr td .views-field {
+  margin-left: 30%;
+}
+/* line 326, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-locations table tbody tr td h4.locations {
+  margin: 0;
+}
+/* line 329, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-locations table tbody tr td .location-thumb {
+  float: left;
+  margin: 0 1.3em 0.5em 0;
+  position: relative;
+  width: 30%;
+}
+
+/* END: Views Type: Locations */
+/* View Type: People Directory */
+/* line 346, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-people-directory .view-filters .views-submit-button, .view-people-directory .view-filters .views-reset-button {
+  display: inline-block;
+  width: auto;
+  float: left;
+}
+
+/* END View Type: People Directory */
+/* View Type: Home Slideshow */
+/* line 360, ../sass/omega-hartnell-alpha-default-normal.scss */
+.front .slideshow-home .view-content {
+  padding: 0 !important;
+}
+/* line 365, ../sass/omega-hartnell-alpha-default-normal.scss */
+.front .slideshow-home .view-content .flexslider ul.slides .flex-active-slide .views-field-nothing {
+  width: auto;
+}
+/* line 367, ../sass/omega-hartnell-alpha-default-normal.scss */
+.front .slideshow-home .view-content .flexslider ul.slides .flex-active-slide .views-field-nothing .left-div {
+  top: 0;
+}
+/* line 369, ../sass/omega-hartnell-alpha-default-normal.scss */
+.front .slideshow-home .view-content .flexslider ul.slides .flex-active-slide .views-field-nothing .left-div img {
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+/* line 376, ../sass/omega-hartnell-alpha-default-normal.scss */
+.front .slideshow-home .view-content .flexslider ul.slides .flex-active-slide .views-field-nothing-1 {
+  margin: 1em 0;
+}
+
+/* line 386, ../sass/omega-hartnell-alpha-default-normal.scss */
+.front #flexslider-2 ul.slides {
+  height: expression(this.scrollHeight < 491 ? "490px" : "auto" );
+  /* Cross browser expression */
+  min-height: 37.692em;
+  /* Chrome override */
+}
+/* line 389, ../sass/omega-hartnell-alpha-default-normal.scss */
+.front #flexslider-2 ul.slides img {
+  height: expression(this.scrollHeight < 491 ? "490px" : "auto" );
+  /* Cross browser expression */
+  min-height: 37.692em;
+  /* Chrome override */
+}
+/* line 393, ../sass/omega-hartnell-alpha-default-normal.scss */
+.front #flexslider-2 ul.slides .float-left-text {
+  height: expression(this.scrollHeight < 391 ? "390px" : "auto" );
+  /* Cross browser expression */
+  min-height: 33.5em;
+  /* Chrome override */
+}
+
+/* END View Type: Home Slideshow */
+/* View Type: Landing Slideshow (Athletic Full pahr no sidebar)*/
+/* line 409, ../sass/omega-hartnell-alpha-default-normal.scss */
+.slideshow-landing .view-content .flexslider .slides li.flexslider_views_slideshow_slide img {
+  height: expression(this.scrollHeight < 530 ? "529px" : "auto" );
+  /* Cross browser expression */
+  min-height: 40.692em;
+  /* Chrome override */
+  left: 0;
+  top: 0;
+  z-index: 2;
+  max-width: 1180px;
+}
+/* line 417, ../sass/omega-hartnell-alpha-default-normal.scss */
+.slideshow-landing .view-content .flexslider .slides li.flexslider_views_slideshow_slide .float-left-text {
+  min-height: 27.769em;
+  /* Chrome override */
+  max-height: 38.692em;
+  /* Chrome override */
+}
+
+/* END View Type: Landing Slideshow */
+/* View Type: Internal Slideshow  */
+/* line 437, ../sass/omega-hartnell-alpha-default-normal.scss */
+.slideshow-internal .view-content .flexslider .slides li.flexslider_views_slideshow_slide .views-field-nothing .left-div img {
+  max-width: 575px;
+}
+/* line 443, ../sass/omega-hartnell-alpha-default-normal.scss */
+.slideshow-internal .view-content .flexslider .slides li.flexslider_views_slideshow_slide .views-field-nothing-1 .float-left-text {
+  min-height: 27.769em;
+  /* Chrome override */
+}
+
+/* END View Type: Internal Slideshow */
+/*
+ * BEGIN Events Type: Academic Default
+ */
+/* line 460, ../sass/omega-hartnell-alpha-default-normal.scss */
+.events-audience .views-field-field-event-date {
+  width: 30%;
+  margin-right: 3%;
+}
+
+/* line 467, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-events .view-content .views-row {
+  clear: both;
+  display: block;
+  min-height: 65px;
+}
+/* line 472, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-events .view-content .views-row .views-field-field-event-date,
+.view-events .view-content .views-row .views-field-field-event-date-2 {
+  width: 40%;
+  margin-right: 3%;
+  /* Mobile */
+}
+@media only screen and (max-width: 380px) {
+  /* line 472, ../sass/omega-hartnell-alpha-default-normal.scss */
+  .view-events .view-content .views-row .views-field-field-event-date,
+  .view-events .view-content .views-row .views-field-field-event-date-2 {
+    float: none !important;
+  }
+}
+/* line 477, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-events .view-content .views-row .views-field-title {
+  /* Mobile */
+}
+@media only screen and (max-width: 380px) {
+  /* line 477, ../sass/omega-hartnell-alpha-default-normal.scss */
+  .view-events .view-content .views-row .views-field-title {
+    text-align: center !important;
+  }
+}
+
+/* line 485, ../sass/omega-hartnell-alpha-default-normal.scss */
+.sidebar .view-events .views-row {
+  width: 87%;
+}
+/* line 489, ../sass/omega-hartnell-alpha-default-normal.scss */
+.sidebar .view-events .views-field-field-event-date,
+.sidebar .view-events .views-field-field-event-date-2 {
+  width: 40%;
+  margin-right: 3%;
+}
+
+/* line 499, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-events .view-content .views-row .views-field-field-event-date,
+.view-events .view-content .views-row .views-field-field-event-date-2 {
+  display: block;
+  float: left;
+}
+/* line 503, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-events .view-content .views-row .views-field-title {
+  display: block;
+}
+/* line 506, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-events .view-content .views-row p {
+  text-align: right;
+  margin: 0;
+}
+/* line 513, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-events .view-footer ul.event-list {
+  width: 100%;
+}
+/* line 515, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-events .view-footer ul.event-list li {
+  list-style: none;
+  display: inline-block;
+}
+/* line 519, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-events .view-footer ul.event-list li.add-event {
+  text-align: left;
+}
+/* line 522, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-events .view-footer ul.event-list li.read-more {
+  float: right;
+}
+/* line 527, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-events .attachment {
+  font-family: Georgia, Times, serif;
+  border-top: 1px solid #cccccc;
+  font-style: italic;
+  padding: 0.5em;
+  text-align: right;
+}
+
+/*
+ * END Events Type: Academic Default
+ */
+/* line 542, ../sass/omega-hartnell-alpha-default-normal.scss */
+.view-people-directory .views-field-field-academic-area-or-major {
+  display: table-cell;
+}
+
+/* line 2, ../sass/_athletics-normal.scss */
+.athletics-context {
+  /*
+   *  BEGIN: Athletics Primary Menu
+   */
+  /* Navigation: User */
+  /* BEGIN: Athletic Slideshow View */
+  /* END View Type: Athletic Slideshow */
+  /* BEGIN: Athletic Events View */
+  /* END: Athletic Events View */
+  /* BEGIN: Athletic Menu */
+  /* BEGIN: Athletic Menu */
+}
+/* line 3, ../sass/_athletics-normal.scss */
+.athletics-context .region-branding {
+  z-index: 500;
+}
+/* line 6, ../sass/_athletics-normal.scss */
+.athletics-context .pane-main-menu > h2.pane-title:nth-child(1) {
+  color: white;
+  background-color: #17150f;
+  padding: 0.5em 1em;
+  margin-bottom: 0;
+  -webkit-box-shadow: inset 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+  text-transform: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+/* line 9, ../sass/_athletics-normal.scss */
+.athletics-context a, .athletics-context a:link, .athletics-context a:visited {
+  color: #f3f3f3;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+/* line 17, ../sass/_athletics-normal.scss */
+.athletics-context ul.tabs a, .athletics-context ul.tabs a:link, .athletics-context ul.tabs a:visited {
+  color: #730027;
+}
+/* line 22, ../sass/_athletics-normal.scss */
+.athletics-context ul.tabs .active a, .athletics-context ul.tabs .active a:link, .athletics-context ul.tabs .active a:visited {
+  color: #000000;
+}
+/* line 26, ../sass/_athletics-normal.scss */
+.athletics-context a:hover, .athletics-context a:active, .athletics-context a:focus {
+  color: white;
+}
+/* line 30, ../sass/_athletics-normal.scss */
+.athletics-context ul.tabs a:hover, .athletics-context ul.tabs a:active, .athletics-context ul.tabs a:focus {
+  color: #730027;
+}
+/* line 35, ../sass/_athletics-normal.scss */
+.athletics-context ul.tabs .active a:hover, .athletics-context ul.tabs .active a:active, .athletics-context ul.tabs .active a:focus {
+  color: #000000;
+}
+/* line 44, ../sass/_athletics-normal.scss */
+.athletics-context a.athletic-link, .athletics-context a.athletic-link:link, .athletics-context a.athletic-link:visited {
+  font-family: 'pt_sans_narrowbold';
+  font-weight: normal;
+  color: #cccccc;
+  border-bottom: none;
+  text-transform: uppercase;
+}
+/* line 47, ../sass/_athletics-normal.scss */
+.athletics-context a.athletic-link:hover, .athletics-context a.athletic-link:focus, .athletics-context a.athletic-link:active {
+  color: white;
+  border-bottom: none;
+  text-decoration: none;
+  border-bottom: none;
+}
+/* line 52, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-brand-wrapper .athletic-branding {
+  /* Panther Logo */
+}
+/* line 54, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-brand-wrapper .athletic-branding .logo-img {
+  margin-top: -8%;
+}
+/* line 61, ../sass/_athletics-normal.scss */
+.athletics-context .view-sitewide-alerts a, .athletics-context .view-sitewide-alerts a:link, .athletics-context .view-sitewide-alerts a:visited {
+  float: right;
+}
+/* line 67, ../sass/_athletics-normal.scss */
+.athletics-context .region-user-second {
+  padding: left;
+}
+/* line 69, ../sass/_athletics-normal.scss */
+.athletics-context .region-user-second .block-search-form {
+  float: right;
+  width: 30%;
+}
+/* line 73, ../sass/_athletics-normal.scss */
+.athletics-context .region-user-second .block-user-menu {
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+/* line 78, ../sass/_athletics-normal.scss */
+.athletics-context .region-user-second .block-user-menu ul.menu {
+  float: right;
+}
+/* line 88, ../sass/_athletics-normal.scss */
+.athletics-context .view-athletics .view-content .views-row .views-field-field-person-headshot {
+  float: left;
+}
+/* line 98, ../sass/_athletics-normal.scss */
+.athletics-context h3.player-name,
+.athletics-context .views-field-field-person-title,
+.athletics-context .views-field-field-player-position {
+  font-weight: normal;
+  text-align: left;
+}
+/* line 103, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-brand-wrapper {
+  height: 160px;
+}
+/* line 105, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-brand-wrapper .athletic-branding {
+  /* Social Media Navigation */
+}
+/* line 108, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-brand-wrapper .athletic-branding .social-media-user ul.menu {
+  text-align: right;
+}
+/* line 110, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-brand-wrapper .athletic-branding .social-media-user ul.menu li {
+  float: right;
+}
+/* line 113, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-brand-wrapper .athletic-branding .social-media-user ul.menu li.last {
+  margin: 1em 0 0 0;
+}
+/* line 124, ../sass/_athletics-normal.scss */
+.athletics-context h2.slide-title a,
+.athletics-context h2.slide-title a:link,
+.athletics-context h2.slide-title a:visited {
+  font-family: "pt_sans_narrowbold";
+  /* Mobile */
+  color: #ffb300;
+  font-weight: normal;
+}
+@media only screen and (max-width: 380px) {
+  /* line 124, ../sass/_athletics-normal.scss */
+  .athletics-context h2.slide-title a,
+  .athletics-context h2.slide-title a:link,
+  .athletics-context h2.slide-title a:visited {
+    font-size: 1.375em;
+  }
+}
+/* line 132, ../sass/_athletics-normal.scss */
+.athletics-context h2.slide-title a:hover,
+.athletics-context h2.slide-title a:active,
+.athletics-context h2.slide-title a:focus {
+  color: #996b00;
+}
+/* line 138, ../sass/_athletics-normal.scss */
+.athletics-context .slideshow-athletic .flexslider li .views-field-nothing {
+  width: 100%;
+}
+/* line 142, ../sass/_athletics-normal.scss */
+.athletics-context .slideshow-athletic .flexslider li .views-field-nothing-1 .float-left-text {
+  left: 52%;
+}
+/* line 155, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-events .view-content span.athletic-day {
+  float: right;
+}
+/* line 158, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-events .view-content .views-row {
+  width: 100%;
+}
+/* line 160, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-events .view-content .views-row .views-field-field-event-date-2 {
+  float: left;
+  width: 20%;
+}
+/* line 165, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-events .view-content .views-row .views-field-field-opponent,
+.athletics-context .athletic-events .view-content .views-row .views-field-title-1 {
+  padding-left: 23%;
+}
+/* line 168, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-events .view-content .views-row .schedules-title {
+  margin-bottom: 0;
+}
+/* line 179, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-field-hartnell-score,
+.athletics-context .athletic-events-upcoming .view-content .views-row.schedules-row .views-field-field-opponent-score,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-field-hartnell-score,
+.athletics-context .athletic-events-past .view-content .views-row.schedules-row .views-field-field-opponent-score {
+  width: 50%;
+  float: left;
+}
+/* line 190, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-primary-menu {
+  padding-top: 0;
+}
+/* line 192, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-primary-menu .content {
+  width: 100%;
+}
+/* line 194, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-primary-menu .content ul.menu {
+  float: right;
+  margin-left: 0;
+  padding-left: 0;
+}
+/* line 198, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-primary-menu .content ul.menu li {
+  padding: 0;
+  margin: 0;
+  list-style: inline;
+}
+/* line 202, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-primary-menu .content ul.menu li a.athletic-link, .athletics-context .athletic-primary-menu .content ul.menu li a.athletic-link:link, .athletics-context .athletic-primary-menu .content ul.menu li a.athletic-link:visited {
+  font-family: 'pt_sans_narrowbold';
+  font-weight: normal;
+  color: #cccccc;
+  border-bottom: none;
+  text-transform: uppercase;
+}
+/* line 205, ../sass/_athletics-normal.scss */
+.athletics-context .athletic-primary-menu .content ul.menu li a.athletic-link:hover, .athletics-context .athletic-primary-menu .content ul.menu li a.athletic-link:focus, .athletics-context .athletic-primary-menu .content ul.menu li a.athletic-link:active {
+  color: white;
+  border-bottom: none;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* END .athletic-context */

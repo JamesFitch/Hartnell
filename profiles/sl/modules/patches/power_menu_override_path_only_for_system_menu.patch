@@ -1,0 +1,15 @@
+--- power_menu/power_menu.module
++++ power_menu/power_menu.module
+@@ -198,7 +198,11 @@ function power_menu_entity_view($entity, $type, $view_mode, $langcode) {
+ 
+   // Power menu sets active menu only on full node view and enabled handlers
+   if ($view_mode == 'full' && variable_get('power_menu_handlers_enabled', FALSE)) {
+-    power_menu_set_path($entity, $type, $langcode);
++    $active_trail = menu_get_active_trail();
++    $menu_tail = array_pop($active_trail);
++    if ($menu_tail['module'] == 'system') {
++      power_menu_set_path($entity, $type, $langcode);
++    }
+   }
+ }
+ 

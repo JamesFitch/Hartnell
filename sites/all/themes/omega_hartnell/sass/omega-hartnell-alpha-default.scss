@@ -1,0 +1,245 @@
+/* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+
+/*
+ * Imports
+*/
+
+@import "variables";
+@import "mixins";
+@import "compass";
+@import "fontello";
+
+/*
+ * Elements
+*/
+
+a, a:link, a:visited {
+  text-decoration: none;
+}
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
+.logo-img {
+    margin: 0 auto;
+    width: 99%;
+    float: none;
+}
+
+.ftr-block-logo {
+  margin: 0 auto;
+  width: 20%;
+}
+
+/* 
+ * Responsive Toggle Menu in Omega
+ */
+ 
+a.menu-link {
+   display: none;
+}
+.js nav[role=navigation] {
+    max-height: none;
+}
+nav[role=navigation] ul {
+    border: 0;
+}
+ 
+nav[role=navigation]  li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+    a.main-menu-link,
+    a.main-menu-link:link,
+    a.main-menu-link:visited {
+      color: $white;
+      padding: 0.5em 0.5em 8px;
+      font-family: $alt-font;
+      font-size: 1.1em;
+    }
+    a.main-menu-link:hover,
+    a.main-menu-link:active,
+    a.main-menu-link:focus {
+      text-decoration: none;
+      border-bottom: 8px solid $gold;
+      @include respond-to(handhelds) { color: $burgundy; } /* Mobile */
+      @include respond-to(handhelds) { border-bottom: 1px solid #808080; } /* Mobile */
+      padding: 0.5em 0.5em 0;
+    }
+    a.main-menu-link:after {
+      content:"";
+      float: none;
+      margin-left: 0;
+    }    
+}
+
+nav[role=navigation] li a {
+  border: 0;   
+}
+
+/*
+ *  BEGIN: Athletics Primary Menu
+ */
+  .athletic-primary-menu {
+    padding-top: 0;
+    .content {
+     width: 100%;
+      ul.menu {
+        float: right;
+        margin-left: 0;
+        padding-left: 0;
+        li {
+          padding: 0;
+          margin: 0;
+          list-style: inline;
+            a.athletic-link, a.athletic-link:link, a.athletic-link:visited { 
+              @include athletic-link;
+              font-size: 1.1em;
+            }
+            a.athletic-link:hover, a.athletic-link:focus, a.athletic-link:active { 
+              @include athletic-link-hover;
+            }
+        }
+      }
+    }
+  }
+
+/* END: Athletics Primary Menu */
+
+/* Audience Promo View */
+
+.pane-audience-promotion {
+	#tabs-audience_promotion-center {
+		.ui-widget-content {
+		 border: none;
+			 .pane-views-panes {
+				  .pane-content {
+					   .view-content {
+					     .views-row {
+					      float: left;
+					      width: 32%;
+						      .audience-row {
+							      img {
+							      top: 0;
+							      }
+						      }
+						      .audience-overlay {
+						       margin-top: 0;
+						       height: auto;
+						       opacity: 1.0;
+    						   padding: 0.45em 0.9em;
+						      }
+					     }
+					     .views-row-1, .views-row-2 {
+					      margin-right: 2%;
+					     }				     
+					   }
+				  }
+			 }
+		}
+		.item-list {
+	  	 border-radius: 0 0 0 0;
+		  	 	 li {
+		  	 	  font-size: 0.857em;
+		  	 	  padding: 1em;
+			  	 	 a, a:link, a:visited {
+		 	 	 	  margin-left: 0em;
+		 	 	 	  padding: 0;
+		 	 	 	  }
+				 } 	 
+		}
+	}
+}
+
+
+/* Slideshow */
+.left-div {
+ position: relative;
+	img {
+	 display: block;
+	// max-width: 100%;
+	}
+}
+
+.front {
+  .view-slides {
+    .views-field-nothing-1 {
+      .float-left-text {
+        left: 57%;
+        width: 37%;
+      }
+    }
+  }
+}
+.view-slides {
+  background-color: transparent !important;
+  border: none !important;
+    .view-content {
+      padding: 0 !important;
+        .flexslider {
+          overflow: hidden;
+            .slides {
+              li.flexslider_views_slideshow_slide {
+              .views-field-nothing {
+                position: absolute;
+                  .left-div {
+                    top: 0;
+                      img {
+                        height: expression( this.scrollHeight < 401 ? "400px" : "auto" ); /* Cross browser expression */
+                        min-height: 30.769em; /* Chrome override */
+                        left: 0;
+                        top: 0;
+                        z-index: 2;
+                      }
+                  }
+              }
+            .views-field-nothing-1 {
+              .float-left-text {
+                left: 57%;
+                width: 37%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+/* 
+ * BEGIN: Layout Adjustments
+ */
+.panel-pane { margin-bottom: 1em; }
+
+.grid-13.push-3.row2 {
+	margin: 0;
+	.grid-4.row2col1.lower_col_2 {
+	 margin-left: 0;	
+	}
+	.grid-4.row2col3.lower_col_4 {
+	 margin-right: 0;
+	}
+}
+
+.field-name-field-flexpage-location {
+  .content {
+    .field-name-field-location-type,
+    .field-name-field-location-address {
+      .field-label {
+        width: 100%;
+        float: none;
+        display: block;        
+      }
+      .field-items {
+        width: 100%;
+        margin-bottom: 0.5em;
+        float: none;
+        display: block;  
+      }
+    }
+  }
+}
+
+/* 
+ * END: Layout Adjustments
+ */

@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function ct_flexpage_install() {
+  // Disable the node:flexpage:default panelizer settings.
+  $panelizer_default_status = variable_get('default_panelizer_defaults', array());
+  $panelizer_default_status['node:flexpage:default'] = TRUE;
+  variable_set('default_panelizer_defaults', $panelizer_default_status);
+}

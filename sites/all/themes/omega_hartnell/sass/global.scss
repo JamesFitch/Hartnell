@@ -1,0 +1,558 @@
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+
+/*
+ * Imports
+ */
+
+@import "variables";
+@import "mixins";
+@import "fontello";
+@import "compass";
+@import "compass/support";
+@import "compass/typography/text";
+@import "layouts";
+@import "views";
+@import "slideshows";
+@import "navigation";
+@import "panelpages";
+@import "athletics";
+@import "help";
+@import "reusable-styles";
+
+/**
+ * IE Compatibility
+ */
+
+$legacy-support-for-ie7 : true;
+$legacy-support-for-ie8 : true;
+
+/*
+ * Elements
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $base-font;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  margin: 0.5em 0;
+}
+h1, h2, h3, h4, h5 {
+  color:$dark-gray;
+}
+h6 {
+  color:$white;
+}
+
+h1.title, .pane-node-title h1 { 
+	color: $gold;
+	font-size: 3em;
+	@include dark-header;
+	padding: 6px 13px;
+}
+
+h2.pane-title,.pane-node-title h2 {
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 1.67em;
+    margin-bottom: 0.5em;
+    color: $gray;
+}
+
+body, .views-field-body {
+  color: $gray;
+  font-weight: normal;
+}
+
+body, label, .views-field-body {
+  font-family: $base-font;
+}
+
+blockquote {
+  font-family: $alt-font;
+  font-size: 1.1em;
+  color: $gray;
+  font-style: italic;
+}
+
+label, .views-label {
+  font-weight: bold;
+  color: $light-gray;
+  display: inline;
+  letter-spacing: -0.01em;
+}
+
+a, a:link, a:visited {
+  color: $burgundy;
+  text-decoration: none;
+}
+a:hover, a:active, a:focus {
+  color: darken($burgundy, 10%);
+}
+
+.more-link a {
+  float: left;
+  @include list-pad;
+}
+
+li.read-more .icon-right-open:before,
+.icon-right-open:after,
+.icon-right-open:before  {
+  font-size: 13px !important;
+  float: right;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+tr:hover td {
+  background: transparent;
+}
+
+ol, ul {
+  margin: 0 0 1.5em 1em;
+}
+
+p.simple-gmap-link {
+  margin: 20px 0;
+  text-align: center;
+	a, a:link, a:visited {
+	  @include gold-bttn;
+	  font-size: 0.9em;
+	}
+	a:hover, a:active, a:focus {
+	  @include gold-bttn-hover;
+	}
+}
+
+.pager li.pager-first a,
+.pager li.pager-previous a,
+.pager li.pager-next a,
+.pager li.pager-last a {
+	width: auto;
+}
+
+.ajax-progress {
+ display: none !important;
+}
+
+button, input[type="reset"], input[type="submit"], input[type="button"] {
+	@include default-bttn;
+	@include default-round;
+}
+
+hr {
+  @include hr-style;
+}
+
+/* Tabs  */
+.ui-tabs {
+  border: none;
+  border-radius: 0;
+  background: hidden;
+  padding: 0;
+	ul.ui-tabs-nav {
+	  background: none;
+	  border: none;
+	}
+	.ui-tabs-panel, .ui-widget-content, .ui-corner-bottom {
+	  padding: 0;
+	  background-color: white;
+	  border: 1px solid $crumbs;
+	 	.panel-pane.pane-views-panes {
+			.pane-content {
+			 padding: 0;
+			}
+		}
+	 	.panel-pane {
+	 	 margin-bottom: 0;
+			.pane-content {
+			 font-family: $base-font;
+			 @include equal-pad;
+				p:last-child {
+				 margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.ui-tabs-panel {
+	 margin-bottom: 1em;
+	}
+	.ui-state-active,
+	.ui-widget-content .ui-state-active,
+	.ui-widget-header .ui-state-active {
+	 border: 1px solid $crumbs;
+	 font-size: 1em;
+	 font-family: $base-font;
+	 font-weight: bold;
+	 color: $gray;
+	}
+	.ui-state-default {
+	 font-size: 1em;
+	 font-family: $base-font;
+	 font-weight: bold;
+	 color: $light-gray;		
+	}
+	.ui-corner-bottom {
+     border-bottom-left-radius: 0px;
+     border-bottom-right-radius: 0px;
+	}
+	.pane-content {
+	 padding: 0;
+		.view {
+		 border: none;
+			.view-content {
+			  padding: 0;
+			}
+			.view-footer {
+			  font-size: 13px;
+			}
+		}
+	}
+}
+/* END: Global Style - Tabs */
+
+
+/* Global Style - Accordions */
+
+.ui-accordion {
+ width: auto;
+ 	.views-row {
+ 	  padding: 0;
+ 	}
+    .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	 @include dark-header-title;
+     font-weight: bold;
+     font-family: $base-font;
+		a, a:link, a:visited {
+		 color: $crumbs;
+		 text-decoration: none;
+		}
+		a:hover, a:active, a:focus {
+		 color: darken($crumbs, 20%);
+		}
+	}
+	.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+	 @include dark-header-title;
+     font-weight: bold;
+     font-family: $base-font;	
+		a, a:link, a:visited {
+		 color: $gold;
+		 text-decoration: none;
+		}
+		.ui-icon {
+		 color: $gold;
+		}
+	}
+	.ui-accordion-content {
+	 @include equal-pad;
+		p {
+		 font-size: 1em;
+		 font-family: $base-font;
+		}
+	}
+}
+.ui-corner-top,
+.ui-corner-all {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+/* END: Global Style - Accordions */
+
+
+/* Global Style -Tables */
+table {
+  width:100%;
+}
+
+th.active {
+  border-right: none;
+}
+
+.footable { 
+ border-collapse: separate;
+ @include content-custom;
+ border-spacing: 0;
+ color: $dark-gray;
+ font-family: $base-font;
+ font-size: 1em;
+   thead, > thead  {
+	    > tr:first-child > th.footable-first-column,
+	    > tr:first-child > td.footable-first-column {
+	      border-radius: 0 0 0 0;
+	    }
+	    > tr > th,
+	    > tr > td,
+	    th {
+	      @include dark-header;
+	      background-image: linear-gradient(to bottom, #17150F, #080705);
+		  text-shadow:
+			0px -1px 1px rgba(000,000,000,1),
+			0px 1px 1px rgba(255,255,255,0.3);
+	    }
+		> tr:first-child > th.footable-last-column, 
+		> tr:first-child > td.footable-last-column {
+		  border-radius: 0 0 0 0;
+		}
+
+    }
+    tbody, > tbody {
+      tr:last-child > td.footable-first-column,
+      tr:last-child > td.footable-last-column {
+        border-radius: 0;
+	  }
+	} 
+}
+
+thead {
+
+}
+
+table, tbody, tfoot, thead, tr, th, td {
+  /* border: 0 none; */
+  font-family: $base-font;
+  margin: 0;
+  outline: 0 none;
+  padding: 0;
+  vertical-align: baseline;
+}
+table, tfoot, thead {
+  border: 0 none;
+}
+
+thead th, th.active {
+  @include dark-header;
+  border-bottom: 1px solid $crumbs;
+  font-family: $base-font;
+  font-weight: bold;
+  color: $white;
+  font-size:1.2em;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 0 0 0 0;
+	tr {
+	th, td {
+		 @include dark-header;
+		 border-left: 1px solid $dark-gray;
+		 border-bottom: 1px solid $dark-gray;
+		 font-size: 1em;
+		 text-shadow: none;
+		 color: $neutral;
+		 	a, a:link, a:visited {
+			 color: $white;			 
+			}
+			a:hover, a:active, a:focus {
+			 color: $gold;				 
+			}		
+		}
+	}
+	 th:first-child {
+	  border-radius: 6px 0 0 0;
+	  -webkit-border-top-left-radius: 5px;
+	  -moz-border-radius-topleft: 5px;
+	  border-bottom: 1px solid $light-gray;
+	}
+    th:last-child {
+	  border-radius: 0 6px 0 0;
+	 -webkit-border-top-right-radius: 5px;
+	 -moz-border-radius-right: 5px;
+     border-bottom: 1px solid $light-gray;
+	}
+}
+
+tbody {
+  border-right: 1px solid $crumbs;
+  border-left: 1px solid $crumbs;
+    tr.even td {
+      background: none repeat scroll 0 0 #ebebeb;
+	}
+	td {
+	  border-bottom: 1px solid $crumbs;
+	  border-left: 1px solid $crumbs;
+	  padding: 4px 8px;
+	  text-align:left;
+	  font-size:0.85em;
+	}
+	td:first-child {
+	  border-left:none;
+	} 	
+}
+
+
+/* gainful-employment */
+table.gainfulemployment-cip th.gainful-plan {
+	min-width:51px ;
+}
+table.gainfulemployment-cip th.gainful-soc {
+	width:70px ;
+}
+
+table.gainfulemployment-program th,
+table.gainfulemployment-program td.gainful-prog-cell {
+  width: percentage(1 / 9);
+}
+
+table.gainfulemployment-program td.gainful-prog-cell {
+	text-align: center; vertical-align:top;
+}
+/* END: Global Style - Tables */
+
+
+
+/*
+ * Sections / Zones / Regions
+ */
+
+/* Header */
+
+.section-header{
+  @include primary-gradient;
+  @include respond-to(handhelds) { @include primary-mobile;  } /* Mobile */
+  @include respond-to(medium-screens) { @include primary-mobile; } /* Tablets */
+	.zone-user-wrapper {
+	background-color: $user-menu;
+	@include inset-shadow;
+	border: 1px solid $dark-gray;
+		.region-user-first {
+		  padding: 0.5em 0;
+		}
+		.region-user-second {
+			.block {
+			    @include respond-to(handhelds) {
+				  float: none;
+				  margin: 0 auto;
+				  width: 90%;
+			    } /* Mobile */ 
+		  	}
+		  	.block-user-menu{
+			    @include respond-to(handhelds) {
+				  margin: 0 auto 3%;
+			    } /* Mobile */ 
+		  	}
+			.block-search-form {
+			  .form-text {
+				@include super-round;
+				margin-right: 0.5em;
+				@include opacity(0.6);
+				width: 87%;
+				font-size: 0.846em;
+			  	font-weight: bold;
+			  	color: $gray;
+			  	padding: 0.154em 0.231em 0.154em 13px;
+				}
+				.form-actions {
+					input {
+					@include opacity(0.8);
+					background: transparent ;
+					}
+					input:hover {
+					@include opacity(1.0);
+					background: transparent ;
+					}
+				}		  
+			}
+		}
+	}
+	.zone-branding {
+    position: relative;
+	  .region-branding {
+	    /* Panther Logo */
+		.logo-img {
+		  @include respond-to(handhelds) { margin: 0 15%; width: 70%; }
+		    a {
+		      text-align: center;
+		    } 
+		}
+	  }
+	}
+	.zone-header-wrapper {
+	 border-top: 1px solid #5a001e;
+	 background-color: $burgundy;
+	 @include inset-shadow;
+		.region-header-first {
+		 padding:  0.5em 0;
+			span.field-content{
+			display: block;
+	    	text-align: center;
+	    	text-shadow: 1px 0 1px #333333;
+				a, a:link, a:visited {
+				color: $gold;
+				font-weight: 700;
+				text-align:center;
+				font-size: 1.167em;
+				text-decoration: none;
+				}
+				a:hover, a:active, a:focus {
+				color: $white;
+				text-decoration: none;
+				}
+				a:after {
+				margin-left: 0.50em;
+				content:"- click for more info!";
+				}
+		  	}
+		}
+	}
+}
+
+.page {
+	background: url(../images/hartnell_panther.jpg) bottom left no-repeat;
+	background-size: 50%;
+}
+
+.section-footer {
+	@include inset-shadow;
+	/* CSS3 Gradient */
+	@include primary-gradient; 
+	@include respond-to(handhelds) { @include primary-mobile; } /* Mobile */
+	@include respond-to(medium-screens) { @include primary-mobile; } /* Tablets */
+}
+
+/* Page */
+#page {
+  overflow: hidden;
+}
+
+/* Content */
+.zone-content { padding: 0 0 1em 0; }
+
+/* Footer */
+.zone-footer-wrapper {
+ margin-top: 1em;
+	.region-footer-first {
+		.block {
+		  padding: 0;
+		  h2.block-title {
+		    font-family: $alt-font;
+		    color: $gold;
+		    font-weight: normal;
+		  }
+		  p {
+		    margin: 0;
+		  }	    
+		}
+	}
+}
+
+
+/* Footer */
+
+/* Functionality */
+
+
+
+/*
+ * Widgets
+ */
+
+ /* iTunes */
+ .itunes-custom {
+ 	#container { 
+ 	 width: 100% ;
+ 	}
+ }
+.style-box {
+ @include content-custom;
+}

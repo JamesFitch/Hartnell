@@ -1,0 +1,68 @@
+<style type="text/css">
+.strong {
+	font-weight: bold;
+}
+</style>
+<h2>Stlying a link to a menu</h2>
+
+<h3>Before you begin</h3>
+<p>If the link you plan to add leads to a Drupal node or content type, first be sure your content type is published. Unpublished nodes may not be available to all site editors or visitors.</p>
+<p>
+Let’s review how your site’s top navigation menus are organized.
+	<ul>
+		<li>Academic Style Pages filter first level links of the Main Menu or http://yourwebaddress.com/admin/structure/men through the top Navigation Bar.<img class="screenshot" src="&path&/screenshots/academic-style-menu.png" /></li>
+		<li>Athletic Style Pages filter first level links of the Athletic Theme Menu or http://yourwebaddress.com/admin/structure/menu through the top Navigation Bar.<img class="screenshot" src="&path&/screenshots/athletic-style-menu.png" /></li>
+	</ul>
+</p>
+<ol>
+			<li>Navigate to the content type for the menu (Structure > Menu or http://yourwebaddress.com/admin/structure/menu/types).</li>
+			<li>Locate the menu you would like to edit (Main menu or Ahtletic Theme Menu) and click <strong>edit</strong>.</li>
+			<li>Now for styling the Main menu be aware that these styles only apply to First Tier Menu links. These are primary links that you see a the top of all the pages. So it you refer to the Menu link list below, 'Hartnell College', 'A through Z index' and 'Future Students' are all First Tier Menu links. So you would not select Registration, or 'Orientation Calendar'. <br>
+			<img class="screenshot" src="&path&/screenshots/menu-style-one.png" />
+			<li>Now for styling the Main menu be aware that these styles only apply to First Tier Menu links. These are primary links that you see a the top of all the pages. So it you refer to the Menu link list below, 'Hartnell College', 'A through Z index' and 'Future Students' are all First Tier Menu links. So you would not select Registration, or 'Orientation Calendar'. <br>
+			<img class="screenshot" src="&path&/screenshots/menu-style-two.png" />		
+			</li>
+</ol>
+
+
+<h3>Adding a link using the Menus section</h3>
+<ol>
+			<li>Navigate to the Menus page (Structure > Menus or http://yourwebaddress.com/admin/structure/menu).</li>
+			<li>Locate a menu to edit and click <strong> add link</strong>.</li>
+			<li>In the <strong>Menu link</strong> title field, enter the title as it will be displayed in the menu.  </li>
+			<li>In the <strong>Path</strong> field, enter a path for the link. This can be an internal path such as node/add (see "Before you begin" above)
+      or an external URL such as http://example.com. Enter <front> to link to the front page.</li>
+			<li>In the <strong>Description</strong> field, enter the text that will be displayed when a user hovers over the link.</li>
+			<li>Enable the link. </li>
+		      	<ul class="no-margin-bottom">
+		        		<li>If the link is not enabled, it will not be displayed in the menu.</li>
+		        		<li>If the content is not published, it will not be displayed in the menu.</li>
+		        </ul>
+			<li>In the <strong>Parent link</strong> list, select the parent of the link. </li>
+			<li>(Optional) In the <strong>Weight</strong> list, select the relative weight of the link. Links with the "lightest" weight will display higher in a menu. Links with the same weight will display in alphabetical order. </li>
+			<li>(Important) Now we ad the style class. Scroll down and under 'Menu Item Attributes' in the 'Classes' field you will add your resuable style for the top level navigation.  </li>
+				<ul class="no-margin-bottom">
+		        		<li>For top level links on the Academic Style Pages you will use the style 'main-menu-link '.</li>
+		        		<li>For top level links on the Academic Style Pages you will use the style 'athletic-link '.</li>
+		        </ul>
+			<img class="screenshot" src="&path&/screenshots/menu-style-three.png" />	
+			<li>Click <strong>Save</strong>. </li>
+
+</ol>
+
+<h3>Adding a styled link using the content type</h3>
+<ol>
+			<li>Navigate to the node editing screen (Node > Edit or http://egos-school.com/admin/node/*/edit) for the node/content you want to add to the menu. This can also be done when you first create the node/content.</li>
+			<li>Click the checkbox marked <strong>Provide a menu link</strong>. The menu options will appear.</li>
+			<li>In the <strong>Menu link title</strong> field, enter the title as it will be displayed in the menu.</li>
+			<li>In the <strong>Description</strong> field, enter the text that will be displayed when a user hovers over the link.</li>
+			<li>In the <strong>Parent item</strong> list, choose the menu that should display this item. Note: the menu you want will only appear in this list if you have assigned it to the content type of the node you are editing. See "Before you begin" above.</li>
+			<li>(Optional) In the <strong>Weight</strong> list, select the relative weight of the link.</li>
+			<li>(Important) Now we ad the style class. Scroll down and under 'Menu Item Attributes' in the 'Classes' field you will add your resuable style for the top level navigation.  </li>
+				<ul class="no-margin-bottom">
+		        		<li>For top level links on the Academic Style Pages you will use the style 'main-menu-link '.</li>
+		        		<li>For top level links on the Academic Style Pages you will use the style 'athletic-link '.</li>
+		        </ul>
+			<img class="screenshot" src="&path&/screenshots/menu-style-four.png" />	
+			<li>Click <strong>Save</strong>. </li>
+</ol>

@@ -1,0 +1,19 @@
+diff --git a/menu_minipanels.module b/menu_minipanels.module
+index 6c87b50..b630cc9 100755
+--- a/menu_minipanels.module
++++ b/menu_minipanels.module
+@@ -461,11 +461,9 @@ function menu_minipanels_page_alter(&$page) {
+   // has already been created, and therefore our code would not be included.
+   // Therefore, we ought to load any mini panels primary and secondary links
+   // may have.
+-  if (theme_get_setting('toggle_main_menu')) {
+-    menu_minipanels_prepare_links(menu_main_menu());
+-  }
+-  if (theme_get_setting('toggle_secondary_menu')) {
+-    menu_minipanels_prepare_links(menu_secondary_menu());
++  $menu_names = menu_get_names();
++  foreach( $menu_names as $menu_name ){
++    menu_minipanels_prepare_links(menu_navigation_links($menu_name));
+   }
+ 
+   // Compile the output of each of the requested MiniPanels.

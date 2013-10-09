@@ -1,0 +1,11 @@
+name = Taxonomy: News Type
+description = News type taxonomy.
+core = 7.x
+package = Taxonomy
+php = 5.2.4
+version = 7.x-1.0-beta1
+project = tax_news_type
+dependencies[] = features
+dependencies[] = taxonomy
+features[features_api][] = api:1
+features[taxonomy][] = news_type

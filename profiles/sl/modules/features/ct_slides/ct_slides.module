@@ -1,0 +1,48 @@
+<?php
+/**
+ * @file
+ * Code for the ct_slides feature.
+ */
+
+include_once 'ct_slides.features.inc';
+
+/**
+ * Implements hook_preprocess_views_view_flexslider().
+ */
+function ct_slides_preprocess_views_view_flexslider(&$vars) {
+  //dpm($vars, 'views_view_flexslider vars');
+}
+
+/**
+ * Implements hook_preprocess_flexslider_list().
+ */
+function ct_slides_preprocess_flexslider_list(&$vars) {
+  //dpm($vars, 'flexslider_list vars');
+}
+
+/**
+ * Implements hook_preprocess_flexslider_list_item().
+ */
+function ct_slides_preprocess_flexslider_list_item(&$vars) {
+  $vars['settings']['attributes']['class'][] = 'flexslider_views_slideshow_slide';
+  //dpm($vars, 'flexslider_list_item vars');
+}
+
+/**
+ * Implements hook_preprocess_views_view_flexslider().
+ */
+function ct_slides_preprocess_flexslider(&$vars) {
+  //dpm($vars, 'flexslider vars');
+}
+
+function ct_slides_preprocess_views_view_fields(&$vars) {
+  if ($vars['view']->name == 'slides') {
+    //dpm($vars, 'vars in views fields');
+  }
+}
+
+function ct_slides_preprocess_views_view(&$vars) {
+  if ($vars['view']->name == 'slides') {
+    //dpm($vars, 'vars in views row');
+  }
+}

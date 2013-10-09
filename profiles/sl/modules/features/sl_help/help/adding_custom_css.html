@@ -1,0 +1,43 @@
+<div class="advanced-help-topic">
+	<h1>Adding your own custom css</h1>
+	<p>Occasionally you will be called ad to custom css to your site. For vendors. advertisers etc. Here is simple reference guide on adding the that css easily and uploading it to Pantheon with out using git. You will need to know how to FTP and of course css.</p>
+	<p>CSS definitions for custom styles can be added (though be careful!) in the stylesheet named "reusable.css" in the theme CSS directory (e.g. /sites/all/themes/omega_emgrif/css/reusable.css). At the bottom of the file you will find the custom css area (as seen below), please add your custom css here. It is best practice to test the css on your testing or dev environment before pushing the new css to you live site.</p>
+  <img class="screenshot" src="&path&/screenshots/custom-css-placement.png" alt="custom-css-placement" width="1326" height="296">
+  <p>Use the documentation below for links and references on how to upload your changes to Pantheon.</p>
+	<h3> Filezilla</h3>
+  <ul>
+    <li> Setting up your FTP client. Filezilla is a free Open source FTP client that is available for Windows, Mac OS X and Linux.
+    If you do not have filezilla installed then go ahead and <a href="http://winscp.net/eng/index.php">download the latest version</a> and get it 	running on your computer.</li>
+	  <li><a href="http://wiki.filezilla-project.org/Documentation">Filezilla overview of the most important topics </a></li>
+	  <li><a href="http://wiki.filezilla-project.org/Site_Manager">Filezilla Site Manager Documentation</a></li>
+  </ul>
+  
+  	<h3> Pantheon</h3>
+  <ul>
+    <li><a href="http://helpdesk.getpantheon.com/customer/portal/articles/565680-filezilla-on-pantheon">Filezilla on Pantheon</a></li>
+	  <li><a href="http://helpdesk.getpantheon.com/customer/portal/articles/376107-on-server-development#connecting-via-sftp">Where to find the SFTP credentials for your site. </a></li>
+    <li><a href="http://helpdesk.getpantheon.com/customer/portal/articles/361247-starting-with-git#push-changes-to-pantheon">Push Changes to Pantheon</a></li>
+  </ul>
+  	<h3>Pantheon & Git</h3>  
+		<p>Pantheon uses git for managing code and deployments.</p>
+
+		<p>Here are the steps to getting a local codebase copy for your work:
+<ol>
+    <li>If you don't yet have git installed on your computer, you can <a href="http://git-scm.com/">download it here</a> for Windows and Mac OS X. If you're running Linux, you should probably install from your distribution's package manager.</li>
+    <li>Pantheon will need you to <a href="http://helpdesk.getpantheon.com/customer/portal/articles/361246-loading-ssh-keys">upload your SSH public key</a>. If you don't know what an SSH public key is, please <a href="http://helpdesk.getpantheon.com/customer/portal/articles/366938-generate-ssh-keys">follow these key generation instructions</a> to make one to upload. You only need to do this once, no matter how many sites you have on Pantheon.</li>
+   <li> Give the system a few minutes to reconfigure with your ssh key</li>
+    <li>Once you've done the first two steps, copy and paste the "git clone" command from the text field at the top of the code log to get a local working copy.</li>
+</ol>
+</p>
+<p>Once you have a local git clone, here's the basic flow for pushing changes to the development environment (be sure to start from within the directory git created):
+	<ol>
+   	<li>git add .</li>
+    <li>git commit -am "Description of the change."</li>
+    <li>git push origin master</li>
+    <li>Check the development site for the changes within 5-10 seconds.</li>
+  </ol>
+</p>
+<p>Further documentation for getting started with git as well as using the Pantheon workflow are available in the <a href="http://helpdesk.getpantheon.com/">helpdesk</a>. The website <strong>"How to Build a Module"</strong> <a href="http://buildamodule.com/video/change-management-and-version-control-installing-git-and-working-on-the-command-line-how-to-install-git-on-windows-with-mysygit">offers serveral drupal specific videos </a>on installing git and working with command line.</p>
+
+  
+ </div> <!-- end advanced-help-topic -->

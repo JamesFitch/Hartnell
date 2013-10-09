@@ -1,0 +1,52 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * 
+ * <!--[if lt IE 9]>
+ * 	<link rel="stylesheet" type="text/css" href="ie8-and-down.css" />
+ * <![endif]-->
+ */
+
+/*
+ * IE8 styles
+ ****************************/
+
+//
+// General includes
+//
+@import "variables";
+@import "mixins";
+@import "ie7";
+@import "ie8";
+@import "ie9";
+
+/**
+ * IE Compatibility
+ */
+
+.athletics-context .form-select {
+  @include old-ie { 
+    color: $black !important;
+	background-color: $white !important;
+  }
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  @include old-ie { 
+    color: $black !important;
+	background-color: $white !important;
+  }
+}

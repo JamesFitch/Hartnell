@@ -1,0 +1,60 @@
+/* temporary styles */
+
+
+/* featured programs slideshow */
+.featured-programs-slideshow-slide {
+    position: relative;
+}
+.featured-programs-slideshow-slide .featured-programs-slideshow-slide-description {
+    position: absolute;
+    top: 2em;
+    right: 1em;
+    background: #000000;
+    opacity: 0.75;
+    color: #ffffff;
+}
+.view-featured-programs-slideshow .views-slideshow-controls-bottom {
+    background: #000000;
+}
+.view-featured-programs-slideshow .featured-programs-slideshow-pager-item  {
+    float: left;
+    margin-right: 0.9em;
+    text-align: center;
+    cursor: pointer;
+    color: #ffffff;
+}
+.views-slideshow-pager-field-item:last-child .featured-programs-slideshow-pager-item {
+    margin-right: 0;
+}
+
+/* audience promotion vertical tab styles */
+.ui-tabs-vertical { width: 90em; }
+.ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: right; width: 14em; }
+.ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+.ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
+.ui-tabs-vertical .ui-tabs-panel { padding: 0em; float: left; width: 75em;}
+
+.audience-promotion-block {
+    position: relative;
+    float: left;
+    width: 24em;
+    margin-right: 1em;
+}
+.audience-promotion-block .audience-promotion-info-box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 23em;
+    padding: 0.5em;
+    background: #000000;
+    opacity: 0.75;
+    color: #ffffff;
+}
+.block-menu-block-1,
+.block-menu-block-2,
+.block-menu-block-3,
+.block-menu-block-4 {
+    width:25%;
+    float: left;
+}

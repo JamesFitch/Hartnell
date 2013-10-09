@@ -1,0 +1,77 @@
+<h1>Adding a flexible page</h1>
+<ol>
+  <li>Starting in the admin toolbar, click on "<b>Add content</b>" then "<b>Flexible page</b>"</li>
+  <li>Fill out the <b>Standard fields</b> (the <b>title</b> and <b>body</b>/main content). See <a href="&topic:sl_help/msc_content_richtext&">Using the rich text editor</a> for help using the rich text editor in the main content.</li>
+  <li>Fill out the "<b>About this content</b>" section.
+    <ol>
+      <li>Choose the <b>Site Section</b> this page belongs to. The site section determines editorial access and assists with menu placement, particularly if this page is not specifically listed in a menu.<br><img src="&path&screenshots/msc_content_addcontent_sitesection.jpg" alt="Site section"></li>
+      <li>The <b>Audience</b> field is not currently in use.</li>
+      <li>The <b>Tags</b> field is not currently in use.</li>
+    </ol>
+  </li>
+  <li>Fill out the "<b>Images</b>" section as needed/desired
+    <ul>
+      <li>Use <b>either</b> a banner <b>or</b> a slideshow.</li>
+      <li>Feel free to upload an image larger than 1220x300px. Drupal will resize and crop the image for you. However, if you want control over the cropping placement, upload an image that is already the dimensions appropriate for the layout you choose.</li>
+      <li>Slides must have an image, but the title, link, and description are all optional. You can reorder the slides by dragging on their crosshair handles.<br><img src="&path&screenshots/msc_content_addcontent_crosshairs.jpg" alt="Crosshairs"></li>
+    </ul>
+  </li>
+  <li>Fill out the "<b>Promotional fields</b>" section as needed/desired.
+    <ul>
+      <li>Promotional fields allow you to add up to six extra areas of custom content. This can be additional text, a list of buttons, a list of links, an image link, etc. You can place and rearrange these fields using panelizer (see below).</li>
+    </ul>
+  </li>
+  <li>Fill out the "<b>Related items</b>" section
+    <ul>
+      <li>
+        <p>"<b>Related Links</b>" allows you to create a pseudo menu of related pages, either internal to the website or external on other websites.</p>
+        <p>Enter the link text into "<b>Title</b>" and the relative path or URL into the "<b>URL</b>" field.</p>
+        <p>To add multiple links, click "<b>Add another item</b>."</p>
+        <p><img src="&path&screenshots/msc_content_addcontent_relatedlinks.jpg" alt="Related links"></p>
+        <p><b>Note</b>: If you are linking to an internal page, it is best to use the node ID, which is the unique identifier of the piece of content. This prevents broken links if the human-readable path to the page changes. To find the node ID of a piece of content:</p>
+        <ol>
+          <li>Navigate to the page you want to link to (it can be helpful to do this in a separate browser tab or window).</li>
+          <li>Ensure you are logged in as a content editor.</li>
+          <li>Click on the content's "<b>Edit</b>," "<b>Edit draft</b>" or "<b>New draft</b>" tab.</li>
+          <li>In the URL, find where it says "node/[somenumber]" e.g. "node/139".<br /><img src="&path&screenshots/msc_content_urlnodeid.jpg" alt="Node ID in the URL"></li>
+          <li>The number is the node ID. Copy that portion of the URL (e.g. "node/139") and put that into the URL field of the related link.<br />
+            <img src="&path&screenshots/msc_content_relatedurl.jpg" alt="Related links URL"></li>
+        </ol>
+      </li>
+      <li><b>Contact person</b> for flexible pages will likely be irrelevant for this site, but if you need to link to a specific person you can do so here.</li>
+    </ul>
+  </li>
+  <li>Choose the layout of the page in the "<b>Panelizer</b>" section. Use the landing page when you want a banner or slideshow to span the whole width of the page.<br>
+    <img src="&path&screenshots/msc_content_addcontent_layoutchoice.jpg" alt="Panel layout choice"></li>
+  <li>If you want this page to appear in the main menu system, read the section on adding a menu item when creating or editing a page in the help page <a href="&topic:sl_help/msc_menus&">Managing menus</a>.</li>
+  <li>When you have finished adding or updating the content, press "<b>Save</b>" at the bottom of the page.<br/>
+    <img src="&path&screenshots/msc_content_addcontent_save.jpg" alt="Save button">
+  </li>
+  <li>Note that the "<b>Preview</b>" functionality is limited and will not completely display how your content will look once published.</li>
+</ol>
+<p>Note also that flexible pages will not be published until they pass through the moderation process.<br />
+Required fields are marked with a red star.</p>
+
+<h2>Using Panelizer on flexible pages:</h2>
+<p>Panelizer gives you the ability to change the layout and content placement of flexible pages.</p>
+<ol>
+  <li>After saving a page, click on its "<b>Panelizer</b>" tab<br/>
+    <img src="&path&screenshots/msc_content_panelizer_tab.jpg" alt="Panelizer tab"></li>
+  <li>To move a piece of content, click and drag on its gray header and move it to the new region.<br/>
+    <img src="&path&screenshots/msc_content_panelizer_drag.jpg" alt="Drag pane"></li></li>
+  <li>To remove a piece of content from the layout, click on its gear icon and then click "<b>Remove</b>" at the bottom of the drop-down list.<br/>
+    <img src="&path&screenshots/msc_content_panelizer_remove.jpg" alt="Remove pane"></li></li>
+  <li>To add more content, click on the region's gear icon and then click "<b>Add content</b>"<br/>
+    <img src="&path&screenshots/msc_content_panelizer_regiongear.jpg" alt="Panelizer region gear"></li><br/>
+    <img src="&path&screenshots/msc_content_panelizer_addcontent.jpg" alt="Panelizer add content">
+  </li>
+  <li>A window will pop up giving you a variety of options contained within fieldsets. Usually you will only need to use <b>Maricopa Views</b>, <b>Miscellaneous</b>, and <b>Node</b>.<br/>
+    <img src="&path&screenshots/msc_content_panelizer_addcontent_fieldsets.jpg" alt="Panelizer add content fieldsets">
+    <ul>
+      <li><b>Maricopa Views</b>: These are various views (lists of content + functionality) that you can place. For most pages, you will probably only need "<b>Department list</b>" (which lists related Departments), "<b>Slideshow - internal page</b>" or "<b>Slideshow - landing page</b>" (which displays the slideshow).</li>
+      <li><b>Miscellaneous</b>: For the most part, you will only need "<b>AddThis</b>" (which places the AddThis buttons) and "<b>Printer, email and PDF versions</b>" (which places those buttons).</li>
+      <li><b>Node</b>: These are the fields that you filled out when creating the flexible page. You will most often use the <b>promotional fields</b> and the <b>related links</b> as well as the <b>banner image</b>. The related departments and slideshows are views, found under Maricopa Views.</li>
+    </ul>
+  </li>
+  <li>Click "<b>Save</b>" after making any changes, including moving the content, or the changes will be lost.</li>
+</ol>

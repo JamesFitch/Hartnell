@@ -1,0 +1,113 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function tax_audience_install() {
+  _tax_audience_init_vocabulary();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function tax_audience_uninstall() {
+  _tax_audience_delete_vocabulary();
+}
+
+function _tax_audience_init_vocabulary() {
+  $vocabulary = taxonomy_vocabulary_machine_name_load('audience');
+  if (!$vocabulary) {
+    // $vid = db_insert('taxonomy_vocabulary')
+    //   ->fields(array(
+    //     'name' => 'Audience',
+    //     'machine_name' => 'audience',
+    //     'description' => 'The group for which this content is intended.',
+    //     'hierarchy' => 0,
+    //     'module' => 'tax_audience',
+    //     'weight' => 0,
+    //   ))
+    //   ->execute();
+    $vocabulary = (object) array(
+      'name' => 'Audience',
+      'machine_name' => 'audience',
+      'description' => 'The group for which this content is intended.',
+      'hierarchy' => 1,
+      'module' => 'tax_audience',
+      'weight' => 0,
+    );
+    taxonomy_vocabulary_save($vocabulary);
+    $vocabulary = taxonomy_vocabulary_machine_name_load('audience');
+  }
+  $vid = $vocabulary->vid;
+  $terms_count = db_query("SELECT COUNT(*) FROM {taxonomy_term_data} WHERE vid = :vid", array(':vid' => $vid))->fetchField();
+  if (!$terms_count) {
+    $values = array(
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Students',
+        'description' => '',
+        'weight' => 0,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Parents',
+        'description' => '',
+        'weight' => 2,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Alumni',
+        'description' => '',
+        'weight' => 4,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Faculty & Staff',
+        'description' => '',
+        'weight' => 6,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Community',
+        'description' => '',
+        'weight' => 7,
+      ),
+    );
+    foreach ($values as $term) {
+      taxonomy_term_save($term);
+    }
+    $students_term = array_shift(taxonomy_get_term_by_name('Students', 'audience'));
+    $values = array(
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Current Students',
+        'description' => '',
+        'parent' => $students_term->tid,
+        'weight' => 0,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Future Students',
+        'description' => '',
+        'parent' => $students_term->tid,
+        'weight' => 1,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Transfer Students',
+        'description' => '',
+        'parent' => $students_term->tid,
+        'weight' => 2,
+      ),
+    );
+    foreach ($values as $term) {
+      taxonomy_term_save($term);
+    }
+  }
+}
+
+function _tax_audience_delete_vocabulary() {
+  // Should we delete the vocabulary if this feature is uninstalled?
+  $vocabulary = taxonomy_vocabulary_machine_name_load('audience');
+  taxonomy_vocabulary_delete($vocabulary->vid);
+}

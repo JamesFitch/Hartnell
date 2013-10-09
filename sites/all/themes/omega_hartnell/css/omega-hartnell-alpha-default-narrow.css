@@ -1,0 +1,409 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the normal and widescreen layouts. You may override these styles in the normal 
+ *  and widescreen CSS files as appropriate. */
+/*
+ * Imports
+ */
+/*
+ * Mixins
+ */
+/*
+* General includes
+*/
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.woff") format("woff"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.ttf") format("truetype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pt_sans_narrowbold';
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot");
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.woff") format("woff"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.ttf") format("truetype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.svg#pt_sans_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * Vanilla mixins
+ */
+/* Links */
+/* Links END */
+/* 
+*	Style Elements
+*/
+/* Images */
+/* Margin is overriding core wysiwyg settings */
+/* Margin is overriding core wysiwyg settings */
+/* Panels */
+/*
+* Social buttons backgrounds
+*/
+/*
+* Flexible buttons
+*/
+/*
+ * BEGIN: Athletics Mixins
+ */
+/*
+ * END: Athletics Mixins
+ */
+/*
+ * Imports
+ */
+/*
+ * Mixins
+ */
+/*
+* General includes
+*/
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.woff") format("woff"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.ttf") format("truetype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pt_sans_narrowbold';
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot");
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.woff") format("woff"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.ttf") format("truetype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.svg#pt_sans_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * Vanilla mixins
+ */
+/* Links */
+/* Links END */
+/* 
+*	Style Elements
+*/
+/* Images */
+/* Margin is overriding core wysiwyg settings */
+/* Margin is overriding core wysiwyg settings */
+/* Panels */
+/*
+* Social buttons backgrounds
+*/
+/*
+* Flexible buttons
+*/
+/*
+ * BEGIN: Athletics Mixins
+ */
+/*
+ * END: Athletics Mixins
+ */
+/* line 8, ../sass/_athletics-narrow.scss */
+.athletics-context {
+  /* BEGIN: Athletic Events View */
+  /* END: Athletic Events View */
+  /* END: Athletics Primary Menu */
+}
+/* line 10, ../sass/_athletics-narrow.scss */
+.athletics-context .section-header {
+  background: #600e10;
+}
+/* line 13, ../sass/_athletics-narrow.scss */
+.athletics-context .region-content {
+  margin-top: 0;
+}
+/* line 19, ../sass/_athletics-narrow.scss */
+.athletics-context .view-sitewide-alerts a, .athletics-context .view-sitewide-alerts a:link, .athletics-context .view-sitewide-alerts a:visited {
+  float: none;
+}
+/* line 29, ../sass/_athletics-narrow.scss */
+.athletics-context .view-athletics .view-content .views-row .views-field-field-person-headshot {
+  float: none;
+}
+/* line 37, ../sass/_athletics-narrow.scss */
+.athletics-context .view-athletics .views-field-field-player-number {
+  width: 100%;
+  text-align: center;
+}
+/* line 46, ../sass/_athletics-narrow.scss */
+.athletics-context a.athletic-link, .athletics-context a.athletic-link:link, .athletics-context a.athletic-link:visited {
+  font-family: 'pt_sans_narrowbold';
+  font-weight: normal;
+  color: #cccccc;
+  border-bottom: none;
+  text-transform: uppercase;
+}
+/* line 49, ../sass/_athletics-narrow.scss */
+.athletics-context a.athletic-link:hover, .athletics-context a.athletic-link:focus, .athletics-context a.athletic-link:active {
+  color: white;
+  border-bottom: none;
+  text-decoration: none;
+  border-bottom: none;
+}
+/* line 56, ../sass/_athletics-narrow.scss */
+.athletics-context .athletic-events .views-row .views-field-field-opponent, .athletics-context .athletic-events .views-row .views-field-title-1 {
+  padding-left: 0;
+}
+/* line 59, ../sass/_athletics-narrow.scss */
+.athletics-context .athletic-events .views-row .schedules-title {
+  margin: 0;
+}
+/* line 64, ../sass/_athletics-narrow.scss */
+.athletics-context .field-content.team-vs-team {
+  text-align: center;
+  padding-left: 0%;
+}
+/* line 68, ../sass/_athletics-narrow.scss */
+.athletics-context .views-field-field-win-loss {
+  text-align: center;
+}
+/* line 74, ../sass/_athletics-narrow.scss */
+.athletics-context .views-field-field-event-date-1 .views-field-title-1,
+.athletics-context .views-field-field-event-date-1 .views-field-title,
+.athletics-context .views-field-field-event-date-1 .views-field-field-win-loss {
+  text-align: center;
+}
+/* line 76, ../sass/_athletics-narrow.scss */
+.athletics-context .views-field-field-event-date-1 .views-field-title-1 .win-loss-field,
+.athletics-context .views-field-field-event-date-1 .views-field-title .win-loss-field,
+.athletics-context .views-field-field-event-date-1 .views-field-field-win-loss .win-loss-field {
+  float: none;
+  text-align: center;
+}
+/* line 79, ../sass/_athletics-narrow.scss */
+.athletics-context .views-field-field-event-date-1 .views-field-title-1 .team-vs-team,
+.athletics-context .views-field-field-event-date-1 .views-field-title .team-vs-team,
+.athletics-context .views-field-field-event-date-1 .views-field-field-win-loss .team-vs-team {
+  padding: 0;
+  text-align: center;
+}
+/* line 83, ../sass/_athletics-narrow.scss */
+.athletics-context .views-field-field-event-date-1 .views-field-title-1 .game-location,
+.athletics-context .views-field-field-event-date-1 .views-field-title .game-location,
+.athletics-context .views-field-field-event-date-1 .views-field-field-win-loss .game-location {
+  padding: 0 0 0.5em 0;
+}
+/* line 88, ../sass/_athletics-narrow.scss */
+.athletics-context .views-field-field-event-date-2 {
+  margin: 9px 1em 0 0;
+}
+/* line 94, ../sass/_athletics-narrow.scss */
+.athletics-context .athletic-primary-menu ul.menu {
+  margin: 0 0 1em 0;
+}
+/* line 97, ../sass/_athletics-narrow.scss */
+.athletics-context .athletic-primary-menu a.athletic-link, .athletics-context .athletic-primary-menu a.athletic-link:link, .athletics-context .athletic-primary-menu a.athletic-link:visited {
+  color: #333333;
+}
+/* line 100, ../sass/_athletics-narrow.scss */
+.athletics-context .athletic-primary-menu a.athletic-link:hover, .athletics-context .athletic-primary-menu a.athletic-link:focus, .athletics-context .athletic-primary-menu a.athletic-link:active {
+  color: #400016;
+}
+
+/* END .athletic-context */
+/*
+ * Typography fixes
+ */
+/* line 22, ../sass/omega-hartnell-alpha-default-narrow.scss */
+h1.title, .pane-node-title h1 {
+  /* Mobile */
+}
+@media only screen and (max-width: 380px) {
+  /* line 22, ../sass/omega-hartnell-alpha-default-narrow.scss */
+  h1.title, .pane-node-title h1 {
+    font-size: 2.25em;
+  }
+}
+
+/* line 26, ../sass/omega-hartnell-alpha-default-narrow.scss */
+#breadcrumb {
+  /* Mobile */
+}
+@media only screen and (max-width: 380px) {
+  /* line 26, ../sass/omega-hartnell-alpha-default-narrow.scss */
+  #breadcrumb {
+    font-size: 0.9em;
+    text-align: center;
+  }
+}
+
+/* line 30, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.ftr-block-logo {
+  float: none;
+}
+
+/* END Type fixes */
+/*
+ * Layout fixes
+ */
+/* line 42, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.ftr-block-logo {
+  /* Mobile */
+}
+@media only screen and (max-width: 380px) {
+  /* line 42, ../sass/omega-hartnell-alpha-default-narrow.scss */
+  .ftr-block-logo {
+    width: 100%;
+  }
+}
+
+/* line 46, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.page {
+  /* Mobile */
+}
+@media only screen and (max-width: 380px) {
+  /* line 46, ../sass/omega-hartnell-alpha-default-narrow.scss */
+  .page {
+    background-image: hidden;
+  }
+}
+/* line 48, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.page .zone-content {
+  /* Mobile */
+}
+@media only screen and (max-width: 380px) {
+  /* line 48, ../sass/omega-hartnell-alpha-default-narrow.scss */
+  .page .zone-content {
+    background-image: hidden;
+  }
+}
+
+/* Navigation: User */
+/* line 55, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.region-user-second .block {
+  width: 100%;
+  float: none;
+  margin: 0 auto 1%;
+}
+/* line 60, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.region-user-second ul.menu {
+  float: right;
+}
+
+/* line 66, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.view-sitewide-alerts .views-row {
+  padding: 0;
+}
+
+/* line 71, ../sass/omega-hartnell-alpha-default-narrow.scss */
+a.main-menu-link {
+  /* Mobile */
+}
+@media only screen and (max-width: 380px) {
+  /* line 71, ../sass/omega-hartnell-alpha-default-narrow.scss */
+  a.main-menu-link {
+    border-bottom: 1px solid #808080;
+    font-size: 1.0em;
+    margin: 0;
+  }
+}
+
+/* line 78, ../sass/omega-hartnell-alpha-default-narrow.scss */
+a.main-menu-link, a.main-menu-link:link, a.main-menu-link:visited {
+  color: #333333;
+  padding: 0.5em 1em;
+  text-align: right;
+  display: block;
+  padding: 0.5em 1em;
+  font-family: Georgia, Times, serif;
+  font-size: 1.0em;
+}
+
+/* line 86, ../sass/omega-hartnell-alpha-default-narrow.scss */
+a.main-menu-link:hover, a.main-menu-link:active, a.main-menu-link:focus {
+  color: #730027;
+}
+
+/* line 90, ../sass/omega-hartnell-alpha-default-narrow.scss */
+a.main-menu-link:after,
+a.athletic-link:after {
+  /* Mobile */
+}
+@media only screen and (max-width: 380px) {
+  /* line 90, ../sass/omega-hartnell-alpha-default-narrow.scss */
+  a.main-menu-link:after,
+  a.athletic-link:after {
+    float: right;
+    font-size: 1em;
+    margin-left: 1em;
+  }
+}
+
+/* Navigation: Social Media */
+/* line 103, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.athletic-brand-wrapper .athletic-branding .social-media-user ul.menu {
+  display: inline;
+  margin: 0;
+}
+/* line 106, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.athletic-brand-wrapper .athletic-branding .social-media-user ul.menu li {
+  float: right;
+}
+/* line 109, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.athletic-brand-wrapper .athletic-branding .social-media-user ul.menu li.last {
+  margin: 1em 0 0 0;
+}
+
+/* Person: Academic Content Type */
+/* line 121, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.node-type-person .row2.grid-13.push-3 {
+  margin-left: 10px;
+}
+/* line 125, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.node-type-person h2.node-title {
+  font-size: 1.5em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* line 136, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.field-name-field-flexpage-location .content .field-name-field-location-type .field-label,
+.field-name-field-flexpage-location .content .field-name-field-location-address .field-label {
+  width: 100%;
+  float: none;
+  display: block;
+}
+/* line 141, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.field-name-field-flexpage-location .content .field-name-field-location-type .field-items,
+.field-name-field-flexpage-location .content .field-name-field-location-address .field-items {
+  width: 100%;
+  margin-bottom: 0.5em;
+  float: none;
+  display: block;
+}
+
+/* A-Z Index View */
+/* line 176, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.views-responsive-grid .grid-1,
+.views-responsive-grid .grid-2,
+.views-responsive-grid .grid-3,
+.views-responsive-grid .grid-4,
+.views-responsive-grid .grid-5,
+.views-responsive-grid .grid-6,
+.views-responsive-grid .grid-7,
+.views-responsive-grid .grid-8,
+.views-responsive-grid .grid-9,
+.views-responsive-grid .grid-10,
+.views-responsive-grid .grid-11,
+.views-responsive-grid .grid-12,
+.views-responsive-grid .grid-13,
+.views-responsive-grid .grid-14,
+.views-responsive-grid .grid-15,
+.views-responsive-grid .grid-16,
+.views-responsive-grid .grid-17,
+.views-responsive-grid .grid-18,
+.views-responsive-grid .grid-19,
+.views-responsive-grid .grid-20,
+.views-responsive-grid .grid-21,
+.views-responsive-grid .grid-22,
+.views-responsive-grid .grid-23,
+.views-responsive-grid .grid-24 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* View Type: Home Slideshow */
+/* line 188, ../sass/omega-hartnell-alpha-default-narrow.scss */
+.athletics-context .section-header .athletic-branding .region-branding .logo-img {
+  text-align: left;
+}

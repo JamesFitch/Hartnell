@@ -1,0 +1,296 @@
+<h1>Reusable styles</h1>
+<p>Since they are based on CSS classes, these styles can be used repeatedly on a single page, as well as chained together to achieve a number of effects. For example, you could apply a left float with a color box or just the color box by itself.</p>
+<p>Some of these styles utilize CSS3, so be aware not every browser will render the effects exactly the same, particularly rounded corners and drop-shadows.</p>
+<p>CSS definitions for each of these styles can be found (and modified if necessary - though be careful!) in the stylesheet named "reusable-styles.scss" in the theme CSS directory (e.g. /sites/all/themes/omega_maricopa/css/reusable-styles.scss). Please note that we are using <a href="http://sass-lang.com/">SASS</a>/<a href="http://compass-style.org/">Compass</a> to compile the CSS.</p>
+<p>Use the documentation below to see examples of the styles and how to use them.</p>
+
+<h2>How to apply reusable styles</h2>
+<h3 id="howto-panelpane">Panel panes</h3>
+<ol>
+  <li>Navigate to "<b>Content</b>" under "Panelizer."<br />
+    <img class="screenshot" src="&path&/screenshots/cwi_reusable_pane_0.jpg" alt="Screenshot" />
+  </li>
+  <li>Click on the <b>gear icon</b> of the pane you want to apply the style to, then click on "<b>CSS properties</b>."<br />
+    <img class="screenshot" src="&path&/screenshots/cwi_reusable_pane_1.jpg"  alt="Screenshot" />
+  </li>
+  <li>In the field labeled "<b>CSS class</b>" put the reusable style class name, without any preceding period. If you put in more than one class name, separate each one with a space.<br />
+    <img class="screenshot" src="&path&/screenshots/cwi_reusable_pane_2.jpg"  alt="Screenshot" />
+  </li>
+  <li>Click "<b>Save</b>" and then be sure to click "<b>Update and save</b>" on the main page.</li>
+</ol>
+<h3 id="howto-boxblock">Boxes / blocks</h3>
+<ol>
+  <li>To apply a reusable style to a block or box, get to its configuration page. You can do so by
+    <ul>
+      <li>Going to <span class="bold">Admin menu</span> &gt; <span class="bold">Structure</span> &gt; <span class="bold">Blocks</span>, then finding the block/box in the list. Click its "<b>Configure</b>" link.<br />
+      <img class="screenshot" src="&path&/screenshots/reusable_block_1.jpg"  alt="Screenshot" /><br />
+      Or</li>
+      <li>Clicking on its contextual link (the gear icon), then clicking "<b>Configure block</b>" or "<b>Edit box</b>."<br />
+      <img class="screenshot" src="&path&/screenshots/reusable_block_2.jpg"  alt="Screenshot" /><br />
+      <img class="screenshot" src="&path&/screenshots/reusable_block_3.jpg"  alt="Screenshot" /></li>
+    </ul>
+  </li>
+  <li>Find the "<b>Advanced Settings</b>" fieldset, then put your class names into the "<b>Additional CSS classes</b>" field.<br />
+  <img class="screenshot" src="&path&/screenshots/reusable_block_4.jpg"  alt="Screenshot" /></li>
+</ol>
+<h3 id="howto-views">Rich text editor</h3>
+<ol>
+  <li>While editing with the rich text editor, select the portion of your content you wish to apply the style to.</li>
+  <li>Find the "<b>Styles</b>" drop-down input.<br />
+    <img class="screenshot" src="&path&/screenshots/reusable_richtext_1.jpg"  alt="Screenshot" />
+  </li>
+  <li>Depending on what kind of element you select, you will have a variety of options.</li>
+</ol><!-- / Rich text editor -->
+<h3 id="howto-markup">Markup</h3>
+<ol>
+  <li>Make sure your rich text editor is switched off so it doesn't mess up your code.<br />
+    <img class="screenshot" src="&path&/screenshots/reusable_markup_1.jpg"  alt="Screenshot" />
+  </li>
+  <li>Put your class name as the value in a class attribute for whichever element you want to affect.<br />
+    <div class="code">
+      <code>
+        &lt;p&gt;Lorem ipsum dolor sit amet, &lt;span class="<span class="bold">classname</span>"&gt;consectetuer adipiscing elit&lt;/span>. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.&lt;/p&gt;
+      </code>
+    </div>
+  </li>
+  <li>Note: You might not see a preview of your style directly in the rich text editor after switching back to the normal rich text editing. If you need to preview, click the "<b>Preview</b>" button at the bottom of the page.</li>
+</ol>
+<h3 id="howto-views">Views</h3>
+<ol>
+  <li>When editing your view, make sure the "<b>Advanced</b>" fieldset is expanded.<br />
+    <img class="screenshot" src="&path&/screenshots/cwi_reusable_views_1.jpg"  alt="Screenshot" />
+  </li>
+  <li>Click on the value next to "<b>CSS class</b>".<br />
+    <img class="screenshot" src="&path&/screenshots/cwi_reusable_views_2.jpg"  alt="Screenshot" />
+  </li>
+  <li>Enter your class name into the field that appears.<br />
+    <img class="screenshot" src="&path&/screenshots/cwi_reusable_views_3.jpg"  alt="Screenshot" />
+  </li>
+  <li>Depending on your purposes, you may want to change whether it applies to all the current view's displays or just this one.<br />
+    <img class="screenshot" src="&path&/screenshots/cwi_reusable_views_4.jpg"  alt="Screenshot" />
+  </li>
+  <li>Click on "<b>Apply</b>" (or "<b>Apply (this display)</b>").<br />
+    <img class="screenshot" src="&path&/screenshots/cwi_reusable_views_5.jpg"  alt="Screenshot" />
+  </li>
+  <li>Be sure to <b>save</b> your view.
+  </li>
+</ol>
+
+<h2>Samples</h2>
+<p>Here are some examples of what the reusable styles look like, particularly when applied through the rich text editor. See the example and then the underlying code.</p>
+<p>To achieve these effects, add the appropriate CSS class to the HTML element you want to change.</p>
+
+<h4>Inline text styles</h4>
+<p><strong>This is bolded text.</strong> <em>This is italicized text.</em> <a href="">This is a link</a>.</p>
+
+<h4>Read More link</h4>
+<p class="read-more"><a href="/maricopa/node/12">This is a &quot;read more&quot; link</a></p>
+<code>
+  &lt;p class="<b>read-more</b>"&gt;&lt;a href="/maricopa/node/12"&gt;This is a &quot;read more&quot; link&lt;/a&gt;&lt;/p&gt;
+</code>
+
+<h4>Faux menu</h4>
+<ul class="faux-menu">
+  <li>
+    <a href="/maricopa/node/123">Faux menu item 1</a></li>
+  <li>
+    Faux menu item 2</li>
+  <li>
+    Faux menu item 3</li>
+</ul>
+<pre>
+&lt;ul class="<b>faux-menu</b>"&gt;
+  &lt;li&gt;&lt;a href="/maricopa/node/123"&gt;Faux menu item 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Faux menu item 2&lt;/li&gt;
+  &lt;li&gt;Faux menu item 3&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<h4>Buttons</h4>
+<div><a class="button-lightest-gray" href="">Lightest gray button (.button-lightest-gray)</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="<b>button-lightest-gray</b>" href=""&gt;Lightest gray button (.button-lightest-gray)&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div><a class="button-light-gray" href="">Light gray button (.button-light-gray)</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="<b>button-light-gray</b>" href=""&gt;Light gray button (.button-light-gray)&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div><a class="button-gray" href="">Gray button (.button-gray)</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="<b>button-gray</b>" href=""&gt;Gray button (.button-gray)&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div><a class="button-dark-gray" href="">Dark gray button (.button-dark-gray)</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="<b>button-dark-gray</b>" href=""&gt;Dark gray button (.button-dark-gray)&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div><a class="button-red" href="">Red button (.button-red)</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="<b>button-red</b>" href=""&gt;Red button (.button-red)&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div><a class="button-blue" href="">Blue button (.button-blue)</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="<b>button-blue</b>" href=""&gt;Blue button (.button-blue)&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div><a class="button-black" href="">Black button (.button-black)</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="<b>button-black</b>" href=""&gt;Black button (.button-black)&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<h4>Buttons with icons</h4>
+<p>Buttons with icons will have two classes - one that determines what color of button it is, and one that gives it an icon. Following is a list of currently available icons for buttons.</p>
+
+<div><a class="button-gray agua" href="">Gray agua icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>agua</b>" href=""&gt;Gray agua button&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div><a class="button-gray brightoutlook" href="">Gray brightoutlook icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>brightoutlook</b>" href=""&gt;Gray brightoutlook button&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div><a class="button-gray calculator" href="">Gray calculator icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>calculator</b>" href=""&gt;Gray calculator button&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div><a class="button-gray camera" href="">Gray button with camera icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>camera</b>" href=""&gt;Gray button with camera icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div><a class="button-gray chat" href="">Gray chat icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>chat</b>" href=""&gt;Gray chat icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div><a class="button-gray careeroutlook" href="">Gray careeroutlook icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>careeroutlook</b>" href=""&gt;Gray careeroutlook icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray counseling" href="">Gray counseling icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>counseling</b>" href=""&gt;Gray counseling icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray customerservice" href="">Gray customerservice icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>customerservice</b>" href=""&gt;Gray customerservice icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray drawers" href="">Gray drawers icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>drawers</b>" href=""&gt;Gray drawers icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray fastforward" href="">Gray fastforward icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>fastforward</b>" href=""&gt;Gray fastforward icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray forwardarrow" href="">Gray forwardarrow icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>forwardarrow</b>" href=""&gt;Gray forwardarrow icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray greenoccupation" href="">Gray greenocupation icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>greenoccupation</b>" href=""&gt;Gray greenoccupation icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray hourglass" href="">Gray hourglass icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>hourglass</b>" href=""&gt;Gray hourglass icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray key" href="">Gray key icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>key</b>" href=""&gt;Gray key icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray lexcyclestanza" href="">Gray lexcyclestanza icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>lexcyclestanza</b>" href=""&gt;Gray lexcyclestanza icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray nationalcert" href="">Gray nationalcert icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>nationalcer</b>" href=""&gt;Gray nationalcert icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray newsletter" href="">Gray newsletter icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>newsletter</b>" href=""&gt;Gray newsletter icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray phone" href="">Gray phone icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>phone</b>" href=""&gt;Gray phone icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray piggy" href="">Gray piggy icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>piggy</b>" href=""&gt;Gray piggy icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray puzzle2" href="">Gray puzzle2 icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>puzzle2</b>" href=""&gt;Gray puzzle2 icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray scales" href="">Gray scales icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>scales</b>" href=""&gt;Gray scales icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray settings" href="">Gray settings icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>settings</b>" href=""&gt;Gray settings icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray stamphealth" href="">Gray stamphealth icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>stamphealth</b>" href=""&gt;Gray stamphealth icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray transferoppt" href="">Gray transferoppt icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>transferoppt</b>" href=""&gt;Gray transferoppt icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <a class="button-gray whistle" href="">Gray whistle icon</a></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-gray <b>whistle</b>" href=""&gt;Gray whistle icon&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<div>
+  <span class="button-blue www"><a href="">Blue www icon</a></span></div>
+<pre>
+  &lt;div&gt;&lt;a class="button-blue <b>www</b>" href=""&gt;Blue www icon&lt;/a&gt;&lt;/div&gt;
+</pre>

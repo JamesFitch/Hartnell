@@ -1,0 +1,314 @@
+/*
+ * Imports
+ */
+
+@import "variables";
+@import "mixins";
+@import "fontello";
+@import "compass";
+@import "compass/support";
+
+
+/* View Type: Slideshow Responsive Adjustments */
+.views-field-nothing {
+  @include respond-to(handhelds) { position: relative; width: 100%; } /* Mobile */
+}
+
+.slide-title, h2.slide-title {
+  font-family: 'LeagueGothicRegular', Impact, sans-serif !important;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 0 0.382em 0;
+  letter-spacing: 0;
+}
+
+.slide-title a, .slide-title a:link, .slide-title a:visited {
+  font-size: 1.462em;
+  color: $gold !important;
+  @include respond-to(handhelds) { font-size: 1em;	margin: 0; } /* Mobile */ 
+}
+.slide-title a:hover, .slide-title a:active, .slide-title a:focus {
+  color: $white !important;
+  text-decoration: none;
+}
+
+.slide-description {
+ @include respond-to(handhelds) { display: none; } /* Mobile */
+}
+
+.view-slides {
+  background-color: $overlay;
+  border: none;
+	  .attachment-after {
+	    @include respond-to(handhelds) { display: none; } /* Mobile */
+	}
+}
+
+.flexslider .flex-prev {
+  opacity: 1;
+}
+.flex-direction-nav {
+	a {
+	  display: visible;
+	  background: url("../images/bg_direction_nav2.png") no-repeat scroll 0 0 transparent;
+	  height: 50px;
+	  top: 50%;
+	  width: 30px;
+	}
+	.flex-next {
+	  background-position: 100% 0;
+      right: -36px;
+	}
+}
+
+.flex-control-nav.flex-control-paging {
+  @include respond-to(handhelds) { display: none; } /* Mobile */
+  @include respond-to(medium-screens)  { display: none; } /* Tablets */
+
+}
+
+.athletic-context {
+  .view-slides {
+    a.athletic-read-more.icon-right-open,
+	a.athletic-read-more.icon-right-open:link,
+	a.athletic-read-more.icon-right-open:visited {
+	  font-family: $base-font;
+	  font-style: normal !important;        
+	}
+  }
+}	
+
+.view-slides {
+	a.read-more.icon-right-open,
+	a.read-more.icon-right-open:link,
+	a.read-more.icon-right-open:visited {
+		font-family: $alt-font;
+		font-style: italic;    
+		color: $gold !important;
+		text-align: right;
+		font-size: 1em;
+		display: block;
+	}
+	a.read-more.icon-right-open:hover,
+	a.read-more.icon-right-open:active,
+	a.read-more.icon-right-open:focus {
+		color: $white !important;
+	    text-decoration: none;
+	}
+	a.read-more.icon-right-open:after {
+		margin-left: 0.50em;
+	}
+}
+
+/* END View Type: Slideshow Responsive Adjustments */
+
+/* View Type: Athletic Slideshow */
+
+.slideshow-athletic, .slideshow-internal {
+	.flexslider {
+	 background: none repeat scroll 0 0 transparent;
+     border: none;
+     border-radius: 0 0 0 0;
+     box-shadow: none;
+     margin: 0;
+	   .views-field-nothing-1 {
+			.float-left-text {
+			  background-color: $overlay;
+			  @include equal-pad; 
+			  position: relative;
+			  display: block;
+			  overflow: hidden;
+			  @include respond-to(handhelds) { padding: 1em; } /* Mobile */
+			  @include respond-to(medium-screens) { padding: 1em 1.5em; } /* Tablets */
+			  padding: 1.5em 2em 1em 2em; 
+				.slide-description { color: $white; }
+			}
+		}
+	}
+}
+/* END View Type: Athletic Slideshow */
+
+
+/* View Type: Landing Slideshow */
+.slideshow-landing {
+	.view-content {
+	 padding: 0 ;
+	 border-radius: 0 0 0 0;
+		.flexslider {
+		 background: none;
+		 border: none;
+		 border-radius: 0 0 0 0;
+		 box-shadow: none;
+		 margin: 0;
+			.slides{
+				li.flexslider_views_slideshow_slide {
+				 	.views-field.views-field-nothing {
+					 	.left-div {
+					     left: 0;
+					     overflow-y: auto;
+					     position: relative;
+					     top: 0;
+						 	img {
+               max-width: 1180px !important;
+							 left: 0;
+							 top: 0;
+							 z-index: 2;
+							}
+						}
+					}
+					.views-field-nothing-1 {
+					    .float-left-text {
+					      background: $overlay;
+					      opacity:0.8;
+			  			  filter:alpha(opacity=80); /* For IE8 and earlier */
+			  	 		  @include inset-shadow;
+			  	 		  @include respond-to(handhelds) { padding: 1em;  } /* Mobile */
+			  	 		  @include respond-to(medium-screens)  { padding: 1em 1.5em; } /* Tablets */
+					      padding: 1.5em 2em 1em 2em; 
+					      position: relative;
+					      display: block;
+					      overflow: hidden;
+							.slide-description {
+							  color: $white;
+							  font-size: 1.1em;
+							  line-height: 2;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+ul.flex-direction-nav {
+	a {
+	 top: 50%;
+	 background: url(../images/bg_direction_nav.png) no-repeat scroll 0 0 transparent;
+	 height: 50px;
+	 width: 30px;
+	}
+	a.flex-prev {
+	 left: -35 ;
+	}
+	a.flex-next {
+	 right: -36 ;
+	}
+}
+/* END View Type: Landing Slideshow */
+
+
+/* View Type: Home Slideshow */
+.front {
+  .pane-slides-panel-pane-home-main-slide {
+   border: none;
+    .view-slides {
+      background: $overlay;
+      border: none;
+      .view-content {
+       padding: 0 ;
+       border-radius: 0 0 0 0;
+        .flexslider {
+         margin: 0;
+         background: none repeat scroll 0 0 transparent;
+         border: hidden;
+         border-radius: 0 0 0 0;
+         box-shadow: none;
+         .flex-viewport {
+            position:relative;
+            z-index:1;
+          }
+          .slides {
+            li {
+              img.adaptive-image, img {
+                max-width: 1180px !important;
+              }            
+              position: relative;
+              .views-field-nothing { position: absolute; }
+              .views-field-nothing-1 {
+               zoom: 1;
+                  .float-left-text {
+                    display: none;
+                    background: $overlay;
+                    opacity:0.8;
+                    filter:alpha(opacity=80); /* For IE8 and earlier */
+                    @include equal-pad;
+                    position: relative;
+                    display: block;
+                    overflow: hidden;
+                    @include respond-to(handhelds) { padding: 1em;  } /* Mobile */
+                    @include respond-to(medium-screens)  { padding: 1em 1.5em; } /* Tablets */ 
+                      .slide-description {
+                        color: $white;
+                        font-size: 1.1em;
+                        line-height: 2;
+                      }
+                      a {
+                       color: $gold;
+                      }
+                      a:hover, a:active, a:focus {
+                       color: $white;
+                      }
+                }
+                a.read-more.icon-right-open {
+                 font-family: $alt-font;
+                 font-style: italic
+                }
+                a.read-more.icon-right-open:hover, a.read-more.icon-right-open:active, a.read-more.icon-right-open:focus {
+                  color: $white;
+                  text-decoration: none;
+                }
+                a.icon-right-open:before {
+                 text-align: right;
+                 float: right;
+                 font-size: 1.5em;
+                 line-height: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+      .attachment {
+       background: $overlay;
+       @include equal-pad;
+        .view-content {
+         border-radius: 0;
+          .flexslider {
+           height: auto;
+            li {
+             @include respond-to(handhelds) { width: 70px ; } /* Mobile */
+             display: block;
+             //@include box-sizing('border-box');
+             //margin-right: 1em;
+             padding-right: 1em;
+             text-align: center;
+             &:last-child {
+               padding-right: 0;
+             }
+              .views-field-field-slideshow-image-title,
+              .views-field-field-academic-area-or-major {
+               color: $white;
+               @include respond-to(handhelds) { font-size: 50% ; } /* Mobile */
+               font-size: 1em;
+               font-weight: bold;
+               text-transform: uppercase;
+               margin-top: 0.5em;
+              }
+              .views-field-field-slideshow-image-title:hover,
+              .views-field-field-slideshow-image-title:active,
+              .views-field-field-slideshow-image-title:focus,
+              .views-field-field-academic-area-or-major:hover,
+              .views-field-field-academic-area-or-major:active,
+              .views-field-field-academic-area-or-major:focus {
+               color: $gold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* END View Type: Home Slideshow */

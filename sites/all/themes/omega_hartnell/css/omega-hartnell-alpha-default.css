@@ -1,0 +1,1237 @@
+@charset "UTF-8";
+/* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+/*
+ * Imports
+*/
+/*
+ * Mixins
+ */
+/*
+* General includes
+*/
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.woff") format("woff"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.ttf") format("truetype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pt_sans_narrowbold';
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot");
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.woff") format("woff"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.ttf") format("truetype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.svg#pt_sans_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * Vanilla mixins
+ */
+/* Links */
+/* Links END */
+/* 
+*	Style Elements
+*/
+/* Images */
+/* Margin is overriding core wysiwyg settings */
+/* Margin is overriding core wysiwyg settings */
+/* Panels */
+/*
+* Social buttons backgrounds
+*/
+/*
+* Flexible buttons
+*/
+/*
+ * BEGIN: Athletics Mixins
+ */
+/*
+ * END: Athletics Mixins
+ */
+@font-face {
+  font-family: 'hartnell_icons';
+  src: url("../fonts/fontello/font/hartnell_icons.eot");
+  src: url("../fonts/fontello/font/hartnell_icons.eot?#iefix") format("embedded-opentype"), url("../fonts/fontello/font/hartnell_icons.woff") format("woff"), url("../font/hartnell_icons.ttf") format("truetype"), url("../fonts/fontello/font/hartnell_icons.svg#hartnell_icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 22, ../sass/fontello.scss */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'hartnell_icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: block;
+  text-decoration: inherit;
+  text-align: center;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+/* line 27, ../sass/fontello.scss */
+[class^="icon-"]:after,
+[class*=" icon-"]:after {
+  display: inline;
+  margin-left: 1em;
+  font-size: 13px;
+  line-height: 1;
+  font-family: 'hartnell_icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: block;
+  text-decoration: inherit;
+  text-align: center;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+/* line 40, ../sass/fontello.scss */
+[class^="icon-"]:hover,
+[class^="icon-"]:active,
+[class^="icon-"]:focus,
+[class*="icon-"]:hover,
+[class*="icon-"]:active,
+[class*="icon-"]:focus {
+  cursor: pointer;
+}
+
+/* line 22, ../sass/fontello-mixins.scss */
+.icon-gplus:before {
+  content: '\2b';
+  /* '+' */
+}
+
+/* line 27, ../sass/fontello-mixins.scss */
+.icon-calendar-1:before {
+  content: '\2e';
+  /* '.' */
+}
+
+/* line 32, ../sass/fontello-mixins.scss */
+.icon-stumbleupon:before {
+  content: '\2f';
+  /* '/' */
+}
+
+/* line 37, ../sass/fontello-mixins.scss */
+.icon-pinterest:before {
+  content: '\31';
+  /* '1' */
+}
+
+/* line 42, ../sass/fontello-mixins.scss */
+.icon-w3c:before {
+  content: '\33';
+  /* '3' */
+}
+
+/* line 47, ../sass/fontello-mixins.scss */
+.icon-foursquare:before {
+  content: '\34';
+  /* '4' */
+}
+
+/* line 52, ../sass/fontello-mixins.scss */
+.icon-html5:before {
+  content: '\35';
+  /* '5' */
+}
+
+/* line 57, ../sass/fontello-mixins.scss */
+.icon-digg:before {
+  content: '\3b';
+  /* ';' */
+}
+
+/* line 62, ../sass/fontello-mixins.scss */
+.icon-reddit:before {
+  content: '\3e';
+  /* '&gt;' */
+}
+
+/* line 67, ../sass/fontello-mixins.scss */
+.icon-blogger:before {
+  content: '\42';
+  /* 'B' */
+}
+
+/* line 72, ../sass/fontello-mixins.scss */
+.icon-cc:before {
+  content: '\43';
+  /* 'C' */
+}
+
+/* line 77, ../sass/fontello-mixins.scss */
+.icon-dribble:before {
+  content: '\44';
+  /* 'D' */
+}
+
+/* line 82, ../sass/fontello-mixins.scss */
+.icon-evernote:before {
+  content: '\45';
+  /* 'E' */
+}
+
+/* line 87, ../sass/fontello-mixins.scss */
+.icon-flickr:before {
+  content: '\46';
+  /* 'F' */
+}
+
+/* line 92, ../sass/fontello-mixins.scss */
+.icon-google:before {
+  content: '\47';
+  /* 'G' */
+}
+
+/* line 97, ../sass/fontello-mixins.scss */
+.icon-instapaper:before {
+  content: '\49';
+  /* 'I' */
+}
+
+/* line 102, ../sass/fontello-mixins.scss */
+.icon-linkedin:before {
+  content: '\4c';
+  /* 'L' */
+}
+
+/* line 107, ../sass/fontello-mixins.scss */
+.icon-disqus:before {
+  content: '\51';
+  /* 'Q' */
+}
+
+/* line 112, ../sass/fontello-mixins.scss */
+.icon-rss-1:before {
+  content: '\52';
+  /* 'R' */
+}
+
+/* line 117, ../sass/fontello-mixins.scss */
+.icon-skype:before {
+  content: '\53';
+  /* 'S' */
+}
+
+/* line 122, ../sass/fontello-mixins.scss */
+.icon-twitter:before {
+  content: '\54';
+  /* 'T' */
+}
+
+/* line 127, ../sass/fontello-mixins.scss */
+.icon-youtube:before {
+  content: '\55';
+  /* 'U' */
+}
+
+/* line 132, ../sass/fontello-mixins.scss */
+.icon-vimeo:before {
+  content: '\56';
+  /* 'V' */
+}
+
+/* line 137, ../sass/fontello-mixins.scss */
+.icon-yahoo:before {
+  content: '\59';
+  /* 'Y' */
+}
+
+/* line 142, ../sass/fontello-mixins.scss */
+.icon-email:before {
+  content: '\5d';
+  /* ']' */
+  line-height: 0.8em;
+}
+
+/* line 148, ../sass/fontello-mixins.scss */
+.icon-podcast:before {
+  content: '\60';
+  /* '`' */
+}
+
+/* line 153, ../sass/fontello-mixins.scss */
+.icon-amazon:before {
+  content: '\61';
+  /* 'a' */
+}
+
+/* line 158, ../sass/fontello-mixins.scss */
+.icon-dropbox:before {
+  content: '\64';
+  /* 'd' */
+}
+
+/* line 163, ../sass/fontello-mixins.scss */
+.icon-facebook:before {
+  content: '\66';
+  /* 'f' */
+  text-align: center;
+}
+
+/* line 169, ../sass/fontello-mixins.scss */
+.icon-github:before {
+  content: '\67';
+  /* 'g' */
+}
+
+/* line 174, ../sass/fontello-mixins.scss */
+.icon-tumblr:before {
+  content: '\74';
+  /* 't' */
+}
+
+/* line 179, ../sass/fontello-mixins.scss */
+.icon-wordpress:before {
+  content: '\77';
+  /* 'w' */
+}
+
+/* line 184, ../sass/fontello-mixins.scss */
+.icon-yelp:before {
+  content: '\79';
+  /* 'y' */
+}
+
+/* line 189, ../sass/fontello-mixins.scss */
+.icon-eventbrite:before {
+  content: '\7c';
+  /* '|' */
+}
+
+/* line 194, ../sass/fontello-mixins.scss */
+.icon-cart:before {
+  content: '\c9';
+  /* 'É' */
+}
+
+/* line 199, ../sass/fontello-mixins.scss */
+.icon-instagram:before {
+  content: '\dc';
+  /* 'Ü' */
+}
+
+/* line 204, ../sass/fontello-mixins.scss */
+.icon-acrobat:before {
+  content: '\e3';
+  /* 'ã' */
+}
+
+/* line 209, ../sass/fontello-mixins.scss */
+.icon-drupal:before {
+  content: '\e4';
+  /* 'ä' */
+}
+
+/* line 214, ../sass/fontello-mixins.scss */
+.icon-pocket:before {
+  content: '\e7';
+  /* 'ç' */
+}
+
+/* line 219, ../sass/fontello-mixins.scss */
+.icon-bitbucket:before {
+  content: '\e9';
+  /* 'é' */
+}
+
+/* line 224, ../sass/fontello-mixins.scss */
+.icon-info:before {
+  content: '\2139';
+  /* 'ℹ' */
+}
+
+/* line 229, ../sass/fontello-mixins.scss */
+.icon-home:before {
+  content: '\2302';
+  /* '⌂' */
+}
+
+/* line 234, ../sass/fontello-mixins.scss */
+.icon-pause:before {
+  content: '\2389';
+  /* '⎉' */
+}
+
+/* line 239, ../sass/fontello-mixins.scss */
+.icon-fast-forward:before {
+  content: '\23e9';
+  /* '⏩' */
+}
+
+/* line 244, ../sass/fontello-mixins.scss */
+.icon-fast-backward:before {
+  content: '\23ea';
+  /* '⏪' */
+}
+
+/* line 249, ../sass/fontello-mixins.scss */
+.icon-to-end:before {
+  content: '\23ed';
+  /* '⏭' */
+}
+
+/* line 254, ../sass/fontello-mixins.scss */
+.icon-to-start:before {
+  content: '\23ee';
+  /* '⏮' */
+}
+
+/* line 259, ../sass/fontello-mixins.scss */
+.icon-stop:before {
+  content: '\25a0';
+  /* '■' */
+}
+
+/* line 264, ../sass/fontello-mixins.scss */
+.icon-play:before {
+  content: '\25b6';
+  /* '▶' */
+}
+
+/* line 269, ../sass/fontello-mixins.scss */
+.icon-right-dir:before {
+  content: '\25b8';
+  /* '▸' */
+}
+
+/* line 274, ../sass/fontello-mixins.scss */
+.icon-left-dir:before {
+  content: '\25c2';
+  /* '◂' */
+}
+
+/* line 279, ../sass/fontello-mixins.scss */
+.icon-star:before {
+  content: '\2605';
+  /* '★' */
+}
+
+/* line 284, ../sass/fontello-mixins.scss */
+.icon-star-empty:before {
+  content: '\2606';
+  /* '☆' */
+}
+
+/* line 289, ../sass/fontello-mixins.scss */
+.icon-cup:before {
+  content: '\2615';
+  /* '☕' */
+}
+
+/* line 294, ../sass/fontello-mixins.scss */
+.icon-menu:before {
+  content: '\2630';
+  /* '☰' */
+}
+
+/* line 299, ../sass/fontello-mixins.scss */
+.icon-layout:before {
+  content: '\e80c';
+  /* '' */
+}
+
+/* line 304, ../sass/fontello-mixins.scss */
+.icon-th:before {
+  content: '\268f';
+  /* '⚏' */
+}
+
+/* line 309, ../sass/fontello-mixins.scss */
+.icon-flag:before {
+  content: '\2691';
+  /* '⚑' */
+}
+
+/* line 314, ../sass/fontello-mixins.scss */
+.icon-attention:before {
+  content: '\26a0';
+  /* '⚠' */
+}
+
+/* line 319, ../sass/fontello-mixins.scss */
+.icon-record:before {
+  content: '\26ab';
+  /* '⚫' */
+}
+
+/* line 324, ../sass/fontello-mixins.scss */
+.icon-cog-alt:before {
+  content: '\26ef';
+  /* '⛯' */
+}
+
+/* line 329, ../sass/fontello-mixins.scss */
+.icon-mail:before {
+  content: '\2709';
+  /* '✉' */
+}
+
+/* line 334, ../sass/fontello-mixins.scss */
+.icon-edit-1:before {
+  content: '\e804';
+  /* '' */
+}
+
+/* line 339, ../sass/fontello-mixins.scss */
+.icon-pencil:before {
+  content: '\270e';
+  /* '✎' */
+}
+
+/* line 344, ../sass/fontello-mixins.scss */
+.icon-check:before {
+  content: '\2713';
+  /* '✓' */
+}
+
+/* line 349, ../sass/fontello-mixins.scss */
+.icon-cancel:before {
+  content: '\2715';
+  /* '✕' */
+}
+
+/* line 354, ../sass/fontello-mixins.scss */
+.icon-help:before {
+  content: '\2753';
+  /* '❓' */
+}
+
+/* line 359, ../sass/fontello-mixins.scss */
+.icon-list:before {
+  content: '\e005';
+  /* '' */
+}
+
+/* line 364, ../sass/fontello-mixins.scss */
+.icon-info-circled:before {
+  content: '\e801';
+  /* '' */
+}
+
+/* line 369, ../sass/fontello-mixins.scss */
+.icon-info-circle:before {
+  content: '\e705';
+  /* '' */
+}
+
+/* line 374, ../sass/fontello-mixins.scss */
+.icon-th-large:before {
+  content: '\e708';
+  /* '' */
+}
+
+/* line 379, ../sass/fontello-mixins.scss */
+.icon-print:before {
+  content: '\e716';
+  /* '' */
+}
+
+/* line 384, ../sass/fontello-mixins.scss */
+.icon-print-1:before {
+  content: '\e805';
+  /* '' */
+}
+
+/* line 389, ../sass/fontello-mixins.scss */
+.icon-chat:before {
+  content: '\e720';
+  /* '' */
+}
+
+/* line 394, ../sass/fontello-mixins.scss */
+.icon-vcard:before {
+  content: '\e722';
+  /* '' */
+}
+
+/* line 399, ../sass/fontello-mixins.scss */
+.icon-location:before {
+  content: '\e724';
+  /* '' */
+}
+
+/* line 404, ../sass/fontello-mixins.scss */
+.icon-location-1:before {
+  content: '\e806';
+  /* '' */
+}
+
+/* line 409, ../sass/fontello-mixins.scss */
+.icon-trash:before {
+  content: '\e729';
+  /* '' */
+}
+
+/* line 414, ../sass/fontello-mixins.scss */
+.icon-rss:before {
+  content: '\e73a';
+  /* '' */
+}
+
+/* line 419, ../sass/fontello-mixins.scss */
+.icon-basket:before {
+  content: '\e73d';
+  /* '' */
+}
+
+/* line 424, ../sass/fontello-mixins.scss */
+.icon-chart-pie:before {
+  content: '\e751';
+  /* '' */
+}
+
+/* line 429, ../sass/fontello-mixins.scss */
+.icon-left-circled:before {
+  content: '\e759';
+  /* '' */
+}
+
+/* line 434, ../sass/fontello-mixins.scss */
+.icon-right-circled:before {
+  content: '\e75a';
+  /* '' */
+}
+
+/* line 439, ../sass/fontello-mixins.scss */
+.icon-left-open:before {
+  content: '\e75d';
+  /* '' */
+}
+
+/* line 445, ../sass/fontello-mixins.scss */
+.icon-right-open:after {
+  content: '\e75e';
+  /* '' */
+}
+
+/* line 450, ../sass/fontello-mixins.scss */
+.icon-brush:before {
+  content: '\e79a';
+  /* '' */
+}
+
+/* line 455, ../sass/fontello-mixins.scss */
+.icon-aboveground-rail:before {
+  content: '\e810';
+  /* '' */
+}
+
+/* line 460, ../sass/fontello-mixins.scss */
+.icon-airport:before {
+  content: '\e811';
+  /* '' */
+}
+
+/* line 465, ../sass/fontello-mixins.scss */
+.icon-belowground-rail:before {
+  content: '\e80e';
+  /* '' */
+}
+
+/* line 470, ../sass/fontello-mixins.scss */
+.icon-bicycle:before {
+  content: '\e80d';
+  /* '' */
+}
+
+/* line 475, ../sass/fontello-mixins.scss */
+.icon-bus:before {
+  content: '\e80f';
+  /* '' */
+}
+
+/* line 480, ../sass/fontello-mixins.scss */
+.icon-cafe:before {
+  content: '\e80c';
+  /* '' */
+}
+
+/* line 485, ../sass/fontello-mixins.scss */
+.icon-library:before {
+  content: '\e823';
+  /* '' */
+}
+
+/* line 490, ../sass/fontello-mixins.scss */
+.icon-restaurant:before {
+  content: '\e832';
+  /* '' */
+}
+
+/* line 495, ../sass/fontello-mixins.scss */
+.icon-toilet:before {
+  content: '\e83b';
+  /* '' */
+}
+
+/* line 500, ../sass/fontello-mixins.scss */
+.icon-tree-1:before {
+  content: '\e83e';
+  /* '' */
+}
+
+/* line 505, ../sass/fontello-mixins.scss */
+.icon-tree-2:before {
+  content: '\e83f';
+  /* '' */
+}
+
+/* line 510, ../sass/fontello-mixins.scss */
+.icon-chat-empty:before {
+  content: '\f0e6';
+  /* '' */
+}
+
+/* line 515, ../sass/fontello-mixins.scss */
+.icon-picture:before {
+  content: '🌄';
+  /* '\1f304' */
+}
+
+/* line 520, ../sass/fontello-mixins.scss */
+.icon-picture-1:before {
+  content: '\e809';
+  /* '' */
+}
+
+/* line 525, ../sass/fontello-mixins.scss */
+.icon-globe:before {
+  content: '🌎';
+  /* '\1f30e' */
+}
+
+/* line 530, ../sass/fontello-mixins.scss */
+.icon-gift:before {
+  content: '🎁';
+  /* '\1f381' */
+}
+
+/* line 535, ../sass/fontello-mixins.scss */
+.icon-graduation-cap:before {
+  content: '🎓';
+  /* '\1f393' */
+}
+
+/* line 540, ../sass/fontello-mixins.scss */
+.icon-mic:before {
+  content: '🎤';
+  /* '\1f3a4' */
+}
+
+/* line 545, ../sass/fontello-mixins.scss */
+.icon-videocam:before {
+  content: '🎥';
+  /* '\1f3a5' */
+}
+
+/* line 550, ../sass/fontello-mixins.scss */
+.icon-headphones:before {
+  content: '🎧';
+  /* '\1f3a7' */
+}
+
+/* line 555, ../sass/fontello-mixins.scss */
+.icon-ticket:before {
+  content: '🎫';
+  /* '\1f3ab' */
+}
+
+/* line 560, ../sass/fontello-mixins.scss */
+.icon-award-1:before {
+  content: '\e80a';
+  /* '' */
+}
+
+/* line 565, ../sass/fontello-mixins.scss */
+.icon-award:before {
+  content: '🏉';
+  /* '\1f3c9' */
+}
+
+/* line 570, ../sass/fontello-mixins.scss */
+.icon-thumbs-up:before {
+  content: '👍';
+  /* '\1f44d' */
+}
+
+/* line 575, ../sass/fontello-mixins.scss */
+.icon-thumbs-down:before {
+  content: '👎';
+  /* '\1f44e' */
+}
+
+/* line 580, ../sass/fontello-mixins.scss */
+.icon-user:before {
+  content: '👤';
+  /* '\1f464' */
+}
+
+/* line 585, ../sass/fontello-mixins.scss */
+.icon-users:before {
+  content: '👥';
+  /* '\1f465' */
+}
+
+/* line 590, ../sass/fontello-mixins.scss */
+.icon-users-1:before {
+  content: '\e802';
+  /* '' */
+}
+
+/* line 595, ../sass/fontello-mixins.scss */
+.icon-lamp:before {
+  content: '💡';
+  /* '\1f4a1' */
+}
+
+/* line 600, ../sass/fontello-mixins.scss */
+.icon-credit-card-1:before {
+  content: '\e80b';
+  /* '' */
+}
+
+/* line 605, ../sass/fontello-mixins.scss */
+.icon-credit-card:before {
+  content: '💳';
+  /* '\1f4b3' */
+}
+
+/* line 610, ../sass/fontello-mixins.scss */
+.icon-monitor:before {
+  content: '💻';
+  /* '\1f4bb' */
+}
+
+/* line 615, ../sass/fontello-mixins.scss */
+.icon-floppy:before {
+  content: '💾';
+  /* '\1f4be' */
+}
+
+/* line 620, ../sass/fontello-mixins.scss */
+.icon-folder:before {
+  content: '📁';
+  /* '\1f4c1' */
+}
+
+/* line 625, ../sass/fontello-mixins.scss */
+.icon-calendar:before {
+  content: '📅';
+  /* '\1f4c5' */
+}
+
+/* line 630, ../sass/fontello-mixins.scss */
+.icon-chart-line:before {
+  content: '📈';
+  /* '\1f4c8' */
+}
+
+/* line 635, ../sass/fontello-mixins.scss */
+.icon-chart-bar:before {
+  content: '📊';
+  /* '\1f4ca' */
+}
+
+/* line 640, ../sass/fontello-mixins.scss */
+.icon-attach:before {
+  content: '📎';
+  /* '\1f4ce' */
+}
+
+/* line 645, ../sass/fontello-mixins.scss */
+.icon-book:before {
+  content: '📕';
+  /* '\1f4d5' */
+}
+
+/* line 650, ../sass/fontello-mixins.scss */
+.icon-book-1:before {
+  content: '\e808';
+  /* '' */
+}
+
+/* line 655, ../sass/fontello-mixins.scss */
+.icon-book-open:before {
+  content: '📖';
+  /* '\1f4d6' */
+}
+
+/* line 660, ../sass/fontello-mixins.scss */
+.icon-phone:before {
+  content: '📞';
+  /* '\1f4de' */
+}
+
+/* line 665, ../sass/fontello-mixins.scss */
+.icon-megaphone:before {
+  content: '📣';
+  /* '\1f4e3' */
+}
+
+/* line 670, ../sass/fontello-mixins.scss */
+.icon-newspaper:before {
+  content: '📰';
+  /* '\1f4f0' */
+}
+
+/* line 680, ../sass/fontello-mixins.scss */
+.icon-signal:before {
+  content: '📶';
+  /* '\1f4f6' */
+}
+
+/* line 685, ../sass/fontello-mixins.scss */
+.icon-camera:before {
+  content: '📷';
+  /* '\1f4f7' */
+}
+
+/* line 690, ../sass/fontello-mixins.scss */
+.icon-search:before {
+  content: '🔍';
+  /* '\1f50d' */
+}
+
+/* line 695, ../sass/fontello-mixins.scss */
+.icon-search-1:before {
+  content: '\e803';
+  /* '' */
+}
+
+/* line 700, ../sass/fontello-mixins.scss */
+.icon-lock:before {
+  content: '\1f512';
+  /* '\1f512' */
+}
+
+/* line 705, ../sass/fontello-mixins.scss */
+.icon-lock-open:before {
+  content: '🔓';
+  /* '\1f513' */
+}
+
+/* line 710, ../sass/fontello-mixins.scss */
+.icon-bell:before {
+  content: '🔔';
+  /* '\1f514' */
+}
+
+/* line 715, ../sass/fontello-mixins.scss */
+.icon-bell-1:before {
+  content: '\e800';
+  /* '' */
+}
+
+/* line 720, ../sass/fontello-mixins.scss */
+.icon-link:before {
+  content: '🔗';
+  /* '\1f517' */
+}
+
+/* line 725, ../sass/fontello-mixins.scss */
+.icon-flashlight:before {
+  content: '🔦';
+  /* '\1f526' */
+}
+
+/* line 730, ../sass/fontello-mixins.scss */
+.icon-chart-area:before {
+  content: '🔾';
+  /* '\1f53e' */
+}
+
+/* line 735, ../sass/fontello-mixins.scss */
+.icon-clock:before {
+  content: '🕔';
+  /* '\1f554' */
+}
+
+/* line 740, ../sass/fontello-mixins.scss */
+.icon-clock-1:before {
+  content: '\e807';
+  /* '' */
+}
+
+/* line 745, ../sass/fontello-mixins.scss */
+.icon-rocket:before {
+  content: '🚀';
+  /* '\1f680' */
+}
+
+/*
+ * Elements
+*/
+/* line 16, ../sass/omega-hartnell-alpha-default.scss */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+/* line 19, ../sass/omega-hartnell-alpha-default.scss */
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
+/* line 23, ../sass/omega-hartnell-alpha-default.scss */
+.logo-img {
+  margin: 0 auto;
+  width: 99%;
+  float: none;
+}
+
+/* line 29, ../sass/omega-hartnell-alpha-default.scss */
+.ftr-block-logo {
+  margin: 0 auto;
+  width: 20%;
+}
+
+/* 
+ * Responsive Toggle Menu in Omega
+ */
+/* line 38, ../sass/omega-hartnell-alpha-default.scss */
+a.menu-link {
+  display: none;
+}
+
+/* line 41, ../sass/omega-hartnell-alpha-default.scss */
+.js nav[role=navigation] {
+  max-height: none;
+}
+
+/* line 44, ../sass/omega-hartnell-alpha-default.scss */
+nav[role=navigation] ul {
+  border: 0;
+}
+
+/* line 48, ../sass/omega-hartnell-alpha-default.scss */
+nav[role=navigation] li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+/* line 54, ../sass/omega-hartnell-alpha-default.scss */
+nav[role=navigation] li a.main-menu-link,
+nav[role=navigation] li a.main-menu-link:link,
+nav[role=navigation] li a.main-menu-link:visited {
+  color: white;
+  padding: 0.5em 0.5em 8px;
+  font-family: Georgia, Times, serif;
+  font-size: 1.1em;
+}
+/* line 62, ../sass/omega-hartnell-alpha-default.scss */
+nav[role=navigation] li a.main-menu-link:hover,
+nav[role=navigation] li a.main-menu-link:active,
+nav[role=navigation] li a.main-menu-link:focus {
+  text-decoration: none;
+  border-bottom: 8px solid #ffb300;
+  /* Mobile */
+  /* Mobile */
+  padding: 0.5em 0.5em 0;
+}
+@media only screen and (max-width: 380px) {
+  /* line 62, ../sass/omega-hartnell-alpha-default.scss */
+  nav[role=navigation] li a.main-menu-link:hover,
+  nav[role=navigation] li a.main-menu-link:active,
+  nav[role=navigation] li a.main-menu-link:focus {
+    color: #730027;
+  }
+}
+@media only screen and (max-width: 380px) {
+  /* line 62, ../sass/omega-hartnell-alpha-default.scss */
+  nav[role=navigation] li a.main-menu-link:hover,
+  nav[role=navigation] li a.main-menu-link:active,
+  nav[role=navigation] li a.main-menu-link:focus {
+    border-bottom: 1px solid #808080;
+  }
+}
+/* line 69, ../sass/omega-hartnell-alpha-default.scss */
+nav[role=navigation] li a.main-menu-link:after {
+  content: "";
+  float: none;
+  margin-left: 0;
+}
+
+/* line 76, ../sass/omega-hartnell-alpha-default.scss */
+nav[role=navigation] li a {
+  border: 0;
+}
+
+/*
+ *  BEGIN: Athletics Primary Menu
+ */
+/* line 83, ../sass/omega-hartnell-alpha-default.scss */
+.athletic-primary-menu {
+  padding-top: 0;
+}
+/* line 85, ../sass/omega-hartnell-alpha-default.scss */
+.athletic-primary-menu .content {
+  width: 100%;
+}
+/* line 87, ../sass/omega-hartnell-alpha-default.scss */
+.athletic-primary-menu .content ul.menu {
+  float: right;
+  margin-left: 0;
+  padding-left: 0;
+}
+/* line 91, ../sass/omega-hartnell-alpha-default.scss */
+.athletic-primary-menu .content ul.menu li {
+  padding: 0;
+  margin: 0;
+  list-style: inline;
+}
+/* line 95, ../sass/omega-hartnell-alpha-default.scss */
+.athletic-primary-menu .content ul.menu li a.athletic-link, .athletic-primary-menu .content ul.menu li a.athletic-link:link, .athletic-primary-menu .content ul.menu li a.athletic-link:visited {
+  font-family: 'pt_sans_narrowbold';
+  font-weight: normal;
+  color: #cccccc;
+  border-bottom: none;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+/* line 99, ../sass/omega-hartnell-alpha-default.scss */
+.athletic-primary-menu .content ul.menu li a.athletic-link:hover, .athletic-primary-menu .content ul.menu li a.athletic-link:focus, .athletic-primary-menu .content ul.menu li a.athletic-link:active {
+  color: white;
+  border-bottom: none;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* END: Athletics Primary Menu */
+/* Audience Promo View */
+/* line 113, ../sass/omega-hartnell-alpha-default.scss */
+.pane-audience-promotion #tabs-audience_promotion-center .ui-widget-content {
+  border: none;
+}
+/* line 118, ../sass/omega-hartnell-alpha-default.scss */
+.pane-audience-promotion #tabs-audience_promotion-center .ui-widget-content .pane-views-panes .pane-content .view-content .views-row {
+  float: left;
+  width: 32%;
+}
+/* line 122, ../sass/omega-hartnell-alpha-default.scss */
+.pane-audience-promotion #tabs-audience_promotion-center .ui-widget-content .pane-views-panes .pane-content .view-content .views-row .audience-row img {
+  top: 0;
+}
+/* line 126, ../sass/omega-hartnell-alpha-default.scss */
+.pane-audience-promotion #tabs-audience_promotion-center .ui-widget-content .pane-views-panes .pane-content .view-content .views-row .audience-overlay {
+  margin-top: 0;
+  height: auto;
+  opacity: 1.0;
+  padding: 0.45em 0.9em;
+}
+/* line 133, ../sass/omega-hartnell-alpha-default.scss */
+.pane-audience-promotion #tabs-audience_promotion-center .ui-widget-content .pane-views-panes .pane-content .view-content .views-row-1, .pane-audience-promotion #tabs-audience_promotion-center .ui-widget-content .pane-views-panes .pane-content .view-content .views-row-2 {
+  margin-right: 2%;
+}
+/* line 140, ../sass/omega-hartnell-alpha-default.scss */
+.pane-audience-promotion #tabs-audience_promotion-center .item-list {
+  border-radius: 0 0 0 0;
+}
+/* line 142, ../sass/omega-hartnell-alpha-default.scss */
+.pane-audience-promotion #tabs-audience_promotion-center .item-list li {
+  font-size: 0.857em;
+  padding: 1em;
+}
+/* line 145, ../sass/omega-hartnell-alpha-default.scss */
+.pane-audience-promotion #tabs-audience_promotion-center .item-list li a, .pane-audience-promotion #tabs-audience_promotion-center .item-list li a:link, .pane-audience-promotion #tabs-audience_promotion-center .item-list li a:visited {
+  margin-left: 0em;
+  padding: 0;
+}
+
+/* Slideshow */
+/* line 156, ../sass/omega-hartnell-alpha-default.scss */
+.left-div {
+  position: relative;
+}
+/* line 158, ../sass/omega-hartnell-alpha-default.scss */
+.left-div img {
+  display: block;
+}
+
+/* line 167, ../sass/omega-hartnell-alpha-default.scss */
+.front .view-slides .views-field-nothing-1 .float-left-text {
+  left: 57%;
+  width: 37%;
+}
+
+/* line 174, ../sass/omega-hartnell-alpha-default.scss */
+.view-slides {
+  background-color: transparent !important;
+  border: none !important;
+}
+/* line 177, ../sass/omega-hartnell-alpha-default.scss */
+.view-slides .view-content {
+  padding: 0 !important;
+}
+/* line 179, ../sass/omega-hartnell-alpha-default.scss */
+.view-slides .view-content .flexslider {
+  overflow: hidden;
+}
+/* line 183, ../sass/omega-hartnell-alpha-default.scss */
+.view-slides .view-content .flexslider .slides li.flexslider_views_slideshow_slide .views-field-nothing {
+  position: absolute;
+}
+/* line 185, ../sass/omega-hartnell-alpha-default.scss */
+.view-slides .view-content .flexslider .slides li.flexslider_views_slideshow_slide .views-field-nothing .left-div {
+  top: 0;
+}
+/* line 187, ../sass/omega-hartnell-alpha-default.scss */
+.view-slides .view-content .flexslider .slides li.flexslider_views_slideshow_slide .views-field-nothing .left-div img {
+  height: expression(this.scrollHeight < 401 ? "400px" : "auto" );
+  /* Cross browser expression */
+  min-height: 30.769em;
+  /* Chrome override */
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+/* line 197, ../sass/omega-hartnell-alpha-default.scss */
+.view-slides .view-content .flexslider .slides li.flexslider_views_slideshow_slide .views-field-nothing-1 .float-left-text {
+  left: 57%;
+  width: 37%;
+}
+
+/* 
+ * BEGIN: Layout Adjustments
+ */
+/* line 212, ../sass/omega-hartnell-alpha-default.scss */
+.panel-pane {
+  margin-bottom: 1em;
+}
+
+/* line 214, ../sass/omega-hartnell-alpha-default.scss */
+.grid-13.push-3.row2 {
+  margin: 0;
+}
+/* line 216, ../sass/omega-hartnell-alpha-default.scss */
+.grid-13.push-3.row2 .grid-4.row2col1.lower_col_2 {
+  margin-left: 0;
+}
+/* line 219, ../sass/omega-hartnell-alpha-default.scss */
+.grid-13.push-3.row2 .grid-4.row2col3.lower_col_4 {
+  margin-right: 0;
+}
+
+/* line 228, ../sass/omega-hartnell-alpha-default.scss */
+.field-name-field-flexpage-location .content .field-name-field-location-type .field-label,
+.field-name-field-flexpage-location .content .field-name-field-location-address .field-label {
+  width: 100%;
+  float: none;
+  display: block;
+}
+/* line 233, ../sass/omega-hartnell-alpha-default.scss */
+.field-name-field-flexpage-location .content .field-name-field-location-type .field-items,
+.field-name-field-flexpage-location .content .field-name-field-location-address .field-items {
+  width: 100%;
+  margin-bottom: 0.5em;
+  float: none;
+  display: block;
+}
+
+/* 
+ * END: Layout Adjustments
+ */

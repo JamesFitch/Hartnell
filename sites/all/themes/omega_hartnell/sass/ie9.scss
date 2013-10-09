@@ -1,0 +1,25 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+
+/*
+* General includes
+*/
+@import "variables";
+@import "mixins";
+@import "compass/support";
+
+$old-ie: false !default; 
+
+/*
+ * IE9 styles
+ ****************************/
+.ie9 {
+  .athletic-content {
+    .region-content {
+      margin-top: 0 !important;
+    }
+  }
+}

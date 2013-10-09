@@ -1,0 +1,67 @@
+<div id="node-14" class="node">
+
+
+
+  
+  <div class="content clear-block">
+
+
+    <h2>Overview</h2>
+    <p>The Flexible Page banner image display is handled via a custom Panel Pane, the "Dynamic Page Banner".
+      This Pane has been added to each of the Flexible Page defaults, or it can manually be added to a Panel.  The Dynamic Page Banner pane/block is located under "Custom blocks" in the Panelizer panel's "Add Content" pop-up window. </p>
+    <p>This feature dynamically chooses what banner image to display: either the banner attached to the individual page or the banner attached to the page's "Site Section". </p> 
+
+    <h2>How the Banner Image is selected</h2>
+    <p>The following rules are used to determine what (if any) banner to display:</p> 
+    <ul>
+      <li>A banner attached <strong>to the page itself</strong> (i.e., with the Images->Banner Image field) will always be displayed.</li>
+      <li>If a banner image has <strong>not</strong> been set on the page, the system will look for a banner attached to the page's <strong>Site Section</strong> (i.e., with the About this content->Site Section field).</li>
+      <li>If no banner image has been set for the page's Site Section, the system will search upwards along the Site Section taxonomy tree.  For instance, if a page's Site Section is "Men's Footbal" and the Site Section taxonomy tree looks like this:
+        <div>
+          <ul>
+            <li>Student Life
+              <ul>
+                <li>Athletics
+                  <ul>
+                    <li>Men's Football</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        the system will first check for a banner image attached to "Men's Football", then "Athletics", and, finally, "Student Life".
+      <li>If no banner image is found on the page, its Site Section or any ancestors thereof, no banner will be displayed.</li>
+    </ul>
+
+    <h2>Creating a page-specific Banner image</h2>
+    <p>On the page's edit screen, select a Banner Image (on the Images tab).  This will override any Banner supplied by this page's Site Section.</p>
+
+    <h2>Creating a Site-Section-specific Banner image</h2>
+    <p>To specify a default Banner image for a particular site section (including all sub-sections beneath it):</p>
+      <ul>
+        <li>Find the Site Section term in the <a href="../../admin/structure/taxonomy/site_section">Site Section vocabulary listing</a>.</li>
+        <li>Follow the Edit link and select a Banner Image (on the Theme Settings tab).</li>
+      </ul>
+    <p>Note that this Banner will be <strong>not</strong> be applied to pages in this section wherever any of the following conditions is true:</p>
+    <ul>
+      <li>A sub-section of this section has a banner image attached.</li>
+      <li>A page within this section has a Banner Image attached to it directly.</li>
+      <li>A page within this section has the "Hide Banner" box checked (see below).</li>
+    </ul>
+
+    <h2>Creating a page with no banner</h2>
+    <p>In order to create a page with <strong>no</strong> banner, even when it is in a Site Section for which a Banner has been specified:</p>
+    <ul>
+      <li>Go to the "Content" sub-tab of the "Panelizer" tab for the page.</li>
+      <li>Click the Settings Gear icon on the "Dynamic Banner" pane, and choose "Settings".</li>
+      <li>Place a check in the "Hide Banner" checkbox (in the "Configure" popup window).</li>
+      <li>Click "Finish" on the Configure window, then "Save" on the "Content" tab.</li>
+    </ul>
+
+
+  </div>
+
+
+
+</div>

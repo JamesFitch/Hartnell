@@ -1,0 +1,1015 @@
+<div class="reusable-styles">
+  <h1>Reusable Styles</h1>
+  <p>Since they are based on CSS classes, these styles can be used repeatedly on a single page, as well as chained together to achieve a number of effects. For example, you could apply a left float with a color box or just the color box by itself.</p>
+  <p>Some of these styles utilize CSS3, so be aware not every browser will render the effects exactly the same, particularly rounded corners and drop-shadows.</p>
+  <p>CSS definitions for each of these styles can be found (and modified if necessary - though be careful!) in the stylesheet named "reusable-styles.scss" in the theme CSS directory (e.g. /sites/all/themes/omega_maricopa/css/reusable-styles.scss). Please note that we are using <a href="http://sass-lang.com/">SASS</a>/<a href="http://compass-style.org/">Compass</a> to compile the CSS.</p>
+
+  <h3>Practical Examples of Resuable styles:</h3>
+	<ul>
+	  <li><a href="/hartnell/help/sl_help/howto_stylemenu-links">Styling top navigation links</a></li>
+	  <li><a href="/hartnell/help/sl_help/howto_styledbuttons">How To Create Promo Buttons with Icons</a></li>
+	  <li><a href="/hartnell/help/sl_help/ads_and_promotions">Creating Promo Ads</a></li>
+	  <li><a href="/hartnell/help/sl_help/ads_and_alerts">Creating Promo Alerts</a></li>
+	</ul>
+
+  <p>Use the documentation below to see examples of the styles and how to use them.</p>
+  <div class="how-to grid-16 alpha omega">
+    <h2>How to apply reusable styles</h2>
+    <h3 id="howto-panelpane">Panel panes</h3>
+    <ol>
+      <li>Navigate to "Content" under "Panelizer."<br />
+        <img class="screenshot" src="&path&/screenshots/cwi_reusable_pane_0.jpg" alt="Screenshot" />
+      </li>
+      <li>Click on the gear icon of the pane you want to apply the style to, then click on "CSS properties."<br />
+        <img class="screenshot" src="&path&/screenshots/cwi_reusable_pane_1.jpg"  alt="Screenshot" />
+      </li>
+      <li>In the field labeled "CSS class" put the reusable style class name, without any preceding period. If you put in more than one class name, separate each one with a space.<br />
+        <img class="screenshot" src="&path&/screenshots/cwi_reusable_pane_2.jpg"  alt="Screenshot" />
+      </li>
+      <li>Click "Save" and then be sure to click "Update and save" on the main page.</li>
+    </ol>
+    <h3 id="howto-boxblock">Boxes / blocks</h3>
+    <ol>
+      <li>To apply a reusable style to a block or box, get to its configuration page. You can do so by
+        <ul>
+          <li>Going to <span class="bold">Admin menu</span> &gt; <span class="bold">Structure</span> &gt; <span class="bold">Blocks</span>, then finding the block/box in the list. Click its "Configure" link.<br />
+          <img class="screenshot" src="&path&/screenshots/reusable_block_1.jpg"  alt="Screenshot" /><br />
+          Or</li>
+          <li>Clicking on its contextual link (the gear icon), then clicking "Configure block" or "Edit box."<br />
+          <img class="screenshot" src="&path&/screenshots/reusable_block_2.jpg"  alt="Screenshot" /><br />
+          <img class="screenshot" src="&path&/screenshots/reusable_block_3.jpg"  alt="Screenshot" /></li>
+        </ul>
+      </li>
+      <li>Find the "Advanced Settings" fieldset, then put your class names into the "Additional CSS classes" field.<br />
+      <img class="screenshot" src="&path&/screenshots/reusable_block_4.jpg"  alt="Screenshot" /></li>
+    </ol>
+    <h3 id="howto-views">Rich text editor</h3>
+    <ol>
+      <li>While editing with the rich text editor, select the portion of your content you wish to apply the style to.</li>
+      <li>Find the "Styles" drop-down input.<br />
+        <img class="screenshot" src="&path&/screenshots/reusable_richtext_1.jpg"  alt="Screenshot" />
+      </li>
+      <li>Depending on what kind of element you select, you will have a variety of options.</li>
+    </ol><!-- / Rich text editor -->
+    <h3 id="howto-markup">Markup</h3>
+    <ol>
+      <li>Make sure your rich text editor is switched off so it doesn't mess up your code.<br />
+        <img class="screenshot" src="&path&/screenshots/reusable_markup_1.jpg"  alt="Screenshot" />
+      </li>
+      <li>Put your class name as the value in a class attribute for whichever element you want to affect.<br />
+        <div class="code">
+          <code>
+            &lt;p&gt;Lorem ipsum dolor sit amet, &lt;span class="<span class="bold">classname</span>"&gt;consectetuer adipiscing elit&lt;/span>. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.&lt;/p&gt;
+          </code>
+        </div>
+      </li>
+      <li>Note: You might not see a preview of your style directly in the rich text editor after switching back to the normal rich text editing. If you need to preview, click the "Preview" button at the bottom of the page.</li>
+    </ol>
+    <h3 id="howto-views">Views</h3>
+    <ol>
+      <li>When editing your view, make sure the "Advanced" fieldset is expanded.<br />
+        <img class="screenshot" src="&path&/screenshots/cwi_reusable_views_1.jpg"  alt="Screenshot" />
+      </li>
+      <li>Click on the value next to "CSS class".<br />
+        <img class="screenshot" src="&path&/screenshots/cwi_reusable_views_2.jpg"  alt="Screenshot" />
+      </li>
+      <li>Enter your class name into the field that appears.<br />
+        <img class="screenshot" src="&path&/screenshots/cwi_reusable_views_3.jpg"  alt="Screenshot" />
+      </li>
+      <li>Depending on your purposes, you may want to change whether it applies to all the current view's displays or just this one.<br />
+        <img class="screenshot" src="&path&/screenshots/cwi_reusable_views_4.jpg"  alt="Screenshot" />
+      </li>
+      <li>Click on "Apply" (or "Apply (this display)").<br />
+        <img class="screenshot" src="&path&/screenshots/cwi_reusable_views_5.jpg"  alt="Screenshot" />
+      </li>
+      <li>Be sure to save your view.
+      </li>
+    </ol>
+  </div><!-- /.how-to .grid-16 .alpha .omega -->
+
+  <div class="block-level grid-16 alpha omega">
+    <!-- Block-leve styles -->
+    <h2>Block-level styles</h2>
+    <p>These styles apply to whole chunks of content and will most often be applied through configuration, such as in the panels or blocks/boxes interfaces.</p>
+
+    <div class="style-box grid-8 alpha">
+      <h3 class="title">Inline menu</h3>
+      <h4>Example before:</h4>
+      <div class="example-content">
+        <div>
+          <ul>
+            <li><a href="">Menu item 1</a></li>
+            <li><a href="">Menu item 2</a></li>
+            <li><a href="">Menu item 3</a></li>
+          </ul>
+        </div><!-- /.inline-menu -->
+      </div><!-- /.example-content -->
+      <h4>Example after:</h4>
+      <div class="example-content">
+        <div class="inline-menu">
+          <ul>
+            <li><a href="">Menu item 1</a></li>
+            <li><a href="">Menu item 2</a></li>
+            <li><a href="">Menu item 3</a></li>
+          </ul>
+        </div><!-- /.inline-menu -->
+      </div><!-- /.example-content -->
+      <h4>Example code:</h4>
+      <div class="example-content">
+        <code>&lt;div class=&quot;<span class="bold">inline-menu</span>&quot;&gt;<br />
+&lt;ul&gt;<br />
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;Menu item 1&lt;/a&gt;&lt;/li&gt;<br />
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;Menu item 2&lt;/a&gt;&lt;/li&gt;<br />
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;Menu item 3&lt;/a&gt;&lt;/li&gt;<br />
+&lt;/ul&gt;<br />
+&lt;/div&gt;&lt;!-- /.inline-menu --&gt;</code>
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>Footer blocks</li>
+          <li>Menus</li>
+          <li>This style turns a vertical menu into a horizontal one.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.inline-menu</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-boxblock">Blocks</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .alpha -->
+
+    <div class="style-box grid-8 omega">
+      <h3 class="title">Hide title</h3>
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>Boxes / blocks</li>
+          <li>This class uses CSS to hide a block title. This is helpful if you want to keep it there for the sake of screen-reading devices but don't want it to display visually.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.hide-title</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-panelpane">Blocks / boxes</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .omega -->
+  </div><!-- /.block-level .grid-16 .alpha .omega -->
+
+
+  <div class="blocks-inline grid-16 alpha omega">
+    <!-- Blocks or inline -->
+    <h2>For blocks or inline</h2>
+    <p>These styles can be applied to either blocks or inline within the rich text editor.</p>
+    <div class="style-box grid-8 alpha">
+      <h3 class="title">Hide list</h3>
+      <h4>Example, before:</h4>
+      <div class="example-content">
+        <ul>
+        <li><a href="">Unordered list item 1</a></li>
+        <li><a href="">Unordered list item 2</a></li>
+      </ul>
+      </div><!-- /.example-content -->
+      <h4>Example, after:</h4>
+      <div class="hide-list example-content">
+        <ul>
+        <li><a href="">Unordered list item 1</a></li>
+        <li><a href="">Unordered list item 2</a></li>
+      </ul>
+      </div><!-- /.example-content -->
+      <h4>Example code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <pre><code>&lt;div class="<span class="bold">hide-title</span>&gt;
+  &lt;ul"&gt;
+    &lt;li&gt;&lt;a href=""&gt;Unordered list item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;Unordered list item 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>This style removes bullets from an unordered list</li>
+          <li>The class must be applied to a container around the unordered list, such as a div or in the block configuration.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.hide-list</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+          <li><a href="#howto-panelpane">Panel panes</a></li>
+          <li><a href="#howto-boxblock">Boxes / blocks</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .alpha -->
+
+    <div class="style-box grid-8 omega">
+      <h3 class="title">Hide border</h3>
+      <h4>Example, before:</h4>
+      <div class="example-content">
+        <table width="100%" border="0">
+          <tr>
+            <td>Row 1, col 1</td>
+            <td>Row 1, col 2</td>
+          </tr>
+          <tr>
+            <td>Row 2, col 1</td>
+            <td>Row 2, col 2</td>
+          </tr>
+        </table>
+      </div><!-- /.example-content -->
+      <h4>Example, after:</h4>
+      <div class="example-content">
+        <div class="hide-border">
+        <table width="100%" border="0">
+          <tr>
+            <td>Row 1, col 1</td>
+            <td>Row 1, col 2</td>
+          </tr>
+          <tr>
+            <td>Row 2, col 1</td>
+            <td>Row 2, col 2</td>
+          </tr>
+        </table>
+        </div><!-- /.hide-border -->
+      </div><!-- /.example-content -->
+      <h4>Example 1 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>
+        &lt;div class="hide-border"&gt;
+          &lt;table width="100%" border="0"&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Row 1, col 1&lt;/td&gt;
+              &lt;td&gt;Row 1, col 2&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Row 2, col 1&lt;/td&gt;
+              &lt;td&gt;Row 2, col 2&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/table&gt;
+          &lt;/div&gt;
+          </code>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>Hides a table's border if needed</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.hide-border</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+          <li><a href="#howto-panelpane">Panel panes</a></li>
+          <li><a href="#howto-boxblock">Boxes / blocks</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .omega -->
+
+    <div class="style-box grid-8 alpha">
+      <h3 class="title">Gray button</h3>
+      <h4>Example 1, applied to an anchor tag:</h4>
+      <div class="example-content">
+        <p>Phasellus wisi purus, <span class="button-gray"><a href="">interdum vitae</a></span>, rutrum accumsan, viverra in, velit.</p>
+      </div><!-- /.example-content -->
+      <h4>Example 1 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>
+            &lt;p&gt;Phasellus wisi purus, &lt;span  class="<span class="bold">button-gray</span>"&gt;&lt;a href=""&gt;interdum vitae&lt;/a&gt;&lt;/span&gt;, rutrum accumsan, viverra in, velit.&lt;/p&gt;
+          </code>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>This style gives any anchor tag withing this class the appearance of a gray button that highlights on hover.</li>
+          <li>Buttons say "Click me" so only use it if/when you want people to click on something.</li>
+          <li>This style can technically be used on block level elements and applied through configuration screens, but do so with caution because all links will be affected.</li>
+          <li>Note: When applied to an anchor tag it will display the anchor as a block level element, which could break the layout of paragraphs unexpectedly.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.button-gray</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+          <li><a href="#howto-panelpane">Panel panes</a></li>
+          <li><a href="#howto-boxblock">Boxes / blocks</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .alpha -->
+
+    <div class="style-box grid-8 omega">
+      <h3 class="title">Reusable button - Gold button</h3>
+      <h4>Example 1, applied to an anchor tag:</h4>
+      <div class="example-content">
+        <p>Phasellus wisi purus, <span class="button-gold"><a href="">interdum vitae</a></span>, rutrum accumsan, viverra in, velit.</p>
+      </div><!-- /.example-content -->
+      <h4>Example 1 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>
+            &lt;p&gt;Phasellus wisi purus, &lt;span  class="<span class="bold">button-gold</span>"&gt;&lt;a href=""&gt;interdum vitae&lt;/a&gt;&lt;/span&gt;, rutrum accumsan, viverra in, velit.&lt;/p&gt;
+          </code>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>This style gives any anchor tag withing this class the appearance of a blue button that highlights on hover.</li>
+          <li>Buttons say "Click me" so only use it if/when you want people to click on something.</li>
+          <li>This style can technically be used on block level elements and applied through configuration screens, but do so with caution because all links will be affected.</li>
+          <li>Note: When applied to an anchor tag it will display the anchor as a block level element, which could break the layout of paragraphs unexpectedly.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.button-gold</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+          <li><a href="#howto-panelpane">Panel panes</a></li>
+          <li><a href="#howto-boxblock">Boxes / blocks</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .omega -->
+
+    <div class="style-box grid-8 alpha">
+      <h3 class="title">Reusable button - Burgundy</h3>
+      <h4>Example 1, applied to a span around an anchor tag:</h4>
+      <div class="example-content">
+        <p>Phasellus wisi purus, <span class="button-burgundy"><a href="">interdum vitae</a></span>, rutrum accumsan, viverra in, velit.</p>
+      </div><!-- /.example-content -->
+      <h4>Example 1 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>
+            &lt;p&gt;Phasellus wisi purus, &lt;span  class=<span class="bold">"button-burgundy"&gt;</span> &lt;a href=""&gt;interdum vitae&lt;/a&gt;&lt;/span&gt;, rutrum accumsan, viverra in, velit.&lt;/p&gt;
+          </code>
+        </div>
+        <!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>This style gives any anchor tag withing this class the appearance of a gray button that highlights on hover.</li>
+          <li>Buttons say "Click me" so only use it if/when you want people to click on something.</li>
+          <li>This style can technically be used on block level elements and applied through configuration screens, but do so with caution because all links will be affected.</li>
+          <li>Note: When applied to an anchor tag it will display the anchor as a block level element, which could break the layout of paragraphs unexpectedly.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.button-burgundy</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+          <li><a href="#howto-panelpane">Panel panes</a></li>
+          <li><a href="#howto-boxblock">Boxes / blocks</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .alpha -->
+
+    <div class="style-box grid-8 omega">
+      <h3 class="title">Reusable button - Black</h3>
+      <h4>Example 1, applied to a span around an anchor tag:</h4>
+      <div class="example-content">
+        <p>Phasellus wisi purus, <span class="button-black"><a href="">interdum vitae</a></span>, rutrum accumsan, viverra in, velit.</p>
+      </div><!-- /.example-content -->
+      <h4>Example 1 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>
+            &lt;p&gt;Phasellus wisi purus, &lt;span  class="<span class="bold">button-black</span>"&gt;&lt;a href=""&gt;interdum vitae&lt;/a&gt;&lt;/span&gt;, rutrum accumsan, viverra in, velit.&lt;/p&gt;
+          </code>
+        </div><!-- /.code -->
+      </div><!-- /.example-content --> 
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>This style gives any anchor tag withing this class the appearance of a black button that highlights on hover.</li>
+          <li>Buttons say "Click me" so only use it if/when you want people to click on something.</li>
+          <li>This style can technically be used on block level elements and applied through configuration screens, but do so with caution because all links will be affected.</li>
+          <li>Note: When applied to an anchor tag it will display the anchor as a block level element, which could break the layout of paragraphs unexpectedly.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.button-black</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+          <li><a href="#howto-panelpane">Panel panes</a></li>
+          <li><a href="#howto-boxblock">Boxes / blocks</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .alpha -->
+
+    <div class="style-box grid-8 alpha">
+      <h3 class="title">Box shadow (drop shadow)</h3>
+      <h4>Example:</h4>
+      <div class="example-content">
+        <p class="italic"><span class="bold">Note</span>: This example combines two styles, box-shadow + gold-box, to better demonstrate the effect.</p>
+        <div class="box-shadow gold-box">Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit.</div>
+      </div><!-- /.example-content -->
+      <h4>Example code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>
+            &lt;div class="<span class="bold">box-shadow</span> gold-box"&gt;Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit.&lt;/div&gt;
+          </code>
+        </div>
+        <!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>Use this style to apply a drop-shadow to a block of content.</li>
+          <li>Best when used in combination with another style, such as a color box.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.box-shadow</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+          <li><a href="#howto-panelpane">Panel panes</a></li>
+          <li><a href="#howto-boxblock">Boxes / blocks</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .alpha -->
+
+    <div class="style-box grid-8  omega">
+      <h3 class="title">Rounded corners</h3>
+      <h4>Example:</h4>
+      <div class="example-content">
+        <p class="italic"><span class="bold">Note</span>: This example combines two styles, rounded-corners + sky-blue-box, to better demonstrate the effect.</p>
+        <div class="border-gray rounded-corners">Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit.</div>
+      </div><!-- /.example-content -->
+      <h4>Example code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>
+            &lt;div class="border-gray <span class="bold">rounded-corners</span>"&gt;Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit.&lt;/div&gt;
+          </code>
+        </div>
+        <!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>Use this style to apply rounded corners to a block of content.</li>
+          <li>Best when used in combination with another style, such as a color box.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.rounded-corners</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+          <li><a href="#howto-panelpane">Panel panes</a></li>
+          <li><a href="#howto-boxblock">Boxes / blocks</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .omega -->
+
+    <div class="style-box grid-8 alpha">
+      <h3 class="title">Box shadow (drop shadow), white inset</h3>
+      <h4>Example:</h4>
+      <div class="example-content">
+        <p class="italic"><span class="bold">Note</span>: This example combines two styles, box-shadow-white-inset + reusable-bttn-black, to better demonstrate the effect.</p>
+        <div class="box-shadow-white-inset">
+          <ul>
+            <li><a href="">Action 1</a></li>
+            <li><a href="">Action 2</a></li>
+            <li><a href="">Action 3</a></li>
+          </ul>
+        </div>
+      </div><!-- /.example-content -->
+      <h4>Example code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>
+            &lt;div class="box-shadow-white-inset"&gt;&lt;a href=&quot;&quot; class="<span class="bold">box-shadow-white-inset</span>"&gt;Phasellus wisi purus&lt;/a&gt;&lt;/div&gt;
+          </code>
+        </div>
+        <!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>Use this style to apply a drop-shadow with a white inset to a block of content.</li>
+          <li>Best when used in combination with another style, such as a button.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.box-shadow-white-inset</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+          <li><a href="#howto-panelpane">Panel panes</a></li>
+          <li><a href="#howto-boxblock">Boxes / blocks</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .alpha -->
+
+    <div class="style-box grid-8 omega">
+      <h3 class="title">Call to action</h3>
+      <h4>Example:</h4>
+      <div class="example-content">
+        <div class="call-to-action">
+          <ul>
+            <li><a href="">Action 1</a></li>
+            <li><a href="">Action 2</a></li>
+            <li><a href="">Action 3</a></li>
+          </ul>
+        </div>
+      </div><!-- /.example-content -->
+      <h4>Example code:</h4>
+      <div class="example-content">
+        <div class="code"><code>&lt;div class=&quot;<span class="bold">call-to-action</span>&quot;&gt;<br />
+  &lt;ul&gt;<br />
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Action 1&lt;/a&gt;&lt;/li&gt;<br />
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Action 2&lt;/a&gt;&lt;/li&gt;<br />
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;action 3&lt;/a&gt;&lt;/li&gt;<br />
+    &lt;/ul&gt;<br />
+  &lt;/div&gt;</code></div>
+        <!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>This is a short-cut style to giving a Call-to-action list (or content pane) the appearance of buttons.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.call-to-action</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+          <li><a href="#howto-panelpane">Panel panes</a></li>
+          <li><a href="#howto-boxblock">Boxes / blocks</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .omega -->
+
+    <div class="style-box grid-8 alpha">
+      <h3 class="title">Text shadow</h3>
+      <h4>Example 1, by itself:</h4>
+      <div class="example-content">
+        <div class="text-shadow box-shadow-white-inset">Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit.</div>
+      </div><!-- /.example-content -->
+      <h4>Example code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>
+            &lt;div class="<span class="bold">text-shadow</span>"&gt;Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit.&lt;/div&gt;
+          </code>
+        </div>
+        <!-- /.code -->
+      </div><!-- /.example-content -->
+      <h4>Example 2, combined with a color box:</h4>
+      <div class="example-content">
+        <div class="text-shadow custard-box">Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit.</div>
+      </div><!-- /.example-content -->
+      <h4>Example code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>
+            &lt;div class="custard-box <span class="bold">box-shadow-white-inset</span>"&gt;Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit.&lt;/div&gt;
+          </code>
+        </div>
+        <!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>Use this style to apply a subtle drop-shadow to text.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.text-shadow</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+          <li><a href="#howto-panelpane">Panel panes</a></li>
+          <li><a href="#howto-boxblock">Boxes / blocks</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .alpha -->
+
+  </div><!-- /.button-styles .grid-16 .alpha .omega -->
+
+  <div class="inline-styles grid-16 alpha omega">
+    <h2>Inline styles</h2>
+    <p>Inline styles usually are intended to wrap around text or elements within blocks of content, e.g. highlighting text.</p>
+    <div class="style-box grid-8 alpha">
+      <h3 class="title">Fancy link</h3>
+      <h4>Example 1, inline:</h4>
+      <div class="example-content">
+        <p>Phasellus wisi purus, <a class="fancy-link">interdum vitae</a>, rutrum accumsan, viverra in, velit.</p>
+      </div><!-- /.example-content -->
+      <h4>Example 1 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>
+            &lt;p&gt;Phasellus wisi purus, &lt;a class="<span class="bold">fancy-link</span>"&gt;interdum vitae&lt;/span&gt;, rutrum accumsan, viverra in, velit.&lt;/p&gt;
+          </code>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <h4>Example 2, applied to a block level element:</h4>
+      <div class="example-content">
+        <ul class="fancy-link">
+        <li><a href="">Unordered list item 1</a></li>
+        <li><a href="">Unordered list item 2</a></li>
+        <li><a href="">Unordered list item 3</a></li>
+      </ul>
+      </div><!-- /.example-content -->
+      <h4>Example 2 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <pre><code>&lt;ul class=&quot;<span class="bold">fancy-link</span>"&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;Unordered list item 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;Unordered list item 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;Unordered list item 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>Giving a link within the wrapping element additional style</li>
+          <li><span class="bold">This is used best with headings and items within block-level elements</span></li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.fancy-link</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .alpha -->
+
+    <div class="style-box grid-8 omega">
+      <h3 class="title">Bold text</h3>
+      <h4>Example 1, inline:</h4>
+      <div class="example-content">
+        <p>Phasellus wisi purus, <span class="bold">interdum vitae</span>, rutrum accumsan, viverra in, velit.</p>
+      </div><!-- /.example-content -->
+      <h4>Example 1 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>
+            &lt;p&gt;Phasellus wisi purus, &lt;span class="<span class="bold">bold</span>"&gt;interdum vitae&lt;/span&gt;, rutrum accumsan, viverra in, velit.&lt;/p&gt;
+          </code>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <h4>Example 2, applied to a block level element:</h4>
+      <div class="example-content">
+        <ul class="bold">
+        <li>Unordered list item 1</li>
+        <li>Unordered list item 2</li>
+        <li>Unordered list item 3</li>
+      </ul>
+      </div><!-- /.example-content -->
+      <h4>Example 2 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <pre><code>&lt;ul class="<span class="bold">bold</span>"&gt;
+&lt;li&gt;Unordered list item 1&lt;/li&gt;
+&lt;li&gt;Unordered list item 2&lt;/li&gt;
+&lt;li&gt;Unordered list item 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>Highlighting text</li>
+          <li>This style bolds text.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.bold</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .omega -->
+
+
+    <div class="style-box grid-8 alpha">
+      <h3 class="title">Italic text</h3>
+      <h4>Example 1, inline:</h4>
+      <div class="example-content">
+        <p>Phasellus wisi purus, <span class="italic">interdum vitae</span>, rutrum accumsan, viverra in, velit.</p>
+      </div><!-- /.example-content -->
+      <h4>Example 1 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>&lt;p&gt;Phasellus wisi purus, &lt;span class="<span class="bold">italic</span>"&gt;interdum vitae&lt;/span&gt;, rutrum accumsan, viverra in, velit.&lt;/p&gt;
+          </code>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <h4>Example 2, applied to a block level element:</h4>
+      <div class="example-content">
+        <ul class="italic">
+        <li>Unordered list item 1</li>
+        <li>Unordered list item 2</li>
+        <li>Unordered list item 3</li>
+      </ul>
+      </div><!-- /.example-content -->
+      <h4>Example 2 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <pre><code>&lt;ul class="<span class="bold">italic</span>"&gt;
+&lt;li&gt;Unordered list item 1&lt;/li&gt;
+&lt;li&gt;Unordered list item 2&lt;/li&gt;
+&lt;li&gt;Unordered list item 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>Highlighting text</li>
+          <li>This style italicizes text.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.italic</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .alpha -->
+
+    <div class="style-box grid-8 omega">
+      <h3 class="title">Subhead</h3>
+      <h4>Example, before:</h4>
+      <div class="example-content">
+        <h2>Subhead</h2>
+      </div><!-- /.example-content -->
+      <h4>Example, after:</h4>
+      <div class="example-content">
+        <h2><span class="subhead">Subhead</span></h2>
+      </div><!-- /.example-content -->
+      <h4>Example code:</h4>
+      <div class="example-content">
+        <div class="code">&lt;h2&gt;&lt;span class=&quot;<span class="bold">subhead</span>&quot;&gt;Subhead&lt;/span&gt;&lt;/h2&gt;</div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>Makes heading-level elements black and italicizes them</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.subhead</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .omega -->
+     
+  <div class="ckeditor-styles grid-16 alpha omega">
+    <h2>CKEditor styles</h2>
+    <p>These styles appear under the "Styles" dropdown in the CKEditor as "Image on Left," "Image on Left, with border," "Image on Right," and "Image on Right, with border. However, you can also apply these styles manually, hence they are documented here.</p>
+
+
+    <div class="style-box grid-8 alpha">
+      <h3 class="title">Float left</h3>
+      <h4>Example 1, applied to image:</h4>
+      <div class="example-content">
+        <p>Phasellus wisi purus, <img class="float-left" src="&path&screenshots/sample-float-200.png" alt="Sample floated image" />, rutrum accumsan, viverra in, velit. Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin molestie tortor eu velit. Aliquam erat volutpat. Nullam ultrices, diam tempus vulputate egestas, eros pede varius leo, sed imperdiet lectus est ornare odio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        <p>Proin consectetuer velit in dui. Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit. Sed enim risus, congue non, tristique in, commodo eu, metus. Aenean tortor mi, imperdiet id, gravida eu, posuere eu, felis.</p>
+      </div><!-- /.example-content -->
+      <h4>Example 1 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>
+            &lt;p&gt;Phasellus wisi purus, &lt;img class="<span class="bold">float-left</span>" src="&path&screenshots/sample-float-200.png" /&gt;, rutrum accumsan, viverra in, velit. Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin molestie tortor eu velit. Aliquam erat volutpat. Nullam ultrices, diam tempus vulputate egestas, eros pede varius leo, sed imperdiet lectus est ornare odio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. &lt;/p&gt;
+            &lt;p>Proin consectetuer velit in dui. Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit. Sed enim risus, congue non, tristique in, commodo eu, metus. Aenean tortor mi, imperdiet id, gravida eu, posuere eu, felis.&lt;/p&gt;
+          </code>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <h4>Example 2, applied to a wrapper div:</h4>
+      <div class="example-content">
+        <div class="float-left">
+          <ul>
+            <li>Unordered list item 1</li>
+            <li>Unordered list item 2</li>
+            <li>Unordered list item 3</li>
+          </ul>
+        </div>
+        <p>Phasellus wisi purus, rutrum accumsan, viverra in, velit. Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin molestie tortor eu velit. Aliquam erat volutpat. Nullam ultrices, diam tempus vulputate egestas, eros pede varius leo, sed imperdiet lectus est ornare odio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        <p>Proin consectetuer velit in dui. Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit. Sed enim risus, congue non, tristique in, commodo eu, metus. Aenean tortor mi, imperdiet id, gravida eu, posuere eu, felis.</p>
+      </div><!-- /.example-content -->
+      <h4>Example 2 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <pre><code>&lt;div class="<span class="bold">float-left</span>"&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unordered list item 1&lt;/li&gt;
+  &lt;li&gt;Unordered list item 2&lt;/li&gt;
+  &lt;li&gt;Unordered list item 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;Phasellus wisi purus, rutrum accumsan, viverra in, velit. Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin molestie tortor eu velit. Aliquam erat volutpat. Nullam ultrices, diam tempus vulputate egestas, eros pede varius leo, sed imperdiet lectus est ornare odio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. &lt;/p&gt;
+&lt;p&gt;Proin consectetuer velit in dui. Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit. Sed enim risus, congue non, tristique in, commodo eu, metus. Aenean tortor mi, imperdiet id, gravida eu, posuere eu, felis.&lt;/p&gt;</code></pre>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>Aligning images</li>
+          <li>Pulling out sections of content for highlighting.</li>
+          <li>Can be used in conjunction with other styles.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.float-left</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .alpha -->
+
+    <div class="style-box grid-8 omega">
+      <h3 class="title">Float right</h3>
+      <h4>Example 1, applied to image:</h4>
+      <div class="example-content">
+        <p>Phasellus wisi purus, <img class="float-right" src="&path&screenshots/sample-float-200.png" alt="Sample floated image" />, rutrum accumsan, viverra in, velit. Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin molestie tortor eu velit. Aliquam erat volutpat. Nullam ultrices, diam tempus vulputate egestas, eros pede varius leo, sed imperdiet lectus est ornare odio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        <p>Proin consectetuer velit in dui. Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit. Sed enim risus, congue non, tristique in, commodo eu, metus. Aenean tortor mi, imperdiet id, gravida eu, posuere eu, felis.</p>
+      </div><!-- /.example-content -->
+      <h4>Example 1 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>
+            &lt;p&gt;Phasellus wisi purus, &lt;img class="<span class="bold">float-right</span>" src="&path&screenshots/sample-float-200.png" /&gt;, rutrum accumsan, viverra in, velit. Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin molestie tortor eu velit. Aliquam erat volutpat. Nullam ultrices, diam tempus vulputate egestas, eros pede varius leo, sed imperdiet lectus est ornare odio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. &lt;/p&gt;
+            &lt;p>Proin consectetuer velit in dui. Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit. Sed enim risus, congue non, tristique in, commodo eu, metus. Aenean tortor mi, imperdiet id, gravida eu, posuere eu, felis.&lt;/p&gt;
+          </code>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <h4>Example 2, applied to a wrapper div:</h4>
+      <div class="example-content">
+        <div class="float-right">
+          <ul>
+            <li>Unordered list item 1</li>
+            <li>Unordered list item 2</li>
+            <li>Unordered list item 3</li>
+          </ul>
+        </div>
+        <p>Phasellus wisi purus, rutrum accumsan, viverra in, velit. Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin molestie tortor eu velit. Aliquam erat volutpat. Nullam ultrices, diam tempus vulputate egestas, eros pede varius leo, sed imperdiet lectus est ornare odio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        <p>Proin consectetuer velit in dui. Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit. Sed enim risus, congue non, tristique in, commodo eu, metus. Aenean tortor mi, imperdiet id, gravida eu, posuere eu, felis.</p>
+      </div><!-- /.example-content -->
+      <h4>Example 2 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <pre><code>&lt;div class="<span class="bold">float-right</span>"&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unordered list item 1&lt;/li&gt;
+  &lt;li&gt;Unordered list item 2&lt;/li&gt;
+  &lt;li&gt;Unordered list item 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;Phasellus wisi purus, rutrum accumsan, viverra in, velit. Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin molestie tortor eu velit. Aliquam erat volutpat. Nullam ultrices, diam tempus vulputate egestas, eros pede varius leo, sed imperdiet lectus est ornare odio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. &lt;/p&gt;
+&lt;p&gt;Proin consectetuer velit in dui. Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit. Sed enim risus, congue non, tristique in, commodo eu, metus. Aenean tortor mi, imperdiet id, gravida eu, posuere eu, felis.&lt;/p&gt;</code></pre>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>Aligning images</li>
+          <li>Pulling out sections of content for highlighting.</li>
+          <li>Can be used in conjunction with other styles.</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.float-right</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .omega -->
+
+
+    <div class="style-box grid-8 alpha">
+      <h3 class="title">Gray border</h3>
+      <h4>Example 1, applied to image:</h4>
+      <div class="example-content">
+        <p>Phasellus wisi purus, <img class="float-left border-gray" src="&path&screenshots/sample-float-200.png" alt="Sample floated image" />, rutrum accumsan, viverra in, velit. Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin molestie tortor eu velit. Aliquam erat volutpat. Nullam ultrices, diam tempus vulputate egestas, eros pede varius leo, sed imperdiet lectus est ornare odio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        <p>Proin consectetuer velit in dui. Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit. Sed enim risus, congue non, tristique in, commodo eu, metus. Aenean tortor mi, imperdiet id, gravida eu, posuere eu, felis.</p>
+      </div><!-- /.example-content -->
+      <h4>Example 1 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>
+            &lt;p&gt;Phasellus wisi purus, &lt;img class="float-left <span class="bold">image-border</span>" src="&path&screenshots/sample-float-200.png" /&gt;, rutrum accumsan, viverra in, velit. Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin molestie tortor eu velit. Aliquam erat volutpat. Nullam ultrices, diam tempus vulputate egestas, eros pede varius leo, sed imperdiet lectus est ornare odio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. &lt;/p&gt;
+            &lt;p>Proin consectetuer velit in dui. Phasellus wisi purus, interdum vitae, rutrum accumsan, viverra in, velit. Sed enim risus, congue non, tristique in, commodo eu, metus. Aenean tortor mi, imperdiet id, gravida eu, posuere eu, felis.&lt;/p&gt;
+          </code>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>Decorating an element or section</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.image-border</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .alpha -->
+
+
+    <div class="style-box grid-8 omega">
+      <h3 class="title">Gray border</h3>
+      <h4>Example 2, inline:</h4>
+      <div class="example-content">
+        <p>Phasellus wisi purus, <span class="border-gray">interdum vitae</span>, rutrum accumsan, viverra in, velit.</p>
+      </div><!-- /.example-content -->
+      <h4>Example 2 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <code>&lt;p&gt;Phasellus wisi purus, &lt;span class="<span class="bold">border-gray</span>"&gt;interdum vitae&lt;/span&gt;, rutrum accumsan, viverra in, velit.&lt;/p&gt;
+          </code>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <h4>Example 3, applied to a wrapper div:</h4>
+      <div class="example-content">
+        <div class="border-gray">
+          <ul>
+            <li>Unordered list item 1</li>
+            <li>Unordered list item 2</li>
+            <li>Unordered list item 3</li>
+          </ul>
+        </div><!-- /.border-gray -->
+      </div><!-- /.example-content -->
+      <h4>Example 3 code:</h4>
+      <div class="example-content">
+        <div class="code">
+          <pre><code>&lt;div class="<span class="bold">border-gray</span>"&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unordered list item 1&lt;/li&gt;
+  &lt;li&gt;Unordered list item 2&lt;/li&gt;
+  &lt;li&gt;Unordered list item 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+        </div><!-- /.code -->
+      </div><!-- /.example-content -->
+      <div class="description">
+        <h4>Uses:</h4>
+        <ul>
+          <li>Decorating an element or section</li>
+        </ul>
+        <h4>Class:</h4>
+        <ul>
+          <li>.border-gray</li>
+        </ul>
+        <h4>Apply to:</h4>
+        <ul>
+          <li><a href="#howto-markup">Markup</a></li>
+        </ul>
+      </div><!-- /.description -->
+    </div><!-- /.style-box .grid-8 .alpha -->
+  </div><!-- /.ckeditor-styles .grid-16 .alpha .omega -->
+
+</div><!-- /.reusable-styles -->

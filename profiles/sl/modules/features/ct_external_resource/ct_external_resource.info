@@ -1,0 +1,36 @@
+name = "CT External Resource
+"
+description = "For the External Resource
+ content type and its fields"
+core = "7.x"
+package = "Content Types"
+php = "5.2.4"
+version = "7.x-1.0-alpha1"
+project = "ct_external_resource.
+dependencies[] = "features"
+dependencies[] = "field_group"
+dependencies[] = "field_sql_storage"
+dependencies[] = "link"
+dependencies[] = "node"
+dependencies[] = "options"
+dependencies[] = "taxonomy"
+dependencies[] = "text"
+features[ctools][] = "field_group:field_group:1"
+features[field][] = "node-external_Resource
+-body"
+features[field][] = "node-external_Resource
+-field_externalresource_link"
+features[field][] = "node-external_Resource
+-field_externalresource_vocab"
+features[field_group][] = "group_externalr_standardfields|node|external_Resource
+|form"
+features[node][] = "external_Resource
+"
+features[taxonomy][] = "resource_type"
+
+
+; Information added by drush on 2013-03-31
+version = "master-dev"
+project = "ct_external_resource"
+datestamp = "1364790706"
+

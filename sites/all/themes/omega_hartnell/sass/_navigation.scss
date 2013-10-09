@@ -1,0 +1,502 @@
+// Imports
+
+
+@import "variables";
+@import "mixins";
+@import "fontello";
+@import "fontello-mixins";
+@import "compass";
+@import "compass/support";
+@import "compass/typography/text";
+
+
+// IE Compatibility
+
+$legacy-support-for-ie: true;
+$legacy-support-for-ie7 : true;
+$legacy-support-for-ie8 : true;
+$legacy-support-for-mozilla: true;
+
+// General Menu Elements
+
+ul.menu {
+ border: medium none;
+ list-style: none outside none;
+	li {
+	 list-style: none outside none;
+	}
+}
+
+// BEGIN Social Media Navigation 
+
+.feed-icon {
+ margin: -19px 0.5em 0 0;
+  @include respond-to(handhelds) { display: none; }
+  @include respond-to(medium-screens) {float: right; } /* Tablets */
+ /* Mobile */
+}
+
+.social-media-user {
+  @include respond-to(handhelds) { 
+    float: none;
+	margin: 0 auto;
+	width: 57%;
+	} /* Mobile */ 
+	ul.menu {
+	 margin: 0;
+	 padding-left: 0;
+	 display: inline;
+		li {
+		 list-style: none;
+		 display: block;
+		 float: left;
+		 margin: 0 10px 0 0;
+		 padding: 0;
+		 @include default-round;
+		 width: 29px;
+		 height: 25px;
+		 overflow: hidden;
+		 	a, a.active, a:link, a:visited  {
+		 	 display: block;
+			 color: #e4e4e4;
+    		 @include respond-to(handhelds) { width: 1.92em;  color: #e4e4e4; border-bottom: hidden; }
+			}
+			a:hover, a:active, a:focus {
+			 color: $white;
+			 text-decoration: none;
+			 @include respond-to(handhelds) { color: $white; }
+			 opacity:0.9;
+			 filter:alpha(opacity=90); /* For IE8 and earlier */			 
+			} 
+		// Giving all "icon-" classes general styling
+			[class^="icon-"]:before,
+			[class*=" icon-"]:before {
+			 font-size: 9px;
+			 padding: 5px;
+			 display: block;
+			 vertical-align: middle;
+			 text-align: center;
+			 @include default-round; 	 		  
+			}
+			.icon-twitter:before { @include twitterButtn; }
+			.icon-facebook:before { @include facebookButtn; }
+			.icon-rss-1:before { @include rssButtn; }
+			.icon-linkedin:before { @include linkedinButtn; }
+		}
+	}
+}
+// Default buttons for Node Variants 
+.pretty-icons {
+	a.addthis_button_facebook {
+		@include facebookButtn;
+	}
+	a.addthis_button_twitter {
+		@include twitterButtn;
+	}
+	a, a:link, a:visited,
+	a.addthis_button_facebook,
+	a.addthis_button_facebook:link,
+	a.addthis_button_facebook:visited,
+	a.addthis_button_twitter,
+	a.addthis_button_twitter:link,
+	a.addthis_button_twitter:visited  {
+	 color: #e4e4e4;
+     display: inline-block;
+     font-size:0.9em;
+     padding: 0.3em 1em;
+     font-weight: bold;
+	}
+	a:hover, a:active, a:focus,
+	a.addthis_button_facebook:hover,
+	a.addthis_button_facebook:active,
+	a.addthis_button_facebook:focus,
+	a.addthis_button_twitter:hover,
+	a.addthis_button_twitter:active,
+	a.addthis_button_twitter:focus {
+	 color: $white;
+	 text-decoration: none;
+	}
+}
+
+// Athletic Social Media Navigation 
+.athletic-brand-wrapper .social-media-user {
+  @include respond-to(handhelds) {
+    float: none;
+	margin: 0 auto;
+	width: 60%;
+   }
+	ul.menu {
+    display:block;
+	  margin: 0 auto;
+	  padding-left: 0;
+    width: 200px;
+		li {
+		 list-style: none;
+		 @include respond-to(handhelds) { margin: 0 0 0 0.5em; }
+		 margin: 1em 0 0 1em;
+		 width: 37px;
+		 height: 35px;		 
+		 	a, a:visited, a:link {
+			 color: #e4e4e4;
+		 	 height: 2.5em; 
+		 	 @include respond-to(handhelds) { display:block; }
+			}
+			a:hover, a:active, a:focus {
+			 color: $white;
+			 border-top-color: #721517;
+			 border-bottom-color: #380607;
+			 text-decoration: none;
+			}
+			  [class^="icon-"]:before,
+			  [class*=" icon-"]:before {
+			    font-size: 1em;
+				padding-bottom: 1em;
+				text-shadow: #7d1919 0 2px 0;
+			   }
+				.icon-facebook:before,
+				.icon-twitter:before,
+				.icon-rss-1:before,
+				.icon-linkedin:before {
+				 padding: 0.462em 0.231em 0.385em 1em;
+				 @include athletic-media;
+				 box-shadow: none;
+				 border-left: none;	
+				 border-right: none;
+				 display: block;
+				 padding: 6px 9px 5px 9px;	 
+				}
+			a.icon-twitter {
+			 @include respond-to(handhelds) { margin: 0; }
+			} 
+		}
+		li.first {
+		 @include respond-to(handhelds) { margin-left: 0; }
+		}
+		li.last { 
+		 @include respond-to(handhelds) { margin-right: 0; }
+		}
+	}	
+}
+
+// END: Social Media Navigation 	
+
+// Navigation: User / Main Menu / Sidebar / Context / Breadcrumbs 
+
+
+// Navigation: Main Menu Wide and Normal (Toggle Mobile classes begin at line 196)
+
+// Responsive Toggle Menu in Omega Styling (orignal code: http://scottpinkelman.com/blog/responsive-toggle-menu-omega )*/
+
+
+a.menu-link { 
+ float: right;
+ display: block;
+ @include list-pad;
+ font-weight: bold;
+ color: $gold !important;
+}
+nav[role=navigation] {
+    clear: both;
+    -webkit-transition: all 0.3s ease-out;  
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    @include respond-to(handhelds) { margin: 0 0 1em 0; } /* Mobile */
+    @include respond-to(medium-screens) { margin: 0 0 1em 0; } /* Tablets */ 
+}
+.js nav[role=navigation] {
+  overflow: hidden;
+  max-height: 0;
+}
+
+nav[role=navigation].active { /* Menu is displayed  */
+    max-height: 18em;
+    background-color: $white;
+}
+nav[role=navigation] ul {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #808080;
+}
+nav[role=navigation].active li {
+  display: block;
+  padding: 0;
+  margin: 0 0.5em !important; 
+}
+nav[role=navigation].active li.last a {
+  border-bottom: none;
+}
+nav[role=navigation] li a {
+    @include respond-to(handhelds) { padding: 0.8em; } /* Mobile */
+    @include respond-to(medium-screens) { padding: 0.8em; } /* Tablets */ 
+    display: block;
+    border-bottom: 1px solid #808080;
+    font-family: $alt-font;
+}
+/*End Codepen Code */
+/*Reseting system style causing gray lines to show up in Toggle Menu */
+nav[role=navigation] ul.inline li {  padding: 0; }
+
+/* Hartnell Specific Toggle Menu Styling */
+
+.menu-block-wrapper	ul.menu li {
+  padding: 0;
+}
+// END: Hartnell Specific Toggle Menu Styling 
+// END: Responsive Toggle Menu in Omega Styling  
+
+
+// Navigation: Main-Menu DropDowns (for Athletics go to line 503)
+.qtip-active {
+  @include respond-to(handhelds) { display: none !important; } /* Mobile */
+  @include respond-to(medium-screens) { display: none !important; } /* Tablets */ 
+}
+.qtip, .qtip-light, .qtip-active {
+ //left: 10% !important; // Overriding core qtip jquery settings
+  top: 97px !important;
+  .athletics-context & {
+    top: 140px !important;
+  }
+ 	.qtip-wrapper {
+		.qtip-contentWrapper {
+			.pane-main-menu {
+			 	ul.menu {
+			 		li {
+			 		 line-height: 1.583em;
+			 		 list-style: none;
+				 		a, a:link, a:visited {
+					 	 font-weight: bold;
+						 color: $gray;
+						}
+						a:hover, a:active, a:focus {
+					  	 color: $burgundy;
+					  	 text-decoration: underline;
+						}
+				 	}
+				}
+			}
+			.athletic-col2-15,
+			.athletic-col3-16,
+			.athletic-col4-15 {
+			 float: left;
+			 width: 30%;
+				h2.pane-title {
+				 font-size: 1em;
+				 border-bottom: none;
+				 margin: 0 0 0 7px;
+					a, a:link, a:visited {
+					 font-weight: bold;
+					 color: $gray;
+					}
+					a:hover, a:active, a:focus {
+					 color: $burgundy;
+					 text-decoration: underline;
+					}
+				}
+			}
+			.athletic-col2-15 { margin: 0 0 0 2%; }
+			.athletic-col3-16 { margin: 0 2%; }
+		}  
+	}
+}
+
+// Navigation: User
+.region-user-second {
+  padding:  0.5em 0;
+	ul.menu {
+      display: inline-block;
+		li {
+		  list-style: none;
+	 	  display: inline;
+	 	  margin-right: 1em;
+	 	  @include respond-to(handhelds) { margin-right: 0.5em; } /* Mobile */ 
+	 	  a, a:link, a:visited {
+		  color: $neutral;
+		  }
+		  a:hover, a:active, a:focus {
+		  color: $gold;
+		  text-decoration:none;
+		  }
+		}
+	}
+}
+
+// Navigation: Sidebar
+
+// Custom Site Section Color alternatives/
+
+.sidebar {
+	.pane-node-field-related-links > h2.pane-title,
+	.pane-node-field-related-pages > h2.pane-title,
+	#relatedPages-pane > h2.pane-title,	
+	#relatedLinks-pane > h2.pane-title {
+	 font-size: 1.67em;
+	 background-color: transparent;
+	 border-bottom: medium none;
+	 box-shadow: none;
+	 color: $gold;
+	 padding: 0;
+	 text-transform: none; 
+	 margin-bottom: 6px;
+	}
+	.menu-block-wrapper { 
+		ul.menu {
+	     border: medium none;
+	     list-style: none outside none;
+	     text-align: left;
+			a, a:link, a:visited {
+	     	 display: block;			
+			 color: $neutral;
+			 font-weight: bold;
+    		 padding: 0 1em;
+			 text-decoration: none;
+			 text-transform: none;
+	     	}
+			a:hover, a:active, a:focus, a.active-trail {
+			 text-decoration: none;
+			 color: $white;
+			 font-weight: bold;
+			}	     	
+			li {
+			 @include dark-header;
+			 border-bottom: 1px solid $dark-gray;
+			 margin: 0px;
+			 padding-left: 0;
+			 padding-right: 0;			 
+			}
+			li:hover, li:active, li:focus  {
+			 background-color:darken($dark-gray, 20%);
+			}
+		 	li.active-trail {
+		 	 background-color: $burgundy;
+		 	 box-shadow: none;
+		 	 color: $white;
+		 	 text-transform: none;
+			}
+			li.expanded {
+			 padding: 0.5em 0 0 0;
+			 border-bottom: hidden;
+				> ul.menu {
+				   border-top: 1px solid $dark-gray;
+				   margin: 0.5em 0 0 0;
+				 	a {
+    				 padding: 0 1em 0 2em;
+	     			}
+				 	li {
+					 background-color: $gray;
+					 @include inset-shadow;
+					 border-bottom: 1px solid #17150F;
+					 padding: 0.5em 0;				 
+				 	}
+				 	li.expanded {
+					 padding: 0.5em 0 0 0;
+			 		}
+				}
+			}
+		}
+	}
+	.pane-main-menu > h2.pane-title:nth-child(1) {
+	 @include dark-header-title;
+	}	
+}
+
+// override custom coloring set by editorial site section taxonomy. 
+
+// Navigation: Breadcrumbs
+
+.front #breadcrumb,
+.page-node-113 #breadcrumb { display: none; }
+
+#breadcrumb {
+  padding: 11px 0 8px 0;
+  margin-bottom: 1em;
+  font-family: $alt-font;
+  font-size: 0.846em;
+  color: $burgundy;
+	a, a:link, a:visited {
+      color: $burgundy;
+	}
+	a:hover, a:active, a:focus {
+	  color: $burgundy;
+	}
+}
+
+// Footer 
+.zone-footer-wrapper {
+	.region-footer-first {
+		.block {
+	      padding: 0;
+	        ul.menu { /* Navigation: Footer Links */
+	          li {
+	            margin: 0;
+	            list-style: none;
+	            font-size: 0.917em;
+	              a, a:link, a:visited {
+	                color: $white;
+	              }
+	              a:hover, a:active, a:focus {
+	                color: $gold;
+	              }
+	          }
+	       }
+		}
+		.ftr-block-logo{ 
+		   @include respond-to(medium-screens) { text-align: center; float: none; } /* Tablets */
+    	   @include respond-to(handhelds) { text-align: left; float: none; } /* Mobile */
+		}
+		.ftr-block-about,
+		.ftr-block-academics,
+		.ftr-block-athletics,
+		.ftr-block-students {
+		   float: left;
+		  min-width: 17%;
+		  max-width: 50%;
+		  @include respond-to(handhelds) { width: 46%; } /* Mobile */
+		}
+		.ftr-block-about {
+		  @include respond-to(handhelds) { padding: 1em 0.5em; } /* Mobile */
+		  @include respond-to(medium-screens) { padding-left: 0; } /* Tablets */
+		}
+		.ftr-block-students {
+		  padding-right: 0em;
+		  @include respond-to(handhelds) { padding: 1em 0.5em; } /* Mobile */
+		  @include respond-to(medium-screens) { padding-right: 0; } /* Tablets */
+		}
+	}
+	.region-footer-second {
+	 @include respond-to(handhelds) { width: 100% ;} /* Mobile */
+	}
+}
+
+
+//  BEGIN: Athletics Primary Menu
+
+.athletic-primary-menu {
+	nav[role=navigation] li {
+	  font-family: 'pt_sans_narrowbold';
+	  text-align: right;
+	 // @include respond-to(handhelds) { margin: 0;} /* Mobile */
+	}
+	nav[role=navigation] li.first {
+	  margin-left: 0;
+	    a.athletic-link, a.athletic-link:link, a.athletic-link:visited { 
+	      padding: 0.5em 0.5em 0.5em 0; /* for ie8 */
+	    }
+	}
+	nav[role=navigation] li.last {
+	  margin-right: 0;
+	    a.athletic-link, a.athletic-link:link, a.athletic-link:visited { 
+	      padding: 0.5em 0 0.5em 0.5em; /* for ie8 */
+	    }
+	}
+	a.athletic-link, a.athletic-link:link, a.athletic-link:visited { 
+	  padding: 0.5em;
+	 // @include respond-to(handhelds) { color: $gray;} /* Mobile */
+	}
+	a.athletic-link:hover, a.athletic-link:focus, a.athletic-link:active { 
+	 // @include respond-to(handhelds) { color: darken($burgundy, 10%); } /* Mobile */	  
+	}
+}
+
+// END: Athletics Primary Menu

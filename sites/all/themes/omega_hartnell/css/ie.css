@@ -1,0 +1,398 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * 
+ * <!--[if lt IE 9]>
+ * 	<link rel="stylesheet" type="text/css" href="ie8-and-down.css" />
+ * <![endif]-->
+ */
+/*
+ * IE8 styles
+ ****************************/
+/*
+ * Mixins
+ */
+/*
+* General includes
+*/
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.woff") format("woff"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.ttf") format("truetype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pt_sans_narrowbold';
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot");
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.woff") format("woff"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.ttf") format("truetype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.svg#pt_sans_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * Vanilla mixins
+ */
+/* Links */
+/* Links END */
+/* 
+*	Style Elements
+*/
+/* Images */
+/* Margin is overriding core wysiwyg settings */
+/* Margin is overriding core wysiwyg settings */
+/* Panels */
+/*
+* Social buttons backgrounds
+*/
+/*
+* Flexible buttons
+*/
+/*
+ * BEGIN: Athletics Mixins
+ */
+/*
+ * END: Athletics Mixins
+ */
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/*
+ * IE7 styles
+ ****************************/
+/*
+ * Mixins
+ */
+/*
+* General includes
+*/
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.woff") format("woff"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.ttf") format("truetype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pt_sans_narrowbold';
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot");
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.woff") format("woff"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.ttf") format("truetype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.svg#pt_sans_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * Vanilla mixins
+ */
+/* Links */
+/* Links END */
+/* 
+*	Style Elements
+*/
+/* Images */
+/* Margin is overriding core wysiwyg settings */
+/* Margin is overriding core wysiwyg settings */
+/* Panels */
+/*
+* Social buttons backgrounds
+*/
+/*
+* Flexible buttons
+*/
+/*
+ * BEGIN: Athletics Mixins
+ */
+/*
+ * END: Athletics Mixins
+ */
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE 8]>
+ *   <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/*
+ * IE8 styles
+ ****************************/
+/*
+ * Mixins
+ */
+/*
+* General includes
+*/
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.woff") format("woff"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.ttf") format("truetype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pt_sans_narrowbold';
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot");
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.woff") format("woff"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.ttf") format("truetype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.svg#pt_sans_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * Vanilla mixins
+ */
+/* Links */
+/* Links END */
+/* 
+*	Style Elements
+*/
+/* Images */
+/* Margin is overriding core wysiwyg settings */
+/* Margin is overriding core wysiwyg settings */
+/* Panels */
+/*
+* Social buttons backgrounds
+*/
+/*
+* Flexible buttons
+*/
+/*
+ * BEGIN: Athletics Mixins
+ */
+/*
+ * END: Athletics Mixins
+ */
+/**
+ * IE Compatibility
+ */
+/* line 20, ../sass/ie8.scss */
+.ie8 {
+  /*
+   * Layout: Academic
+   */
+  /*
+   * Layout: Athletics
+   */
+  /*
+   * Views
+   */
+  /*
+   * Navigation
+   */
+  /*
+   * Alerts
+   */
+  /*
+   * Location
+   */
+  /*
+   * Event
+   */
+  /*
+   * FAQ
+   */
+  /*
+   * News
+   */
+  /*
+   * Person
+   */
+  /*
+   * Promotion
+   */
+  /*
+   * Slideshow
+   */
+  /*
+   * Testimonial
+   */
+  /*
+   * Webform
+   */
+}
+/* line 26, ../sass/ie8.scss */
+.ie8 .zone-header-wrapper,
+.ie8 .zone-user-wrapper,
+.ie8 .zone-branding-wrapper {
+  background-color: #5a001e;
+}
+/* line 30, ../sass/ie8.scss */
+.ie8 .zone-footer-wrapper {
+  background-color: #5a001e;
+  padding: 1em 0;
+}
+/* line 33, ../sass/ie8.scss */
+.ie8 .zone-footer-wrapper .block, .ie8 .zone-footer-wrapper .block-inner {
+  width: 180px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  margin: 0 8px 0 0;
+}
+/* line 40, ../sass/ie8.scss */
+.ie8 .zone-footer-wrapper .block-title {
+  color: #ffb300;
+}
+/* line 43, ../sass/ie8.scss */
+.ie8 .zone-footer-wrapper a, .ie8 .zone-footer-wrapper a:link, .ie8 .zone-footer-wrapper a:visited {
+  font-size: 1em;
+  color: white;
+}
+/* line 47, ../sass/ie8.scss */
+.ie8 .zone-footer-wrapper a:hover, .ie8 .zone-footer-wrapper a:active, .ie8 .zone-footer-wrapper a:focus {
+  color: #ffb300;
+  text-decoration: none;
+}
+/* line 58, ../sass/ie8.scss */
+.ie8 .athletic-content .region-content {
+  margin-top: 0 !important;
+}
+/* line 64, ../sass/ie8.scss */
+.ie8 .athletic-header-wrapper,
+.ie8 .athletic-user-wrapper,
+.ie8 .athletic-brand-wrapper {
+  background-color: #4B0D0E;
+}
+/* line 67, ../sass/ie8.scss */
+.ie8 .athletic-brand-wrapper {
+  border-bottom: 1px solid #4a0c0b;
+}
+/* line 70, ../sass/ie8.scss */
+.ie8 .athletic-footer-wrapper {
+  border-top: 1px solid #4a0c0b;
+  background-color: #340808;
+}
+/* line 82, ../sass/ie8.scss */
+.ie8 #region-user-first {
+  width: 220px;
+  left: 480px;
+}
+/* line 87, ../sass/ie8.scss */
+.ie8 .main-menu ul.menu, .ie8 .athletic-primary-menu ul.menu {
+  margin-left: 0;
+  padding-left: 0;
+  display: inline;
+}
+/* line 91, ../sass/ie8.scss */
+.ie8 .main-menu ul.menu li, .ie8 .athletic-primary-menu ul.menu li {
+  display: inline;
+}
+/* line 98, ../sass/ie8.scss */
+.ie8 .main-menu ul.menu {
+  float: right;
+}
+/* line 101, ../sass/ie8.scss */
+.ie8 .main-menu ul.menu li a.main-menu-link {
+  color: white;
+}
+/* line 104, ../sass/ie8.scss */
+.ie8 .main-menu ul.menu li a.main-menu-link:hover {
+  color: #f3f3f3;
+}
+/* line 115, ../sass/ie8.scss */
+.ie8 .view-sitewide-alerts a, .ie8 .view-sitewide-alerts a:link, .ie8 .view-sitewide-alerts a:visited {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.5em 1.2em;
+  display: block;
+  text-align: center;
+  color: #ffb300;
+}
+/* line 124, ../sass/ie8.scss */
+.ie8 .view-sitewide-alerts a:hover, .ie8 .view-sitewide-alerts a:active, .ie8 .view-sitewide-alerts a:focus {
+  background: #ffb300;
+  /* Old browsers */
+  color: white;
+  text-decoration: none;
+}
+/* line 131, ../sass/ie8.scss */
+.ie8 .athletic-brand-wrapper {
+  /* Alert Button */
+}
+/* line 134, ../sass/ie8.scss */
+.ie8 .athletic-brand-wrapper .block-sitewide-alerts-block .view-sitewide-alerts .views-row {
+  padding-right: 0;
+}
+/* line 136, ../sass/ie8.scss */
+.ie8 .athletic-brand-wrapper .block-sitewide-alerts-block .view-sitewide-alerts .views-row a, .ie8 .athletic-brand-wrapper .block-sitewide-alerts-block .view-sitewide-alerts .views-row a:link, .ie8 .athletic-brand-wrapper .block-sitewide-alerts-block .view-sitewide-alerts .views-row a:visited {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.5em 1.2em;
+  background: #ffb300;
+  /* Old browsers */
+  display: block;
+  text-align: center;
+  color: black;
+  margin: 1em 0;
+}
+/* line 147, ../sass/ie8.scss */
+.ie8 .athletic-brand-wrapper .block-sitewide-alerts-block .view-sitewide-alerts .views-row a:hover, .ie8 .athletic-brand-wrapper .block-sitewide-alerts-block .view-sitewide-alerts .views-row a:active, .ie8 .athletic-brand-wrapper .block-sitewide-alerts-block .view-sitewide-alerts .views-row a:focus {
+  background: #ffb300;
+  /* Old browsers */
+  color: #730027;
+  text-decoration: none;
+}
+
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/*
+* General includes
+*/
+/*
+ * Mixins
+ */
+/*
+* General includes
+*/
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.woff") format("woff"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.ttf") format("truetype"), url("../fonts/LeagueGothic/LeagueGothic-Regular-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pt_sans_narrowbold';
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot");
+  src: url("../fonts/PT_Sans_Narrow/PTN77F-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.woff") format("woff"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.ttf") format("truetype"), url("../fonts/PT_Sans_Narrow/PTN77F-webfont.svg#pt_sans_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * Vanilla mixins
+ */
+/* Links */
+/* Links END */
+/* 
+*	Style Elements
+*/
+/* Images */
+/* Margin is overriding core wysiwyg settings */
+/* Margin is overriding core wysiwyg settings */
+/* Panels */
+/*
+* Social buttons backgrounds
+*/
+/*
+* Flexible buttons
+*/
+/*
+ * BEGIN: Athletics Mixins
+ */
+/*
+ * END: Athletics Mixins
+ */
+/*
+ * IE9 styles
+ ****************************/
+/* line 21, ../sass/ie9.scss */
+.ie9 .athletic-content .region-content {
+  margin-top: 0 !important;
+}
+
+/**
+ * IE Compatibility
+ */

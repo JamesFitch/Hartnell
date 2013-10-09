@@ -1,0 +1,12 @@
+name = Workbench Moderation integration for Panelizer 
+description = Aids the use of panelizer and workbench moderation together, smoothing out their varying node revision implementations.
+core = 7.x
+dependencies[] = workbench_moderation
+dependencies[] = panelizer
+
+
+; Information added by drush on 2013-03-31
+version = "master-dev"
+project = "workbench_panelizer"
+datestamp = "1364790689"
+

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ */
+
+// Drupal needs this blank file.
+include_once('roles_permissions.features.inc');

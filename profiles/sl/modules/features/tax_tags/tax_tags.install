@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function tax_tags_install() {
+  _tax_tags_init_vocabulary();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function tax_tags_uninstall() {
+  _tax_tags_delete_vocabulary();
+}
+
+function _tax_tags_init_vocabulary() {
+  $vocabulary = taxonomy_vocabulary_machine_name_load('tags');
+  if (!$vocabulary) {
+    $vocabulary = (object) array(
+      'name' => 'Tags',
+      'machine_name' => 'tags',
+      'description' => 'Free tagging vocabulary.',
+      'hierarchy' => 1,
+      'module' => 'tax_tags',
+      'weight' => 0,
+    );
+    taxonomy_vocabulary_save($vocabulary);
+    $vocabulary = taxonomy_vocabulary_machine_name_load('tags');
+  }
+}
+
+function _tax_tags_delete_vocabulary() {
+  // Should we delete the vocabulary if this feature is uninstalled?
+  $vocabulary = taxonomy_vocabulary_machine_name_load('audience');
+  taxonomy_vocabulary_delete($vocabulary->vid);
+}

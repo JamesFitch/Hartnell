@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Stale Content feature.
+ */
+
+include_once 'stale_content.features.inc';

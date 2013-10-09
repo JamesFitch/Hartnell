@@ -1,0 +1,11 @@
+name = Hartnell Custom Functionality
+description = Custom Drupal extensions for the Hartnell College web site.
+package = ServerLogic
+core = 7.x
+version = "7.x-1.0-beta"
+dependencies[] = ctools
+dependencies[] = panels
+dependencies[] = page_manager
+dependencies[] = advanced_help
+dependencies[] = ct_flexpage
+dependencies[] = views

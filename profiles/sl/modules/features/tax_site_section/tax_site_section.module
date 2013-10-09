@@ -1,0 +1,45 @@
+<?php
+/**
+ * @file
+ */
+
+// Drupal needs this blank file.
+include_once('tax_site_section.features.inc');
+
+/**
+ * Implementation of hook_node_presave().
+ */
+function tax_site_section_node_presave($node) {
+  //if (isset($node->field_site_section)) {
+  //  if (isset($node->workbench_access_id) && is_numeric($node->workbench_access_id)) {
+  //    $node->field_site_section[$node->language][0]['tid'] = $node->workbench_access_id;
+  //  }
+  //  elseif (!isset($node->workbench_access_id) && isset($node->workbench_access) && !empty($node->workbench_access)) {
+  //    $tid = key($node->workbench_access);
+  //    if (is_numeric($tid)) {
+  //      $node->field_site_section[$node->language][0]['tid'] = $tid;
+  //    }
+  //  }
+  //  else {
+  //    $node->field_site_section[$node->language] = array();
+  //  }
+  //}
+}
+
+/**
+ * Implementation of hook_node_view_alter().
+ */
+function tax_site_section_node_view_alter(&$build) {
+  //if (isset($build['field_site_section'])) {
+  //  $build['field_site_section']['#access'] = FALSE;
+  //}
+}
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function tax_site_section_form_alter(&$form, &$form_state, $form_id) {
+  //if (substr($form_id, -9) == 'node_form' && isset($form['field_site_section'])) {
+  //  $form['field_site_section']['#access'] = FALSE;
+  //}
+}

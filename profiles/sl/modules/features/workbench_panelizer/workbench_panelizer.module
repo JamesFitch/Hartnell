@@ -1,0 +1,20 @@
+<?php
+
+/***
+ * Implementation of hook_form_alter
+ * We need to avoid the revision form elements being present on panelizer forms, 
+ * to prevent it from clobbering workbench moderation revision handling.
+ */
+
+function workbench_panelizer_form_alter(&$form, &$form_state, $form_id) {
+  if ((strpos($form_id, 'panelizer') !== FALSE) && module_exists('workbench_moderation') && isset($form_state['entity'])) {
+    $form['revision_information']['revision']['#access'] = FALSE;
+    $form['revision_information']['revision']['#default_value'] = FALSE;
+    $form['revision_information']['log']['#access'] = FALSE;
+    // When the panelizer form is submitted, the workbench state is incorrectly set to a new workbench moderation state
+    // by the workbench_moderation_node_update() function (which implements hook_node_update()) if there is no 
+    // $node->workbench_moderation_state_new already set. Must set it here to the current state so that workbench moderation
+    // doesn't force it to change to draft.
+    $form_state['entity']->workbench_moderation_state_new = $form_state['entity']->workbench_moderation['my_revision']->state;
+  }
+}

@@ -1,0 +1,21 @@
+<style type="text/css">
+.strong {
+	font-weight: bold;
+}
+</style>
+<h2>User permissions for comments</h2>
+<p>To configure user permissions for commenting you must be logged in as either User 1 (the administrative user) or as a user with the "User: Administer permissions" permission:</p>
+<ol>
+<li> Navigate to the Permissions administration page (Administer > People > Permissions or http://example.com/admin/people/permissions).</li>
+<li> In the Comments section, enable or disable the permissions for each role: 
+	<ul>
+    <li>Administer comments and comment settings</li>
+    <li>View comments</li>
+    <li>Post comments (If a user has this and not the "Skip comment approval" permission, their comments will show in the "Unapproved comments" list until someone with the "Administer comments and comment settings" approves them.)</li>
+    <li>Skip comment approval (Comments are published immediately and do not need to be approved.</li>
+    <li> Edit own comments (This does not allow the user to delete comments, only users with the "Administer comments and comment settings" can delete comments because if comments are threaded, replies to a comment are deleted with it.)</li>
+  </ul>
+ </li>
+</ol>
+
+<p><em>Note: Granting anonymous users the permission to post comments can dramatically increase the amount of spam. It is recommended that you set up a spam filtering module if you choose to allow anonymous comments.</em></p>

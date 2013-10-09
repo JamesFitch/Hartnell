@@ -1,0 +1,18 @@
+name = ServerLogic Site Help
+description = Site documentation via Drupal's Advanced Help module.
+core = 7.x
+dependencies[] = advanced_help
+
+
+; Information added by drush on 2012-05-24
+version = "master-dev"
+project = "sl_help"
+datestamp = "1337850135"
+
+
+
+; Information added by drush on 2013-03-31
+version = "master-dev"
+project = "sl_help"
+datestamp = "1364790699"
+

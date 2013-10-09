@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Taxonomy-Default Handlers feature.
+ */
+
+include_once 'taxonomy_default_handlers.features.inc';

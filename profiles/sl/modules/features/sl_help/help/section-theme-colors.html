@@ -1,0 +1,94 @@
+<div id="node-14" class="node">
+
+
+
+  
+  <div class="content clear-block">
+
+
+    <h2>Overview</h2>
+    <p>Site sections can be configured to display alternate colors in certain display elements.</p> 
+    <p>Themeable elements include:</p>
+    <ul>
+      <li>
+        Title bar text and background colors.</li>
+      <li>Sidebar menu text and background colors.</li>
+    </ul>
+
+    <h3>Color options</h3>
+    <table class="color-help">
+      <tr><td colspan="5"><h4>Title Bar</h4></td></tr>
+      <tr>
+        <td><strong>&nbsp;&nbsp;Text<strong></td>
+        <td><span class="title-text-color-a"></span>White</td>
+        <td><span class="title-text-color-b"></span>Gold</td>
+        <td><span class="title-text-color-c"></span>Gray</td>
+        <td><span class="title-text-color-d"></span>Black</td>
+      </tr>
+      <tr>
+        <td><strong>&nbsp;&nbsp;Background<strong></td>
+        <td><span class="title-background-color-a"></span>Olive</td>
+        <td><span class="title-background-color-b"></span>Blue</td>
+        <td><span class="title-background-color-c"></span>Burgundy</td>
+        <td><span class="title-background-color-d"></span>Gold</td>
+      </tr>
+      <tr><td colspan="5"><h4>Sidebar Menu</h4></td></tr>
+      <tr>
+        <td><strong>&nbsp;&nbsp;Text<strong></td>
+        <td><span class="menu-text-color-a"></span>Gold</td>
+        <td><span class="menu-text-color-b"></span>White</td>
+        <td><span class="menu-text-color-c"></span>Gray</td>
+        <td><span class="menu-text-color-d"></span>Black</td>
+      </tr>
+      <tr>
+        <td><strong>&nbsp;&nbsp;Background<strong></td>
+        <td><span class="menu-background-color-a"></span>Olive</td>
+        <td><span class="menu-background-color-b"></span>Gold</td>
+        <td><span class="menu-background-color-c"></span>Burgundy</td>
+        <td><span class="menu-background-color-d"></span>Blue</td>
+      </tr>
+    </table>
+
+
+    <h2>Setting Section Theme colors</h2>
+    <p>To specify theme colors for a particular site section (including, by default, all sub-sections beneath it):</p>
+      <ul>
+        <li>Find the Site Section term in the <a href="/admin/structure/taxonomy/site_section">Site Section vocabulary listing</a>.</li>
+        <li>Follow the Edit link, and scroll down to the "Theme Settings" section (if necessary, click "Theme Settings" in the vertical tabs at the left).
+        <li>Under "Section Theme Colors", select "Custom" in the "Color Settings" dropdown list.</li>
+        <li>Specify a color for each themeable element.</li>
+        <li>Save changes.</li>
+      </ul>
+    <p>Note that these colors will be <strong>not</strong> be applied to pages in child sections that have their "Color Settings" that override these settings (see "Sub-Section Overrides", below).</p>
+ 
+
+
+    <h2>Inheriting Section Theme colors from parent Section</h2>
+    <p>To have pages within a sub-section use the theme colors of its parent Section:</p>
+      <ul>
+        <li>Find the Site Section term in the <a href="/admin/structure/taxonomy/site_section">Site Section vocabulary listing</a>.</li>
+        <li>Follow the Edit link, and scroll down to the "Theme Settings" section (if necessary, click "Theme Settings" in the vertical tabs at the left).
+        <li>Under "Section Theme Colors", select "Inherit from parent section." in the "Color Settings" dropdown list.</li>
+        <li>Save changes.</li>
+      </ul>
+     <p>Note that these colors will be <strong>not</strong> be applied to pages in child sections that have their "Color Settings" that override these settings (see "Sub-Section Overrides", below).</p>
+
+
+    <h2>Sub-Section Overrides</h2>
+    <p>Color settings for a section that's a parent of other sections will be <strong>not</strong> be applied to pages in any child sections that have their "Color Settings" set to either:</p>
+    <ul>
+      <li><strong>Custom</strong>. Pages within that section will use the colors specified for that section.</li>
+      <li><strong>Default</strong>. Pages within that section will use the site's default cololrs.</li>
+    </ul>
+    <p>In other words, settings for child sections (other than "Inherit") override the settings of parent sections.</p>
+
+
+ 
+
+
+
+  </div>
+
+
+
+</div>

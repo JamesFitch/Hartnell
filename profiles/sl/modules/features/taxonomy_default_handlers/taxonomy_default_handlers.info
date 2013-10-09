@@ -1,0 +1,13 @@
+name = Taxonomy: Default Handlers
+description = Handle default taxonomy term requests. For admin vocabularies, redirect anonymous users to home page.
+core = 7.x
+package = Taxonomy
+php = 5.2.4
+version = 7.x-1.0-beta1
+project = taxonomy_default_handlers
+dependencies[] = ctools
+dependencies[] = page_manager
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:1
+features[page_manager_handlers][] = term_view_http_response_admin_vocabularies
+features[page_manager_handlers][] = term_view_http_response_default_listing

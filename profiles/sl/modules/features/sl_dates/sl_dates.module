@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ * Code for the SL Dates feature.
+ */
+
+include_once 'sl_dates.features.inc';
+
+/**
+ * Implements hook_date_formatter_pre_view_alter().
+ */
+function sl_dates_date_formatter_pre_view_alter(&$entity, &$variables) {
+}
+
+/**
+ * Implements hook_date_formatter_dates_alter().
+ */
+function sl_dates_date_formatter_dates_alter(&$dates, &$context) {
+  foreach ($dates as $key => $value) {
+    $dates[$key]['formatted'] = str_replace('am', 'a.m.', $dates[$key]['formatted']);
+    $dates[$key]['formatted'] = str_replace('pm', 'p.m.', $dates[$key]['formatted']);
+    // Get the formatted time
+    $dates[$key]['formatted_time'] = str_replace('am', 'a.m.', $dates[$key]['formatted_time']);
+    $dates[$key]['formatted_time'] = str_replace('pm', 'p.m.', $dates[$key]['formatted_time']);
+  }
+  // If start and end times are on the same day, just show the end time,
+  // not the date and time of the end time.
+  if ($dates['value']['formatted_date'] == $dates['value2']['formatted_date']) {
+    $dates['value2']['formatted'] = $dates['value2']['formatted_time'];
+  }
+}

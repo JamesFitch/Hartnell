@@ -1,0 +1,14 @@
+<h2>How to configure IMCE for browsing specific directories</h2>
+<p>IMCE is the file browser within the rich text editor. Enabling content creators to use the IMCE means they will be able to browse and select images on the server, upload images, create thumbnails and resize images, and much more.</p>
+<ol>
+  <li>Go to the IMCE config page: <a href="&path&/admin/config/media/imce">&path&/admin/config/media/imce</a></li>
+  <li>Click on the profile name you wish to edit, such as the "Content editors" profile<br/>
+    <img class="screenshot" src="&path&/screenshots/cwi_howto_imcedir_1.jpg" alt="Screenshot" /></li>
+  <li>Scroll down to the "Directories" section</li>
+  <li>In a new entry, enter the directory you wish users to access, e.g. "imce/icons"<br />
+    <span class="bold">Note</span>: the root is going to be this path: &path&/sites/default/files So the full path will end up being something like: &path&/sites/default/files/imce/icons<br/>
+    <img class="screenshot" src="&path&/screenshots/cwi_howto_imcedir_2.jpg" alt="Screenshot" /></li>
+  <li>Apply the specific permissions you wish users to have, such as browsing, uploading, generating thumbnails, deleting files, and adding/removing subdirectories.<br/>
+    <img class="screenshot" src="&path&/screenshots/cwi_howto_imcedir_3.jpg" alt="Screenshot" /></li>
+  <li>If you have created that directory separately, make sure its permissions (and those of the files within) allow for Drupal to read and write to it.</li>
+</ol>

@@ -1,0 +1,242 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function tax_site_section_install() {
+  _tax_site_section_init_vocabulary();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function tax_site_section_uninstall() {
+  _tax_site_section_delete_vocabulary();
+}
+
+// function tax_site_section_update_7100() {
+//   _tax_site_section_init_vocabulary();
+// }
+
+function _tax_site_section_init_vocabulary() {
+  $vocabulary = taxonomy_vocabulary_machine_name_load('site_section');
+  if (!$vocabulary) {
+    $vocabulary = (object) array(
+      'name' => 'Editorial Site Section',
+      'machine_name' => 'site_section',
+      'description' => 'The section of the site where this content belongs. Controls editorial access to creating and editing content.',
+      'hierarchy' => 1,
+      'module' => 'tax_site_section',
+      'weight' => 0,
+    );
+    taxonomy_vocabulary_save($vocabulary);
+    $vocabulary = taxonomy_vocabulary_machine_name_load('site_section');
+  }
+  $vid = $vocabulary->vid;
+  $terms_count = db_query("SELECT COUNT(*) FROM {taxonomy_term_data} WHERE vid = :vid", array(':vid' => $vid))->fetchField();
+  if (!$terms_count) {
+    $values = array(
+      (object) array(
+        'vid' => $vid,
+        'name' => 'About',
+        'description' => '',
+        'weight' => 0,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Enrollment',
+        'description' => '',
+        'weight' => 1,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Academic',
+        'description' => '',
+        'weight' => 2,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Student Life',
+        'description' => '',
+        'weight' => 3,
+      ),
+    );
+    foreach ($values as $term) {
+      taxonomy_term_save($term);
+    }
+    // Add 'About' child terms.
+    $parent_term = array_shift(taxonomy_get_term_by_name('About', 'site_section'));
+    $values = array(
+      (object) array(
+        'vid' => $vid,
+        'name' => 'General Information',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 0,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Leadership/Administration',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 1,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Human Resources',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 2,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Campus Development',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 3,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Sustainability',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 4,
+      ),
+    );
+    foreach ($values as $term) {
+      taxonomy_term_save($term);
+    }
+    // Add 'Enrollment' child terms
+    $parent_term = array_shift(taxonomy_get_term_by_name('Enrollment', 'site_section'));
+    $values = array(
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Paying for College',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 0,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Registration',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 1,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Support',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 2,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Tuition/Fees',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 3,
+      ),
+    );
+    foreach ($values as $term) {
+      taxonomy_term_save($term);
+    }
+    // Add 'Academic' child terms
+    $parent_term = array_shift(taxonomy_get_term_by_name('Academic', 'site_section'));
+    $values = array(
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Resources',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 0,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Support',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 1,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Faculty',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 2,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Programs',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 3,
+      ),
+    );
+    foreach ($values as $term) {
+      taxonomy_term_save($term);
+    }
+    // Add 'Student Life' child terms
+    $parent_term = array_shift(taxonomy_get_term_by_name('Student Life', 'site_section'));
+    $values = array(
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Athletic',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 0,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Bookstore',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 1,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Copy Services',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 2,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Food Services',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 3,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Childcare',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 4,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Calendar',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 5,
+      ),
+      (object) array(
+        'vid' => $vid,
+        'name' => 'Student Organizations',
+        'description' => '',
+        'parent' => $parent_term->tid,
+        'weight' => 6,
+      ),
+    );
+    foreach ($values as $term) {
+      taxonomy_term_save($term);
+    }
+  }
+}
+
+function _tax_site_section_delete_vocabulary() {
+  // Should we delete the vocabulary if this feature is uninstalled?
+  $vocabulary = taxonomy_vocabulary_machine_name_load('site_section');
+  taxonomy_vocabulary_delete($vocabulary->vid);
+}

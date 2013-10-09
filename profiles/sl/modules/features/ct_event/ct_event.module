@@ -1,0 +1,128 @@
+<?php
+/**
+ * @file
+ * Code for the CT Event feature.
+ */
+
+include_once('ct_event.features.inc');
+
+/**
+ * Implements hook_form_alter().
+ */
+function ct_event_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'event_node_form') {
+    if (isset($form['workbench_access'])) {
+      $form['workbench_access']['workbench_access_id']['#title'] = t('Event Category');
+      $form['workbench_access']['workbench_access_id']['#description'] = '';
+    }
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function ct_event_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'form_alter') {
+    $group = $implementations['ct_event'];
+    unset($implementations['ct_event']);
+    $implementations['ct_event'] = $group;
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function ct_event_views_pre_render(&$view) {
+  if ($view->name == 'events') {
+    $params = array();
+    foreach ($view->argument as $id => $arg) {
+      switch ($id) {
+        case 'term_node_tid_depth':
+          if (!empty($arg->argument)) $params['site_section[]'] = $arg->argument;
+          break;
+        case 'field_audience_tid':
+          if (!empty($arg->argument)) $params['audience[]'] = $arg->argument;
+          break;
+      }
+    }
+    $displays = array('panel_pane_event_list','panel_pane_event_list_short');
+    if (in_array($view->current_display, $displays)) {
+      $view->attachment_after = l(t('Browse more events &gt;'), 'calendar', array('html' => TRUE, 'query' => $params));
+    }
+  }
+}
+
+/**
+ * Implements computed_field_HOOK_compute().
+ */
+function computed_field_field_win_loss_compute(&$entity_field, $entity_type, $entity, $field, $instance, $langcode, $items) {
+  $scores = array();
+  foreach( array('opponent', 'hartnell') as $team ) {
+    $field = field_get_items('node', $entity, 'field_' . $team . '_score');
+
+    // handle null field value (field_get_item() will return entity object instead of array of fields)
+    if(is_array($field) && !empty($field)){
+      $field = array_pop($field);
+      $val_key = array_key_exists('safe_value', $field) ? 'safe_value' : 'value';
+      $scores[$team] = $field[$val_key];
+    }
+  }
+
+  // compute win/loss/tie
+  if( count($scores) == 2 ) {
+    if (strpos($scores['hartnell'], ':') !== FALSE) {
+      // If both scores have a colon in them, they are finish times to be compared.
+      if (strpos($scores['opponent'], ':') !== FALSE) {
+        $hartnell_parts = explode(':', $scores['hartnell']);
+        $opponent_parts = explode(':', $scores['opponent']);
+        if (count($hartnell_parts) === count($opponent_parts)) {
+          foreach ($hartnell_parts as $index => $hartnell_part) {
+            // The higher time is a loss (slower runner, etc.)
+            if ($hartnell_part > $opponent_parts[$index]) {
+              $rslt = "LOSS";
+              break;
+            }
+            elseif ($hartnell_part < $opponent_parts[$index]) {
+              $rslt = "WIN";
+              break;
+            }
+          }
+          // If the foreach loop has completed and $rslt has not been set, it is a tie.
+          if (!isset($rslt)) {
+            $rslt = 'TIE';
+          }
+        }
+        // If the scores do not have the same number of colons, they cannot be compared.
+        else {
+          $rslt = '';
+        }
+      }
+      // If only Hartnell score has colon, we cannot compare the scores
+      else {
+        $rslt = '';
+      }
+    }
+    // If only opponent score has colon, we cannot compare the scores
+    elseif (strpos($scores['opponent'], ':') !== FALSE) {
+      $rslt = '';
+    }
+    // Otherwise both scores are normal point scores.
+    else {
+      $rslt = $scores['hartnell'] - $scores['opponent'] > 0 ? "WIN" : ($scores['hartnell'] -$scores['opponent'] < 0 ? "LOSS" : "TIE");
+    }
+
+  }
+  // one or both scores is missing
+  else {
+    $rslt = '';
+  }
+  $entity_field[0]['value'] = $rslt;
+}
+
+/**
+ * Implements computed_field_HOOK_display().
+ */
+function computed_field_field_win_loss_display($field, $entity_field_item, $entity_lang, $langcode) {
+  $display_output = $entity_field_item['value'];
+  return $display_output;
+}

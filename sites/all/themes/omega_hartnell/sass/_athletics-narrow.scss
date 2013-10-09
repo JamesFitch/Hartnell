@@ -1,0 +1,107 @@
+/*
+ * Imports
+ */
+
+@import "variables";
+@import "mixins";
+
+.athletics-context {
+
+  .section-header {
+    background: #600e10;
+  }
+  .region-content {
+        margin-top: 0;
+  }
+  
+  // BEGIN: Athletic Alert Views
+  .view-sitewide-alerts {
+    a, a:link, a:visited {
+      float: none;
+    }
+  }
+
+  // BEGIN: Athletic Person Views
+  // Coaches list
+  .view-athletics {
+    .view-content {
+      .views-row {
+        .views-field-field-person-headshot {
+          float: none;
+        }
+      }
+    } 
+  }
+  // Players list
+  .view-athletics {
+    .views-field-field-player-number {
+      width: 100%; text-align: center;
+    }
+    // .player-name, .views-field-field-player-position {
+    //   text-align: center;
+    //  }
+  }
+  // END: Athletic Person View
+
+  a.athletic-link, a.athletic-link:link, a.athletic-link:visited { 
+    @include athletic-link;
+  }
+  a.athletic-link:hover, a.athletic-link:focus, a.athletic-link:active { 
+    @include athletic-link-hover;
+  }
+
+  /* BEGIN: Athletic Events View */
+  .athletic-events {
+    .views-row {
+      .views-field-field-opponent, .views-field-title-1 {
+  	  padding-left: 0;
+  	}
+  	.schedules-title {
+  	  margin: 0;
+  	}
+    }
+  }
+  .field-content.team-vs-team {
+    text-align: center;
+    padding-left: 0%;
+  }
+  .views-field-field-win-loss {
+    text-align: center;
+  }
+  .views-field-field-event-date-1 {
+    .views-field-title-1,
+    .views-field-title,
+    .views-field-field-win-loss {
+      text-align: center;
+  	  .win-loss-field {
+  		float: none; text-align: center;
+        }
+  	  .team-vs-team {
+  		padding: 0;
+  	    text-align: center;
+  	  }
+  	  .game-location {
+  	    padding: 0 0 0.5em 0;
+       }
+    }
+  }
+  .views-field-field-event-date-2 {
+    margin: 9px 1em 0 0;
+  }
+
+  /* END: Athletic Events View */
+.athletic-primary-menu {
+  ul.menu {
+    margin: 0 0 1em 0;
+  }
+  a.athletic-link, a.athletic-link:link, a.athletic-link:visited { 
+    color: $gray
+  }
+  a.athletic-link:hover, a.athletic-link:focus, a.athletic-link:active { 
+   color: darken($burgundy, 10%);  
+  }
+}
+
+/* END: Athletics Primary Menu */
+
+} /* END .athletic-context */

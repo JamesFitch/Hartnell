@@ -1,0 +1,235 @@
+/*
+ * Imports
+ */
+
+@import "variables";
+@import "mixins";
+@import "fontello";
+@import "fontello-mixins";
+@import "compass";
+@import "compass/support";
+@import "compass/typography/text";
+
+/**
+ * IE Compatibility
+ */
+
+$legacy-support-for-ie7 : true;
+$legacy-support-for-ie8 : true;
+
+/* 
+ * CONTENT TYPE: Promotion
+ */
+
+/*
+ * BEGIN: cKeditor Global Styles
+ */ 
+.rtecenter { text-align: center; }
+.rteright { text-align: right; }
+.rteleft { text-align: left; }
+
+.floatLeft { float: left; }
+.floatRight { float: right; }
+
+blockquote {
+  font-family: $alt-font;
+  font-size: 1.1em;
+  color: $gray;
+  font-style: italic;
+}
+/* Reusable Button Styles */
+
+.button-gray {
+  @include default-bttn;
+  display: inline;
+  	a, a:link, a:visited {
+	  text-decoration: none;
+	  color: $dark-gray ;
+	}
+	a, a:link, a:visited  {
+	  color: darken($dark-gray, 20%);
+	  text-decoration: none;
+	}
+}
+.button-gray:hover {
+  @include default-bttn-hover;
+  color: $white;
+	a, a:link, a:visited  {
+	  color: darken($dark-gray, 20%);
+	  text-decoration: none;
+	}
+}
+
+.button-gold  {
+  @include gold-bttn;
+  color: $gray;
+  display: block;
+ }
+.button-gold:hover {
+  @include gold-bttn-hover;
+  color: $gray;
+	a:hover, a:active, a:focus {
+	text-decoration: none;
+  }
+}
+
+.button-burgundy {
+  @include burgundy-bttn;
+  color: $white;
+  display: inline;
+	a, a:link, a:visited {
+	  color: $gold;
+ 	  text-decoration: none;	
+  	}
+ }
+.button-burgundy:hover {
+  @include burgundy-bttn-hover;
+  color: $white;
+  display: inline;
+	a, a:link, a:visited {
+ 	color: $white;
+ 	text-decoration: none;	
+  }
+}
+
+.button-black {
+ @include black-bttn;
+  display: inline;
+	a, a:link, a:visited {
+	  color: $white;
+ 	  text-decoration: none;	
+  	}
+ }
+.button-black:hover {
+ 	@include black-bttn-hover;
+	a, a:link, a:visited {
+ 	color: $gold;
+ 	text-decoration: none;	
+  }
+}
+
+hr {
+  @include hr-style;
+ }
+
+/*  Columns */
+.two-columns {
+  -moz-column-count:2; /* Firefox */
+  -webkit-column-count:2; /* Safari and Chrome */
+  column-count:2;	
+}
+
+.three-columns {
+	-moz-column-count:3; /* Firefox */
+	-webkit-column-count:3; /* Safari and Chrome */
+	column-count:3;	
+}
+
+/*
+ * END: cKeditor Global Styles
+ */ 
+
+/* Promotion type: Button */
+.promo-button, .promo-ad, .promo-alert {
+ font-family: $base-font;
+ margin: 0 ;
+}
+
+.node-type-ad {
+	.pane-node-content {
+	 padding: 0;
+	 border: 0;
+		.node-ad {
+		 padding: 0;
+		 margin-bottom: -6.5px;
+		}
+	}
+}
+.promo-button {
+ @include promoButtn;
+ min-height: 20px;
+ margin: 0 auto;
+ @include list-pad;
+ vertical-align:middle;
+ 	a, a:link, a:visited {
+	 color: $light-gray;
+	 text-decoration: none;
+	 @include text-shadow;
+	 line-height: 1.1;
+ 	 letter-spacing: 0;
+ 	 font-size: 1.2em;
+ 	 font-weight: bold;
+	}
+	[class^="icon-"]:before, [class*=" icon-"]:before {
+	 zoom: 1;
+	 margin-right: 0.25em;
+	 line-height: 1.1;
+	}
+}
+.promo-button:hover, .promo-button:active, .promo-button:focus {
+ @include promoButtn-hover;
+ 	[class^="icon-"]:before, [class*=" icon-"]:before {
+ 	 color: $gold;
+ 	}
+	a {
+	 color: $black;
+	 text-decoration: none;
+	 text-shadow: none;
+	}
+}
+.promo-ad {
+ background-color: $gray;
+ padding: 0.5em 0;
+ 	h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:firstchild { margin-top: 0;}
+	 	p, d, hr, h1, h2, h3, h4, h5, h6, ol, ul, table, address {
+	 		padding-left: 13px;
+	 		padding-right: 13px;
+	 	}
+		.adButtn, .adButtn:link, .adButtn:visited {
+		 @include adButtn;
+			a {
+			 font-weight: bold;
+			 text-decoration: none;
+			 color: $dark-gray;
+			}
+		}
+		.adButtn:hover, .adButtn:active, .adButtn:focus {
+		 @include adButtn-hover;
+		 	a {
+			 color: $burgundy;
+			}
+		}
+		.rteright {
+		 margin: 0 13px;
+		}		
+	}
+
+
+	.promo-alert {
+	 @include list-pad;
+	 background-color: $black;	
+	}
+	
+	.field-name-field-ad-link {
+	 padding: 0em 0.5em 0.077em 0.5em;
+	 text-align: right;
+	 text-transform: uppercase;
+	 background-color: $crumbs;
+		a, a:link, a:visited {
+		 color: $gray;
+		 font-weight: bold;
+		 text-decoration: none;
+		 letter-spacing: 0;
+		 font-size: 10px;
+		}
+	}
+	.field-name-field-ad-link:hover {
+	 background-color: darken($crumbs, 10%);
+	 	a:hover, a:active, a:focus {
+		 color: $black;
+		 font-weight: bold;
+		 text-decoration: none;
+		}
+	}
+
+/* END Promotion type: Button */

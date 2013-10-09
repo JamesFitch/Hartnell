@@ -1,0 +1,44 @@
+<h1> How to Update a Drupal 7 Module </h1>
+<h2> Warning this task should only be performed by the site administrator.</h2>
+
+<p>In this tutorial we're going to show you how to update your Drupal 7 module.</p>
+<p>In the example below, we have version 7.x-2.4 of the @font-your-face 7.x-2.4 module on your site.</p>
+<img class="screenshot" src="&path&/screenshots/font-your-face1.png" /> 
+
+<p>However, when we visit the @font-your-face page on Drupal.org, the latest version is showing as 7.x-2.5:</p>
+<img class="screenshot" src="&path&/screenshots/font-your-face2.png" />
+
+<p>Before you start, please make sure to backup your site. <a href="http://drupal.org/node/22281">Details of how to do that are available on Drupal.org</a>.</p>
+
+<p>Go to Reports &gt; Available Updates &gt; click Update in the top-right corner.</p>
+<p>If you @font-your-face update doesn't already show, click Check Manually.</p>
+<p>When your theme does show, it will look like the image below. Click the "Download" link next to the update you want.</p>
+<img class="screenshot" src="&path&/screenshots/fyf_download.png" />
+
+<p>You will see a progress bar and then a message saying "Updates downloaded successfully".</p>
+<p>Click Continue.</p>
+<img class="screenshot" src="&path&/screenshots/updates_dwnld_success.png" />
+<p>You will get the message "Update was completed successfully. Your site has been taken out of maintenance mode".</p>
+
+<p>Most of the time, a theme will have no database updates to run at all. However, if you want to be sure, click Run database updates.</p>
+<img class="screenshot" src="&path&/screenshots/database-module-update.png" />
+<p>Drupal will give you a short explanation of what might come next. Click Continue.</p>
+<img class="screenshot" src="&path&/screenshots/database_update.png" />
+<p>Sometimes you will get the message "No pending updates" as in the image below. You can click Administration pages and get on with running your site.</p>
+<img class="screenshot" src="&path&/screenshots/database1.png" />
+<p>However, sometimes there will be updates to make, as in the image below:</p>
+<img class="screenshot" src="&path&/screenshots/database2.png" />
+<p>You can click on the down arrow to see what the update is. Click Apply pending updates to continue the process.</p>
+
+
+<img class="screenshot" src="&path&/screenshots/database3.png" />
+<p>Again you will see a progress bar and then a completion page:</p>
+<img class="screenshot" src="&path&/screenshots/database4.png" />
+<p>You can click Administration pages and get on with running your site. Before you finish the update completely, it will be worth going to the modules page to confirm that you do indeed have the new version:</p>
+<img class="screenshot" src="&path&/screenshots/new-module.png" />
+<hr/>
+ <h2> Additional resources: </h2>
+ <ul>
+ <li><a href="http://nodeone.se/sv/node/812">Installing a module video: by Node one.</a></li>
+ <li><a href="http://nodeone.se/sv/node/814">Uninstalling modules: by Node one.</a> </li>
+ </ul>

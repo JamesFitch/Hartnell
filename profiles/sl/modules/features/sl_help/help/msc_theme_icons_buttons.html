@@ -1,0 +1,18 @@
+<h1>Changing / adding to button icons</h1>
+<p>You can see a current list of available icons for use in buttons on the <a href="&topic:sl_help/msc_theme_reusable&">Reusable Styles help page</a>.</p>
+<p>The images for the icons are stored in the theme directory, specifically: <b>/sites/all/themes/omega_maricopa/images/button-icons</b></p>
+<h2>Changing an icon</h2>
+<p>If you need to change an icon, save your new version with the exact same name as the old one, then upload it to the button-icons directory, overwriting the old file.</p>
+<p>Try to keep the height approximately the same as the old version, to prevent any layout issues in the buttons.</p>
+<h2>Adding a new icon</h2>
+<p>This is more complex than just adding a new icon image; you will also need to create a new reusable style.</p>
+<ol>
+  <li>Create your new icon image and upload it to the button-icons directory, using the same naming convention as the other icon files, e.g. "icon-customerservice.png".</li>
+  <li>Open up the "<b>button-icons</b>" stylesheet. If you are using Compass/SASS (which is ideal), open "button-icons.scss" in the "sass" directory of the theme. If you are not familiar with Compass/SASS, you will also need to make your changes to the "button-icons.css" file in the "css" directory of the theme. However, you should not ignore the button-icons.scss file since if anyone ever recompiles the stylesheets your changes to the plain CSS file will be lost.</li>
+  <li>In the stylesheet(s), copy the last rule and paste it at the bottom. Remember to do this in both files if you are not using Compass/SASS.</li>
+  <li>Change the class name to what you want for your new button. To follow the preexisting pattern, use the text that follows <b>icon-</b> in the file name. For example, the "www" icon's file name is "icon-www.png" and its class name is "www." So if you were creating a new icon called "icon-flower.png" you would want to call the new class "flower."</li>
+  <li>In the line that says "<b>background-image</b>" change the file name in the path to match the file name of the icon you just created and uploaded.</li>
+  <li>Save the files.</li>
+  <li>Test the new icon by creating a button and then adding the icon class.</li>
+  <li>If you need to adjust the padding, open the SCSS (and the CSS file, if you're not using Compass/SASS) and edit the padding in rule you created.</li>
+</ol>

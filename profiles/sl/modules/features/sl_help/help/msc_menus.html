@@ -1,0 +1,94 @@
+<h1>Managing menus</h1>
+
+<h2>How to add a page to the main menu</h2>
+<p>You can add a page to the main menu one of two ways: as you're creating the page or through editing the menu directly. Either way, you'll first want to create an Editorial Site Section for the menu item.</p>
+<h3>Creating a Site Section term</h3>
+<ol>
+  <li>Starting in the admin menu, go to "<b>Structure</b>" -> "<b>Taxonomy</b>."</li>
+  <li>Find "<b>Editorial Site Section</b>" and click on its "<b>add terms</b>" link.<br /><img src="&path&screenshots/msc_menus_addterm.jpg" alt="add term"></li>
+  <li>Enter in the <b>Name</b> of the new term. It should match what the menu item will be.</li>
+  <li>Click on the "<b>Relations</b>" fieldset link.<br /><img src="&path&screenshots/msc_menus_relations.jpg" alt="Relations"></li>
+  <li>Under "<b>Parent terms</b>" find the parent item and select it.<br /><img src="&path&screenshots/msc_menus_termparent.jpg" alt="Parent terms"></li>
+  <li>In most cases you can ignore the rest of the fields.</li>
+  <li>Click "<b>Save</b>."</li>
+  <li>Click on the "<b>List</b>" tab at the top of the page.<br />
+    <img src="&path&screenshots/msc_menus_termlist.jpg" alt="List"><br />
+    Then find your new term and ensure it's got the right parent and placement. You may need to go to the next page if it does not appear on the first one. To adjust the order and nesting of a term item, click and drag its crosshairs icon, which appears to the left of its title.<br /><img src="&path&screenshots/msc_menus_crosshairs.jpg" alt="Item crosshairs"></li>
+  <li>The next step is to add a new menu item and associate it with that term. Continue reading to learn how to do that while making a page or by directly editing the main menu.</li>
+</ol>
+<h3>Add a menu item when creating or editing a page</h3>
+<ol>
+  <li>While on the content edit page, find the "<b>Menu settings</b>" fieldset tab.<br /><img src="&path&screenshots/msc_menus_fieldset.jpg" alt="Menu settings tab"></li>
+  <li>Click on the checkbox for "<b>Provide a menu link</b>."<br /><img src="&path&screenshots/msc_menus_providemenu.jpg" alt="Provide a menu link">
+  </li>
+  <li>Change or fill out the "<b>Menu link title</b>" field as desired. This is the text that people will see and click on in the menu.</li>
+  <li>Under "<b>Parent item</b>," choose the parent item for this page.</li>
+  <li>"<b>Weight</b>" helps determine the order of the menu items. Lower numbers will display the item higher; higher numbers will display the item lower in the menu. If this is confusing, you can change the menu items' order by editing the menu directly (see instructions below).</li>
+  <li>You will likely not need to add anything to the rest of the fields.</li>
+  <li>Find the "<b>Site section</b>" field (either under "Standard fields" or "About this content") and make sure it matches with the parent(s) of the menu item. This ensures proper editorial access.</li>
+  <li>Remember to click "<b>Save</b>" to save your changes.</li>
+  <li>The last step is to associate the new menu item with its Editorial Site Section. To do so:
+    <ol>
+      <li>Using the admin toolbar, go to <b>Structure</b> -> <b>Menus</b></li>
+      <li>Find the menu you want to add the page to. Usually this will be "<b>Main menu</b>."</li>
+      <li>Click on "<b>list links</b>" in the menu's row.<br/><img src="&path&screenshots/msc_menus_listlinks.jpg" alt="list links">
+      </li>
+      <li>Find your newly added menu item and click on its "<b>edit</b>" link.<br/><img src="&path&screenshots/msc_menus_menu_itemedit.jpg" alt="edit"></li>
+      <li>Find the "<b>Power menu</b>" fieldset, which allows you to sync menu items up with the Editorial Site Section. Under "<b>Taxonomy plugin</b>" find the matching term you created (as per the instructions above) and select it. Most of the other terms will be grayed out, indicating they have already been paired with a menu item.<br /><img src="&path&screenshots/msc_menus_menu_linkterm.jpg" alt="Link to existing term"></li>
+      <li>Click "<b>Save</b>."</li>
+    </ol>
+  </li>
+</ol>
+<h3>Add a menu item through the menu</h3>
+<ol>
+  <li>Using the admin toolbar, go to <b>Structure</b> -> <b>Menus</b></li>
+  <li>Find the menu you want to add the page to. Usually this will be "<b>Main menu</b>."</li>
+  <li>Click on "<b>add link</b>" in the menu's row.<br/><img src="&path&screenshots/msc_menus_menu_addlink.jpg" alt="add link">
+  </li>
+  <li>In "<b>Menu link title</b>" choose the display title for the menu item (this is what people will see and click on).</li>
+  <li>In the "<b>Path</b>" field, enter the path to the menu item.
+    <p><b>Note</b>: If you are linking to an internal page, it is best to use the node ID, which is the unique identifier of the piece of content. This prevents broken links if the human-readable path to the page changes. To find the node ID of a piece of content:</p>
+    <ol>
+      <li>Navigate to the page you want to link to (it can be helpful to do this in a separate browser tab or window).</li>
+      <li>Ensure you are logged in as a content editor.</li>
+      <li>Click on the content's "<b>Edit</b>," "<b>Edit draft</b>" or "<b>New draft</b>" tab.</li>
+      <li>In the URL, find where it says "node/[somenumber]" e.g. "node/139".<br /><img src="&path&screenshots/msc_content_urlnodeid.jpg" alt="Node ID in the URL"></li>
+      <li>The number is the node ID. Copy that portion of the URL (e.g. "node/139") and put that into the URL field of the related link.<br />
+        <img src="&path&screenshots/msc_menus_pathnodeid.jpg" alt="Related links URL"></li>
+    </ol>
+  </li>
+  <li>Leave "<b>Enabled</b>" and "<b>Show as expanded</b>" at their defaults. You can uncheck "Enabled" if you want the menu item to exist but not display in the menu.</li>
+  <li>In "<b>Parent link</b>" choose the parent of the new menu item.</li>
+  <li>You can set the "<b>Weight</b>" here, or you can set it after saving by adjusting it using the drag-and-drop functionality.</li>
+  <li>The "<b>Power menu</b>" allows you to sync menu items up with the Editorial Site Section. Under "<b>Taxonomy plugin</b>" find the term you just created (as per the instructions above) and select it. Most of the other terms will be grayed out, indicating they have already been paired with a menu item.<br /><img src="&path&screenshots/msc_menus_menu_linkterm.jpg" alt="Link to existing term"></li>
+  <li>Under most circumstances you will not need to add to or edit the rest of the fields.</li>
+  <li>Click "<b>Save</b>" to save your new menu item.</li>
+</ol>
+
+<h2>Changing the placement of a main menu item</h2>
+<p>This is a two step process: 1) Adjust the Editorial Site Section term and 2) adjust the menu item itself.</p>
+<ol>
+  <li>Change the site section term by going to <b>Structure</b> -> <b>Taxonomy</b> and then clicking on "<b>list terms</b>" for <b>Editorial Site Section</b>. Find the term you want to move/edit and use its crosshair icon to drag it to where you want and/or click on its "<b>edit</b>" link to change its attributes.</li>
+  <li>Change the menu item placement and/or attributes by going to <b>Structure</b> -> <b>Menus</b> and then "<b>list links</b>" for the main menu. Find the menu item you want to move/edit and use its crosshair icon to drag it to where you want and/or click on its "<b>edit</b>" link to change its attributes.</li>
+</ol>
+
+<h2>How to edit a menu</h2>
+<ol>
+  <li>Using the admin toolbar, go to Structure -> Menus</li>
+  <li>Find the menu you want to edit and click "list links." The available menus are:
+    <ul>
+      <li><b>Footer logos</b>: the sister sites<br />If you need to change the URLs the logos point to, change them here. If you need to change the logo, find the file in /sites/all/themes/omega_maricopa/images then replace the logo with one a similar size and with the same name.</li>
+      <li><b>Footer menu</b>: the menu items in the footer<br />Edit the text and paths of the menu items here. You can also rearrange their order by grabbing the crosshairs. Be sure to save after changing any of the ordering.</li>
+      <li><b>Main menu</b>: the main navigation with the drop-downs<br />You can edit the link text and paths here as well as change the ordering and nesting. Be sure to save after changing any of the placement.</li>
+      <li><b>Social media</b>: the links for the social media icons<br />If you need to change the URLs the icons point to, change them here. If you need to change the icon, find the file in /sites/all/themes/omega_maricopa/images then replace the icon with one the same size and with the same name.</li>
+    </ul>
+  </li>
+  <li>To change the properties of any of the links, such as the display title or link destination, click on its "<b>edit</b>" link.<br/><img src="&path&screenshots/msc_menus_menu_itemedit.jpg" alt="edit"></li>
+  <li>On the edit page for a menu item you can change the "<b>Menu link title</b>," the "<b>Path</b>," whether it is "<b>Enabled</b>" or not, its "<b>Parent link</b>," its "<b>Weight</b>," and its "<b>Link to existing term</b>" (which associates it with an Editorial Site Section).</li>
+  <li>Be sure to click "<b>Save</b>" after making any changes.</li>
+</ol>
+
+<h2>What's the difference between the main menu and the site sections?</h2>
+<p>The main menu is what shows up in the top menu (with the drop-downs) and in the left sidebar. It gives visitors a structured way to explore the site.</p>
+<p>The Editorial site section vocabulary does two things: 1) it allows for editorial access control and 2) page/content can latch onto a menu path without needing to actually be in the menu.</p>
+<p>In some cases, you will not want every page to show up in the main menu structure, but you will still want it to fall under access control and to have the right breadcrumbs and sub-menu blocks to show up. In such instances you will not add it to the menu but will still give it a site section.</p>

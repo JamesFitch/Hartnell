@@ -1,0 +1,194 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the normal and widescreen layouts. You may override these styles in the normal 
+ *  and widescreen CSS files as appropriate. */
+
+/*
+ * Imports
+ */
+
+@import "variables";
+@import "mixins";
+@import "compass";
+
+// Adding "narrow" styles for Athletics
+@import "athletics-narrow";
+
+/*
+ * Typography fixes
+ */
+
+
+h1.title, .pane-node-title h1 {
+  @include respond-to(handhelds) { font-size: 2.25em; } /* Mobile */
+}
+
+#breadcrumb{
+ @include respond-to(handhelds) { font-size: 0.9em; text-align: center; } /* Mobile */
+}
+
+.ftr-block-logo {
+  float: none;
+}
+
+
+/* END Type fixes */
+
+
+/*
+ * Layout fixes
+ */
+
+.ftr-block-logo {
+  @include respond-to(handhelds) { width: 100% ;} /* Mobile */
+}
+
+.page {
+ @include respond-to(handhelds) { background-image: hidden; } /* Mobile */
+	.zone-content {
+	 @include respond-to(handhelds) { background-image: hidden; } /* Mobile */
+	}
+}
+
+/* Navigation: User */
+.region-user-second {
+  .block {
+    width: 100%;
+    float: none;
+    margin: 0 auto 1%;
+  }
+  ul.menu {
+    float: right;
+  }
+}
+
+.view-sitewide-alerts {
+  .views-row {
+    padding: 0;
+  }  
+}
+
+a.main-menu-link {
+ @include respond-to(handhelds) {
+  border-bottom: 1px solid #808080;
+  font-size: 1.0em;
+  margin: 0;
+  } /* Mobile */  
+}
+a.main-menu-link, a.main-menu-link:link, a.main-menu-link:visited {
+ color: $gray; padding: 0.5em 1em;
+ text-align: right;
+ display: block;
+ padding: 0.5em 1em;
+ font-family: $alt-font;
+  font-size: 1.0em;
+}
+a.main-menu-link:hover, a.main-menu-link:active, a.main-menu-link:focus {
+ color: $burgundy;
+}
+a.main-menu-link:after,
+a.athletic-link:after {
+  @include respond-to(handhelds) { 
+   float: right;
+   font-size: 1em;
+   margin-left: 1em;
+  } /* Mobile */
+
+}
+
+/* Navigation: Social Media */
+.athletic-brand-wrapper {
+    .athletic-branding {
+      .social-media-user {
+        ul.menu {
+          display:inline;
+          margin:0;
+          li {
+           float: right;
+          }
+          li.last {
+           margin: 1em 0 0 0;
+          }
+        } 
+      }
+    }
+  }
+
+/* Person: Academic Content Type */
+.node-type-person {
+  // Adjust nested columns in second row
+  .row2 {
+    &.grid-13.push-3 {
+      margin-left: 10px;
+    }
+  }
+  h2.node-title {
+    font-size: 1.5em;
+    line-height: 1.2;
+    margin: 0;
+  }
+}
+
+.field-name-field-flexpage-location {    
+  .content {
+    .field-name-field-location-type,
+    .field-name-field-location-address {
+      .field-label {
+        width: 100%;
+        float: none;
+        display: block;        
+      }
+      .field-items {
+        width: 100%;
+        margin-bottom: 0.5em;
+        float: none;
+        display: block;  
+      }
+    }
+  }
+}
+
+/* A-Z Index View */
+.views-responsive-grid {
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5,
+  .grid-6,
+  .grid-7,
+  .grid-8,
+  .grid-9,
+  .grid-10,
+  .grid-11,
+  .grid-12,
+  .grid-13,
+  .grid-14,
+  .grid-15,
+  .grid-16,
+  .grid-17,
+  .grid-18,
+  .grid-19,
+  .grid-20,
+  .grid-21,
+  .grid-22,
+  .grid-23,
+  .grid-24 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* View Type: Home Slideshow */
+
+.athletics-context {
+  .section-header {
+    .athletic-branding  {
+      .region-branding {
+        .logo-img {
+          text-align:left;
+        }
+      }
+    }
+  }
+}

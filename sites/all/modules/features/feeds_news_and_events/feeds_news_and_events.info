@@ -1,0 +1,12 @@
+name = Feeds News and Events
+description = Hartnell News and Events feed view
+core = 7.x
+package = Feeds
+php = 5.2.4
+version = 7.x-1.0-beta1
+project = feeds_news_and_events
+dependencies[] = ctools
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[views_view][] = feed_events_news
