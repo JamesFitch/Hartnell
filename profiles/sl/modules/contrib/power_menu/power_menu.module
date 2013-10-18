@@ -200,7 +200,11 @@ function power_menu_entity_view($entity, $type, $view_mode, $langcode) {
 
   // Power menu sets active menu only on full node view and enabled handlers
   if ($view_mode == 'full' && variable_get('power_menu_handlers_enabled', FALSE)) {
-    power_menu_set_path($entity, $type, $langcode);
+    $active_trail = menu_get_active_trail();
+    $menu_tail = array_pop($active_trail);
+    if ($menu_tail['module'] == 'system') {
+      power_menu_set_path($entity, $type, $langcode);
+    }
   }
 }
 
@@ -236,8 +240,8 @@ function power_menu_set_path($entity, $type, $langcode) {
     }
 
     // TODO: Cache the breadcrumbs
-    // Set the breadcrumb
-    if (variable_get('power_menu_handlers_breadcrumb', TRUE)) {
+    // Set the breadcrumb when is activated in settings and a path is set
+    if (variable_get('power_menu_handlers_breadcrumb', TRUE) && isset($path)) {
       $breadcrumbs = power_menu_get_breadcrumbs($path);
 
       // Add title only a title filed exists
