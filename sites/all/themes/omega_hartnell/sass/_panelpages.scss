@@ -1,0 +1,119 @@
+/*
+ * Imports
+ */
+
+@import "variables";
+@import "mixins";
+@import "compass";
+@import "compass/support";
+@import "fontello-mixins";
+
+
+.pane-node-field-headerimg {
+ // padding-bottom: 1em;
+ // border-bottom: 1px solid #ccc;
+}
+.panel-pane {
+  &.pane-node-field-headerimg {
+    margin-bottom: 1.5em;
+  }
+}
+
+.pane-node-title h1 {
+  margin-top: 0;
+}
+
+/* PERSON CT PAGE VARIANT  */
+
+.node-type-person {
+  /* hide spurious element */
+  .pane-node-title {
+    h2 {
+      display: none;
+    }
+  }
+  /*  +++++   undo layout in global.css:2242 ++++ */
+  .field {
+    margin-left: 0;
+  }
+  .field-name-field-person-headshot {
+    /* undo absolute positioning in global.css:2305 */
+    position:relative;
+  }
+  .welcome-subtitle h2.pane-title {
+    border:none;
+  }
+  .pane-node-field-person-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: -.8em;
+  }
+  .pane-node-field-person-headshot {
+  //  background-color: white;
+    float: left; 
+    max-width: 50%;
+    img {
+      margin-right: 1em;
+      margin-bottom: 1em;
+    }
+  }
+  // Alternative sidebar styling - "Additional Links"
+  .sidebar {
+    .pane-additional-links-custom {
+      border: 1px solid #ccc;
+      border-top: none;
+      background-color: white;
+      @include hyphenation;
+    }
+    .panel-pane {
+      margin-bottom: 0;
+    }
+    .pane-title {
+      border-bottom: none;
+    }
+    .panel-pane ~ .panel-pane {
+      h2.pane-title {
+        margin: 0;
+        padding: 0.5em 1em;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        font-size: 1.25em;
+        &, & a {
+          color: #17150f;
+          background-color: white;
+        }
+      }
+      &:last-child {
+        .pane-content {
+          border-bottom: none;
+        }
+      }
+      .pane-content {
+        border-bottom: 1px dotted #cccccc;
+        margin: 0 1em;
+        padding-bottom: 10px;
+      }
+      // hide content on certain panes (eg., the "additional links" label and email field)
+      // We don't set display:none directly on the container because we still want to 
+      // show the border.
+      &.title-only .pane-content {
+        padding-bottom: 0;
+        * {
+          display: none;
+        }
+      }
+    }
+    .panel-pane ~ .panel-pane.pseudo-block-title {
+      .pane-content {
+        border-bottom: none;
+      }
+    }
+    // Icons
+    .inline-icon:before {
+      display: inline-block;
+      padding-right: .25em;
+    } 
+  }
+
+}
+

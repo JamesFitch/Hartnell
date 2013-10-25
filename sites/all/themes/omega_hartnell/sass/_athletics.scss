@@ -1,0 +1,1049 @@
+/*
+ * Imports
+ */
+
+@import "variables";
+@import "mixins";
+@import "fontello";
+@import "fontello-mixins";
+@import "compass";
+@import "compass/support";
+
+$athletics-pane-title-fontsize: 1.4em;
+
+/**
+ * IE Compatibility
+ */
+$legacy-support-for-ie: true;
+$legacy-support-for-ie7 : true;
+$legacy-support-for-ie8 : true;
+$legacy-support-for-mozilla: true;
+
+
+.page-node-208 #breadcrumb {
+	display: none ;
+}
+
+.section-header {
+  .athletic-branding  {
+    .region-branding {
+      /* Panther Logo */
+        .logo-img {
+          margin: 0 auto;
+          text-align:center;
+          width: 99%;
+          @include respond-to(handhelds) {
+            margin: 0 30% 3% !important;
+            width: 40% !important;
+          }
+        }
+    }
+  }  
+}
+.athletics-content {
+  .region-content {
+    margin-top: 0;
+  }
+}
+
+.athletics-context {
+  h1.athletics-title {
+   color: $gold;
+   font-family: 'pt_sans_narrowbold' ;
+   font-weight: normal;
+   letter-spacing: 1px;
+ }
+  h2.pane-title {
+    font-szie: 1.4em;
+    text-transform: uppercase;
+ }
+  .pane-node-body {
+  	color: $crumbs;
+  }
+.panel-pane h2.pane-title,
+.pane-views-panes h2.pane-title,
+.sidebar .panel-pane h2.pane-title,
+.sidebar .pane-views-panes h2.pane-title,
+.athletics-pane-title { // athletics-pane-title allows extending from this rule
+	 font-size: $athletics-pane-title-fontsize;
+	 color: $gold;
+	 font-family: 'pt_sans_narrowbold';
+	 background: transparent;
+	 padding: 0;
+	 margin: 0;
+	 letter-spacing: 1px ;
+	 font-weight: normal ;
+	 border-bottom: none;
+	 text-transform: uppercase;
+	 	a, a:link, a:visited {
+		 color: $gold;
+		 text-decoration: none;
+		}
+		a:hover, a:active, a:focus {
+		 color: $white;
+		 background-color: transparent;
+		}
+	}
+	#page.page {
+	  @include athletics-page;
+		#section-header {
+	     @include respond-to(handhelds) { background: #600e10; }		
+	     @include athletics-header;
+			.athletic-user-wrapper {
+			 background-color: transparent;
+			 border: none;
+			 box-shadow: none;
+				.region-user-second {
+					  a,  a:link,  a:visited {
+					    font-weight: normal;			
+					}
+					.block-search-form {
+            .container-inline {
+              text-align: center;
+            }
+					  .form-text {
+						border-radius: 0 0 0 0;
+						margin-right: 0.5em;
+						@include opacity(1.0);
+						background-color: $user-menu;
+						border: 1px solid #48090a;
+						font-size: 0.846em;
+					  	font-weight: bold;
+					  	color: $gray;
+					  	padding: 0.154em 0.231em 0.154em 13px;
+					  	@include inset-shadow;
+						}
+						.form-item {
+							textarea, input {
+							 color: $light-gray;
+							 }
+						}		  
+					}
+				}			 
+			}
+			.athletic-brand-wrapper {
+				.athletic-branding {
+				}			
+				/* Alert Button */
+				.block-sitewide-alerts-block {
+					.view-sitewide-alerts .views-row {
+						padding-right: 0;
+						  @include respond-to(handhelds) { padding: 0; }
+							a, a:link, a:visited {
+							 @include gold-bttn;
+							 display: block;
+							 text-align: center;
+							 color: $black;
+							 margin: 1em 0;
+							}
+							a:hover, a:active, a:focus {
+	 						 @include gold-bttn-hover;
+	 						 color: $burgundy;
+	 						 text-decoration: none;
+							}
+					}
+				} 
+			}
+		}
+		.athletic-content-wrapper {
+		 @include inset-shadow;
+			#breadcrumb {
+			 font-family: 'pt_sans_narrowbold';
+			 font-size: 0.925em;
+			 color: $white;
+				a, a:link, a:visited {
+				 font-weight: normal;
+				 font-family: 'pt_sans_narrowbold';
+				 color: $crumbs;
+				}
+				a:hover, a:active, a:focus {
+				 font-weight: normal;				
+				 color: $white;
+				 border-bottom: none;
+				} 
+			}
+			.region-content {
+				h1.event-title {
+				 background: transparent;
+				 box-shadow: none;
+				 padding: 0;
+				}
+				h2 {
+				 box-shadow: none;/*
+ *  BEGIN: Athletics Primary Menu
+ */
+				}
+				.pane-node-body {
+					strong {
+					  color: $gold;
+					}
+				}
+			}
+		}
+		#section-footer {
+		 border-top: 1px solid #461e1f;
+		 @include athletics-footer;
+		}
+	}
+
+  .title-background-color-a,
+  .title-background-color-b,
+  .title-background-color-c,
+  .title-background-color-d {
+    h2.pane-title,
+    .pane-views-panes h2.pane-title,
+    .sidebar .panel-pane h2.pane-title,
+    .sidebar .pane-views-panes h2.pane-title {
+      color: $white;
+      background-color: transparent;
+      box-shadow: none;
+      font-size: $athletics-pane-title-fontsize;
+      text-transform: none;
+    }
+  }
+  .view-slides {
+    background-color: #0F0B05;
+    border: medium none;
+  }
+
+  /* BEGIN: Athletic Panes */
+	.panel-pane  {
+		.field-item {
+		 border-bottom: 1px solid #461e1f;
+		 border-top: 1px solid #240203;		 
+		}
+		.field-item:first-child {
+		 border-top: none;
+		}
+		.field-item:last-child {
+		 border-bottom: none;
+		}		
+	}
+	.pane-node-field-related-links,
+	.pane-node-field-related-files,
+	.pane-node-field-related-flexpages {
+		.field-item {
+		 font-weight: bold;		 
+			a, a:link, a:visited {
+			  color: darken($white, 20%);
+			  text-decoration: none;
+			}
+			a:hover, a:active, a:focus {
+			 color: $white; 
+			}	 
+		}
+	}
+
+//
+
+.pane-views-panes .view a,
+.pane-views-panes .view a:link,
+.pane-views-panes .view a:visited {
+  color: darken($white, 20%);
+  text-decoration: none;	
+}
+
+/*  Node Adjustment */
+ article.node-news {
+	a, a:link, a:visited {
+	    color: $burgundy;
+	    text-decoration: none;
+	}
+	a:hover, a:active, a:focus {
+		color: darken($burgundy, 10%);
+		text-decoration: none; 
+	}
+}
+
+  /* Before: Athletic People Adjustments */
+  &.node-type-person {
+    // Layout & page-wide tweaks
+    .grid-13.row2,
+    .grid-13.row3,
+    .person-node-content-area,
+    .pane-additional-links-custom {
+      @include content-custom;
+      margin-top: 20px;
+    }
+    .pane-additional-links-custom {
+      margin-top: 0;
+      border: none;
+    }
+    .grid-13 .pane-title,
+    div.row2:before {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    .grid-13.row3 .pane-ath-person-info .pane-content .pane-title {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    .grid-13.row3 .pane-title, 
+    #content-type-person-athletics {
+      .pane-ath-person-info .omega-grid {
+        margin-left: 0;
+      }
+    }
+    .person-node-content-area,
+    .row2col1 .inside,
+    .row2col2 .inside,
+    .row3 .inside {
+      padding: 1em;
+    }
+    .row2col1 .inside {
+      padding-top: 0;
+     }
+    .panel-panel.grid-13 {
+      .grid-6.row2Col2 {
+        margin-bottom: 10px ;
+      }
+      .field.field-name-field-bio {
+        width: 98%;
+      }
+    }
+    // Athl person info minipanel
+    .pane-ath-person-info .inside {
+      display: table;
+      padding-left: 10px;
+    }
+    .pane-ath-person-info .panel-pane {
+      margin-left: 10px;
+      display: table-row;
+    
+    }
+    .pane-ath-person-info .panel-pane .pane-title, 
+    .pane-ath-person-info .panel-pane .pane-content {
+      display: table-cell;
+    }
+    .pane-ath-person-info .panel-pane h2.pane-title {
+      font-size: 13px;
+      padding-right: 8px;
+    }
+    // "Fake" pane title for person Contact Info - adjust for athletics theme
+    .row2 {
+      &:before {
+        @extend .athletics-pane-title;
+        // calculate margin to match '1em' values for regular content elements
+        margin-right: (1em / $athletics-pane-title-fontsize) * 1em;
+        margin-left: (1em / $athletics-pane-title-fontsize) * 1em;
+        margin-top: (1em / $athletics-pane-title-fontsize) * 1em;
+      }
+    }
+  }
+  .pane-node-field-body .field-name-field-body {
+	p, ul, ol, li, img, span, strong, em {
+		color: $white;
+	}
+  }
+  // Additional Links minipanel in sidebar - adjust for athl theme
+  &.node-type-person .sidebar {
+    .panel-pane.pane-additional-links-custom {
+      .file-icon {
+        margin-bottom: 2px;
+      }
+      .panel-pane h2.pane-title {
+        &, & a {
+          color: $gold;
+        }
+      }
+    }
+    // remove pointer cursor added by fontello
+    .pane-node-field-url .icon-monitor:hover {
+      cursor: auto;
+    }
+  }
+ /* END: Athletic People Adjustments */
+
+
+/*
+ * END: Athletic Panes
+*/
+
+
+/*
+ * BEGIN: Athletic Views
+*/
+
+/* BEGIN: Athletic Global View Styles */
+	ul.links {
+	 padding: 0;
+	 margin: 0;
+		.node-readmore {
+		 padding: 0;
+		 margin: 0;
+			a, a:link, a:visited {
+			font-style: normal;
+			font-weight: bold;
+			font-family: $base-font;
+			text-align: right;
+			}
+			a:hover, a:active, a:focus {
+			color: darken($burgundy, 20%);
+			}
+		}
+	}
+	.views-row {
+	 @include list-pad;
+	 border-bottom: hidden;
+	}
+	.views-field-body {
+	 color: $gray;
+	 font-weight: normal;
+	 font-family: $base-font;
+	 font-size: 13px;
+	 	a, a:link, a:visited,
+	 	.read-more-link,
+	 	.read-more-red,
+		.views-more-link,
+		.node-readmore a {
+		 color: $gray;
+		 font-weight: bold;
+		 font-family: $base-font;
+		 font-size: 13px;
+		}
+		a:hover, a:active, a:focus {
+		 color: $white;
+		}
+	}
+	a.read-more-link,
+	a.more-link, {
+	  color: $gray;
+	  font-weight: bold;
+	  font-family: $base-font;
+	  font-size: 13px;
+	}
+	a.more-link:hover,
+	a.more-link:active,
+	a.more-link:focus {
+	  color: $white;
+	}
+		
+	.publish-date {
+	 font-family: $base-font;
+	 color: $white;
+	 font-style: normal;
+	 font-weight: bold;
+	 font-size: 1em;
+	}
+	.pane-views-panes .events-audience {
+	 background-color: $white ;
+	 	.event-view-row {
+	 	border-bottom: 1px solid $crumbs ; 
+			h6.homepage-event { margin: 0 ; }
+			.location-name {
+				a, a:link, a:visited {
+				 color: $burgundy ;
+				 text-decoration: none;
+				}
+				a:hover, a:active, a:focus {
+				 color: darken($burgundy, 20%) ;
+				}
+		}
+	.events-audience > .view-footer { border-color: $crumbs ; }
+		}
+		p.calendar {
+		 margin: 0;
+		 padding: 0;
+		 	a, a:link, a:visited {
+			 color: $burgundy ;
+			 text-decoration: none;
+			}
+			a:hover, a:active, a:focus {
+			 color: darken($burgundy, 20%) ;
+			}
+		}
+	}
+	.pane-views-panes {
+		.view {
+		 	.view-content { padding: 0; }
+			.view-filters {
+			 @include list-pad;
+				 .views-exposed-widget {
+				 	label {
+				 	 float: left;
+				 	 margin-right: 1em;
+					}
+				}
+			}
+			a.read-more.icon-right-open {
+			 color: $white;
+			 font-family: $base-font;
+			}
+		}
+	}
+	.pane-views-panes, .panel-pane {
+		.view-filters {
+		  .ajax-progress { display: none; }
+		  padding: 0;
+			#edit-tid-wrapper { 
+			 padding: 0;
+			 width: 100%;
+				label {
+				 color: $white;
+				 padding: 0 0 0.3em 0;
+				}
+				.views-widget {
+					select:active,
+					select:focus {
+					box-shadow: 0 0 7px $dark-gray ;
+					}
+					.form-select {
+					 padding: 0.462em 1em;
+					 height: 2.615em;
+					 opacity:0.4;
+					 filter:alpha(opacity=40); /* For IE8 and earlier */
+					 border-color: #894e4e #2e0304 #2e0304;
+					 border-radius: 4px 4px 4px 4px;
+					 width: 100%;
+					 font-weight: bold;
+					   option {
+					     font-weight: bold;
+					     color: $dark-gray;
+					   } 
+					}
+				}
+			}
+		}
+		.view-content {
+			h3, h3.sports-title {
+			margin: 0;
+			}
+			.testimonial-rows {
+			 border-bottom: 1px dotted $crumbs;
+			}
+			.views-row {
+			 color: white;
+    		 font-weight: bold;
+    		 padding: 0;
+	 		 @include list-pad;
+				a, a:link, a:visited, a.read-more-link {
+				  color: darken($white, 20%);
+				  text-decoration: none;
+				}
+				a:hover, a:active, a:focus {
+				 color: $white; 
+				}
+			}
+			  .more-link,
+			  .read-more-red,
+			  .views-more-link,
+			  .node-readmore a {
+			   font-weight: bold;
+			  .views-field-body {
+			    color: $gray;
+				font-weight: normal;
+				font-family: $base-font;
+				font-size: 13px;
+			  }
+			 .views-exposed-widget {
+			 	label {
+			 	 float: left;
+			 	 margin-right: 1em;
+				}
+			  }		 
+			}
+			.views-row:hover, .views-row:active, .views-row:focus {
+			 background-color: transparent;
+			} 
+		}
+		.view-footer {
+		 border-top: 1px solid #240203;
+		 text-align: right;
+		 @include list-pad;
+			p {
+			 text-align: right;
+			 padding-top: 0.5em;		 
+				a, a:link, a:visited {
+				 color: darken($white, 20%);
+				 text-decoration: none;
+				 font-weight: bold;
+				 font-family: $base-font;
+				 font-style: normal;			  
+				}
+				a:hover, a:active, a:focus {
+				 color: $white; 
+				}
+				a.read-more-red:after,
+				a.views-more-link:after {
+				 content: "";
+				}
+			}
+			.node-readmore {
+				a:after {
+				 font-weight: bold;
+				}
+			}	
+		}
+		ul.pager {
+		 border: 1px solid #240203;
+		 background: transparent;
+		 min-height: 21px;
+		 text-shadow: none;
+		 margin-bottom: 1em;
+			li {
+			 background: transparent;
+			 border-right: 1px solid #894e4e;
+				a, a:link, a:visited  {
+				 background: transparent;
+				 text-shadow: none;
+				 color: darken($white, 20%);
+				 text-decoration: none;
+				}
+				a:hover, a:active, a:focus { color: $white; }  				 
+			}
+			li.pager-next { border-left: 1px solid #894e4e; }
+			li.pager-next, li.pager-last {
+				a { padding: 0.308em 0.615em; }
+			}
+		}
+/* END: Athletic Global View Styles */
+
+/* Node Specific Styles */
+
+.athletic-context {
+	.node-location {
+		.events-audience {
+		  @include content-custom;
+		}
+	}	
+}
+
+/* BEGIN: Athletic Events View */
+	.athletic-events,
+	.athletic-events-upcoming,
+	.athletic-events-past {
+	 background: transparent;
+	 border: hidden;
+		.view-content {
+			h3, h3.athletic-title {
+			  border-top: 1px solid #461e1f;
+			  color:#d1d1d1;
+			  margin: 0;
+			  padding: 0;
+			}
+			.schedules-row {
+			  @include respond-to(medium-screens) { padding: 0; } /* Tablets */
+			  border-bottom: 1px solid #461e1f !important;
+			  padding: 0.5em 0;
+			  width: 100%;
+				.views-field-title {
+				  display: block;
+					.schedules-title {
+					  border-bottom: 0;
+					  padding: 0;
+					  margin-bottom: 0 ;
+					}
+				}
+			}
+		}
+	}
+}
+	.athletic-events {
+    span.athletic-day {
+      display:inline-block;
+      margin-left: 1em;
+    }
+		.views-row {
+			.schedules-title {
+			 @include respond-to(handhelds) { margin: 0; } /* Mobile */
+			 @include respond-to(medium-screens) { margin: 0; } /* Tablets */
+			}
+		}
+	}
+	.athletic-events-upcoming,
+	.athletic-events-past {
+		.view-content {
+			h3.sports-title {
+			 font-size: 1.3em;
+			 margin: 0.25 0 0 0;
+			}
+			span.win-loss {
+			  color: $gold;
+			  float: right;
+			  text-align: right;
+			  display: inline-block;
+			  width: 10%;
+			}		
+			.views-row.schedules-row {
+			  clear: both;
+			  display: inline-block;
+			  padding: 0.3em 0 0.5em 0;
+				.views-field-title,			  
+			 	.views-field-field-event-date-1,
+			 	.views-field-field-event-date-2 {
+    			  display: block;
+    			  min-height: 18px;
+    			  width: 100%;
+    			  margin: 0;
+			        span.athletic-time {
+				      display: inline-block;
+				      text-align: right;
+				      width: 50%;
+			        }
+				    span.athletic-day {
+				      text-align: left;
+				      display: inline-block;
+				      width: 50%;				      
+				    }
+					.game-location {
+					  font-weight: normal;
+					}
+			 	}
+				.views-field-field-hartnell-score,
+				.views-field-field-opponent-score {
+				  width: 100%;
+				  float: none;
+				  padding: 0;
+				  text-align: center;
+				  text-transform: uppercase;
+					.views-label {
+					  color: $white;
+					}
+				}
+				.win-loss-field,
+				.team-vs-team,
+				.game-location,
+				.vs-opponent {
+				  text-align: center;
+				}
+				p.opponents {
+				  margin: 0;
+				  text-align: center;
+				}
+			}
+		}
+	}
+}
+/* END: Athletic Events View */
+
+/* BEGIN: Athletic Person View */
+.athletics-context {
+	.view-athletics {
+    &.coaching-staff,
+    &.player-list {
+      .view-filters {
+        border-bottom: 1px solid rgba(137, 78, 78, 0.35);
+      }
+    }
+		.view-content {
+      border-top: 1px solid #461E1F;
+      .views-row {
+        &.players-info-row,
+        &.coach-sport-row {
+          // margin-left: 10%;
+          // margin-right: 10%;
+          // width: 80%;
+          // border-top: 1px solid #240203;
+          &:first-child {
+            border-top: none;
+          }
+          &.views-row-last {
+            border-bottom: none;
+          }
+        }
+		 	  .views-field-field-person-headshot {
+		 	    float: left;
+		 		  img {
+		 		    @include pretty-picture;
+		 		  } 
+		   	}
+			 	.views-field-field-player-number {
+			 	  width: 28%;
+          max-width: 60px;
+          height: 45px;
+			 	  float: left;
+				  padding: 0;
+				 	h2 {
+            font-size: 2.769em;
+            color: $white;
+            font-family: 'pt_sans_narrowbold' ;
+            padding: 0;
+            margin: 0;
+            letter-spacing: 1px ;
+            font-weight: normal ;	
+            line-height: 1em;	 	 
+				 	}
+			 	}
+      }
+      .views-row.players-info-row {
+        .views-field-field-player-number {
+          // margin-left: -12.5%;
+        }
+        .views-field-title,
+        .views-field-field-player-position {
+          // margin-right: -12.5%;
+        }
+      }
+      .views-row.coach-sport-row {
+        .views-field-field-person-headshot {
+          // margin-left: -12.5%;
+        }
+        .views-field-title {
+          // margin-right: -12.5%;
+        }
+        .views-field-field-person-title {
+          // margin-right: -12.5%;
+        }
+      }
+    }
+  }
+}
+// @include respond-to(medium-screens) {
+//   .athletics-context { 
+//     .view-athletics {
+//       .view-content {
+//         .views-row {
+//           .views-field-field-player-number {
+//             width: 26%;
+//           }
+//           &.views-row.coach-sport-row {
+//             .views-field-field-person-headshot {
+//               float: none; 
+//             }
+//             .views-field-title {
+//               margin-left: -12.5%;
+//             }
+//             .views-field-field-person-title {
+//               margin-left: -12.5%;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+@include respond-to(handhelds) {
+  .athletics-context { 
+    .view-athletics {
+      .view-content {
+        .views-row {
+          &.players-info-row,
+          &.coach-sport-row {
+            // margin-left: 5%;
+            // margin-right: 5%;
+            // width: 90%;
+          }          
+          .views-field-field-player-number {
+            width: 100%; 
+            text-align: center;    
+          }
+          &.views-row.players-info-row {
+            .views-field-field-player-number {
+              margin-left: 0;
+            }
+            .views-field-title,
+            .views-field-field-player-position {
+              margin-right: 0;
+            }
+          }
+          &.views-row.coach-sport-row {
+            .views-field-field-person-headshot {
+              // margin-left: -6.25%;
+            }
+            .views-field-title {
+              // margin-right: -6.25%;
+            }
+            .views-field-field-person-title {
+              // margin-right: -6.25%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// @include respond-to(medium-screens) {
+//   .athletics-context { 
+//     .view-athletics {
+//       .view-content {
+//         .views-row {
+//           .views-field-field-player-number {
+//             width: 26%;
+//           }
+//           &.views-row.coach-sport-row {
+//             .views-field-field-person-headshot {
+//               float: none; 
+//             }
+//             .views-field-title {
+//               margin-left: -12.5%;
+//             }
+//             .views-field-field-person-title {
+//               margin-left: -12.5%;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+@include respond-to(tablets) {
+  .athletics-context { 
+    .view-athletics {
+      .view-content {
+        .views-row {
+          &.players-info-row {
+            padding-top: 10px;
+            .views-field-field-player-number {
+              padding-right: 5px;
+              height: 45px;
+              width: 38px;
+              h2 {
+                font-size: 29px;
+                line-height: 29px;             
+              }
+            }
+            .views-field-title h3 {
+              font-size: 13px;
+            }
+          }
+          &.coach-sport-row {
+            // .views-field {
+            //   margin-left: -12.5%;
+            //   margin-right: -12.5%;
+            // }
+
+            .views-field-field-person-headshot {
+              float: none; 
+            }
+            .views-field-title {
+              // margin-left: -12.5%;
+            }
+            .views-field-field-person-title {
+              // margin-left: -12.5%;
+            }
+            
+          }
+        }
+      }
+    }
+  }
+}
+
+.athletics-context {
+	.view-athletics {
+		.view-content {
+		 padding: 0;
+		 margin-bottom: 0;
+		 border-bottom: 1px solid #461e1f;
+			.views-row,
+			.coach-sport-row {
+	      padding: 0.5em 0;
+        @include box-sizing(border-box);
+		    display: block;
+		    width: 100%;
+		    min-height: 54px;
+			 	.coach-title, .player-name {
+			 	   margin: 0;
+			 	   font-size: 15px;
+			 	   font-weight: bold;
+			 	}
+			 	// .player-name, .views-field-field-player-position {
+     //      /* Mobile */
+     //      @include respond-to(handhelds) { 
+     //        text-align: center; 
+     //      } 
+			 	// }
+			 	.views-field-field-person-title {
+			 	  font-size: 13px;
+			 	  font-weight: normal;
+			 	}
+			}
+		}
+    ul.pager {
+      .ajax-progress-throbber {
+        display: none;
+      }
+    }
+	}
+	.coaching-staff {
+	  background-color: transparent;
+    border: hidden;
+		.view-content {
+			.coach-sport-row {
+			  margin-bottom: 0.5em;
+			  padding: 0.5em 0;
+			  min-height: 70px;
+			}
+		}	
+	}
+	.player-roster, .player-list {
+	  background-color: transparent;
+    border: hidden;
+		.view-content {
+      border-top: 1px solid #461E1F;
+      border-bottom: 1px solid #240203;
+      table.views-view-grid {
+        border-top: 1px solid #240203;
+        border-bottom: 1px solid #461E1F;
+        tbody {
+          border-left: none;
+          border-right: none;
+          tr {
+            td {
+              @include list-pad;
+              border-bottom: none;
+              color: $white;
+						 .views-field {
+                margin-right: 1em; 
+								a, a:link, a:visited {
+						 		 color: darken($white, 20%);
+								 text-decoration: none;
+								 font-weight: bold;
+								 font-family: $base-font;
+								 font-style: normal;			  
+								}
+								a:hover, a:active, a:focus {
+								 color: $white; 
+								}
+							}
+						}
+						td.col-first {
+						 border-left: 1px solid #240203;
+						}
+						td.col-last {
+						 border-left: 1px solid #461E1F;
+						}
+					}	
+				}
+			}
+			@include respond-to(handhelds) {
+				/* Force table to not be like tables anymore */
+				table, thead, tbody, th, td, tr { 
+					display: block; 
+				}	
+				td, td.col-first, td.col-last { 
+					/* Behave  like a "row" */
+					border-left: 1px solid #461E1F ;
+					border-right: 1px solid #461E1F;
+					position: relative;
+					padding-left: 50%; 
+				}
+			} 
+		}
+	}
+/* END: Athletic Person View */
+
+
+/* BEGIN: Athletic News View */
+	.athletic-news {
+	  background-color: transparent;
+      border: hidden;
+		.news-view-row {
+		 border-bottom: none ;
+		 @include list-pad;
+			.views-field-body {
+			  color: $white;
+			}
+		}	
+		.views-row-last.news-view-row {
+		 border-bottom: 1px solid #461e1f;
+		}
+	}
+
+/* END: Athletic News View */
+
+/*
+ * END: Athletic Views
+*/
+}
