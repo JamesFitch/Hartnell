@@ -7,6 +7,10 @@ base theme = 'omega_sl'
 version = '1.x'
 
 ; STYLESHEETS
+css[styles.css][name] = 'Your reusable styles for creating content'
+css[styles.css][description] = 'This file holds all the active reusable CSS of your theme including site sections.'
+css[styles.css][options][weight] = '0'
+
 css[global.css][name] = 'Your custom global styles'
 css[global.css][description] = 'This file holds all the globally active custom CSS of your theme.'
 css[global.css][options][weight] = '10'
@@ -24,10 +28,9 @@ css[ckeditor.css][name] = Your custom ckeditor styles
 css[ckeditor.css][description] = This file holds all the custom ckeditor CSS of your theme.
 css[ckeditor.css][options][weight] = '13'
 
-css[ie.css][name] = Your Internet Explorer adjustment styles
+css[ie.css][name] = Your Internet Explorer adjustment styles.
 css[ie.css][description] = This file holds all the custom adjustments for troubleshooting the Internet Explorer of your theme.
 css[ie.css][options][weight] = '14'
-
 
 css[omega-hartnell-alpha-default-default.css][name] = Hartnell default styles
 css[omega-hartnell-alpha-default-default.css][description] = This file holds all the layout adjustment CSS for the default view of your theme.
@@ -38,7 +41,10 @@ css[omega-hartnell-alpha-default-normal.css][description] = This file holds all 
 css[omega-hartnell-alpha-default-wide.css][name] = Hartnell wide layout styles
 css[omega-hartnell-alpha-default-wide.css][description] = This file holds all the layout adjustment CSS for the wide view of your theme.
 
-
+; Set the conditional stylesheets that are processed by IE.
+; stylesheets-conditional[lt IE 7][all][] = ie7.css
+; stylesheets-conditional[IE 8][all][] = ie8.css
+; stylesheets-conditional[IE 9][all][] = ie9.css
 
 ; JAVASCRIPT
 scripts[] = js/menu.js

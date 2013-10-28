@@ -18,18 +18,19 @@
 @import "panelpages";
 @import "athletics";
 @import "help";
-@import "reusable-styles";
 
 /**
  * IE Compatibility
  */
 
-$legacy-support-for-ie7 : true;
-$legacy-support-for-ie8 : true;
+// $legacy-support-for-ie : true;
+// $legacy-support-for-ie7 : true;
+// $legacy-support-for-ie8 : true;
 
 /*
  * Elements
 */
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $base-font;
@@ -412,9 +413,9 @@ table.gainfulemployment-program td.gainful-prog-cell {
   @include respond-to(handhelds) { @include primary-mobile;  } /* Mobile */
   @include respond-to(medium-screens) { @include primary-mobile; } /* Tablets */
 	.zone-user-wrapper {
-	background-color: $user-menu;
-	@include inset-shadow;
-	border: 1px solid $dark-gray;
+	  background-color: $user-menu;
+	  @include inset-shadow;
+	  border: 1px solid $dark-gray;
 		.region-user-first {
 		  padding: 0.5em 0;
 		}

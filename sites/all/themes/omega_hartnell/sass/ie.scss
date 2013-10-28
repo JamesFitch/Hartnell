@@ -2,12 +2,12 @@
  * Import this file using the following HTML or equivalent:
  * 
  * <!--[if lt IE 9]>
- * 	<link rel="stylesheet" type="text/css" href="ie8-and-down.css" />
+ * 	<link rel="stylesheet" type="text/css" href="ie9-and-down.css" />
  * <![endif]-->
  */
 
 /*
- * IE8 styles
+ * IE styles
  ****************************/
 
 //
@@ -18,6 +18,8 @@
 @import "ie7";
 @import "ie8";
 @import "ie9";
+@import "compass";
+@import "compass/support";
 
 /**
  * IE Compatibility
