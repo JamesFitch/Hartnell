@@ -161,7 +161,7 @@ class PowerMenuTaxonomyHandler implements PowerMenuHandlerInterface {
     $vocabulary = variable_get('power_menu_taxonomy_vocabulary', array('vid' => NULL, 'machine_name' => NULL));
 
     // Add new term if necessary
-    if ($vocabulary['vid'] !== NULL && $form_state['values']['power_menu_taxonomy_create']) {
+    if ($vocabulary['vid'] !== NULL && isset($form_state['values']['power_menu_taxonomy_create'])) {
       // Does a term with this name exists
       $term_name = $form_state['values']['link_title'];
 
