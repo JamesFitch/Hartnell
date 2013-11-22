@@ -53,6 +53,7 @@ function roles_permissions_strongarm() {
     'page_type' => 0,
     'person_type' => 0,
     'news_type' => 0,
+    'department' => 0,
     'department_editorial_access' => 0,
     'promo' => 0,
     'faq_category' => 0,
