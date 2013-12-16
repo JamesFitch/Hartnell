@@ -195,7 +195,6 @@ nav[role=navigation] ul {
 /* line 154, ../sass/omega-hartnell-alpha-default-normal.scss */
 .js nav[role=navigation] {
   overflow: visible;
-  max-height: 0;
 }
 
 /* line 160, ../sass/omega-hartnell-alpha-default-normal.scss */
