@@ -30,7 +30,7 @@ function ct_location_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-hours-operation field-group-tab',
         'required_fields' => 1,
       ),
     ),
@@ -66,7 +66,7 @@ function ct_location_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-location-standardfields field-group-tab',
         'required_fields' => 1,
       ),
     ),
@@ -90,15 +90,14 @@ function ct_location_field_group_info() {
       1 => 'field_location_address',
       2 => 'field_location_phone',
       3 => 'field_location_photo',
-      4 => 'field_complete_address',
-      5 => 'field_location_zip',
-      6 => 'field_location_type',
+      4 => 'field_location_zip',
+      5 => 'field_location_type',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
-        'classes' => '',
+        'classes' => ' group-location-standardfields field-group-tab',
         'description' => '',
       ),
       'formatter' => 'open',
