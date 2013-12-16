@@ -8,10 +8,7 @@
  * Implements hook_views_api().
  */
 function flag_content_review_views_api() {
-  list($module, $api) = func_get_args();
-  if ($module == "views" && $api == "views_default") {
-    return array("version" => "3.0");
-  }
+  return array("version" => "3.0");
 }
 
 /**
@@ -28,15 +25,14 @@ function flag_content_review_flag_default_flags() {
       0 => 'blog_category',
       1 => 'external_resources',
       2 => 'faq',
-      3 => 'file',
-      4 => 'library_resource',
-      5 => 'location',
-      6 => 'news',
-      7 => 'newsletter',
-      8 => 'page',
-      9 => 'person',
-      10 => 'webform',
-      11 => 'scholarship',
+      3 => 'library_resource',
+      4 => 'location',
+      5 => 'news',
+      6 => 'newsletter',
+      7 => 'page',
+      8 => 'person',
+      9 => 'webform',
+      10 => 'scholarship',
     ),
     'flag_short' => 'Flag "[node:title]" for review',
     'flag_long' => 'Flag this content for admin review',
@@ -56,10 +52,12 @@ function flag_content_review_flag_default_flags() {
         1 => '3',
       ),
     ),
-    'show_on_page' => 1,
-    'show_on_teaser' => 1,
+    'weight' => 0,
     'show_on_form' => 0,
     'access_author' => '',
+    'show_on_page' => 1,
+    'show_on_teaser' => 1,
+    'show_contextual_link' => FALSE,
     'i18n' => 0,
     'module' => 'flag_content_review',
     'locked' => array(
@@ -68,4 +66,5 @@ function flag_content_review_flag_default_flags() {
     'api_version' => 2,
   );
   return $flags;
+
 }
