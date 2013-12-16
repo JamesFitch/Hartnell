@@ -46,6 +46,7 @@ function roles_permissions_strongarm() {
     'site_section' => 'site_section',
     'event_type' => 0,
     'audience' => 0,
+    'document_type' => 0,
     'location_type' => 0,
     'testimonial_type' => 0,
     'sport' => 0,

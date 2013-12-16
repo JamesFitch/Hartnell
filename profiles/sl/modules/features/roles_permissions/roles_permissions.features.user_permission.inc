@@ -15,7 +15,8 @@ function roles_permissions_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       0 => 'administrator',
-      1 => 'content editor',
+      1 => 'content administrator',
+      2 => 'content editor',
     ),
     'module' => 'system',
   );
@@ -25,7 +26,8 @@ function roles_permissions_user_default_permissions() {
     'name' => 'access toolbar',
     'roles' => array(
       0 => 'administrator',
-      1 => 'content editor',
+      1 => 'content administrator',
+      2 => 'content editor',
     ),
     'module' => 'toolbar',
   );
@@ -35,7 +37,8 @@ function roles_permissions_user_default_permissions() {
     'name' => 'access workbench',
     'roles' => array(
       0 => 'administrator',
-      1 => 'content editor',
+      1 => 'content administrator',
+      2 => 'content editor',
     ),
     'module' => 'workbench',
   );
@@ -45,7 +48,8 @@ function roles_permissions_user_default_permissions() {
     'name' => 'access workbench access by role',
     'roles' => array(
       0 => 'administrator',
-      1 => 'content editor',
+      1 => 'content administrator',
+      2 => 'content editor',
     ),
     'module' => 'workbench_access',
   );
@@ -64,7 +68,8 @@ function roles_permissions_user_default_permissions() {
     'name' => 'administer workbench access',
     'roles' => array(
       0 => 'administrator',
-      1 => 'content editor',
+      1 => 'content administrator',
+      2 => 'content editor',
     ),
     'module' => 'workbench_access',
   );
@@ -122,6 +127,8 @@ function roles_permissions_user_default_permissions() {
     'name' => 'view the administration theme',
     'roles' => array(
       0 => 'administrator',
+      1 => 'content administrator',
+      2 => 'content editor',
     ),
     'module' => 'system',
   );
@@ -131,7 +138,8 @@ function roles_permissions_user_default_permissions() {
     'name' => 'view workbench access information',
     'roles' => array(
       0 => 'administrator',
-      1 => 'content editor',
+      1 => 'content administrator',
+      2 => 'content editor',
     ),
     'module' => 'workbench_access',
   );

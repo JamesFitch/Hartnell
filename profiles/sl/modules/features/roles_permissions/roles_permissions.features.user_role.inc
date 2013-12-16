@@ -13,7 +13,7 @@ function roles_permissions_user_default_roles() {
   // Exported role: administrator.
   $roles['administrator'] = array(
     'name' => 'administrator',
-    'weight' => '7',
+    'weight' => '4',
   );
 
   // Exported role: content editor.
