@@ -66,7 +66,7 @@ function hartnell_custom_form_alter(&$form, &$form_state, $form_id) {
     case 'taxonomy_form_term':
 
       // Custom handling for taxonomy term form on "site_section" vocabulary.
-      if($form['#bundle'] == 'site_section') {
+      if(isset($form['#bundle']) && ($form['#bundle'] == 'site_section')) {
 
         // Add custom validation function.
         $form['#validate'][] = 'hartnell_custom_site_section_term_validate';
