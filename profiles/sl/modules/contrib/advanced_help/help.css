@@ -1,25 +1,11 @@
 
-.advanced-help-topic code, .advanced-help-topic pre {
-  border: 1px solid #444;
+.advanced-help-topic code,
+.advanced-help-topic pre {
   background: #f1f1f1;
+  border: 1px solid #444;
+  display: block;
   margin: 1em;
   padding: .2em;
-  display: block;
-}
-
-.page-help-sl-help h1.page-title {
-  color: #FFB300;
-}
-
-.advanced-help-topic h1,
-.advanced-help-topic h2 {
-  color: #17150f;
-  font-family: Georgia,Times,serif;
-  font-weight: normal;
-}
-
-.advanced-help-topic h2 {
-  border-bottom: 1px solid #ccc;
 }
 
 .advanced-help-topic h3,
@@ -27,9 +13,7 @@
 .advanced-help-topic h5,
 .advanced-help-topic h6,
 .advanced-help-topic dt {
-  color: #17150f;
-  font-family: Georgia,Times,serif;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .advanced-help-topic li h3,
@@ -40,32 +24,32 @@
 }
 
 .help-left {
-  text-align: left;
-  width: 42%;
   display: block;
   float: left; /* LTR */
+  text-align: left;
+  width: 42%;
 }
 
 .help-up {
-  margin: 0 5%;
-  width: 4%;
   display: block;
   float: left; /* LTR */
+  margin: 0 5%;
+  width: 4%;
 }
 
 .help-up-noleft {
-  margin: 0 5%;
-  width: 42%;
-  text-align: right;
   display: block;
   float: left; /* LTR */
+  margin: 0 5%;
+  text-align: right;
+  width: 42%;
 }
 
 .help-right {
-  text-align: right;
-  width: 42%;
   display: block;
   float: right;
+  text-align: right;
+  width: 42%;
 }
 
 .help-box {
