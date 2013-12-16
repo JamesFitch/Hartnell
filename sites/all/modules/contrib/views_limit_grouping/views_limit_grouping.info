@@ -16,9 +16,9 @@ files[] = tests/views_limit_grouping.test
 ; Module dependencies
 dependencies[] = views
 
-; Information added by drupal.org packaging script on 2013-10-01
+; Information added by drupal.org packaging script on 2013-10-19
 version = "7.x-1.x-dev"
 core = "7.x"
 project = "views_limit_grouping"
-datestamp = "1380658112"
+datestamp = "1382164904"
 
