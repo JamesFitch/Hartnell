@@ -129,7 +129,38 @@ function ct_news_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'news',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'tid' => '1',
+        ),
+        1 => array(
+          'tid' => '6',
+        ),
+        2 => array(
+          'tid' => '54',
+        ),
+        3 => array(
+          'tid' => '7',
+        ),
+        4 => array(
+          'tid' => '8',
+        ),
+        5 => array(
+          'tid' => '2',
+        ),
+        6 => array(
+          'tid' => '3',
+        ),
+        7 => array(
+          'tid' => '4',
+        ),
+        8 => array(
+          'tid' => '5',
+        ),
+        9 => array(
+          'tid' => '102',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -166,6 +197,7 @@ function ct_news_field_default_fields() {
         'type' => 'options_buttons',
         'weight' => '2',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 

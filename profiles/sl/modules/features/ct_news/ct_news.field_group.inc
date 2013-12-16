@@ -32,15 +32,15 @@ function ct_news_field_group_info() {
       6 => 'field_type_of_news',
       7 => 'field_team',
       8 => 'field_news_banner',
-      9 => 'title',
-      10 => 'field_location',
+      9 => 'field_location',
+      10 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-news-standardfields field-group-tab',
         'required_fields' => 1,
       ),
     ),
