@@ -141,7 +141,7 @@ $entity_field[0][\'value\'] = $title . \' \'  . $body;',
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'full' => array(
           'label' => 'above',
@@ -252,6 +252,81 @@ $entity_field[0][\'value\'] = $title . \' \'  . $body;',
     ),
   );
 
+  // Exported field: 'node-faq-field_site_section'.
+  $fields['node-faq-field_site_section'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_site_section',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'site_section',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'faq',
+      'default_value' => array(
+        0 => array(
+          'tid' => '11',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '3',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_site_section',
+      'label' => 'Site Section',
+      'required' => 1,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '12',
+      ),
+      'workbench_access_field' => 1,
+    ),
+  );
+
   // Exported field: 'node-faq-field_social_icons'.
   $fields['node-faq-field_social_icons'] = array(
     'field_config' => array(
@@ -318,6 +393,7 @@ $entity_field[0][\'value\'] = $title . \' \'  . $body;',
   t('Body');
   t('FAQ Category');
   t('Multi-search computed');
+  t('Site Section');
   t('Social Icons');
   t('Terminology or Categories for Frequently Asked Questions');
 

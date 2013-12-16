@@ -25,8 +25,7 @@ function ct_faq_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_faq_term',
-      2 => 'field_popular_faq',
-      3 => 'title',
+      2 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

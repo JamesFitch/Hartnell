@@ -101,6 +101,9 @@ function ct_faq_strongarm() {
         'redirect' => array(
           'weight' => '3',
         ),
+        'flag' => array(
+          'weight' => '10',
+        ),
       ),
       'display' => array(),
     ),
