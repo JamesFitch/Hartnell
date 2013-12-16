@@ -25,9 +25,8 @@ function ct_flexpage_field_group_info() {
     'children' => array(
       0 => 'field_audience',
       1 => 'field_site_section',
-      2 => 'field_gainful_employment',
-      3 => 'field_include_in_a_z_index',
-      4 => 'field_team',
+      2 => 'field_include_in_a_z_index',
+      3 => 'field_team',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

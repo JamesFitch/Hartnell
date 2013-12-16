@@ -43,7 +43,6 @@ features[field][] = node-flexpage-field_flexpage_promo_field_d
 features[field][] = node-flexpage-field_flexpage_promo_field_e
 features[field][] = node-flexpage-field_flexpage_promo_field_f
 features[field][] = node-flexpage-field_flexpage_slideshow
-features[field][] = node-flexpage-field_gainful_employment
 features[field][] = node-flexpage-field_headerimg
 features[field][] = node-flexpage-field_include_in_a_z_index
 features[field][] = node-flexpage-field_promo_content

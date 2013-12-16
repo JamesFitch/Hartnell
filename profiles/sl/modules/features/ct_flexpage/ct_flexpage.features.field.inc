@@ -135,7 +135,38 @@ function ct_flexpage_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'flexpage',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'tid' => '1',
+        ),
+        1 => array(
+          'tid' => '6',
+        ),
+        2 => array(
+          'tid' => '54',
+        ),
+        3 => array(
+          'tid' => '7',
+        ),
+        4 => array(
+          'tid' => '8',
+        ),
+        5 => array(
+          'tid' => '2',
+        ),
+        6 => array(
+          'tid' => '3',
+        ),
+        7 => array(
+          'tid' => '4',
+        ),
+        8 => array(
+          'tid' => '5',
+        ),
+        9 => array(
+          'tid' => '102',
+        ),
+      ),
       'deleted' => '0',
       'description' => 'Which group of site visitors is this content for?',
       'display' => array(
@@ -172,6 +203,7 @@ function ct_flexpage_field_default_fields() {
         'type' => 'options_buttons',
         'weight' => '3',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -784,74 +816,6 @@ function ct_flexpage_field_default_fields() {
         ),
         'type' => 'entityreference_autocomplete',
         'weight' => '6',
-      ),
-      'workbench_access_field' => 0,
-    ),
-  );
-
-  // Exported field: 'node-flexpage-field_gainful_employment'.
-  $fields['node-flexpage-field_gainful_employment'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_gainful_employment',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'text_long',
-    ),
-    'field_instance' => array(
-      'bundle' => 'flexpage',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'inline',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '8',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_gainful_employment',
-      'label' => 'Gainful Employment',
-      'required' => 0,
-      'settings' => array(
-        'text_processing' => '1',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'rows' => '5',
-        ),
-        'type' => 'text_textarea',
-        'weight' => '5',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1628,7 +1592,6 @@ function ct_flexpage_field_default_fields() {
   t('Body');
   t('Check to include this page in the A-Z index.');
   t('Contact Person');
-  t('Gainful Employment');
   t('If this is an Athletic page, please select the appropriate sport.');
   t('Include in A-Z Index');
   t('Location');
