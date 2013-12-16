@@ -128,7 +128,38 @@ function ct_event_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'event',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'tid' => '1',
+        ),
+        1 => array(
+          'tid' => '6',
+        ),
+        2 => array(
+          'tid' => '54',
+        ),
+        3 => array(
+          'tid' => '7',
+        ),
+        4 => array(
+          'tid' => '8',
+        ),
+        5 => array(
+          'tid' => '2',
+        ),
+        6 => array(
+          'tid' => '3',
+        ),
+        7 => array(
+          'tid' => '4',
+        ),
+        8 => array(
+          'tid' => '5',
+        ),
+        9 => array(
+          'tid' => '102',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -165,6 +196,7 @@ function ct_event_field_default_fields() {
         'type' => 'options_buttons',
         'weight' => '14',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -334,6 +366,7 @@ function ct_event_field_default_fields() {
         'active' => 1,
         'module' => 'date',
         'settings' => array(
+          'display_all_day' => 1,
           'increment' => '15',
           'input_format' => 'M j Y - g:i:sa',
           'input_format_custom' => '',
@@ -489,10 +522,7 @@ function ct_event_field_default_fields() {
       'bundle' => 'event',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'This field will support various kinds of content, instead of putting that content into separate fields. Examples of content to be put into the body field include:
-    Videos – YouTube embed plus links to external sites with videos (e.g. Vidego multicast player).
-    Speaker information.
-',
+      'description' => 'Website Visitors can filter the General Calendar via Event Type - If your event does not fall under one of the available values, please request a new Event Type by emailing webmaster@hartnell.edu',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -527,6 +557,7 @@ function ct_event_field_default_fields() {
         'type' => 'options_select',
         'weight' => '13',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -1434,7 +1465,7 @@ function ct_event_field_default_fields() {
         'type' => 'options_select',
         'weight' => '15',
       ),
-      'workbench_access_field' => 0,
+      'workbench_access_field' => 1,
     ),
   );
 
@@ -1736,12 +1767,9 @@ function ct_event_field_default_fields() {
   t('Site Section');
   t('Social Icons');
   t('Speaker Notes');
-  t('This field will support various kinds of content, instead of putting that content into separate fields. Examples of content to be put into the body field include:
-    Videos – YouTube embed plus links to external sites with videos (e.g. Vidego multicast player).
-    Speaker information.
-');
   t('This image will get resized to <b>915x300 pixels</b>.');
   t('Thumb');
+  t('Website Visitors can filter the General Calendar via Event Type - If your event does not fall under one of the available values, please request a new Event Type by emailing webmaster@hartnell.edu');
   t('Win-Loss');
 
   return $fields;

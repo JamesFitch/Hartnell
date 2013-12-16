@@ -1027,8 +1027,8 @@ function ct_event_views_default_views() {
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<ul class="event-list">
-     <li class="add-event"> <a class="read-more icon-right-open"" href="node/add/event"> add an event </li>
-     <li class="read-more"> <a class="read-more icon-right-open" href="academic-calender"> all events </li>
+     <li class="add-event"> <a class="read-more icon-right-open"" href="/node/add/event"> add an event </li>
+     <li class="read-more"> <a class="read-more icon-right-open" href="/hartnell-college-calender"> all events </li>
 </ul>';
   $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
@@ -1218,6 +1218,8 @@ function ct_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_date']['ui_name'] = 'Content: Event Date (Short)';
   $handler->display->display_options['fields']['field_event_date']['label'] = '';
   $handler->display->display_options['fields']['field_event_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date']['alter']['text'] = '  [field_event_date]  ';
   $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_date']['settings'] = array(
     'format_type' => 'news_date_no_time',
@@ -1789,7 +1791,7 @@ function ct_event_views_default_views() {
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '<p class="calendar"> <a class="read-more icon-right-open" href="">View the Entire Calendar</a> </p>';
+  $handler->display->display_options['footer']['area']['content'] = '<p class="calendar"> <a class="read-more icon-right-open" href="/hartnell-college-calender">View the Entire Calendar</a> </p>';
   $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Calendar Month */

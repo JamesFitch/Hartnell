@@ -35,7 +35,7 @@ function ct_event_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-athletic-information field-group-tab',
         'required_fields' => 1,
       ),
     ),
@@ -76,7 +76,7 @@ function ct_event_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-event-standardfields field-group-tab',
         'required_fields' => 1,
       ),
     ),
