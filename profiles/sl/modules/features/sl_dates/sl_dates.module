@@ -26,6 +26,11 @@ function sl_dates_date_formatter_dates_alter(&$dates, &$context) {
   // If start and end times are on the same day, just show the end time,
   // not the date and time of the end time.
   if ($dates['value']['formatted_date'] == $dates['value2']['formatted_date']) {
-    $dates['value2']['formatted'] = $dates['value2']['formatted_time'];
+    if ($dates['value']['formatted_time'] !== $dates['value2']['formatted_time']) {
+      $dates['value2']['formatted'] = $dates['value2']['formatted_time'];
+    }
+    else {
+      $dates['value2']['formatted'] = '';
+    }
   }
 }
