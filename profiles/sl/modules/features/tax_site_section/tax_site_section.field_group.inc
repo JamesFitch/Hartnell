@@ -34,7 +34,7 @@ function tax_site_section_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-section-theme-colors field-group-fieldset',
         'required_fields' => 1,
       ),
     ),
@@ -62,7 +62,7 @@ function tax_site_section_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-theme-settings field-group-tab',
         'required_fields' => 1,
       ),
     ),
